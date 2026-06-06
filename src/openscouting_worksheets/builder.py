@@ -60,7 +60,10 @@ def build(badge_path: Path, output_path: Path,
     styles = make_styles()
 
     story: list[Flowable] = []
-    story.extend(_build_cover(badge, styles, asset_dir=asset_dir, base_dir=base_dir))
+    built = badge.badge.workbook_version or _git_last_modified(badge_path) \
+        or _today_iso()
+    story.extend(_build_cover(badge, styles, asset_dir=asset_dir,
+                              base_dir=base_dir, built=built))
     # Switch to body chrome for any page that overflows past the cover, but
     # don't force a page break — let requirements flow onto the cover page
     # when there's room. The natural spaceBefore on Req0Intro gives the
@@ -81,7 +84,7 @@ def build(badge_path: Path, output_path: Path,
 # ---------- cover ----------
 
 def _build_cover(badge: S.Badge, styles, asset_dir: Path,
-                 base_dir: Path) -> list[Flowable]:
+                 base_dir: Path, built: str) -> list[Flowable]:
     s = styles
     out: list[Flowable] = []
 
@@ -155,12 +158,7 @@ def _build_cover(badge: S.Badge, styles, asset_dir: Path,
         meta_bits.append(
             f"Requirements revised {badge.badge.requirements_revision}"
         )
-    # Default the workbook version to today's build date when the YAML
-    # doesn't pin one, so every PDF carries a meaningful stamp.
-    workbook_version = (
-        badge.badge.workbook_version or _today_iso()
-    )
-    meta_bits.append(f"Workbook built {workbook_version}")
+    meta_bits.append(f"Workbook updated {built}")
     out.append(Spacer(1, 8))
     out.append(Paragraph(" · ".join(meta_bits), s["CoverMeta"]))
     return out
@@ -169,6 +167,26 @@ def _build_cover(badge: S.Badge, styles, asset_dir: Path,
 def _today_iso() -> str:
     from datetime import date
     return date.today().isoformat()
+
+
+def _git_last_modified(path: Path) -> str | None:
+    """Date (YYYY-MM-DD) of the last commit that touched `path`.
+
+    This makes the cover's "updated" stamp reflect when the worksheet content
+    actually last changed, not when the PDF happened to be built, so identical
+    source produces an identical PDF. Returns None outside a git repo or for an
+    uncommitted file, so callers can fall back to today's date.
+    """
+    import subprocess
+    try:
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%cs", "--", path.name],
+            cwd=path.parent, capture_output=True, text=True, timeout=5,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    date = out.stdout.strip()
+    return date or None
 
 
 # ---------- requirements ----------
