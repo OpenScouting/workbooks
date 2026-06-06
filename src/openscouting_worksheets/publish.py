@@ -93,12 +93,25 @@ def build_site(base_dir: Path, output_dir: Path, draft: bool = False) -> dict:
         })
 
     rows.sort(key=lambda r: r["name"].lower())
-    (output_dir / INDEX_NAME).write_text(_render_index(rows))
+    (output_dir / INDEX_NAME).write_text(_render_index(rows, draft=draft))
     prior_path.write_text(json.dumps(manifest, indent=2, sort_keys=True))
     return {"built": built, "reused": reused, "total": len(rows)}
 
 
-def _render_index(rows: list[dict]) -> str:
+# Prominent banner shown across the top of the draft site so visitors can't
+# miss that these are work-in-progress copies, not the released workbooks.
+_DRAFT_BANNER = (
+    '<div class="draft-banner" role="alert">'
+    '<strong>⚠ DRAFT PREVIEW</strong>'
+    '<span>These workbooks are still under review and are <strong>not final</strong>. '
+    'Every page is watermarked DRAFT. '
+    'For released copies, go to '
+    '<a href="../">openscouting.github.io/workbooks</a>.</span>'
+    '</div>'
+)
+
+
+def _render_index(rows: list[dict], draft: bool = False) -> str:
     items = "\n".join(
         f'      <tr>'
         f'<td class="name"><a href="{html.escape(r["pdf"])}">'
@@ -108,7 +121,12 @@ def _render_index(rows: list[dict]) -> str:
         f'</tr>'
         for r in rows
     )
-    return _INDEX_TEMPLATE.format(count=len(rows), rows=items)
+    return _INDEX_TEMPLATE.format(
+        count=len(rows), rows=items,
+        banner=(_DRAFT_BANNER if draft else ""),
+        title_suffix=(" — DRAFT" if draft else ""),
+        body_class=("draft" if draft else ""),
+    )
 
 
 _INDEX_TEMPLATE = """<!DOCTYPE html>
@@ -116,7 +134,7 @@ _INDEX_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OpenScouting Merit Badge Workbooks</title>
+<title>OpenScouting Merit Badge Workbooks{title_suffix}</title>
 <style>
   :root {{
     --green: #1B4332; --amber: #F59E0B; --muted: #6B7280;
@@ -125,6 +143,16 @@ _INDEX_TEMPLATE = """<!DOCTYPE html>
   * {{ box-sizing: border-box; }}
   body {{ margin: 0; font: 16px/1.5 -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
          color: #111; background: var(--bg); }}
+  /* Big, impossible-to-miss draft warning banner. */
+  .draft-banner {{ background: repeating-linear-gradient(45deg, #FEF3C7, #FEF3C7 18px, #FDE68A 18px, #FDE68A 36px);
+                   color: #7C2D12; border-bottom: 4px solid #B45309;
+                   padding: 1.1rem 1.5rem; text-align: center; line-height: 1.4; }}
+  .draft-banner strong {{ color: #7C2D12; }}
+  .draft-banner > strong {{ display: block; font-size: 1.5rem; letter-spacing: .08em;
+                            text-transform: uppercase; margin-bottom: .25rem; }}
+  .draft-banner span {{ font-size: 1rem; }}
+  .draft-banner a {{ color: #7C2D12; font-weight: 700; }}
+  body.draft header {{ background: #7C2D12; border-bottom-color: #B45309; }}
   header {{ background: var(--green); color: #fff; padding: 2rem 1.5rem 1.6rem;
             border-bottom: 4px solid var(--amber); }}
   header h1 {{ margin: 0; font-size: 1.6rem; letter-spacing: .2px; }}
@@ -150,7 +178,8 @@ _INDEX_TEMPLATE = """<!DOCTYPE html>
   footer a {{ color: var(--green); }}
 </style>
 </head>
-<body>
+<body class="{body_class}">
+{banner}
 <header>
   <h1>OpenScouting Merit Badge Workbooks</h1>
   <p>Fillable PDF worksheets to organize your notes as you work toward each badge.</p>

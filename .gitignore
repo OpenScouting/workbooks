@@ -14,6 +14,10 @@ dist/
 build/
 *.pdf
 
+# CI per-site staging dirs (release root + draft subdir, assembled into dist/)
+site-draft/
+site-release/
+
 # Local Claude Code settings (the badge-yaml skill IS committed)
 .claude/settings.local.json
 
