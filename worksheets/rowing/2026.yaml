@@ -1,0 +1,142 @@
+badge:
+  name: Rowing
+  slug: rowing
+  requirements_revision: "2026-01-01"
+  description: >
+    The Rowing merit badge teaches Scouts to handle a rowboat safely and
+    skillfully. Scouts learn water safety, rescue techniques, and rowing
+    fundamentals in both fixed-seat and sliding-seat craft.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while participating in rowing activities, including weather- and
+          water-related hazards, and what you should do to anticipate, help
+          prevent, mitigate, and respond to these hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Review prevention, symptoms, and first-aid treatment for the following
+          injuries or illnesses that can occur while rowing: blisters,
+          hypothermia, heat-related illnesses, dehydration, sunburn, sprains, and
+          strains.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Blisters"
+            - "Hypothermia"
+            - "Heat-related illnesses"
+            - "Dehydration"
+            - "Sunburn"
+            - "Sprains"
+            - "Strains"
+      - id: "1c"
+        prompt: >
+          Review the Scouting America Safety Afloat policy. Explain to your
+          counselor how this applies to rowing activities.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    prompt: >
+      Before completing requirements 4, 5, 6, and 7, successfully complete the
+      Scouting America swimmer test. Note: See the Swimming merit badge pamphlet
+      for details about the Scouting America swimmer test.
+    field: { type: checkbox, label: "Completed the Scouting America swimmer test." }
+
+  - id: "3"
+    prompt: >
+      Review the characteristics of life jackets most appropriate for rowing and
+      why one must always be worn while rowing. Then demonstrate how to select
+      and fit a life jacket.
+    field: { type: text_box, lines: 8 }
+
+  - id: "4"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Alone or with a passenger, do a series of rowing maneuvers in a fixed-seat or sliding-seat rowboat: launch; row in a straight line for 100 yards, stop, pivot, and return; backwater 25 yards, make a turn underway, and return; land and moor or rack your craft; and tie the mooring knots."
+        - "(b) Participate as a rowing team member in a competitive rowing meet sponsored by a school, club, or Scout unit, with competition between two or more teams with different sponsors. Complete at least 10 hours of team practice prior to the meet."
+    children:
+      - id: "4-notes"
+        prompt: "Notes from your chosen option (including mooring knots tied, if applicable)"
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) In a fixed-seat rowboat, come alongside a pier and help a passenger into the boat. Pull away from the pier, change positions with your passenger, and demonstrate sculling over the stern or side. Resume your rowing position, return alongside the pier, and help your passenger out of the boat."
+        - "(b) In a sliding-seat rowboat, come alongside a pier and, with your buddy assisting you, get out onto the pier. Help your buddy into the boat. Reverse roles with your buddy and repeat the procedure."
+    children:
+      - id: "5-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    prompt: >
+      Participate in a swamped boat drill including righting and stabilizing the
+      craft, reboarding in deep water, and making headway. Tell why you should
+      stay with a swamped boat.
+    field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Alone in a rowboat, push off from the shore or a pier. Row 20 yards to a
+      swimmer. While giving instructions to the swimmer, pivot the boat so that
+      the swimmer can hold on to the stern. Tow the swimmer to shore.
+    field: { type: checkbox, label: "Completed the rowboat swimmer tow." }
+
+  - id: "8"
+    intro: "Describe the following:"
+    children:
+      - id: "8a"
+        prompt: "Types of craft used in commercial, competitive, and recreational rowing"
+        field: { type: text_box, lines: 6 }
+      - id: "8b"
+        prompt: "Four common boatbuilding materials. Give some positive and negative points of each"
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Material", type: text_field }
+            - { label: "Positive points", type: text_box, lines: 2 }
+            - { label: "Negative points", type: text_box, lines: 2 }
+      - id: "8c"
+        prompt: "Types of oarlocks used in competitive and recreational rowing"
+        field: { type: text_box, lines: 5 }
+
+  - id: "9"
+    intro: "Discuss the following:"
+    children:
+      - id: "9a"
+        prompt: "The advantage of feathering oars while rowing"
+        field: { type: text_box, lines: 4 }
+      - id: "9b"
+        prompt: >
+          Precautions regarding strong winds and heavy waves, and boat-handling
+          procedures in rough water and windstorms
+        field: { type: text_box, lines: 5 }
+      - id: "9c"
+        prompt: >
+          How to properly fit out and maintain a boat in season, and how to
+          prepare and store a boat for winter
+        field: { type: text_box, lines: 5 }
+      - id: "9d"
+        prompt: "How to determine the proper length of oars"
+        field: { type: text_box, lines: 4 }
+      - id: "9e"
+        prompt: "The differences between fixed-seat and sliding-seat rowing"
+        field: { type: text_box, lines: 4 }
+      - id: "9f"
+        prompt: "The different meanings of the term sculling in fixed- and sliding-seat rowing"
+        field: { type: text_box, lines: 4 }
+      - id: "9g"
+        prompt: "The health benefits from rowing for exercise"
+        field: { type: text_box, lines: 4 }

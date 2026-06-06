@@ -1,0 +1,132 @@
+badge:
+  name: Law
+  slug: law
+  requirements_revision: "2026-01-01"
+  description: >
+    Law shapes nearly every part of daily life, from buying goods to settling
+    disputes. This badge introduces you to the sources and functions of law, the
+    difference between civil and criminal cases, and the many careers and
+    services connected to the legal system.
+
+requirements:
+  - id: "1"
+    prompt: "Define law. Tell some of its sources. Describe the functions it serves."
+    field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    prompt: "Discuss TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "Justinian's Code, the Code of Hammurabi, and the Magna Carta"
+        - "The development of the jury system"
+        - "Two famous trials in history"
+    children:
+      - id: "2-notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    prompt: >
+      Tell what civil law is; tell what criminal law is. Tell the main
+      differences between them. Give examples of each.
+    field: { type: text_box, lines: 8 }
+
+  - id: "4"
+    prompt: >
+      Ask five people (not more than one from your immediate family) about the
+      role of law enforcement officers in our society. Discuss their answers with
+      them. Report your findings to your counselor.
+    field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Discuss with your counselor several laws that were passed to protect the
+      consumer and the seller. Describe several organizations that provide help
+      to consumers and sellers.
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Attend a session of a civil or criminal court. Write 250 words or more on what you saw."
+        - "Plan and conduct a mock trial with your troop or school class or other group. After the trial is over, discuss it with the group."
+    children:
+      - id: "6-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "7"
+    prompt: >
+      Arrange a visit with a lawyer who works for a business, bank, title
+      company, or government agency. Find out his or her duties and
+      responsibilities. Report what you have learned.
+    field: { type: text_box, lines: 8 }
+
+  - id: "8"
+    prompt: >
+      Explain the requirements for becoming a lawyer in your state. Describe how
+      judges are selected in your state.
+    field: { type: text_box, lines: 8 }
+
+  - id: "9"
+    prompt: >
+      Make a list of 15 jobs that deal with some aspects of law or legal
+      processes. Tell which you prefer. Why?
+    children:
+      - id: "9-list"
+        prompt: "List of 15 jobs that deal with some aspects of law or legal processes"
+        field:
+          type: labeled_rows
+          lines_each: 1
+          labels:
+            - "1"
+            - "2"
+            - "3"
+            - "4"
+            - "5"
+            - "6"
+            - "7"
+            - "8"
+            - "9"
+            - "10"
+            - "11"
+            - "12"
+            - "13"
+            - "14"
+            - "15"
+      - id: "9-prefer"
+        prompt: "Which do you prefer? Why?"
+        field: { type: text_box, lines: 5 }
+
+  - id: "10"
+    prompt: >
+      Tell where people can go to obtain the help of a lawyer if they are unable
+      to pay for one. Tell what you can do if you can afford a lawyer but do not
+      know of any in your area.
+    field: { type: text_box, lines: 8 }
+
+  - id: "11"
+    prompt: >
+      Discuss with your counselor the importance in our society of TWO of the
+      following areas of the law or process:
+    field:
+      type: checklist
+      items:
+        - "Administrative"
+        - "Alternative Dispute Resolution"
+        - "Bankruptcy"
+        - "Biotechnology"
+        - "Environmental"
+        - "Family"
+        - "Immigration"
+        - "Information Technology"
+        - "Intellectual Property, (Copyright, Patents and Trademarks)"
+        - "International"
+        - "Privacy"
+    children:
+      - id: "11-notes"
+        prompt: "Notes from your chosen areas"
+        field: { type: text_box, lines: 8 }

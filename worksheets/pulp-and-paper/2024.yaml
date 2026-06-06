@@ -1,0 +1,104 @@
+badge:
+  name: Pulp and Paper
+  slug: pulp-and-paper
+  requirements_revision: "2024-01-01"
+  description: >
+    The Pulp and Paper merit badge explores how trees become the paper products
+    we use every day. Scouts learn about forest management, the science of
+    turning wood into fiber, recycling, and the careers that keep this industry
+    running.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Tell the history of papermaking. Describe the part paper products play in
+      our society and economy.
+    field: { type: text_box, lines: 10 }
+
+  - id: "2"
+    intro: "Learn about the pulp and paper industry."
+    children:
+      - id: "2a"
+        prompt: "Describe the ways the industry plants, grows, and harvests trees."
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: >
+          Explain how the industry manages its forests so that the supply of
+          trees keeps pace with the demand.
+        field: { type: text_box, lines: 6 }
+      - id: "2c"
+        prompt: >
+          Tell how the industry has incorporated the concepts of sustainable
+          forest management (SFM).
+        field: { type: text_box, lines: 6 }
+      - id: "2d"
+        prompt: "Describe two ways the papermaking industry has addressed pollution."
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: >
+      Name at least four types of trees that are major sources of papermaking
+      fibers. Then do the following:
+    field: { type: table, rows: 4, cols: 1 }
+    children:
+      - id: "3a"
+        prompt: >
+          Discuss what other uses are made of the trees and the forestland owned
+          by the pulp and paper industry.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: >
+          Describe two ways of getting fibers from wood, and explain the major
+          differences between them.
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: "Tell why some pulps are bleached, and describe the process."
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: >
+      Describe how paper is made. Discuss how paper is recycled. Make a sheet of
+      paper by hand.
+    field: { type: text_box, lines: 10 }
+
+  - id: "5"
+    prompt: >
+      Explain what coated paper is and why it is coated. Describe the major uses
+      for different kinds of coated papers. Describe one other way that paper is
+      changed by chemical or mechanical means to make new uses possible.
+    field: { type: text_box, lines: 10 }
+
+  - id: "6"
+    prompt: >
+      Make a list of 15 pulp or paper products found in your home. Share
+      examples of 10 such products with your counselor.
+    field:
+      type: table
+      headers: ["Pulp or paper product", "Shared with counselor"]
+      rows: 15
+      cols: 2
+
+  - id: "7"
+    prompt: >
+      With your parent or guardian's and counselor's approval, do ONE of the
+      following:
+    field:
+      type: checklist
+      items:
+        - "(a) Visit a pulp mill. Describe how the mill converts wood to cellulose fibers."
+        - "(b) Visit a paper mill and get a sample of the paper made there. Describe the processes used for making this paper. Tell how it will be used."
+        - "(c) Visit a container plant or box plant. Describe how the plant's products are made."
+        - "(d) Visit a recycled paper collection or sorting facility. Describe the operations there."
+        - "(e) Using books, magazines, your local library, the internet (with your parent or guardian's permission), and any other suitable research tool, find out how paper products are developed. Find out what role research and development play in the papermaking industry. Share what you learned with your counselor."
+    children:
+      - id: "7-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "8"
+    prompt: >
+      Find out about three career opportunities in the papermaking industry that
+      interest you. Pick one and find out the education, training, and experience
+      required for this profession. Discuss this with your counselor, and explain
+      why this profession might interest you.
+    field: { type: text_box, lines: 10 }

@@ -1,0 +1,160 @@
+badge:
+  name: Archery
+  slug: archery
+  requirements_revision: "2025-01-01"
+  description: >
+    The Archery merit badge teaches the safe handling of bows and arrows along
+    with the skills to shoot accurately. You will learn range safety, the parts
+    and care of your equipment, scoring, and shoot a qualifying round with the
+    bow of your choice.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain what a projectile is, and why any device that shoots a
+          projectile at high speed must be handled with care and respect, and used
+          only in approved locations.
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: "Explain the five range safety rules."
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: "Explain the four whistle commands used on the range."
+        field: { type: text_box, lines: 5 }
+      - id: "1d"
+        prompt: "Explain how to safely remove arrows from the target and return them to your quiver."
+        field: { type: text_box, lines: 4 }
+      - id: "1e"
+        prompt: "Tell your counselor about your local and state laws for owning and using archery equipment."
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Name and point to the parts of an arrow."
+        field: { type: text_box, lines: 4 }
+      - id: "2b"
+        prompt: "Describe three or more different types of arrows."
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: "Name the four principal materials for making arrow shafts."
+        field: { type: text_box, lines: 3 }
+      - id: "2d"
+        prompt: "Do ONE of the following:"
+        field:
+          type: checklist
+          items:
+            - "Make a complete arrow from a bare shaft using appropriate equipment available to you."
+            - "To demonstrate arrow repair, inspect the shafts and prepare and replace at least three vanes, one point, and one nock. You may use as many arrows as necessary to accomplish this. The repairs can be done on wood, fiberglass, or aluminum arrows."
+      - id: "2e"
+        prompt: "Explain how to properly care for and store arrows."
+        field: { type: text_box, lines: 4 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Explain the proper use, care, and storage of, as well as the reasons
+          for using tabs, arm guards, shooting gloves, and quivers.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: >
+          Explain the following terms: draw length, draw weight, mechanical
+          release, and barebow.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels: ["Draw length", "Draw weight", "Mechanical release", "Barebow"]
+
+  - id: "4"
+    intro: "Explain the following:"
+    children:
+      - id: "4a"
+        prompt: "The difference between an end and a round"
+        field: { type: text_box, lines: 4 }
+      - id: "4b"
+        prompt: "The differences among field, target, and 3-D archery"
+        field: { type: text_box, lines: 5 }
+      - id: "4c"
+        prompt: "How the five-color World Archery Federation target is scored"
+        field: { type: text_box, lines: 4 }
+      - id: "4d"
+        prompt: >
+          How the National Field Archery Association (NFAA) black-and-white field
+          targets and blue indoor targets are scored
+        field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    prompt: >
+      Working under the supervision of a certified USA Archery Level 1 Instructor
+      or a certified long-term camp staff member (i.e., a National Camping School
+      [NCS] Range Activities Director; or a Rangemaster over age 18 who is trained
+      by a NCS Range Activities Director or by a USA Archery Level 1 Instructor),
+      do ONE of the following options: Note: When using a Genesis bow, apply the
+      requirements in Option A.
+    field:
+      type: checklist
+      items:
+        - "Option A: Recurve Bow or Longbow"
+        - "Option B: Compound Bow"
+    children:
+      - id: "5optA"
+        intro: "Option A. Recurve Bow or Longbow. Do ALL of the following:"
+        children:
+          - id: "5A1"
+            prompt: "Name and point to the parts of the recurve or longbow you are shooting."
+            field: { type: checkbox, label: "Named and pointed to the parts of the recurve bow or longbow." }
+          - id: "5A2"
+            prompt: "Explain how to properly care for and store recurve bows and longbows."
+            field: { type: text_box, lines: 5 }
+          - id: "5A3"
+            prompt: "Demonstrate and explain USA Archery's 11 Steps of Shooting for the bow you are shooting."
+            field: { type: checkbox, label: "Demonstrated and explained USA Archery's 11 Steps of Shooting." }
+          - id: "5A4"
+            prompt: "Demonstrate the proper way to string a recurve bow or longbow."
+            field: { type: checkbox, label: "Demonstrated the proper way to string a recurve bow or longbow." }
+          - id: "5A5"
+            prompt: >
+              Using a bow square, locate and mark with dental floss, crimp-on, or
+              other method, the nocking point on the bowstring of the bow you are
+              using.
+            field: { type: checkbox, label: "Located and marked the nocking point on the bowstring." }
+          - id: "5A6"
+            prompt: "Do ONE of the following:"
+            field:
+              type: checklist
+              items:
+                - "Using a recurve bow or longbow and arrows with a finger release, shoot a single round of one of the following: an NFAA field round of 14 targets and make a score of 60 points; a Scouting America field round of 14 targets and make a score of 80 points; a World Archery/USA Archery indoor round and make a score of 80 points (indoor rounds may be shot outdoors if this is more convenient); an NFAA indoor round and make a score of 50 points (indoor rounds may be shot outdoors if this is more convenient)."
+                - "Shooting 30 arrows in five-arrow ends at an 80-centimeter (32-inch) five-color target at 10 yards and using the 10 scoring regions, make a score of 150 points."
+      - id: "5optB"
+        intro: "Option B. Compound Bow. Do ALL of the following:"
+        children:
+          - id: "5B1"
+            prompt: "Name and point to the parts of the compound bow you are shooting."
+            field: { type: checkbox, label: "Named and pointed to the parts of the compound bow." }
+          - id: "5B2"
+            prompt: "Explain how to properly care for and store compound bows."
+            field: { type: text_box, lines: 5 }
+          - id: "5B3"
+            prompt: "Demonstrate and explain USA Archery's 11 Steps of Shooting for the bow you are shooting."
+            field: { type: checkbox, label: "Demonstrated and explained USA Archery's 11 Steps of Shooting." }
+          - id: "5B4"
+            prompt: "Explain why it is necessary to have the string or cable on a compound bow replaced at an archery shop."
+            field: { type: text_box, lines: 4 }
+          - id: "5B5"
+            prompt: >
+              Locate and mark with dental floss, crimp-on, or other method, the
+              nocking point on the bowstring of the bow you are using.
+            field: { type: checkbox, label: "Located and marked the nocking point on the bowstring." }
+          - id: "5B6"
+            prompt: "Do ONE of the following:"
+            field:
+              type: checklist
+              items:
+                - "Using a compound bow and arrows with a finger release, shoot a single round of one of the following: an NFAA field round of 14 targets and make a score of 70 points; a Scouting America field round of 14 targets and make a score of 90 points; a World Archery/USA Archery indoor round and make a score of 90 points (indoor rounds may be shot outdoors if this is more convenient); an NFAA indoor round and make a score of 60 points (indoor rounds may be shot outdoors if this is more convenient)."
+                - "Shooting at an 80-centimeter (32-inch) five-color target using the 10 scoring regions, make a minimum score of 160 points. Accomplish this in the following manner: shoot 15 arrows in five-arrow ends, at a distance of 10 yards AND shoot 15 arrows in five-arrow ends, at a distance of 15 yards."

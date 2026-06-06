@@ -1,0 +1,123 @@
+badge:
+  name: Photography
+  slug: photography
+  requirements_revision: "2024-01-01"
+  description: >
+    Photography lets you capture moments, tell stories, and see the world in
+    new ways. Earning this badge teaches you how a camera works, how light and
+    composition shape an image, and how to plan and produce a visual story of
+    your own.
+
+requirements:
+  - id: "1"
+    intro: "Safety. Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while working with photography and what you should do to anticipate,
+          mitigate, prevent, and respond to these hazards. Explain how you would
+          prepare for exposure to environmental situations such as weather, sun,
+          and water.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: 'View the Personal Safety Awareness "Digital Safety" video (with your parent or guardian''s permission).'
+        field: { type: checkbox, label: 'View the Personal Safety Awareness "Digital Safety" video (with your parent or guardian''s permission).' }
+
+  - id: "2"
+    prompt: "Explain how the following elements and terms can affect the quality of a picture:"
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels:
+        - "Light: natural light (ambient/existing), low light (such as at night), and artificial light (such as from a flash)"
+        - "Exposure: aperture (f-stops), shutter speed, ISO"
+        - "Depth of field"
+        - "Composition: rule of thirds, leading lines, framing, depth"
+        - "Angle of view"
+        - "Stop action and blur motion"
+        - "Decisive moment (action or expression captured by the photographer)"
+
+  - id: "3"
+    prompt: >
+      Explain the basic parts and operation of a camera. Explain how an
+      exposure is made when you take a picture.
+    field: { type: text_box, lines: 8 }
+
+  - id: "4"
+    prompt: "Do TWO of the following, then share your work with your counselor."
+    field:
+      type: checklist
+      items:
+        - "(a) Photograph one subject from two different angles or perspectives."
+        - "(b) Photograph one subject from two different light sources - artificial and natural."
+        - "(c) Photograph one subject with two different depth of fields."
+        - "(d) Photograph one subject with two different compositional techniques."
+    children:
+      - id: "4notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    prompt: "Photograph THREE of the following, then share your work with your counselor."
+    field:
+      type: checklist
+      items:
+        - "(a) Close-up of a person"
+        - "(b) Two to three people interacting"
+        - "(c) Action shot"
+        - "(d) Animal shot"
+        - "(e) Nature shot"
+        - "(f) Picture of a person - candid, posed, or camera aware"
+    children:
+      - id: "5notes"
+        prompt: "Notes from your chosen subjects"
+        field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    prompt: >
+      Describe how software allows you to enhance your photograph after it is
+      taken. Select a photo you have taken, then do ONE of the following, and
+      share what you have done with your counselor:
+    field:
+      type: checklist
+      items:
+        - "(a) Crop your photograph."
+        - "(b) Adjust the exposure or make a color correction."
+        - "(c) Show another way you could improve your picture for impact."
+    children:
+      - id: "6describe"
+        prompt: "Describe how software allows you to enhance your photograph after it is taken."
+        field: { type: text_box, lines: 6 }
+      - id: "6notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: >
+      Using images other than those created for requirements 4, 5, and 6,
+      produce a visual story to document an event to photograph OR choose a
+      topic that interests you to photograph. Do the following:
+    children:
+      - id: "7a"
+        prompt: "Plan the images you need to photograph for your photo story."
+        field: { type: text_box, lines: 6 }
+      - id: "7b"
+        prompt: >
+          Share your plan with your counselor, and get your counselor's input
+          and approval before you proceed.
+        field: { type: checkbox, label: "Share your plan with your counselor, and get your counselor's input and approval before you proceed." }
+      - id: "7c"
+        prompt: >
+          Select eight to 12 images that best tell your story. Arrange your
+          images in order and mount the prints on a poster board, OR create an
+          electronic presentation. Share your visual story with your counselor.
+        field: { type: text_box, lines: 6 }
+
+  - id: "8"
+    prompt: >
+      Identify three career opportunities in photography. Pick one and explain
+      to your counselor how to prepare for such a career. Discuss what
+      education and training are required, and why this profession might
+      interest you.
+    field: { type: text_box, lines: 8 }

@@ -1,0 +1,86 @@
+badge:
+  name: Art
+  slug: art
+  requirements_revision: "2024-01-01"
+  description: >
+    The Art merit badge introduces the elements and principles that artists use
+    to create and share their work. You will explore different art forms, try
+    your hand at several media, and learn how art careers and creativity shape
+    the world around you.
+
+requirements:
+  - id: "1"
+    intro: "Discuss the following with your counselor:"
+    children:
+      - id: "1a"
+        prompt: "What art is and what some of the different forms of art are"
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: "The importance of art to humankind"
+        field: { type: text_box, lines: 5 }
+      - id: "1c"
+        prompt: "What art means to you and how art can make you feel"
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    prompt: >
+      Discuss with your counselor the following terms and elements of art: line,
+      value, shape, form, space, color, and texture. Show examples of each
+      element.
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels: [Line, Value, Shape, Form, Space, Color, Texture]
+
+  - id: "3"
+    prompt: >
+      Discuss with your counselor the six principles of design: rhythm, balance,
+      proportion, variety, emphasis, and unity.
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels: [Rhythm, Balance, Proportion, Variety, Emphasis, Unity]
+
+  - id: "4"
+    prompt: "Render a subject of your choice in FOUR of these ways:"
+    field:
+      type: checklist
+      items:
+        - "Pen and ink"
+        - "Watercolors"
+        - "Pencil"
+        - "Pastels"
+        - "Oil paints"
+        - "Tempera"
+        - "Acrylics"
+        - "Charcoal"
+        - "Computer drawing or painting"
+
+  - id: "5"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Design something useful. Make a sketch or model of your design. With your counselor's approval, create a promotional piece for the item using a picture or pictures."
+        - "Tell a story with a picture or pictures or using a 3-D rendering."
+        - "Design a logo. Share your design with your counselor and explain the significance of your logo. Then, with your parent or guardian's permission and your counselor's approval, put your logo on Scout equipment, furniture, ceramics, or fabric."
+    children:
+      - id: "5-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    prompt: >
+      With your parent or guardian's permission and your counselor's approval,
+      visit a museum, art exhibit, art gallery, artists' co-op, or artist's
+      workshop. Find out about the art displayed or created there. Discuss what
+      you learned with your counselor.
+    field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Find out about three career opportunities in art. Pick one and find out the
+      education, training, and experience required for this profession. Discuss
+      this with your counselor, and explain why this profession might interest
+      you.
+    field: { type: text_box, lines: 8 }

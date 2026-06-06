@@ -1,0 +1,94 @@
+badge:
+  name: Wood Carving
+  slug: wood-carving
+  requirements_revision: "2017-01-01"
+  description: >
+    Wood carving turns a block of wood into something useful or beautiful using
+    sharp tools and patient cuts. Earning this badge teaches you to carve
+    safely, care for your tools, master the basic cuts, and complete carving
+    projects of your own.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the hazards you are most likely to encounter
+          while wood carving, and what you should do to anticipate, help prevent,
+          mitigate, or lessen these hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Show that you know first aid for injuries that could occur while wood
+          carving, including minor cuts and scratches and splinters.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Minor cuts and scratches
+            - Splinters
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Earn the Totin' Chip recognition."
+        field: { type: checkbox, label: "Earned the Totin' Chip recognition." }
+      - id: "2b"
+        prompt: >
+          Discuss with your counselor your understanding of the Safety Checklist
+          for Carving.
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Explain to your counselor, orally or in writing, the care and use of
+          five types of tools that you may use in a carving project.
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Tool", type: text_field }
+            - { label: "Care and use", type: text_box, lines: 3 }
+      - id: "3b"
+        prompt: >
+          Tell your counselor how to care for and use several types of
+          sharpening devices, then demonstrate that you know how to use these
+          devices.
+        field: { type: text_box, lines: 7 }
+
+  - id: "4"
+    prompt: >
+      Using a piece of scrap wood or a project on which you are working, show
+      your counselor that you know how to do the following:
+    field:
+      type: checklist
+      items:
+        - "(a) Paring cut"
+        - "(b) Basic cut and push cut"
+        - "(c) V cut"
+        - "(d) Stop cut or score line"
+
+  - id: "5"
+    prompt: >
+      Tell why different woods are used for different projects. Explain why you
+      chose the type of wood you did for your projects in requirements 6 and 7.
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: >
+      Plan your own or select a project from the Wood Carving merit badge
+      pamphlet and complete a simple carving in the round.
+    field: { type: checkbox, label: "Completed a simple carving in the round." }
+
+  - id: "7"
+    prompt: "Complete a simple low-relief OR a chip carving project."
+    field:
+      type: checklist
+      items:
+        - "Completed a simple low-relief project"
+        - "Completed a chip carving project"

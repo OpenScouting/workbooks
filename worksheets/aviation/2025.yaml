@@ -1,0 +1,142 @@
+badge:
+  name: Aviation
+  slug: aviation
+  requirements_revision: "2025-01-01"
+  description: >
+    The Aviation merit badge introduces the science of flight and the world of
+    aircraft. You will learn how airplanes fly, build and test a model, explore
+    flight and airport operations, and discover the many careers available in
+    aviation.
+
+requirements:
+  - id: "1"
+    intro: "Aviation Basics and Mechanics of Flight. Do the following:"
+    children:
+      - id: "1a"
+        prompt: 'Define "aircraft." Describe three kinds of aircraft today, and their typical uses.'
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: "Provide a brief overview of the evolution of flight, and discuss three notable times in history important to aviation."
+        field: { type: text_box, lines: 7 }
+      - id: "1c"
+        prompt: "Explain the difference between a fixed wing and a rotary wing aircraft, and the benefits of each."
+        field: { type: text_box, lines: 5 }
+      - id: "1d"
+        prompt: "Explain the operation of piston, turbine, and jet engines."
+        field: { type: text_box, lines: 6 }
+      - id: "1e"
+        prompt: "Using a model aircraft, describe the four forces that act on an aircraft in flight."
+        field: { type: text_box, lines: 5 }
+      - id: "1f"
+        prompt: "Explain how an airfoil generates lift, specifically noting Bernoulli's principle."
+        field: { type: text_box, lines: 5 }
+      - id: "1g"
+        prompt: >
+          Identify and describe the aerodynamic control surfaces on the aircraft of
+          your choice, and explain how they operate to control its attitude and
+          direction of flight.
+        field: { type: text_box, lines: 7 }
+      - id: "1h"
+        prompt: >
+          Explain the purposes and functions of the various instruments found in a
+          typical single-engine aircraft: attitude indicator, heading indicator,
+          altimeter, airspeed indicator, turn and bank indicator, vertical speed
+          indicator, compass, navigation, communication, and engine performance
+          indicators.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Attitude indicator"
+            - "Heading indicator"
+            - "Altimeter"
+            - "Airspeed indicator"
+            - "Turn and bank indicator"
+            - "Vertical speed indicator"
+            - "Compass"
+            - "Navigation"
+            - "Communication"
+            - "Engine performance indicators"
+
+  - id: "2"
+    prompt: "Principles of Flight. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Build a model FPG-9. Get others in your troop or patrol to make their own model, then organize a competition to test the precision of flight and landing of the models."
+        - "Build a rubber-band driven balsa wood airplane. Fly the plane for 25 feet in a straight line, with a smooth landing."
+        - "Build (or obtain) a fuel-driven or battery-powered electric model aircraft or drone. Obtain The Recreational UAS Safety Test (TRUST) certification, and fly the aircraft with a successful take-off and landing."
+    children:
+      - id: "2-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    prompt: "Flight Operations. Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "Using a flight simulator software package, set a course and fly the headings you have established with a successful take-off and landing."
+        - "Under supervision, perform a preflight inspection of an aircraft."
+        - "Observe and/or participate in an aircraft maintenance activity. Describe the maintenance schedule and requirements for an aircraft of your choice."
+        - "Obtain and learn how to read an aeronautical chart. Measure a true course on the chart; correct it for magnetic variation, compass deviation, and wind drift to determine a navigational heading for an aircraft."
+        - "With your parent or guardian's permission, take a discovery flight in an aircraft. Record the date, place, type of aircraft, and duration of flight. Report on your impressions of the flight."
+    children:
+      - id: "3-notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    prompt: "Airport Operations. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - 'Visit an airport. After the visit, report on how the facilities are used, how runways are numbered, and how runways are determined to be "active."'
+        - "Visit a Federal Aviation Administration facility: Airport Traffic Control Tower (ATCT), Terminal Radar Approach Control (TRACON), Air Route Traffic Control Center (ARTCC), or Flight Standards District Office (FSDO). Report on the operation and your impressions of the facility."
+        - "Visit a military aviation facility. Learn how that facility supports defense and/or civilian activities. Report on the operation and your impressions of the facility."
+        - "Visit an aviation museum or attend an air show. Report on your impressions of the museum or show, and what you learned from the experience."
+    children:
+      - id: "4-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    intro: "Personal & Professional Aviation Opportunities. Do the following:"
+    children:
+      - id: "5a"
+        prompt: "Explain the following: the student pilot, the recreational pilot, the remote pilot, and the private pilot certificates."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Student pilot certificate"
+            - "Recreational pilot certificate"
+            - "Remote pilot certificate"
+            - "Private pilot certificate"
+      - id: "5b"
+        prompt: "Describe the benefits of the instrument rating."
+        field: { type: text_box, lines: 5 }
+      - id: "5c"
+        prompt: "Explain the following: the commercial pilot certificate, the airline transport pilot certificate, and certified flight instructor (CFI)."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Commercial pilot certificate"
+            - "Airline transport pilot certificate"
+            - "Certified flight instructor (CFI)"
+      - id: "5d"
+        prompt: >
+          Identify an Aviation Exploring Post and/or Civil Air Patrol facility in
+          your area. Learn about their activities and membership requirements.
+        field: { type: text_box, lines: 6 }
+      - id: "5e"
+        prompt: >
+          Identify three career opportunities that would use skills and knowledge
+          in aviation. Pick one and research the training, education, certification
+          requirements, experience, and expenses associated with entering the
+          field. Research the prospects for employment, starting salary, advancement
+          opportunities and career goals associated with this career. Discuss what
+          you learned with your counselor and whether you might be interested in
+          this career.
+        field: { type: text_box, lines: 10 }

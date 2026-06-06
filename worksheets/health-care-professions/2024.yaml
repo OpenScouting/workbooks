@@ -1,0 +1,150 @@
+badge:
+  name: Health Care Professions
+  slug: health-care-professions
+  requirements_revision: "2024-01-01"
+  description: >
+    Health care is delivered by a broad team of professionals, from physicians
+    and nurses to therapists, technologists, and engineers. This badge helps you
+    explore the many roles in modern medicine, what it takes to enter each
+    field, and how you might contribute to caring for others.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Select three of the professions from Group 1 listed below which interest
+      you, then complete the following. Group 1: (1) Allopathic physician
+      (MD), all specialties (2) Osteopathic physician (DO), all specialties
+      (3) Podiatrist (DPM) (4) Chiropractor (DC) (5) Nurse Practitioner (NP)
+      (6) Psychologist (PhD or PsyD) (7) Optometrist (OD) (8) Audiologist (AudD)
+    children:
+      - id: "1ab"
+        prompt: >
+          For each of the three professions you selected: (a) Briefly describe
+          to your counselor the roles these professionals play in the delivery
+          of health care. (b) Describe to your counselor the educational and
+          licensing requirements for the professionals you selected.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Profession", type: text_field }
+            - { label: "Role in delivery of health care", type: text_box, lines: 3 }
+            - { label: "Educational and licensing requirements", type: text_box, lines: 3 }
+
+  - id: "2"
+    prompt: >
+      Select three of the professions from Group 2 listed below which interest
+      you, then complete the following. Group 2: (1) Physician Assistant (PA)
+      (2) Registered Nurse (RN) (3) Certified Nurse Midwife (CNM) (4) Certified
+      Nurse Assistant (CNA) (5) Licensed Practical Nurse (LPN/LVN) (6) Nurse
+      Anesthetist (CRNA) (7) Pharmacist (PharmD) (8) Pharmacy Technician
+      (9) Emergency Medical Technician (EMT)/Paramedic
+    children:
+      - id: "2ab"
+        prompt: >
+          For each of the three professions you selected: (a) Briefly describe
+          to your counselor the roles these professionals play in the delivery
+          of health care. (b) Describe to your counselor the educational and
+          licensing requirements for the professionals you selected.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Profession", type: text_field }
+            - { label: "Role in delivery of health care", type: text_box, lines: 3 }
+            - { label: "Educational and licensing requirements", type: text_box, lines: 3 }
+
+  - id: "3"
+    prompt: >
+      Select three of the professions from Group 3 listed below which interest
+      you, then complete the following. Group 3: (1) Physical Therapist (DPT)
+      (2) Occupational Therapist (OT) (3) Orthotist/Prosthetist (4) Medical
+      Appliance Technician (5) Respiratory Therapist (RT) (6) Medical Assistant
+      (7) Dietitian (RD) (8) Speech-Language Pathologist (Speech Therapist) (SLP)
+    children:
+      - id: "3ab"
+        prompt: >
+          For each of the three professions you selected: (a) Briefly describe
+          to your counselor the roles these professionals play in the delivery
+          of health care. (b) Describe to your counselor the educational and
+          licensing requirements for the professionals you selected.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Profession", type: text_field }
+            - { label: "Role in delivery of health care", type: text_box, lines: 3 }
+            - { label: "Educational and licensing requirements", type: text_box, lines: 3 }
+
+  - id: "4"
+    prompt: >
+      Select three of the professions from Group 4 listed below which interest
+      you, then complete the following. Group 4: (1) Biomedical Engineer (BME)
+      (2) Medical Technologist (3) Phlebotomist (4) Radiology Technologist
+      (5) Sonographer (6) Medical Records Specialist (7) Cytopathologist
+      (8) Histotechnologist
+    children:
+      - id: "4ab"
+        prompt: >
+          For each of the three professions you selected: (a) Briefly describe
+          to your counselor the roles these professionals play in the delivery
+          of health care. (b) Describe to your counselor the educational and
+          licensing requirements for the professionals you selected.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Profession", type: text_field }
+            - { label: "Role in delivery of health care", type: text_box, lines: 3 }
+            - { label: "Educational and licensing requirements", type: text_box, lines: 3 }
+
+  - id: "5"
+    prompt: >
+      Select one career from any of the lists in Requirements 1, 2, 3, or 4 and
+      arrange to visit that professional at their workplace. Discuss with your
+      counselor the following:
+    children:
+      - id: "5a"
+        prompt: "Why did they choose their particular career?"
+        field: { type: text_box, lines: 4 }
+      - id: "5b"
+        prompt: "What do they most like about their job?"
+        field: { type: text_box, lines: 4 }
+      - id: "5c"
+        prompt: "What are their biggest challenges in doing their job?"
+        field: { type: text_box, lines: 4 }
+      - id: "5d"
+        prompt: "Identify the tools/instruments that may be used in their jobs."
+        field: { type: text_box, lines: 4 }
+      - id: "5e"
+        prompt: "What has been the most surprising aspect of their career?"
+        field: { type: text_box, lines: 4 }
+      - id: "5f"
+        prompt: "What continuing education requirements are required to maintain certification?"
+        field: { type: text_box, lines: 4 }
+
+  - id: "6"
+    prompt: >
+      Discuss with your counselor your understanding of the meaning of the
+      Physician's Oath.
+    field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    prompt: >
+      Describe the role of confidentiality between a patient and the health care
+      provider. What is HIPAA?
+    field: { type: text_box, lines: 6 }
+
+  - id: "8"
+    prompt: >
+      Identify a medical advancement or discovery that has been in the news
+      recently. Discuss with your counselor how this can affect patient care.
+    field: { type: text_box, lines: 6 }
+
+  - id: "9"
+    prompt: >
+      With your parent or guardian's and counselor's approval, serve as a
+      volunteer at a health-related event or facility in your community (e.g.
+      blood drive, health fair, blood pressure screening event). Report to your
+      counselor what you did and learned from the experience.
+    field: { type: text_box, lines: 8 }

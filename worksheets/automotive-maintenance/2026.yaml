@@ -1,0 +1,259 @@
+badge:
+  name: Automotive Maintenance
+  slug: automotive-maintenance
+  requirements_revision: "2026-01-01"
+  description: >
+    The Automotive Maintenance merit badge teaches you how the systems of a car
+    or truck work and how to keep a vehicle running safely. You will learn to
+    check fluids, tires, brakes, and electrical systems, and explore the costs and
+    careers of vehicle ownership.
+
+requirements:
+  - id: "1"
+    intro: "Safety and Registration. Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the hazards you are most likely to encounter
+          during automotive maintenance activities, and what you should do to
+          anticipate, help prevent, mitigate, or lessen these hazards.
+        field: { type: text_box, lines: 7 }
+      - id: "1b"
+        prompt: >
+          Discuss with your counselor the safety equipment, tools, and clothing
+          used while checking or repairing a motor vehicle. Use this equipment,
+          tools, and/or clothing (when needed or called for) in meeting the
+          requirements for this merit badge.
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: "Explain the different ways motor vehicles are powered."
+        field: { type: text_box, lines: 5 }
+      - id: "1d"
+        prompt: "Explain the safety considerations when performing maintenance on a vehicle equipped with a high-voltage electrical system."
+        field: { type: text_box, lines: 5 }
+      - id: "1e"
+        prompt: "Review the maintenance chart in the vehicle owner's manual. Explain the requirements and time limits."
+        field: { type: text_box, lines: 6 }
+      - id: "1f"
+        prompt: "Explain the purpose, importance, and limitations of safety belts and passive restraints."
+        field: { type: text_box, lines: 5 }
+      - id: "1g"
+        prompt: >
+          Find out the requirements for your state's emissions and safety
+          inspections (as applicable), including how often a vehicle needs to be
+          inspected.
+        field: { type: text_box, lines: 5 }
+      - id: "1h"
+        prompt: >
+          Explain the importance of registering a vehicle and find out the annual
+          registration fee for renewing your family car's registration.
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    intro: "General Maintenance. Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Demonstrate how to check the following:"
+        field:
+          type: checklist
+          items:
+            - "Brake fluid"
+            - "Engine oil"
+            - "Coolant"
+            - "Power steering fluid"
+            - "Windshield washer fluid"
+            - "Transmission fluid"
+            - "Battery fluid (if possible) and condition of the battery terminals"
+      - id: "2b"
+        prompt: >
+          Locate the fuse boxes; determine the type and size of fuses. Demonstrate
+          the proper replacement of burned-out fuses.
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: "Demonstrate how to check the condition and tension of belts and hoses."
+        field: { type: checkbox, label: "Demonstrated how to check the condition and tension of belts and hoses." }
+      - id: "2d"
+        prompt: >
+          Check the vehicle for proper operation of its lights, including the
+          interior overhead lights, instrument lights, warning lights, and exterior
+          bulbs.
+        field: { type: checkbox, label: "Checked the vehicle's lights for proper operation." }
+      - id: "2e"
+        prompt: "Locate and check the air filter(s)."
+        field: { type: checkbox, label: "Located and checked the air filter(s)." }
+
+  - id: "3"
+    intro: "Dashboard/Driver Information Center. Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Explain the function of the fuel gauge, speedometer, tachometer, oil
+          pressure, and engine temperature gauge. Point each one out on the
+          instrument cluster.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels: ["Fuel gauge", "Speedometer", "Tachometer", "Oil pressure", "Engine temperature gauge"]
+      - id: "3b"
+        prompt: >
+          Explain the symbols that light up on the dashboard and the difference
+          between the yellow and red symbols. Explain each of the indicators on the
+          dashboard, using the owner's manual if necessary.
+        field: { type: text_box, lines: 7 }
+      - id: "3c"
+        prompt: >
+          Explain the messages and alerts that may be displayed on the dashboard/
+          driver information center including maintenance-related reminders.
+        field: { type: text_box, lines: 5 }
+
+  - id: "4"
+    intro: "Tires. Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Explain the difference between tire manufacturer's and vehicle manufacturer's specifications and show where to find them."
+        field: { type: text_box, lines: 5 }
+      - id: "4b"
+        prompt: >
+          Demonstrate how to check tire pressure and properly inflate a tire. Check
+          the spare tire and make sure it is ready for use.
+        field: { type: checkbox, label: "Demonstrated checking tire pressure, inflating a tire, and checking the spare." }
+      - id: "4c"
+        prompt: >
+          Explain why wheel alignment is important to the life of a tire. Explain
+          caster, camber, and toe-in adjustments on wheel alignment.
+        field: { type: text_box, lines: 6 }
+      - id: "4d"
+        prompt: "Explain the purpose of the lateral-wear bar indicator."
+        field: { type: text_box, lines: 4 }
+      - id: "4e"
+        prompt: "Explain how to dispose of old tires in accordance with local laws and regulations."
+        field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    intro: "Engine. Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          Explain how an internal combustion engine operates. Tell the differences
+          between gasoline and diesel engines. Explain how a gasoline-electric
+          hybrid vehicle is powered.
+        field: { type: text_box, lines: 8 }
+      - id: "5b"
+        prompt: "Discuss the purpose of engine oil. Explain the API service code, the SAE number, and the viscosity rating."
+        field: { type: text_box, lines: 6 }
+      - id: "5c"
+        prompt: "Explain where to find the recommended oil type and the amount of oil to be used in the vehicle engine."
+        field: { type: text_box, lines: 4 }
+
+  - id: "6"
+    intro: "Cooling System. Do the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Explain the need for coolant in the cooling system, and the importance of
+          selecting the correct coolant type for a given vehicle.
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: >
+          Explain how to flush and change the engine coolant in the vehicle, and
+          how to properly dispose of the used coolant.
+        field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    intro: "Fuel System. Do the following:"
+    children:
+      - id: "7a"
+        prompt: "Explain how the air and fuel systems work together and why it is necessary to have an air filter and fuel filter."
+        field: { type: text_box, lines: 6 }
+      - id: "7b"
+        prompt: "Explain how a fuel injection system works and how an onboard computer works with the fuel injection system."
+        field: { type: text_box, lines: 6 }
+
+  - id: "8"
+    intro: "Ignition and Electrical Systems. Do the following:"
+    children:
+      - id: "8a"
+        prompt: "Diagram and explain the parts of one of the following electrical systems:"
+        field:
+          type: checklist
+          items:
+            - "Starting/charging system"
+            - "Hybrid or electric vehicle inverter"
+            - "Lighting system"
+      - id: "8a-diagram"
+        prompt: "Diagram and explanation of your chosen electrical system"
+        field: { type: text_box, lines: 8 }
+      - id: "8b"
+        prompt: "Explain the engine's firing order."
+        field: { type: text_box, lines: 4 }
+      - id: "8c"
+        prompt: "Explain the purpose of the spark gap."
+        field: { type: text_box, lines: 4 }
+      - id: "8d"
+        prompt: "Demonstrate how to safely connect jumper cables to your car battery."
+        field: { type: checkbox, label: "Demonstrated how to safely connect jumper cables to a car battery." }
+      - id: "8e"
+        prompt: >
+          Discuss with your counselor what factors can affect range on an
+          electrified vehicle. Explain the procedure for recharging an electric or
+          plug-in hybrid vehicle.
+        field: { type: text_box, lines: 6 }
+      - id: "8f"
+        prompt: "Explain what other vehicle systems are dependent on a reliable electrical system."
+        field: { type: text_box, lines: 5 }
+
+  - id: "9"
+    intro: "Drive Train. Do the following:"
+    children:
+      - id: "9a"
+        prompt: "Diagram the drive train and explain the different parts."
+        field: { type: text_box, lines: 8 }
+      - id: "9b"
+        prompt: "Explain the difference between automatic and standard transmissions."
+        field: { type: text_box, lines: 5 }
+      - id: "9c"
+        prompt: "Explain the types of automatic transmission fluid."
+        field: { type: text_box, lines: 4 }
+      - id: "9d"
+        prompt: "Explain the types of lubricants used in a standard transmission, and in the differential and transfer case."
+        field: { type: text_box, lines: 5 }
+      - id: "9e"
+        prompt: "Explain the difference between front-wheel, rear-wheel, and four-wheel drive."
+        field: { type: text_box, lines: 5 }
+
+  - id: "10"
+    intro: "Brake System. Do the following:"
+    children:
+      - id: "10a"
+        prompt: "Explain the brake system (including antilock systems) and how it operates."
+        field: { type: text_box, lines: 6 }
+      - id: "10b"
+        prompt: "Explain the differences between disc and drum brake systems."
+        field: { type: text_box, lines: 5 }
+      - id: "10c"
+        prompt: >
+          Demonstrate how to check the condition of a vehicle's brake system. After
+          checking, make recommendations for repairs (if necessary).
+        field: { type: text_box, lines: 6 }
+
+  - id: "11"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "Determine the value of three different vehicles you are interested in purchasing. One must be new and one must be used; the third vehicle can be new or used. For each vehicle, find out the requirements and cost of automobile insurance to include basic liability and options for collision, comprehensive, towing, and rental car. Using the three vehicles you chose and with your counselor's assistance, complete the operation/maintenance chart provided in the Automotive Maintenance merit badge pamphlet. Use this information to determine the operating cost per mile for each vehicle, and discuss what you learn with your counselor."
+        - "Choose a car cleaner and wax product for a vehicle you want to clean. Explain clear-coat paint and the precautions necessary for care. Clean the vehicle, both inside and out, and wax the exterior. Use a vinyl and rubber protectant (on vinyl tops, rubber door seals, sidewalls, etc.) and explain the importance of this protectant."
+        - "Locate the manufacturer's jack. Use the jack to demonstrate how to engage the jack correctly on the vehicle, then change a tire correctly."
+        - "Perform an oil filter and oil change on a vehicle. Explain how to properly dispose of the used oil and filter."
+    children:
+      - id: "11-notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 10 }
+
+  - id: "12"
+    prompt: >
+      Find out about three career opportunities in the automotive industry. Pick
+      one and find out the education, training, and experience required for this
+      profession. Discuss this with your counselor, and explain why this profession
+      might interest you.
+    field: { type: text_box, lines: 8 }

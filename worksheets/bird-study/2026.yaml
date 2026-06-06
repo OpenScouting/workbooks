@@ -1,0 +1,206 @@
+badge:
+  name: Bird Study
+  slug: bird-study
+  requirements_revision: "2026-01-01"
+  description: >
+    Bird Study introduces you to the field of ornithology. You learn to
+    identify birds by sight and sound, understand their role in the ecosystem,
+    and observe and record them in the field while practicing good outdoor
+    ethics.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Explain the need for bird study and why birds are useful indicators of
+      the quality of the environment. Describe how birds are part of the
+      ecosystem.
+    field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    prompt: "Show that you are familiar with the terms used to describe birds by doing the following:"
+    children:
+      - id: "2a"
+        prompt: "Sketch or trace a perched bird and then label 15 different parts of the bird."
+        field: { type: text_box, lines: 10 }
+      - id: "2b"
+        prompt: "Sketch or trace an extended wing and label six types of wing feathers."
+        field: { type: text_box, lines: 10 }
+
+  - id: "3"
+    prompt: >
+      Demonstrate that you know how to properly use and care for binoculars, a
+      spotting scope, or a monocular.
+    children:
+      - id: "3a"
+        prompt: "Explain what the specification numbers mean on binoculars, a spotting scope, or a monocular."
+        field: { type: text_box, lines: 5 }
+      - id: "3b"
+        prompt: "Show how to adjust the eyepiece and how to focus for proper viewing."
+        field: { type: text_box, lines: 4 }
+      - id: "3c"
+        prompt: "Show how to properly care for and clean the lenses."
+        field: { type: text_box, lines: 4 }
+      - id: "3d"
+        prompt: "Describe when and where each type of viewing device would be most effective."
+        field: { type: text_box, lines: 5 }
+
+  - id: "4"
+    prompt: >
+      Demonstrate that you know how to use a bird field guide. Show your
+      counselor that you are able to understand a range map by locating in the
+      book and pointing out the wintering range, the breeding range, and/or the
+      year-round range of one species of each of the following types of birds:
+    field:
+      type: labeled_rows
+      lines_each: 1
+      labels:
+        - Seabird
+        - Plover
+        - Falcon or hawk
+        - Warbler or vireo
+        - Heron or egret
+        - Sparrow
+
+  - id: "5"
+    prompt: >
+      Observe and be able to identify 20 species of wild birds. Prepare a field
+      notebook, making a separate entry for each species, and record the
+      following information from your field observations and other references.
+    children:
+      - id: "5notes"
+        prompt: >
+          For each species, note the date and time; the location and habitat;
+          the bird's main feeding habitat and two types of food it is likely to
+          eat; and whether the bird is a migrant or a summer, winter, or
+          year-round resident of your area.
+        field:
+          type: table
+          headers: ["Species", "Date / time", "Location / habitat", "Feeding habitat & two foods", "Migrant or resident"]
+          rows: 20
+          cols: 5
+
+  - id: "6"
+    prompt: >
+      Describe to your counselor how certain orders of birds are uniquely
+      adapted to a specific habitat. In your description, include
+      characteristics such as the size and shape of the following:
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels:
+        - Beak
+        - Body
+        - Leg and foot
+        - Feathers/plumage
+
+  - id: "7"
+    prompt: >
+      Explain the function of a bird's song. Be able to identify five of the 20
+      species in your field notebook by song or call alone. Explain the
+      difference between songs and calls. For each of these five species, enter
+      a description of the song or call, and note the behavior of the bird
+      making the sound. Note why you think the bird was making the call or song
+      that you heard.
+    children:
+      - id: "7explain"
+        prompt: "Explain the function of a bird's song and the difference between songs and calls."
+        field: { type: text_box, lines: 6 }
+      - id: "7species"
+        prompt: >
+          For each of the five species you identify by song or call alone,
+          describe the song or call, the behavior of the bird, and why you think
+          the bird was making the sound.
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Species", type: text_field }
+            - { label: "Description of song/call", type: text_box, lines: 2 }
+            - { label: "Behavior & likely reason", type: text_box, lines: 2 }
+
+  - id: "8"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Go on a field trip with a local club or with others who are knowledgeable about birds in your area, keeping a list of birds observed, telling your counselor which birds your group saw and why some species were common or uncommon, and telling what makes the area good for finding birds."
+        - "(b) By using a public library, the internet, or contacting the National Audubon Society, find the name and location of the Christmas Bird Count nearest your home, obtain a recent count's results, and explain what information is collected, which species are most common and why, and which species are uncommon and why."
+        - "(c) Participate in a bird banding program with an approved federal or state agency, university researcher, bird observatory, or certified private individual, and explain who is able to band birds and why, why birds get banded, what kinds of birds get banded, and tell how the birds were captured, the number of species recorded, and your role."
+    children:
+      - id: "8notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "9"
+    prompt: >
+      Do ONE of the following. For the item you choose, describe what birds you
+      hope to attract, and why. Describe the necessary maintenance required with
+      the item that you choose.
+    field:
+      type: checklist
+      items:
+        - "(a) Build a bird feeder and put it in an appropriate place in your yard or another location."
+        - "(b) Build a birdbath and put it in an appropriate place."
+        - "(c) Build a backyard sanctuary for birds by planting trees and shrubs for food and cover."
+        - "(d) Build a nest box for a species of your choice using plans approved by your counselor."
+        - "(e) Describe the elements of a backyard bird habitat for a given area and draw a plan for one, including lists of birds you hope to attract, appropriate plantings for food, cover, and nesting."
+    children:
+      - id: "9notes"
+        prompt: "Describe the birds you hope to attract and why, and the maintenance required."
+        field: { type: text_box, lines: 8 }
+
+  - id: "10"
+    intro: "Do the following:"
+    children:
+      - id: "10a"
+        prompt: "Explain the differences between extinct, endangered, and threatened."
+        field: { type: text_box, lines: 5 }
+      - id: "10b"
+        prompt: >
+          Identify a bird species that is on the endangered or threatened list.
+          Explain what caused their decline. Discuss with your counselor what
+          can be done to reverse this trend and what can be done to help remove
+          the species from the endangered or threatened list.
+        field: { type: text_box, lines: 8 }
+      - id: "10c"
+        prompt: >
+          Explain how we can address birds that are in decline before they get
+          to an endangered or threatened list. List how we can protect habitat.
+          Identify threats that migratory birds face and how to protect food
+          supply for birds.
+        field: { type: text_box, lines: 8 }
+
+  - id: "11"
+    prompt: >
+      Identify a non-native bird (introduced to North America from a foreign
+      country since 1800). Describe how non-native birds may become damaging to
+      the ecosystem.
+    field: { type: text_box, lines: 6 }
+
+  - id: "12"
+    prompt: >
+      Discuss the importance of the Leave No Trace Seven Principles and the
+      Outdoor Code as they relate to bird study. Explain how you have followed
+      the Leave No Trace Seven Principles and the Outdoor Code while in natural
+      areas during field observation, specimen collection, and identification.
+    field: { type: text_box, lines: 8 }
+
+  - id: "13"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Identify three career opportunities that would use skills and knowledge in Bird Study. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career."
+        - "(b) Identify how you might use the skills and knowledge in Bird Study to pursue a personal hobby. Research the additional training required, expenses, and affiliation with organizations that would help you maximize the enjoyment and benefit you might gain from it. Discuss what you learned with your counselor and share what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "13notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

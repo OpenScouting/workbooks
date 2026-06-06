@@ -1,0 +1,77 @@
+badge:
+  name: Moviemaking
+  slug: moviemaking
+  requirements_revision: "2026-01-01"
+  description: >
+    Moviemaking is visual storytelling. Earning this badge, you learn the
+    techniques behind good motion pictures, plan a story with a treatment and
+    storyboard, and shoot and present a program of your own.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Discuss and demonstrate the proper elements of a good motion picture. In
+      your discussion, include visual storytelling, rhythm, the 180-axis rule,
+      camera movement, framing and composition of camera shots, and lens
+      selection.
+    field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          In a three- or four-paragraph treatment, tell the story you plan to
+          produce, making sure that the treatment conveys a visual picture.
+        field: { type: text_box, lines: 10 }
+      - id: "2b"
+        prompt: >
+          Prepare a storyboard for your motion picture. Note: This can be done with
+          rough sketches and stick figures.
+        field: { type: checkbox, label: "Prepared a storyboard for your motion picture." }
+      - id: "2c"
+        prompt: "Demonstrate the following motion picture shooting techniques:"
+        field:
+          type: checklist
+          items:
+            - "(1) Using a tripod"
+            - "(2) Panning a camera"
+            - "(3) Framing a shot"
+            - "(4) Selecting an angle"
+            - "(5) Selecting proper lighting"
+            - "(6) Handheld shooting"
+      - id: "2d"
+        prompt: >
+          Using motion picture shooting techniques, plan ONE of the following
+          programs. Start with a treatment and complete the requirement by
+          presenting this program to a pack or your troop, patrol, or class.
+        field:
+          type: checklist
+          items:
+            - "(1) Film a court of honor and show it to an audience."
+            - "(2) Create a short feature of your own design, using the techniques you learned."
+            - "(3) Shoot a vignette that could be used to train a new Scout in a Scouting skill."
+
+  - id: "3"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) With your parent or guardian's permission and your counselor's approval, visit a film set or television production studio and watch how production work is done."
+        - "(b) Explain to your counselor the elements of the zoom lens and three important parts."
+    children:
+      - id: "3-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Explore careers related to this merit badge. Research one career to learn about the training and education needed, costs, job prospects, salary, job duties, and career advancement. Your research methods may include, with your parent or guardian's permission, an internet or library search, an interview with a professional in the field, or a visit to a location where people in this career work. Discuss with your counselor both your findings and what about this profession might make it an interesting career."
+        - "(b) Explore how you could use knowledge and skills from this merit badge to pursue a hobby or healthy lifestyle. Research any training needed, expenses, and organizations that promote or support it. Discuss with your counselor what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "4-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }

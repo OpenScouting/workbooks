@@ -1,0 +1,116 @@
+badge:
+  name: Entrepreneurship
+  slug: entrepreneurship
+  requirements_revision: "2014-01-01"
+  description: >
+    Entrepreneurship walks you through turning a business idea into a real plan.
+    You will study the skills entrepreneurs rely on, interview a business owner,
+    and write a complete business plan for an idea of your own.
+
+requirements:
+  - id: "1"
+    prompt: "In your own words, define entrepreneurship. Explain to your counselor how entrepreneurs impact the U.S. economy."
+    field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    prompt: >
+      Explain to your counselor why having good skills in the following areas
+      are important for an entrepreneur: communication, planning, organization,
+      problem solving, decision making, basic math, adaptability, technical and
+      social skills, teamwork, and leadership.
+    field: { type: text_box, lines: 10 }
+
+  - id: "3"
+    prompt: >
+      Identify and interview an individual who has started a business. Learn
+      about this person's educational background, early work experiences, where
+      the idea for the business came from, and what was involved in starting the
+      business. Find out how the entrepreneur raised the capital (money) to
+      start the business, examples of successes and challenges faced, and how
+      the business is currently doing (if applicable). Discuss with your
+      counselor what you have learned.
+    field: { type: text_box, lines: 12 }
+
+  - id: "4"
+    prompt: >
+      Think of as many ideas for a business as you can, and write them down.
+      From your list, select three ideas you believe represent the best
+      opportunities. Choose one of these and explain to your counselor why you
+      selected it and why you feel it can be successful.
+    field: { type: text_box, lines: 10 }
+
+  - id: "5"
+    prompt: "Create a written business plan for your idea that includes all of the following:"
+    children:
+      - id: "5a"
+        prompt: "Product or Service"
+        children:
+          - id: "5a1"
+            prompt: "Describe the product or service to be offered."
+            field: { type: text_box, lines: 5 }
+          - id: "5a2"
+            prompt: "Identify goals for your business."
+            field: { type: text_box, lines: 4 }
+          - id: "5a3"
+            prompt: "Explain how you can make enough of the product or perform the service to meet your goals."
+            field: { type: text_box, lines: 5 }
+          - id: "5a4"
+            prompt: "Identify and describe the potential liability risks for your product or service."
+            field: { type: text_box, lines: 5 }
+          - id: "5a5"
+            prompt: "Determine what type of license, if any, you might need in order to sell or make your product or service."
+            field: { type: text_box, lines: 4 }
+      - id: "5b"
+        prompt: "Market Analysis"
+        children:
+          - id: "5b1"
+            prompt: "Identify the types of people who would buy your product or service."
+            field: { type: text_box, lines: 4 }
+          - id: "5b2"
+            prompt: "Identify your business's competitors, and describe their strengths and weaknesses."
+            field: { type: text_box, lines: 6 }
+          - id: "5b3"
+            prompt: "Describe what makes your product or service unique."
+            field: { type: text_box, lines: 4 }
+      - id: "5c"
+        prompt: "Financial"
+        children:
+          - id: "5c1"
+            prompt: "Determine how much money you will need to start your business, and identify how you will obtain the money."
+            field: { type: text_box, lines: 5 }
+          - id: "5c2"
+            prompt: "Determine the cost of offering your product or service and the price you will charge in order to make a profit."
+            field: { type: text_box, lines: 5 }
+          - id: "5c3"
+            prompt: "Describe what will happen with the money you make from the sales of your product or service."
+            field: { type: text_box, lines: 4 }
+      - id: "5d"
+        prompt: "Personnel"
+        children:
+          - id: "5d1"
+            prompt: "Determine what parts of the business you will handle yourself, and describe your qualifications."
+            field: { type: text_box, lines: 5 }
+          - id: "5d2"
+            prompt: "Determine whether you will need additional help to operate your business. If you will need help, describe the responsibilities and qualifications needed for the personnel who will fill each role."
+            field: { type: text_box, lines: 6 }
+      - id: "5e"
+        prompt: "Promotion and Marketing"
+        children:
+          - id: "5e1"
+            prompt: "Describe the methods you will use to promote your business to potential customers."
+            field: { type: text_box, lines: 5 }
+          - id: "5e2"
+            prompt: "Explain how you will utilize the internet and social media to increase awareness of your product or service."
+            field: { type: text_box, lines: 5 }
+          - id: "5e3"
+            prompt: "Design a promotional flyer or poster for your product or service."
+            field: { type: checkbox, label: "Designed a promotional flyer or poster for your product or service." }
+
+  - id: "6"
+    prompt: >
+      When you believe your business idea is feasible, imagine your business
+      idea is now up and running. What successes and problems might you
+      experience? How would you overcome any failures? Discuss with your
+      counselor any ethical questions you might face and how you would deal with
+      them.
+    field: { type: text_box, lines: 10 }

@@ -1,0 +1,89 @@
+badge:
+  name: Leatherwork
+  slug: leatherwork
+  requirements_revision: "2017-01-01"
+  description: >
+    Leatherwork is a craft with deep roots, turning raw hides into useful and
+    beautiful objects. Earning this badge, you learn where leather comes from,
+    work it safely with traditional tools, and create articles of your own.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the hazards you are most likely to encounter
+          while using leatherwork tools and materials, and what you should do to
+          anticipate, help prevent, mitigate, or lessen these hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Show that you know first aid for injuries or illnesses that could occur
+          while working with leather, including minor cuts and scratches,
+          puncture wounds, ingested poisoning, and reactions from exposure to
+          chemicals such as dyes, cements, and finishes used in leatherworking.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Minor cuts and scratches
+            - Puncture wounds
+            - Ingested poisoning
+            - Reactions from exposure to chemicals
+
+  - id: "2"
+    intro: "Explain the following:"
+    children:
+      - id: "2a"
+        prompt: "Where leather comes from"
+        field: { type: text_box, lines: 4 }
+      - id: "2b"
+        prompt: "Kinds of hides that are used to make leather"
+        field: { type: text_box, lines: 4 }
+      - id: "2c"
+        prompt: "Five types of leather"
+        field:
+          type: table
+          headers: ["Type of leather", "Best uses for this type"]
+          rows: 5
+          cols: 2
+      - id: "2d"
+        prompt: "Best uses for each type of leather"
+        notes:
+          - "Record the best uses alongside each type in the table for requirement 2(c)."
+        field: { type: checkbox, label: "Discussed the best uses for each type of leather with your counselor." }
+
+  - id: "3"
+    prompt: >
+      Make one or more articles of leather that use at least five of the
+      following steps:
+    field:
+      type: checklist
+      items:
+        - "Pattern layout and transfer"
+        - "Cutting leather"
+        - "Punching holes"
+        - "Carving or stamping surface designs"
+        - "Applying dye or stain and finish to the project"
+        - "Assembly by lacing or stitching"
+        - "Setting snaps and rivets"
+        - "Dressing edges"
+
+  - id: "4"
+    prompt: "Braid or plait an article out of leather, vinyl lace, or paracord."
+    field: { type: checkbox, label: "Braided or plaited an article out of leather, vinyl lace, or paracord." }
+
+  - id: "5"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Learn about the commercial tanning process. Report about it to your counselor."
+        - "(b) Tan the skin of a small animal. Describe the safety precautions you will take and the tanning method that you used."
+        - "(c) Recondition or show that you can take proper care of your shoes, a baseball glove, a saddle, furniture, or other articles of leather. Discuss with your counselor the advantages or disadvantages of leather vs. synthetic materials."
+        - "(d) Visit a leather-related business. This could be a leathercraft supply company, a tannery, a leather goods or shoe factory, or a saddle shop. Report on your visit to your counselor."
+    children:
+      - id: "5-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }

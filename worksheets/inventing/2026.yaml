@@ -1,0 +1,141 @@
+badge:
+  name: Inventing
+  slug: inventing
+  requirements_revision: "2026-01-01"
+  description: >
+    Inventing turns a problem into an opportunity and an idea into something
+    real. This badge walks you through the whole inventive process, from
+    understanding intellectual property to designing, building, and testing a
+    working prototype of your own invention.
+
+requirements:
+  - id: "1"
+    prompt: "In your own words, define inventing. Then do the following:"
+    children:
+      - id: "1-define"
+        prompt: "Your definition of inventing"
+        field: { type: text_box, lines: 4 }
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the role of inventors and their inventions
+          in the economic development of the United States.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: "List three inventions and state how they have helped humankind."
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Invention", type: text_field }
+            - { label: "How it has helped humankind", type: text_box, lines: 3 }
+
+  - id: "2"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "With your parent or guardian's permission and counselor's approval, interview an adult who has invented a useful item or process. Report what you learned to your counselor."
+        - "Read about three inventors. Select the one you find most interesting and tell your counselor what you learned."
+    children:
+      - id: "2-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Define the term intellectual property. Explain which government
+          agencies oversee the protection of intellectual property, the types of
+          intellectual property that can be protected, how such property is
+          protected, and why protection is necessary.
+        field: { type: text_box, lines: 8 }
+      - id: "3b"
+        prompt: "Explain the components of a patent and the different types of patents available."
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: >
+          Examine your Scouting gear and find a patent number on a camping item
+          you have used. With your parent or guardian's permission, use the
+          internet to find out more about that patent. Compare the finished item
+          with the claims and drawings in the patent. Report what you learned to
+          your counselor.
+        field: { type: text_box, lines: 8 }
+      - id: "3d"
+        prompt: "Explain to your counselor the term patent infringement."
+        field: { type: text_box, lines: 5 }
+
+  - id: "4"
+    prompt: >
+      Discuss with your counselor the types of inventions that are appropriate
+      to share with others, and explain why. Tell your counselor about one
+      unpatented invention and its impact on society.
+    field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Choose a commercially available product that you have used on an overnight
+      camping trip with your troop. Make recommendations for improving the
+      product, and make a sketch that shows your recommendations. Discuss your
+      recommendations with your counselor.
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: >
+      Think of an item you would like to invent that would solve a problem for
+      your family, troop, chartered organization, community, or a
+      special-interest group. Then do the following, while keeping a notebook to
+      record your progress.
+    children:
+      - id: "6a"
+        prompt: >
+          Talk to potential users of your invention and determine their needs.
+          Then, based on what you have learned, write a statement describing the
+          invention and how it would help solve a problem. This statement should
+          include a detailed sketch of the invention.
+        field: { type: text_box, lines: 10 }
+      - id: "6b"
+        prompt: >
+          Create a model of the invention using clay, cardboard, or any other
+          readily available material. List the materials necessary to build a
+          working prototype of the invention.
+        field: { type: text_box, lines: 8 }
+      - id: "6c"
+        prompt: >
+          Share the idea and the model with your counselor and potential users
+          of your invention. Record their feedback in your notebook.
+        field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Build a working prototype of the item you invented for requirement 6. Test
+      and evaluate the invention. Among the aspects to consider in your
+      evaluation are cost, usefulness, marketability, appearance, and function.
+      Describe how your original vision and expectations for your invention are
+      similar or dissimilar to the prototype you built. Have your counselor
+      evaluate and critique your prototype. Note: Before you begin building the
+      prototype, you must have your counselor's approval, based on the design and
+      building plans you have already shared.
+    field: { type: text_box, lines: 10 }
+
+  - id: "8"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Participate with a club or team (robotics team, science club, or engineering club) that builds a useful item. Share your experience with your counselor."
+        - "Visit a museum or exhibit dedicated to an inventor or invention, and create a presentation of your visit to share with a group such as your troop or patrol."
+    children:
+      - id: "8-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "9"
+    prompt: >
+      Discuss with your counselor the diverse skills, education, training, and
+      experience it takes to be an inventor. Discuss how you can prepare yourself
+      to be creative and inventive to solve problems at home, in school, and in
+      your community. Discuss three career fields that might utilize the skills
+      of an inventor.
+    field: { type: text_box, lines: 10 }

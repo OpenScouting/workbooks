@@ -1,0 +1,52 @@
+[tools]
+python = "3.11"
+
+# Auto-create and activate a project-local venv when entering this directory.
+[env]
+_.python.venv = { path = ".venv", create = true }
+
+# ---- Tasks ----------------------------------------------------------------
+# Run with:  mise run <task>     (or:  mise r <task>)
+# List with: mise tasks
+
+[tasks.install]
+description = "Install package + test extras into the venv"
+run = "pip install -q -e '.[test]' && touch .venv/.deps-installed"
+sources = ["pyproject.toml"]
+outputs = [".venv/.deps-installed"]
+
+[tasks.validate]
+description = "Validate every YAML in badges/ against the schema"
+depends = ["install"]
+run = "worksheets validate worksheets/"
+
+[tasks.build]
+description = "Build one badge's latest revision: mise run build <slug> (default camping)"
+depends = ["install"]
+run = '''
+slug="{{arg(name="slug", default="camping")}}"
+name=$(echo "$slug" | sed -E 's/(^|-)([a-z])/\1\U\2/g')
+worksheets build "worksheets/$slug" -o "dist/${name}.pdf"
+'''
+
+[tasks."build-all"]
+description = "Build every badge YAML in badges/ to dist/"
+depends = ["install"]
+run = "worksheets build-all worksheets/ -o dist/"
+
+[tasks.test]
+description = "Run the pytest suite"
+depends = ["install"]
+run = "pytest -q"
+
+[tasks.check]
+description = "Full local CI — validate, build all PDFs, run tests"
+depends = ["validate", "build-all", "test"]
+
+[tasks.clean]
+description = "Remove generated PDFs, caches, and install marker"
+run = """
+rm -rf dist/ .pytest_cache .venv/.deps-installed
+find . -type d -name __pycache__ -prune -exec rm -rf {} +
+find . -type d -name '*.egg-info' -prune -exec rm -rf {} +
+"""

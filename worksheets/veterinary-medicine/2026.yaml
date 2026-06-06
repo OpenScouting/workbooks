@@ -1,0 +1,105 @@
+badge:
+  name: Veterinary Medicine
+  slug: veterinary-medicine
+  requirements_revision: "2026-01-01"
+  description: >
+    Veterinarians care for animals of every kind and protect public health.
+    Scouts explore the many roles veterinarians play, the training the
+    profession requires, the human-animal bond, and the careers open to those
+    who want to work with animals.
+
+requirements:
+  - id: "1"
+    intro: "Discuss with your counselor the roles a veterinarian plays in the following:"
+    children:
+      - id: "1a"
+        prompt: "Companion or small animal medicine, and equine medicine"
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: "Food animal or large animal medicine"
+        field: { type: text_box, lines: 5 }
+      - id: "1c"
+        prompt: "Exotic animal medicine"
+        field: { type: text_box, lines: 5 }
+      - id: "1d"
+        prompt: "Marine animal medicine (mammal and fish)"
+        field: { type: text_box, lines: 5 }
+      - id: "1e"
+        prompt: "Poultry medicine"
+        field: { type: text_box, lines: 5 }
+      - id: "1f"
+        prompt: "Wildlife medicine and aquaculture medicine"
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    intro: "Discuss with your counselor the roles a veterinarian plays in the following:"
+    children:
+      - id: "2a"
+        prompt: "Public health medicine and zoonotic disease surveillance and control"
+        field: { type: text_box, lines: 5 }
+      - id: "2b"
+        prompt: "The military"
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: "Food safety and inspection"
+        field: { type: text_box, lines: 5 }
+      - id: "2d"
+        prompt: "Laboratory animal medicine and research"
+        field: { type: text_box, lines: 5 }
+      - id: "2e"
+        prompt: "Teaching and government"
+        field: { type: text_box, lines: 5 }
+
+  - id: "3"
+    prompt: >
+      Describe the training required to become a veterinarian. Where is the
+      veterinary medical college in your state or nearest to you? Describe the
+      prerequisites for applying to veterinary school.
+    field: { type: text_box, lines: 8 }
+
+  - id: "4"
+    prompt: >
+      Tell your counselor what a registered veterinary technician (R.V.T.) or
+      animal health technician (A.H.T.) is. Describe the training required to
+      become an R.V.T. or A.H.T. Where is the school or facility for R.V.T. or
+      A.H.T training in your state or nearest to you? Describe the role an R.V.T.
+      or A.H.T. would play in assisting a veterinarian working in three of the
+      practice types listed in requirement 1.
+    field: { type: text_box, lines: 10 }
+
+  - id: "5"
+    prompt: >
+      Discuss with your counselor the role a veterinarian plays in the
+      human-animal bond.
+    field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Visit a veterinary clinic, hospital, or veterinary referral teaching hospital that does work in one of the practices listed in requirement 1. Spend as much time as you can observing the veterinarians and their staff. Prepare a presentation on what you observed and learned at the facility and share with your counselor."
+        - "(b) Spend as much time as possible with a veterinarian who works in one of the fields listed in requirement 2. Learn what special training beyond veterinary medical school may have been required for that position. Learn about any special or unusual activities required of this position. Prepare a presentation and share what you have learned about this field of veterinary medicine with your counselor. Include how this field serves the needs of the general public."
+    children:
+      - id: "6-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "7"
+    intro: "Select one career from any of the lists in requirements 1 or 2. Discuss the following with your counselor:"
+    children:
+      - id: "7a"
+        prompt: "Why would one choose this particular career field?"
+        field: { type: text_box, lines: 4 }
+      - id: "7b"
+        prompt: "What would you like about this job?"
+        field: { type: text_box, lines: 4 }
+      - id: "7c"
+        prompt: "What would be the biggest challenges in doing this job?"
+        field: { type: text_box, lines: 4 }
+      - id: "7d"
+        prompt: "What to you has been the most surprising aspect of this job?"
+        field: { type: text_box, lines: 4 }
+      - id: "7e"
+        prompt: "What continuing education requirements are required to maintain certification for this job?"
+        field: { type: text_box, lines: 4 }

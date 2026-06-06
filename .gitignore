@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# Virtual envs
+.venv/
+venv/
+
+# Build output (PDFs are generated from worksheets/ via `mise run build-all`)
+dist/
+build/
+*.pdf
+
+# Local Claude Code settings (the badge-yaml skill IS committed)
+.claude/settings.local.json
+
+# Editor / OS cruft
+*.swp
+*~
+.DS_Store

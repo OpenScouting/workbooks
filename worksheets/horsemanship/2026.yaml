@@ -1,0 +1,125 @@
+badge:
+  name: Horsemanship
+  slug: horsemanship
+  requirements_revision: "2026-01-01"
+  description: >
+    Horsemanship is the art of safely handling, caring for, and riding horses.
+    Earning this badge teaches you a horse's anatomy and health, how to groom
+    and tack up, and how to ride with confidence and in harmony with your mount.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Describe the safety precautions you should take when handling and caring for a horse."
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: "Describe the fire safety precautions you should take in a barn and around horses."
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    prompt: "Name 15 parts of a horse and discuss the function of each with your counselor."
+    field:
+      type: table
+      headers: ["Part of the horse", "Function"]
+      rows: 15
+      cols: 2
+
+  - id: "3"
+    prompt: "Name four breeds of horses. Explain the special features for which each breed is known."
+    field:
+      type: repeated_block
+      count: 4
+      template:
+        - { label: "Breed", type: text_field }
+        - { label: "Special features", type: text_box, lines: 3 }
+
+  - id: "4"
+    prompt: "Describe the symptoms of colic. Name and describe four other horse health problems."
+    children:
+      - id: "4-colic"
+        prompt: "Symptoms of colic"
+        field: { type: text_box, lines: 5 }
+      - id: "4-other"
+        prompt: "Four other horse health problems"
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Health problem", type: text_field }
+            - { label: "Description", type: text_box, lines: 3 }
+
+  - id: "5"
+    prompt: >
+      Explain what conformation is and why it is important. Explain the
+      difference between lameness and unsoundness.
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: "Explain the importance of hoof care and why a horse might need to wear shoes."
+    field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    prompt: >
+      Demonstrate how to groom a horse, including picking hooves and caring for
+      a horse after a ride.
+    field: { type: text_box, lines: 6 }
+
+  - id: "8"
+    prompt: >
+      Explain how to determine what and how much to feed a horse and why the
+      amount and kind of feed are changed according to the activity level and
+      the breed of horse.
+    field: { type: text_box, lines: 8 }
+
+  - id: "9"
+    intro: "Do the following:"
+    children:
+      - id: "9a"
+        prompt: >
+          Name 10 parts of the saddle and bridle that you will use, and explain
+          how to care for this equipment.
+        field:
+          type: table
+          headers: ["Part of the saddle or bridle", "How to care for it"]
+          rows: 10
+          cols: 2
+      - id: "9b"
+        field: { type: checkbox, label: "Show how to properly saddle and bridle a horse." }
+      - id: "9c"
+        field: { type: checkbox, label: "Demonstrate how to safely mount and dismount a horse." }
+
+  - id: "10"
+    prompt: >
+      Explain and demonstrate how to approach and lead a horse safely from a
+      stall, corral, or field and how to tie the horse securely.
+    field: { type: text_box, lines: 8 }
+
+  - id: "11"
+    prompt: >
+      On level ground, continuously do the following movements after safely
+      mounting the horse. Do them correctly, at ease, and in harmony with the
+      horse.
+    field:
+      type: checklist
+      items:
+        - "Walk the horse in a straight line for 60 feet."
+        - "Walk the horse in a half-circle of not more than 16 feet in radius."
+        - "Trot or jog the horse in a straight line for 60 feet."
+        - "Trot or jog the horse in a half-circle of not more than 30 feet in radius."
+        - "Halt straight."
+        - "Back up straight four paces."
+        - "Halt and dismount."
+
+  - id: "12"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Explore careers related to this merit badge. Research one career to learn about the training and education needed, costs, job prospects, salary, job duties, and career advancement. Your research methods may include, with your parent or guardian's permission, an internet or library search, an interview with a professional in the field, or a visit to a location where people in this career work. Discuss with your counselor both your findings and what about this profession might make it an interesting career."
+        - "Explore how you could use knowledge and skills from this merit badge to pursue a hobby or healthy lifestyle. Research any training needed, expenses, and organizations that promote or support it. Discuss with your counselor what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "12-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }

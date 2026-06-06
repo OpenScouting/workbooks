@@ -1,0 +1,185 @@
+badge:
+  name: Orienteering
+  slug: orienteering
+  requirements_revision: "2013-01-01"
+  description: >
+    Orienteering is the sport of finding your way across unfamiliar terrain
+    using a map and compass. Earning this badge sharpens your navigation
+    skills, builds confidence in the outdoors, and prepares you to compete in
+    or run your own orienteering events.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Show that you know first aid for the following types of injuries that
+      could occur while orienteering: cuts, scratches, blisters, snakebite,
+      insect stings, tick bites, heat and cold reactions (sunburn, heatstroke,
+      heat exhaustion, hypothermia), dehydration. Explain to your counselor
+      why you should be able to identify poisonous plants and poisonous
+      animals that are found in your area.
+    children:
+      - id: "1a"
+        prompt: "Show that you know first aid for the following types of injuries that could occur while orienteering:"
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Cuts
+            - Scratches
+            - Blisters
+            - Snakebite
+            - Insect stings
+            - Tick bites
+            - Sunburn
+            - Heatstroke
+            - Heat exhaustion
+            - Hypothermia
+            - Dehydration
+      - id: "1b"
+        prompt: >
+          Explain to your counselor why you should be able to identify
+          poisonous plants and poisonous animals that are found in your area.
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    prompt: "Explain what orienteering is."
+    field: { type: text_box, lines: 5 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: "Explain how a compass works. Describe the features of an orienteering compass."
+        field: { type: text_box, lines: 7 }
+      - id: "3b"
+        prompt: "In the field, show how to take a compass bearing and follow it."
+        field: { type: checkbox, label: "In the field, show how to take a compass bearing and follow it." }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: >
+          Explain how a topographic map shows terrain features. Point out and
+          name five terrain features on a map and in the field.
+        field: { type: text_box, lines: 7 }
+      - id: "4b"
+        prompt: "Point out and name 10 symbols on a topographic map."
+        field: { type: text_box, lines: 5 }
+      - id: "4c"
+        prompt: >
+          Explain the meaning of declination. Tell why you must consider
+          declination when using map and compass together.
+        field: { type: text_box, lines: 6 }
+      - id: "4d"
+        prompt: "Show a topographic map with magnetic north-south lines."
+        field: { type: checkbox, label: "Show a topographic map with magnetic north-south lines." }
+      - id: "4e"
+        prompt: "Show how to measure distances on a map using an orienteering compass."
+        field: { type: checkbox, label: "Show how to measure distances on a map using an orienteering compass." }
+      - id: "4f"
+        prompt: "Show how to orient a map using a compass."
+        field: { type: checkbox, label: "Show how to orient a map using a compass." }
+
+  - id: "5"
+    prompt: >
+      Set up a 100-meter pace course. Determine your walking and running pace
+      for 100 meters. Tell why it is important to pace-count.
+    children:
+      - id: "5pace"
+        prompt: "Record your walking and running pace for 100 meters."
+        field:
+          type: table
+          headers: ["", "Number of paces for 100 meters"]
+          rows: 2
+          cols: 2
+      - id: "5why"
+        prompt: "Tell why it is important to pace-count."
+        field: { type: text_box, lines: 4 }
+
+  - id: "6"
+    intro: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Identify 20 international control description symbols. Tell the
+          meaning of each symbol.
+        field:
+          type: table
+          headers: ["Symbol", "Meaning"]
+          rows: 20
+          cols: 2
+      - id: "6b"
+        prompt: "Show a control description sheet and explain the information provided."
+        field: { type: text_box, lines: 6 }
+      - id: "6c"
+        prompt: >
+          Explain the following terms and tell when you would use them: attack
+          point, collecting feature, catching feature, aiming off, contouring,
+          reading ahead, handrail, relocation, and rough versus fine
+          orienteering.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Attack point
+            - Collecting feature
+            - Catching feature
+            - Aiming off
+            - Contouring
+            - Reading ahead
+            - Handrail
+            - Relocation
+            - Rough versus fine orienteering
+
+  - id: "7"
+    intro: "Do the following:"
+    children:
+      - id: "7a"
+        prompt: >
+          Take part in three orienteering events. One of these must be a
+          cross-country course. Note: While orienteering is primarily an
+          individual sport, Scouting America Youth Protection procedures call
+          for using the buddy system. Requirement 7(a) can be completed by
+          pairs or groups of Scouts.
+        field:
+          type: table
+          headers: ["Event", "Date", "Type of course"]
+          rows: 3
+          cols: 3
+      - id: "7b"
+        prompt: >
+          After each event, write a report with (1) a copy of the master map
+          and control description sheet, (2) a copy of the route you took on
+          the course, (3) a discussion of how you could improve your time
+          between control points, and (4) a list of your major weaknesses on
+          this course. Describe what you could do to improve.
+        field: { type: text_box, lines: 10 }
+
+  - id: "8"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - >
+          (a) Set up a cross-country course that is at least 2,000 meters long
+          with at least five control markers. Prepare the master map and
+          control description sheet.
+        - >
+          (b) Set up a score orienteering course with at least 12 control
+          points and a time limit of at least 60 minutes. Set point values for
+          each control. Prepare the master map and control description sheet.
+    children:
+      - id: "8notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "9"
+    prompt: >
+      Act as an official during an orienteering event. This may be during the
+      running of the course you set up for requirement 8.
+    field: { type: text_box, lines: 5 }
+
+  - id: "10"
+    prompt: "Teach orienteering techniques to your patrol, troop or crew."
+    field: { type: text_box, lines: 5 }

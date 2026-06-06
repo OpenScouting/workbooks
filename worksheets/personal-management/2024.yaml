@@ -1,0 +1,276 @@
+badge:
+  name: Personal Management
+  slug: personal-management
+  requirements_revision: "2024-01-01"
+  description: >
+    Personal Management is about setting goals, handling money wisely, and
+    making the most of your time. This Eagle-required badge walks you through
+    budgeting, saving and investing, managing credit, and planning projects
+    so you can take charge of your own future.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Choose an item that your family might want to purchase that is considered a major expense."
+        field: { type: text_box, lines: 3 }
+      - id: "1b"
+        prompt: >
+          Write a plan that tells how your family would save money for the
+          purchase identified in requirement 1(a).
+        field: { type: text_box, lines: 8 }
+      - id: "1b1"
+        prompt: "Discuss the plan with your counselor."
+        field: { type: checkbox, label: "Discuss the plan with your counselor." }
+      - id: "1b2"
+        prompt: "Discuss the plan with your family."
+        field: { type: checkbox, label: "Discuss the plan with your family." }
+      - id: "1b3"
+        prompt: "Discuss how other family needs must be considered in this plan."
+        field: { type: text_box, lines: 4 }
+      - id: "1c"
+        prompt: "Develop a written shopping strategy for the purchase identified in requirement 1(a)."
+        field: { type: text_box, lines: 5 }
+      - id: "1c1"
+        prompt: "Determine the quality of the item or service (using consumer publications or rating systems.)"
+        field: { type: text_box, lines: 4 }
+      - id: "1c2"
+        prompt: >
+          Comparison shop for the item. Find out where you can buy the item for
+          the best price. (Provide prices from at least two different price
+          sources.) Call around; study ads. Look for a sale or discount coupon.
+          Consider alternatives. Can you buy the item used? Should you wait for
+          a sale?
+        field:
+          type: table
+          headers: ["Price source", "Price", "Notes"]
+          rows: 4
+          cols: 3
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Prepare a budget reflecting your expected income (allowance, gifts,
+          wages), expenses, and savings for a period of 13 consecutive weeks.
+        field:
+          type: table
+          headers: ["Week", "Expected income", "Expected expenses", "Expected savings"]
+          rows: 13
+          cols: 4
+      - id: "2b"
+        prompt: "Compare expected income with expected expenses."
+        field: { type: text_box, lines: 4 }
+      - id: "2b1"
+        prompt: "If expenses exceed budget income, determine steps to balance your budget."
+        field: { type: text_box, lines: 4 }
+      - id: "2b2"
+        prompt: "If income exceeds budget expenses, state how you would use the excess money (new goal, savings)."
+        field: { type: text_box, lines: 4 }
+      - id: "2c"
+        prompt: >
+          Track and record your actual income, expenses, and savings for 13
+          consecutive weeks (the same 13-week period for which you budgeted).
+          (You may use the forms provided in the Personal Management merit
+          badge pamphlet, devise your own, or use a computer-generated
+          version). When complete, present the records showing the results to
+          your counselor.
+        field:
+          type: table
+          headers: ["Week", "Actual income", "Actual expenses", "Actual savings"]
+          rows: 13
+          cols: 4
+      - id: "2d"
+        prompt: >
+          Compare your budget with your actual income and expenses to
+          understand when your budget worked and when it did not work. With
+          your counselor, discuss what you might do differently the next time.
+        field: { type: text_box, lines: 7 }
+
+  - id: "3"
+    prompt: "Discuss with your counselor FIVE of the following concepts:"
+    field:
+      type: checklist
+      items:
+        - "(a) The emotions you feel when you receive money."
+        - "(b) Your understanding of how the amount of money you have with you affects your spending habits."
+        - >
+          (c) Your thoughts when you buy something new and your thoughts about
+          the same item three months later. Explain the concept of buyer's
+          remorse.
+        - "(d) How hunger affects you when shopping for food items (snacks, groceries)."
+        - >
+          (e) Your experience of an item you have purchased after seeing or
+          hearing advertisements for it. Did the item work as well as
+          advertised?
+        - "(f) Your understanding of what happens when you put money into a savings account."
+        - "(g) Charitable giving. Explain its purpose and your thoughts about it."
+        - "(h) What you can do to better manage your money."
+    children:
+      - id: "3notes"
+        prompt: "Notes from your chosen concepts"
+        field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    intro: "Explain the following to your counselor:"
+    children:
+      - id: "4a"
+        prompt: >
+          The differences between saving and investing, including reasons for
+          using one over the other.
+        field: { type: text_box, lines: 5 }
+      - id: "4b"
+        prompt: "The concepts of return on investment and risk and how they are related."
+        field: { type: text_box, lines: 5 }
+      - id: "4c"
+        prompt: "The concepts of simple interest and compound interest."
+        field: { type: text_box, lines: 5 }
+      - id: "4d"
+        prompt: "The concept of diversification in investing."
+        field: { type: text_box, lines: 4 }
+      - id: "4e"
+        prompt: "Why it is important to save and invest for retirement."
+        field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    prompt: "Explain to your counselor what the following investments are and how each works:"
+    field:
+      type: labeled_rows
+      lines_each: 3
+      labels:
+        - Common stocks
+        - Mutual funds
+        - Life insurance
+        - A certificate of deposit (CD)
+        - A savings account
+        - A U.S. savings bond
+
+  - id: "6"
+    prompt: "Explain to your counselor why people might purchase the following types of insurance and how they work:"
+    field:
+      type: labeled_rows
+      lines_each: 3
+      labels:
+        - Automobile
+        - Health
+        - Homeowner's/renter's
+        - Whole life and term life
+
+  - id: "7"
+    intro: "Explain to your counselor the following:"
+    children:
+      - id: "7a"
+        prompt: >
+          What a loan is, what interest is, and how the annual percentage rate
+          (APR) measures the true cost of a loan
+        field: { type: text_box, lines: 5 }
+      - id: "7b"
+        prompt: "The different ways to borrow money"
+        field: { type: text_box, lines: 5 }
+      - id: "7c"
+        prompt: >
+          The differences between a charge card, debit card, and credit card,
+          including the costs and pitfalls of using these financial tools, and
+          why it is unwise to make only the minimum payment on your credit card
+        field: { type: text_box, lines: 7 }
+      - id: "7d"
+        prompt: "Credit reports and how personal responsibility can affect your credit report"
+        field: { type: text_box, lines: 5 }
+      - id: "7e"
+        prompt: "Ways to reduce or eliminate debt."
+        field: { type: text_box, lines: 5 }
+
+  - id: "8"
+    intro: "Demonstrate to your counselor your understanding of time management by doing the following:"
+    children:
+      - id: "8a"
+        prompt: >
+          Write a "to do" list of tasks or activities, such as homework
+          assignments, chores, and personal projects, that must be done in the
+          coming week. List these in order of importance to you.
+        field:
+          type: table
+          headers: ["Priority", "Task or activity"]
+          rows: 10
+          cols: 2
+      - id: "8b"
+        prompt: >
+          Make a seven-day calendar or schedule. Put in your set activities,
+          such as school classes, sports practices or games, jobs or chores,
+          and/or Scout or place of worship or club meetings, then plan when you
+          will do all the tasks from your "to do" list between your set
+          activities.
+        field: { type: text_box, lines: 10 }
+      - id: "8c"
+        prompt: >
+          Follow the one-week schedule you planned. Keep a daily diary or
+          journal during each of the seven days of this week's activities,
+          writing down when you completed each of the tasks on your "to do"
+          list compared to when you scheduled them.
+        field:
+          type: table
+          headers: ["Day", "Task completed", "Scheduled time", "Actual time"]
+          rows: 7
+          cols: 4
+      - id: "8d"
+        prompt: >
+          With your counselor, review your "to do" list, one-week schedule, and
+          diary/journal to understand when your schedule worked and when it did
+          not work. Discuss what you might do differently the next time.
+        field: { type: text_box, lines: 6 }
+
+  - id: "9"
+    prompt: >
+      Prepare a written project plan demonstrating the steps below, including
+      the desired outcome. This is a project on paper, not a real-life project.
+      Examples could include planning a camping trip, developing a community
+      service project or a school or religious event, or creating an annual
+      patrol plan with additional activities not already included in the troop
+      annual plan. Discuss your completed project plan with your counselor.
+    children:
+      - id: "9a"
+        prompt: "Define the project. What is your goal?"
+        field: { type: text_box, lines: 4 }
+      - id: "9b"
+        prompt: "Develop a timeline for your project that shows the steps you must take from beginning to completion."
+        field:
+          type: table
+          headers: ["Step", "Target date"]
+          rows: 8
+          cols: 2
+      - id: "9c"
+        prompt: "Describe your project."
+        field: { type: text_box, lines: 6 }
+      - id: "9d"
+        prompt: "Develop a list of resources. Identify how these resources will help you achieve your goal."
+        field:
+          type: table
+          headers: ["Resource", "How it helps you achieve your goal"]
+          rows: 6
+          cols: 2
+      - id: "9e"
+        prompt: "Develop a budget for your project."
+        field:
+          type: table
+          headers: ["Item", "Estimated cost"]
+          rows: 6
+          cols: 2
+
+  - id: "10"
+    intro: "Do the following:"
+    children:
+      - id: "10a"
+        prompt: >
+          Choose a career you might want to enter after high school or college
+          graduation. Discuss with your counselor the needed qualifications,
+          education, skills, and experience.
+        field: { type: text_box, lines: 7 }
+      - id: "10b"
+        prompt: >
+          Explain to your counselor what the associated costs might be to
+          pursue this career, such as tuition, school or training supplies, and
+          room and board. Explain how you could prepare for these costs and how
+          you might make up for any shortfall.
+        field: { type: text_box, lines: 7 }

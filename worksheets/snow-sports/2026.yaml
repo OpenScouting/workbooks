@@ -1,0 +1,335 @@
+badge:
+  name: Snow Sports
+  slug: snow-sports
+  requirements_revision: "2026-01-01"
+  description: >
+    The Snow Sports merit badge takes you onto the snow to ski, snowboard, or
+    snowshoe with skill and safety. You will learn cold-weather first aid, trail
+    rules, avalanche awareness, and the fitness and technique your chosen sport
+    demands.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the hazards you are most likely to encounter
+          while participating in snow sport activities, and what you should do to
+          anticipate, help prevent, mitigate, and respond to these hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Discuss first aid and prevention for the types of injuries or illnesses
+          that could occur while participating in snow sports, including
+          hypothermia, frostbite, shock, dehydration, sunburn, concussion,
+          fractures, bruises, sprains, and strains. Tell how to apply splints.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Hypothermia
+            - Frostbite
+            - Shock
+            - Dehydration
+            - Sunburn
+            - Concussion
+            - Fractures
+            - Bruises
+            - Sprains
+            - Strains
+            - How to apply splints
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Explain why every snow sport participant should be prepared to render first aid in the event of an accident."
+        field: { type: text_box, lines: 5 }
+      - id: "2b"
+        prompt: "Explain the procedure used to report an accident to the local ski patrol or local emergency personnel."
+        field: { type: text_box, lines: 5 }
+
+  - id: "3"
+    prompt: "Explain the international trail-marking system."
+    field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: >
+      Discuss the importance of strength, endurance, and flexibility in snow
+      sports. Demonstrate exercises and activities you can do to get fit for the
+      option you choose in requirement 7.
+    field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Present yourself properly clothed and equipped for the option you choose in
+      requirement 7. Discuss how the clothing you have chosen will help keep you
+      warm and protected.
+    field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    intro: "Do ALL of the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Explain the elements of the Your Responsibility Code that is in effect
+          at the location where you will ski, snowboard, or snowshoe. Explain why
+          each person must follow this code.
+        field: { type: text_box, lines: 8 }
+      - id: "6b"
+        prompt: >
+          Explain the SMART Style safety program. Tell why it is important and
+          how it applies to participants at snow sport venues like terrain parks
+          and pipes.
+        field: { type: text_box, lines: 6 }
+      - id: "6c"
+        prompt: >
+          Explain the precautions pertaining to avalanche safety, including the
+          responsibility of individuals regarding avalanche safety.
+        field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    prompt: "Do ONE of the following options:"
+    children:
+      - id: "7-choice"
+        prompt: "Check the option you completed:"
+        field:
+          type: checklist
+          items:
+            - "Option A: Downhill (Alpine) Skiing. Do ALL of the following."
+            - "Option B: Cross-Country (Nordic) Skiing. Do ALL of the following."
+            - "Option C: Snowboarding. Do ALL of the following."
+            - "Option D: Snowshoeing. Do ALL of the following."
+
+      - id: "7A"
+        intro: >
+          Option A: Downhill (Alpine) Skiing. Do ALL of the following. Note:
+          Generally, a gentle slope will be a trail designated by a green circle,
+          a slightly steeper slope will be a green circle or blue square trail,
+          and an intermediate slope will be a blue square trail. However, your
+          counselor should determine what type of hill is most suited to your
+          skill level and allows you to demonstrate each of the required skills.
+        children:
+          - id: "7A1"
+            prompt: >
+              Show how to wax and maintain your skis and use/maintain your
+              release bindings. Explain the international DIN standard and what it
+              means to skiers.
+            field: { type: text_box, lines: 6 }
+          - id: "7A2"
+            prompt: "Explain the American Teaching System and a basic snowskiing progression."
+            field: { type: text_box, lines: 6 }
+          - id: "7A3"
+            prompt: "Discuss the different types of Alpine skis. Demonstrate two ways to carry skis and poles safely and easily."
+            field: { type: text_box, lines: 6 }
+          - id: "7A4"
+            prompt: "Demonstrate how to ride one kind of lift and explain how to ride two others."
+            field: { type: text_box, lines: 5 }
+          - id: "7A5"
+            prompt: >
+              On a gentle slope, demonstrate some of the beginning maneuvers
+              learned in skiing. Include the straight run, gliding wedge, wedge
+              stop, sidestep, and herringbone maneuvers.
+            field:
+              type: checkbox
+              label: "I demonstrated the beginning maneuvers on a gentle slope."
+          - id: "7A6"
+            prompt: "On slightly steeper terrain, show linked wedge turns."
+            field:
+              type: checkbox
+              label: "I showed linked wedge turns on slightly steeper terrain."
+          - id: "7A7"
+            prompt: "On a moderate slope, demonstrate five to 10 christies."
+            field:
+              type: checkbox
+              label: "I demonstrated five to 10 christies on a moderate slope."
+          - id: "7A8"
+            prompt: "Make a controlled run down an intermediate slope."
+            field:
+              type: checkbox
+              label: "I made a controlled run down an intermediate slope."
+          - id: "7A9"
+            prompt: >
+              Demonstrate the ability to ski in varied conditions, including
+              changes in pitch and snow conditions. Maintain your balance and
+              ability to turn.
+            field:
+              type: checkbox
+              label: "I demonstrated the ability to ski in varied conditions."
+          - id: "7A10"
+            prompt: "Name the major ski organizations in the United States and explain their functions."
+            field: { type: text_box, lines: 6 }
+
+      - id: "7B"
+        intro: "Option B: Cross-Country (Nordic) Skiing. Do ALL of the following:"
+        children:
+          - id: "7B1"
+            prompt: "Show your ability to select, use, and maintain equipment for cross-country skiing in safety and comfort."
+            field: { type: text_box, lines: 6 }
+          - id: "7B2"
+            prompt: >
+              Explain the reasons for common rules, including no walking on ski
+              trails, one-way ski direction, no pets, and no skiing on snowmobile
+              trails.
+            field: { type: text_box, lines: 6 }
+          - id: "7B3"
+            prompt: "Discuss classic, skating, touring, and telemark skis."
+            field: { type: text_box, lines: 6 }
+          - id: "7B4"
+            prompt: "Discuss the basic principles of waxing for cross-country ski touring."
+            field: { type: text_box, lines: 5 }
+          - id: "7B5"
+            prompt: >
+              Discuss the differences between cross-country, backcountry/ski
+              touring, ski mountaineering, and downhill/telemark skiing.
+            field: { type: text_box, lines: 6 }
+          - id: "7B6"
+            prompt: "List the items you would take on a one-day ski tour."
+            field: { type: table, rows: 8, cols: 2 }
+          - id: "7B7"
+            prompt: "Demonstrate the proper use of a topographic map and compass."
+            field:
+              type: checkbox
+              label: "I demonstrated the proper use of a topographic map and compass."
+          - id: "7B8"
+            prompt: >
+              On a gentle, packed slope, show some basic ways to control speed
+              and direction. Include the straight run, traverse, side slip, step
+              turn, wedge stop, and wedge turn maneuvers.
+            field:
+              type: checkbox
+              label: "I showed basic ways to control speed and direction on a gentle slope."
+          - id: "7B9"
+            prompt: >
+              On a cross-country trail, demonstrate effective propulsion by
+              showing proper weight transfer from ski to ski, pole timing,
+              rhythm, flow, and glide.
+            field:
+              type: checkbox
+              label: "I demonstrated effective propulsion on a cross-country trail."
+          - id: "7B10"
+            prompt: >
+              Demonstrate your ability, on a 4-mile tour, to cope with an average
+              variety of snow conditions. Note: Adaptive skiers may complete a
+              1-mile tour with prior approval from their counselor.
+            field:
+              type: checkbox
+              label: "I completed the tour, coping with a variety of snow conditions."
+          - id: "7B11"
+            prompt: >
+              Demonstrate several methods of dealing with steep hills or difficult
+              conditions. Include traverses and kick turns going uphill and
+              downhill, sidesteps, and pole drag.
+            field:
+              type: checkbox
+              label: "I demonstrated several methods of dealing with steep hills or difficult conditions."
+
+      - id: "7C"
+        intro: >
+          Option C: Snowboarding. Do ALL of the following. Note: Generally, a
+          gentle slope will be a trail designated by a green circle, a slightly
+          steeper slope will be a green circle or blue square trail, and an
+          intermediate slope will be a blue square trail. However, your counselor
+          should determine what type of hill is most suited to your skill level
+          and allows you to demonstrate the required skills.
+        children:
+          - id: "7C1"
+            prompt: "Discuss forward-fall injuries."
+            field: { type: text_box, lines: 5 }
+          - id: "7C2"
+            prompt: "Show your ability to select the correct equipment for snowboarding and to use it for safety and comfort."
+            field: { type: text_box, lines: 6 }
+          - id: "7C3"
+            prompt: >
+              Show how to use and maintain your own bindings, and explain the use
+              of the different binding methods. Explain the need for leashes.
+            field: { type: text_box, lines: 6 }
+          - id: "7C4"
+            prompt: "Discuss the four types of snowboards. Demonstrate how to carry a snowboard easily and safely."
+            field: { type: text_box, lines: 6 }
+          - id: "7C5"
+            prompt: "Demonstrate how to ride one kind of lift and explain how to ride two others."
+            field: { type: text_box, lines: 5 }
+          - id: "7C6"
+            prompt: "Demonstrate the basic principles of waxing a snowboard."
+            field:
+              type: checkbox
+              label: "I demonstrated the basic principles of waxing a snowboard."
+          - id: "7C7"
+            prompt: "Do the following:"
+            children:
+              - id: "7C7a"
+                prompt: >
+                  On a gentle slope, demonstrate beginning snowboarding maneuvers.
+                  Show basic ways to control speed and direction. Include the
+                  sideslipping maneuver.
+                field:
+                  type: checkbox
+                  label: "I demonstrated beginning snowboarding maneuvers on a gentle slope."
+              - id: "7C7b"
+                prompt: "On slightly steeper terrain, show traversing."
+                field:
+                  type: checkbox
+                  label: "I showed traversing on slightly steeper terrain."
+          - id: "7C8"
+            prompt: "On a moderate slope, demonstrate an ollie, a nose-end grab, and a wheelie."
+            field:
+              type: checkbox
+              label: "I demonstrated an ollie, a nose-end grab, and a wheelie on a moderate slope."
+          - id: "7C9"
+            prompt: "Make a controlled run down an intermediate slope."
+            field:
+              type: checkbox
+              label: "I made a controlled run down an intermediate slope."
+          - id: "7C10"
+            prompt: >
+              Demonstrate your ability to ride in varied conditions, including
+              changes in pitch, snow conditions, and moguls. Maintain your balance
+              and ability to turn.
+            field:
+              type: checkbox
+              label: "I demonstrated the ability to ride in varied conditions."
+          - id: "7C11"
+            prompt: "Name the major snowboarding organizations in the United States and explain their functions."
+            field: { type: text_box, lines: 6 }
+
+      - id: "7D"
+        intro: "Option D: Snowshoeing. Do ALL of the following:"
+        children:
+          - id: "7D1"
+            prompt: "Name the parts of a snowshoe."
+            field: { type: text_box, lines: 4 }
+          - id: "7D2"
+            prompt: "Explain how to choose the correct size of snowshoe."
+            field: { type: text_box, lines: 5 }
+          - id: "7D3"
+            prompt: "Describe the different types of snowshoes and their specialized uses. Discuss factors to consider when choosing a snowshoe."
+            field: { type: text_box, lines: 6 }
+          - id: "7D4"
+            prompt: "Explain how to properly care for and maintain snowshoes."
+            field: { type: text_box, lines: 5 }
+          - id: "7D5"
+            prompt: "List the items you would take on a one-day snowshoe hike."
+            field: { type: table, rows: 8, cols: 2 }
+          - id: "7D6"
+            prompt: "Describe areas that are best for snowshoeing. Discuss some advantages and dangers of backcountry snowshoeing."
+            field: { type: text_box, lines: 6 }
+          - id: "7D7"
+            prompt: "Discuss the benefits of snowshoeing."
+            field: { type: text_box, lines: 5 }
+          - id: "7D8"
+            prompt: "Demonstrate the most efficient ways to break trail, climb uphill, travel downhill and traverse a slope."
+            field:
+              type: checkbox
+              label: "I demonstrated efficient ways to break trail, climb, descend, and traverse."
+          - id: "7D9"
+            prompt: "Demonstrate your ability, on a 2-mile snowshoe hike, to cope with an average variety of snow conditions."
+            field:
+              type: checkbox
+              label: "I completed a 2-mile snowshoe hike, coping with a variety of snow conditions."
+          - id: "7D10"
+            prompt: "Demonstrate the proper use of a topographic map and compass."
+            field:
+              type: checkbox
+              label: "I demonstrated the proper use of a topographic map and compass."

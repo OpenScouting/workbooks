@@ -1,0 +1,72 @@
+badge:
+  name: Fingerprinting
+  slug: fingerprinting
+  requirements_revision: "2025-01-01"
+  description: >
+    Fingerprinting introduces you to the science that makes every person
+    uniquely identifiable. You will learn how prints are classified and taken,
+    and how fingerprints are used in both civil and criminal identification.
+
+requirements:
+  - id: "1"
+    prompt: "Give a short history of fingerprinting. Tell the difference between civil and criminal identification."
+    children:
+      - id: "1a"
+        prompt: "Short history of fingerprinting"
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: "The difference between civil and criminal identification"
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Explain the difference between the automated fingerprint
+          identification systems (AFIS) now used by law enforcement agencies
+          and the biometric fingerprint systems used to control access to
+          computers and places like buildings and airports.
+        field: { type: text_box, lines: 7 }
+      - id: "2b"
+        prompt: "Discuss how our society uses identification systems based on tokens, passwords, and biometrics."
+        field: { type: text_box, lines: 7 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: "Name the surfaces of the body where friction or papillary ridges are found."
+        field: { type: text_box, lines: 4 }
+      - id: "3b"
+        prompt: "Name the two basic principles supporting the science of fingerprints and give a brief explanation of each principle."
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: "Explain what it takes to positively identify a person using fingerprints."
+        field: { type: text_box, lines: 5 }
+
+  - id: "4"
+    prompt: "Take a clear set of prints using ONE of the following methods:"
+    field:
+      type: checklist
+      items:
+        - "Make both rolled and plain impressions. Make these on an 8-by-8-inch fingerprint identification card, available from your local police department or your counselor."
+        - "Using clear adhesive tape, a pencil, and plain paper, record your own fingerprints or those of another person."
+
+  - id: "5"
+    prompt: >
+      Show your counselor you can identify the three basic types of fingerprint
+      patterns and their subcategories. Using your own hand, identify the types
+      of patterns you see.
+    field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    prompt: >
+      Identify three career opportunities that would use skills and knowledge
+      in the areas of biometrics and/or fingerprinting. Pick one and research
+      the training, education, certification requirements, experience, and
+      expenses associated with entering the field. Research the prospects for
+      employment, starting salary, advancement opportunities, and career goals
+      associated with this career. Discuss what you learned with your counselor
+      and whether you might be interested in this career.
+    field: { type: text_box, lines: 10 }

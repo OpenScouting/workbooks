@@ -1,0 +1,119 @@
+badge:
+  name: Geocaching
+  slug: geocaching
+  requirements_revision: "2024-01-01"
+  description: >
+    Geocaching is a high-tech treasure hunt that uses GPS to find hidden caches
+    around the world. This badge teaches you how GPS works, how to navigate to a
+    waypoint, the etiquette of hiding and seeking caches, and how to plan a
+    geohunt of your own.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Explain to your counselor the most likely hazards you may encounter while participating in geocaching activities, and what you should do to anticipate, help prevent, mitigate, and respond to these hazards."
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: "Discuss first aid and prevention for the types of injuries or illnesses that could occur while participating in geocaching activities, including cuts, scrapes, snakebite, insect stings, tick bites, exposure to poisonous plants, heat and cold reactions (sunburn, heatstroke, heat exhaustion, hypothermia), and dehydration."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Cuts and scrapes"
+            - "Snakebite"
+            - "Insect stings"
+            - "Tick bites"
+            - "Exposure to poisonous plants"
+            - "Sunburn"
+            - "Heatstroke"
+            - "Heat exhaustion"
+            - "Hypothermia"
+            - "Dehydration"
+      - id: "1c"
+        prompt: "Discuss how to properly plan an activity that uses GPS, including using the buddy system, sharing your plan with others, and considering the weather, route, and proper attire."
+        field: { type: text_box, lines: 7 }
+
+  - id: "2"
+    prompt: "Discuss the following with your counselor:"
+    children:
+      - id: "2a"
+        prompt: "Why you should never bury a cache"
+        field: { type: text_box, lines: 4 }
+      - id: "2b"
+        prompt: "How to use proper geocaching etiquette when hiding or seeking a cache, and how to properly hide, post, maintain, and dismantle a geocache"
+        field: { type: text_box, lines: 7 }
+      - id: "2c"
+        prompt: "The Leave No Trace Seven Principles and the Outdoor Code as they apply to geocaching"
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: "Explain the following terms used in geocaching: waypoint, log, cache, accuracy, difficulty and terrain ratings, attributes, and trackable. Choose five additional terms to explain to your counselor."
+    children:
+      - id: "3-terms"
+        prompt: "Explain each of these terms."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Waypoint"
+            - "Log"
+            - "Cache"
+            - "Accuracy"
+            - "Difficulty and terrain ratings"
+            - "Attributes"
+            - "Trackable"
+      - id: "3-extra"
+        prompt: "Choose five additional terms to explain to your counselor."
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Term", type: text_field }
+            - { label: "Explanation", type: text_box, lines: 2 }
+
+  - id: "4"
+    prompt: "Explain how the Global Positioning System (GPS) works. Then, using Scouting's EDGE, demonstrate to your counselor the use of a GPS unit. Include marking and editing a waypoint, changing field functions, and changing the coordinate system in the unit."
+    field: { type: text_box, lines: 9 }
+
+  - id: "5"
+    intro: "Do the following:"
+    children:
+      - id: "5a"
+        prompt: "Show you know how to use a map and compass and explain why this is important for geocaching."
+        field: { type: text_box, lines: 6 }
+      - id: "5b"
+        prompt: "Explain the similarities and differences between GPS navigation and standard map-reading skills and describe the benefits of each."
+        field: { type: text_box, lines: 7 }
+
+  - id: "6"
+    prompt: "Describe to your counselor the four steps to finding your first cache. Then mark and edit a waypoint."
+    field: { type: text_box, lines: 7 }
+
+  - id: "7"
+    prompt: "With your parent or guardian's permission, go to www.geocaching.com. Type in your city and state to locate public geocaches in your area. Share with your counselor the posted information about three of those geocaches. Then, pick one of the three and find the cache. Note: To fulfill this requirement, you will need to set up a free user account with www.Geocaching.com. Before doing so, ask your parent for permission and help."
+    field:
+      type: repeated_block
+      count: 3
+      template:
+        - { label: "Geocache name", type: text_field }
+        - { label: "Posted information", type: text_box, lines: 3 }
+
+  - id: "8"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) If a Cache to Eagle series exists in your council, visit at least three of the locations in the series. Describe the projects that each cache you visit highlights, and explain how the Cache to Eagle program helps share our Scouting service with the public."
+        - "(b) Create a Scouting-related Travel Bug that promotes one of the values of Scouting. Release your Travel Bug into a public geocache and, with your parent or guardian's permission, monitor its progress at www.geocaching.com for 30 days. Keep a log, and share this with your counselor at the end of the 30-day period."
+        - "(c) Set up and hide a public geocache, following the guidelines in the Geocaching merit badge pamphlet. Before doing so, share with your counselor a three-month maintenance plan for the geocache where you are personally responsible for those three months. After setting up the geocache, with your parent or guardian's permission, follow the logs online for 30 days and share them with your counselor. You must archive the geocache when you are no longer maintaining it."
+        - "(d) Explain what Cache In Trash Out (CITO) means, and describe how you have practiced CITO at public geocaches or at a CITO event. Then, either create CITO containers to leave at public caches, or host a CITO event for your unit or for the public."
+    children:
+      - id: "8-notes"
+        prompt: "Notes and logs from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "9"
+    prompt: "Plan a geohunt for a youth group such as your troop or a neighboring pack, at school, or your place of worship. Choose a theme, set up a course with at least four waypoints, teach the players how to use a GPS unit, and play the game. Tell your counselor about your experience, and share the materials you used and developed for this event."
+    field: { type: text_box, lines: 12 }

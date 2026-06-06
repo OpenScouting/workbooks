@@ -1,0 +1,57 @@
+badge:
+  name: Basketry
+  slug: basketry
+  requirements_revision: "2024-01-01"
+  description: >
+    Basketry is one of the oldest crafts in the world. Earning this badge, you
+    learn to identify basket styles and weaves and to plan and weave projects of
+    your own, working safely with traditional tools and materials.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the hazards you are most likely to encounter
+          while using basketry tools and materials, and what you should do to
+          anticipate, help prevent, mitigate, and respond to these hazards.
+        field: { type: text_box, lines: 7 }
+      - id: "1b"
+        prompt: >
+          Discuss the prevention of and first-aid treatment for injuries,
+          including cuts, scratches, and scrapes, that could occur while working
+          with basketry tools and materials.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Show your counselor that you are able to identify the following types
+          of baskets: plaited, coiled, ribbed, and wicker.
+        field:
+          type: checklist
+          items:
+            - "Plaited"
+            - "Coiled"
+            - "Ribbed"
+            - "Wicker"
+      - id: "2b"
+        prompt: "Describe three different types of weaves to your counselor."
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Weave", type: text_field }
+            - { label: "Description", type: text_box, lines: 3 }
+
+  - id: "3"
+    prompt: "Plan and weave the following projects:"
+    field:
+      type: checklist
+      items:
+        - "Square basket"
+        - "Round basket"
+        - "Campstool seat"

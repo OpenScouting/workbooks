@@ -1,0 +1,180 @@
+badge:
+  name: Soil and Water Conservation
+  slug: soil-and-water-conservation
+  requirements_revision: "2019-01-01"
+  description: >
+    The Soil and Water Conservation merit badge explores how soil forms, how
+    erosion and pollution threaten our land and water, and what people can do to
+    protect these resources. You will study watersheds, the water cycle, and
+    conservation practices, then carry out a project of your own.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Tell what soil is. Tell how it is formed."
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: "Describe three kinds of soil. Tell how they are different."
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: >
+          Name the three main plant nutrients in fertile soil. Tell how they can
+          be put back when used up.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Define soil erosion."
+        field: { type: text_box, lines: 4 }
+      - id: "2b"
+        prompt: "Tell why soil erosion is important and how it affects you."
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: "Name three kinds of soil erosion. Describe each."
+        field: { type: text_box, lines: 6 }
+      - id: "2d"
+        prompt: "Take pictures of or draw two kinds of soil erosion."
+        field:
+          type: checkbox
+          label: "I took pictures of or drew two kinds of soil erosion."
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: "Tell what is meant by conservation practices."
+        field: { type: text_box, lines: 5 }
+      - id: "3b"
+        prompt: "Describe the effect of three kinds of erosion-control practices."
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: "Take pictures of or draw three kinds of erosion-control practices."
+        field:
+          type: checkbox
+          label: "I took pictures of or drew three kinds of erosion-control practices."
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Explain what a watershed is."
+        field: { type: text_box, lines: 4 }
+      - id: "4b"
+        prompt: "Outline the smallest watershed that you can find on a contour map."
+        field:
+          type: checkbox
+          label: "I outlined the smallest watershed I could find on a contour map."
+      - id: "4c"
+        prompt: >
+          Outline, as far as the map will allow, the next larger watershed that
+          also has the smallest one in it.
+        field:
+          type: checkbox
+          label: "I outlined the next larger watershed containing the smallest one."
+      - id: "4d"
+        prompt: >
+          Explain what a river basin is. Tell why all people living in a river
+          basin should be concerned about land and water use in the basin.
+        field: { type: text_box, lines: 6 }
+      - id: "4e"
+        prompt: "Explain what an aquifer is and why it can be important to communities."
+        field: { type: text_box, lines: 5 }
+
+  - id: "5"
+    intro: "Do the following:"
+    children:
+      - id: "5a"
+        prompt: "Make a drawing to show the hydrologic cycle."
+        field:
+          type: checkbox
+          label: "I made a drawing showing the hydrologic cycle."
+      - id: "5b"
+        prompt: >
+          Demonstrate at least two of the following actions of water in relation
+          to soil: percolation, capillary action, precipitation, evaporation, and
+          transpiration.
+        field:
+          type: checklist
+          items:
+            - Percolation
+            - Capillary action
+            - Precipitation
+            - Evaporation
+            - Transpiration
+      - id: "5c"
+        prompt: "Explain how removal of vegetation will affect the way water runs off a watershed."
+        field: { type: text_box, lines: 5 }
+      - id: "5d"
+        prompt: "Tell how uses of forest, range, and farmland affect usable water supply."
+        field: { type: text_box, lines: 6 }
+      - id: "5e"
+        prompt: "Explain how industrial use affects water supply."
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    intro: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: "Tell what is meant by water pollution."
+        field: { type: text_box, lines: 4 }
+      - id: "6b"
+        prompt: "Describe common sources of water pollution and explain the effects of each."
+        field: { type: text_box, lines: 6 }
+      - id: "6c"
+        prompt: >
+          Explain the terms: primary water treatment, secondary waste treatment,
+          and biochemical oxygen demand.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Primary water treatment
+            - Secondary waste treatment
+            - Biochemical oxygen demand
+      - id: "6d"
+        prompt: "Make a drawing showing the principles of complete waste treatment."
+        field:
+          type: checkbox
+          label: "I made a drawing showing the principles of complete waste treatment."
+
+  - id: "7"
+    prompt: "Do TWO of the following:"
+    children:
+      - id: "7-choice"
+        prompt: "Check the two options you chose:"
+        field:
+          type: checklist
+          items:
+            - "(a) Make a trip to TWO of the following places. Write a report of more than 500 words about the soil and water and energy conservation practices you saw."
+            - "(b) Plant 100 trees, bushes, and/or vines for a good purpose."
+            - "(c) Seed an area of at least one-fifth acre for some worthwhile conservation purposes, using suitable grasses or legumes alone or in a mixture."
+            - "(d) Study a soil survey report. Describe the things in it. Using tracing paper and a pen, trace over any of the soil maps, and outline an area with three or more different kinds of soil. List each kind of soil by full name and map symbol."
+            - "(e) Make a list of places in your neighborhood, camps, school ground, or park that have erosion, sedimentation, or pollution problems. Describe how these could be corrected through individual or group action."
+            - "(f) Carry out any other soil and water conservation project approved by your counselor."
+      - id: "7a-places"
+        prompt: >
+          If you chose option (a), check the TWO places you visited: (1) An
+          agricultural experiment, (2) A managed forest or woodlot, range, or
+          pasture, (3) A wildlife refuge or a fish or game management area, (4) A
+          conservation-managed farm or ranch, (5) A managed watershed, (6) A
+          waste-treatment plant, (7) A public drinking water treatment plant, (8)
+          An industry water use installation, (9) A desalinization plant.
+        field:
+          type: checklist
+          items:
+            - "(1) An agricultural experiment"
+            - "(2) A managed forest or woodlot, range, or pasture"
+            - "(3) A wildlife refuge or a fish or game management area"
+            - "(4) A conservation-managed farm or ranch"
+            - "(5) A managed watershed"
+            - "(6) A waste-treatment plant"
+            - "(7) A public drinking water treatment plant"
+            - "(8) An industry water use installation"
+            - "(9) A desalinization plant"
+      - id: "7-notes"
+        prompt: "Notes, reports, and records for your chosen options"
+        field: { type: text_box, lines: 12 }

@@ -1,0 +1,295 @@
+badge:
+  name: Multisport
+  slug: multisport
+  requirements_revision: "2026-01-01"
+  description: >
+    Multisport combines swimming, biking, and running into events like the
+    triathlon. Earning this badge, you build fitness and technique across
+    disciplines, train toward a personal goal, and complete an event of your own.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          during multisport activities and what you should do to anticipate,
+          prevent, mitigate, and respond to these hazards.
+        field: { type: text_box, lines: 7 }
+      - id: "1b"
+        prompt: >
+          Show that you know first aid for injuries or illnesses that could occur
+          while participating in multisport events, including abrasions, blisters,
+          concussions, contusions, dehydration, hypothermia, overheating, sprains,
+          and strains.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Abrasions
+            - Blisters
+            - Concussions
+            - Contusions
+            - Dehydration
+            - Hypothermia
+            - Overheating
+            - Sprains
+            - Strains
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Discuss the importance of having a physical examination each year.
+          Discuss why overall health, immunizations, medications, allergies, and
+          medical history are covered during an examination. Tell your counselor
+          when you last underwent a physical examination.
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: >
+          Explain the importance of maintaining good health habits, especially
+          during training, and how the use of tobacco products, alcohol, and other
+          harmful substances can negatively affect your health and your
+          performance in athletic activities.
+        field: { type: text_box, lines: 6 }
+      - id: "2c"
+        prompt: "Define a healthy diet and explain the importance of maintaining a healthy diet."
+        field: { type: text_box, lines: 5 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Discuss with your counselor your level of familiarity and experience
+          with the multisport events (swimming, biking, and running) and the order
+          and distance of each sports segment.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: >
+          Explain to your counselor which multisport event (swimming, biking, or
+          running) you feel is your strongest and which you could improve upon the
+          most.
+        field: { type: text_box, lines: 5 }
+      - id: "3c"
+        prompt: >
+          Identify the required equipment for each of the three common multisport
+          events (swimming, biking, and running).
+        field:
+          type: labeled_rows
+          lines_each: 3
+          labels:
+            - Swimming
+            - Biking
+            - Running
+      - id: "3d"
+        prompt: >
+          Based on your interests, experience, and discussion with your counselor,
+          select ONE of the following multisport formats to concentrate on for the
+          remaining requirements: triathlon (swimming, biking, and running),
+          duathlon (biking and running), aquathlon (swimming and running), or
+          aquabike (swimming and biking).
+        field:
+          type: checklist
+          items:
+            - "Triathlon (swimming, biking, and running)"
+            - "Duathlon (biking and running)"
+            - "Aquathlon (swimming and running)"
+            - "Aquabike (swimming and biking)"
+
+  - id: "4"
+    prompt: >
+      Complete ALL of the following for the multisport format option you selected
+      in requirement 3(d):
+    children:
+      - id: "4A"
+        intro: "Option A: Triathlon."
+        children:
+          - id: "4A1a"
+            prompt: "Swimming. Before doing requirements 5 through 8, earn the Swimming merit badge."
+            field: { type: checkbox, label: "Earned the Swimming merit badge." }
+          - id: "4A1b"
+            prompt: >
+              Explain the components of the Scouting America Safe Swim Defense
+              program and how you will ensure they are in place when you swim.
+            field: { type: text_box, lines: 6 }
+          - id: "4A1c"
+            prompt: >
+              Explain to your counselor the difference between a pool swim and an
+              open water swim, including at what water temperature it is
+              appropriate to wear a wet suit.
+            field: { type: text_box, lines: 5 }
+          - id: "4A2a"
+            prompt: "Biking. Explain to your counselor how to ride predictably, be conspicuous, think ahead, and ride ready."
+            field: { type: text_box, lines: 5 }
+          - id: "4A2b"
+            prompt: "Discuss what should be checked regularly to make sure the bicycle is safe to ride."
+            field: { type: text_box, lines: 5 }
+          - id: "4A2c"
+            prompt: >
+              Explain the importance of wearing a properly sized and fitted helmet
+              while cycling and of wearing the right clothing for the weather.
+            field: { type: text_box, lines: 5 }
+          - id: "4A3a"
+            prompt: >
+              Running. Demonstrate a proper run warmup and cool-down. Explain to
+              your counselor the importance of maintaining healthy habits, including
+              hydration, nutrition, injury prevention, and rest.
+            field: { type: text_box, lines: 5 }
+          - id: "4A3b"
+            prompt: "Learn and state the basic rules of the road for runners."
+            field: { type: text_box, lines: 5 }
+          - id: "4A3c"
+            prompt: "Demonstrate important running drills, including high knees, butt kicks, lunges, inchworms, and soldier kicks."
+            field: { type: checkbox, label: "Demonstrated important running drills (high knees, butt kicks, lunges, inchworms, soldier kicks)." }
+      - id: "4B"
+        intro: "Option B: Duathlon."
+        children:
+          - id: "4B1a"
+            prompt: "Biking. Explain to your counselor how to ride predictably, be conspicuous, think ahead, and ride ready."
+            field: { type: text_box, lines: 5 }
+          - id: "4B1b"
+            prompt: "Discuss what should be checked regularly to make sure the bicycle is safe to ride."
+            field: { type: text_box, lines: 5 }
+          - id: "4B1c"
+            prompt: >
+              Explain the importance of wearing a properly sized and fitted helmet
+              while cycling and of wearing the right clothing for the weather.
+            field: { type: text_box, lines: 5 }
+          - id: "4B2a"
+            prompt: >
+              Running. Demonstrate a proper run warmup and cool-down. Explain to
+              your counselor the importance of maintaining healthy habits, including
+              hydration, nutrition, injury prevention, and rest.
+            field: { type: text_box, lines: 5 }
+          - id: "4B2b"
+            prompt: "Learn and state the basic rules of the road for runners."
+            field: { type: text_box, lines: 5 }
+          - id: "4B2c"
+            prompt: "Demonstrate important running drills, including high knees, butt kicks, lunges, inchworms, and soldier kicks."
+            field: { type: checkbox, label: "Demonstrated important running drills (high knees, butt kicks, lunges, inchworms, soldier kicks)." }
+      - id: "4C"
+        intro: "Option C: Aquathlon."
+        children:
+          - id: "4C1a"
+            prompt: "Swimming. Before doing requirements 5 through 8, earn the Swimming merit badge."
+            field: { type: checkbox, label: "Earned the Swimming merit badge." }
+          - id: "4C1b"
+            prompt: >
+              Explain the components of the Scouting America Safe Swim Defense
+              guidelines and how you will ensure they are in place when you swim.
+            field: { type: text_box, lines: 6 }
+          - id: "4C1c"
+            prompt: >
+              Explain to your counselor the difference between a pool swim and an
+              open water swim, including at what water temperature it is
+              appropriate to wear a wet suit.
+            field: { type: text_box, lines: 5 }
+          - id: "4C2a"
+            prompt: >
+              Running. Demonstrate a proper run warmup and cool-down. Explain to
+              your counselor the importance of maintaining healthy habits, including
+              hydration, nutrition, injury prevention, and rest.
+            field: { type: text_box, lines: 5 }
+          - id: "4C2b"
+            prompt: "Learn and state the basic rules of the road for runners."
+            field: { type: text_box, lines: 5 }
+          - id: "4C2c"
+            prompt: "Demonstrate important running drills, including high knees, butt kicks, lunges, inchworms, and soldier kicks."
+            field: { type: checkbox, label: "Demonstrated important running drills (high knees, butt kicks, lunges, inchworms, soldier kicks)." }
+      - id: "4D"
+        intro: "Option D: Aquabike."
+        children:
+          - id: "4D1a"
+            prompt: "Swimming. Before doing requirements 5 through 8, earn the Swimming merit badge."
+            field: { type: checkbox, label: "Earned the Swimming merit badge." }
+          - id: "4D1b"
+            prompt: >
+              Explain the components of the Scouting America Safe Swim Defense
+              guidelines and how you will ensure they are in place when you swim.
+            field: { type: text_box, lines: 6 }
+          - id: "4D1c"
+            prompt: >
+              Explain to your counselor the difference between a pool swim and an
+              open water swim, including at what water temperature it is
+              appropriate to wear a wet suit.
+            field: { type: text_box, lines: 5 }
+          - id: "4D2a"
+            prompt: "Biking. Explain to your counselor how to ride predictably, be conspicuous, think ahead, and ride ready."
+            field: { type: text_box, lines: 5 }
+          - id: "4D2b"
+            prompt: "Discuss what should be checked regularly to make sure the bicycle is safe to ride."
+            field: { type: text_box, lines: 5 }
+          - id: "4D2c"
+            prompt: >
+              Explain the importance of wearing a properly sized and fitted helmet
+              while cycling and of wearing the right clothing for the weather.
+            field: { type: text_box, lines: 5 }
+
+  - id: "5"
+    intro: "Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          With guidance from your counselor, establish a four-week training plan
+          that combines your chosen multisport format to develop proper techniques,
+          gain self-confidence, and increase endurance. Each session should last at
+          least 25 minutes and include a proper warmup before the session and
+          stretching afterward.
+        field: { type: text_box, lines: 8 }
+      - id: "5b"
+        prompt: "Use a chart or other tracking method to monitor your training and development during this period."
+        field:
+          type: table
+          headers: ["Date", "Activity", "Duration", "Notes"]
+          rows: 8
+          cols: 4
+      - id: "5c"
+        prompt: >
+          Set a personal goal for improvement based on one or more of the following
+          criteria: time, technique, or distance.
+        field: { type: text_box, lines: 5 }
+      - id: "5d"
+        prompt: >
+          At the end of four weeks, discuss your progress with your counselor and
+          tell how your development has affected you mentally and physically.
+        field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    prompt: >
+      Learn the methods of setting up your transition area, which is where your
+      bike equipment and/or running gear will be. Discuss with your counselor how
+      to smoothly and safely transition from one element to the next, such as
+      mounting and dismounting your bike or adjusting your gear.
+    field: { type: text_box, lines: 7 }
+
+  - id: "7"
+    prompt: >
+      After completing requirements 1-6, do ONE of the following (complete all of
+      the activities on the same day and consecutively) for the multisport focus
+      area you selected in requirement 3(d), including demonstrating a smooth and
+      safe transition between each:
+    field:
+      type: checklist
+      items:
+        - "(a) Triathlon (swim 100 m, bike 3 km, and run 1 km)"
+        - "(b) Duathlon (run 1.5 km, bike 3 km, and run 0.75 km)"
+        - "(c) Aquathlon (swim 100 m and run 1 km)"
+        - "(d) Aquabike (swim 100 m and bike 3 km)"
+
+  - id: "8"
+    prompt: "Do TWO of the following and discuss with your counselor:"
+    field:
+      type: checklist
+      items:
+        - "(a) Research and identify two ways you can continue participating in multisport after completing this merit badge."
+        - "(b) Research an Olympic, Paralympic, or professional triathlete (past or current). Share information on their background in the sport and what inspires you most about this individual."
+        - "(c) Demonstrate leadership by starting a training group and educating your peers on the importance of physical activity, nutrition, and the disciplines of multisport."
+        - "(d) Sign up for and participate in a sanctioned multisport event in your area."
+        - "(e) Volunteer at a local multisport event, running race, biking event, swim meet, or adaptive sporting event."
+    children:
+      - id: "8-notes"
+        prompt: "Notes from your two chosen options"
+        field: { type: text_box, lines: 8 }

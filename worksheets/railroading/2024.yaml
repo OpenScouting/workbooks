@@ -1,0 +1,168 @@
+badge:
+  name: Railroading
+  slug: railroading
+  requirements_revision: "2024-01-01"
+  description: >
+    The Railroading merit badge explores how trains move people and freight
+    across the country. Scouts learn about locomotives, rail cars, safety around
+    tracks, signals, and the model railroading and railfanning hobbies.
+
+requirements:
+  - id: "1"
+    prompt: "Do THREE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Name three types of modern freight trains. Explain why unit trains are more efficient than mixed freight trains."
+        - "(b) Name one Class I or regional railroad. Explain what major cities it serves, the locations of major terminals, service facilities, and crew change points, and the major commodities it carries."
+        - "(c) Using models or pictures, identify 10 types of railroad freight or passenger cars. Explain the purpose of each type of car."
+        - "(d) Explain how a modern diesel or electric locomotive develops power. Explain the terms dynamic braking and radial steering trucks."
+    children:
+      - id: "1-notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 12 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Explain the purpose and formation of Amtrak. Explain, by the use of a
+          timetable, a plan for making a trip by rail between two cities at least
+          500 miles apart. List the times of departure and arrival at your
+          destination, the train number and name, and the type of service you
+          want.
+        field: { type: text_box, lines: 10 }
+      - id: "2b"
+        prompt: "List and explain the various forms of public/mass transit using rail."
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Name four departments of a railroad company. Describe what each department does."
+        - "(b) Tell about the opportunities in railroading that interest you most and why."
+        - "(c) Name four rail support industries. Describe the function of each one."
+        - "(d) With your parent or guardian's and counselor's approval, interview someone employed in the rail industry. Learn what that person does and how this person became interested in railroading. Find out what type of schooling and training is required for this position."
+    children:
+      - id: "3-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Explain the purpose of Operation Lifesaver and its mission."
+        field: { type: text_box, lines: 5 }
+      - id: "4b"
+        prompt: "List 9 track basic safety tips to remember when you are around a railroad track."
+        field:
+          type: table
+          rows: 9
+          cols: 1
+      - id: "4c"
+        prompt: "List 9 safety considerations that should be followed when walking near a railroad track."
+        field:
+          type: table
+          rows: 9
+          cols: 1
+      - id: "4d"
+        prompt: "Tell your counselor what a driver can do to safely operate near tracks."
+        field: { type: text_box, lines: 5 }
+      - id: "4e"
+        prompt: "Explain safety precautions when using a light rail or commuter train."
+        field: { type: text_box, lines: 5 }
+
+  - id: "5"
+    intro: "Explain the appearance and meaning of the following rail signs and signals:"
+    children:
+      - id: "5a"
+        prompt: "Passive signs and active signs"
+        field: { type: text_box, lines: 4 }
+      - id: "5b"
+        prompt: >
+          Devices at the crossing (flashing red lights, with or without bells,
+          flashing red lights and gates, and cantilever flashing lights)
+        field: { type: text_box, lines: 4 }
+      - id: "5c"
+        prompt: "Markings on the road (pavement markings and stop bars)"
+        field: { type: text_box, lines: 4 }
+      - id: "5d"
+        prompt: >
+          Signs before the crossing (advance warning sign, advance warning sign
+          for side streets, no train horn sign, and low ground clearance grade
+          crossing sign)
+        field: { type: text_box, lines: 4 }
+      - id: "5e"
+        prompt: "Signs along the railroad property (no trespassing sign)"
+        field: { type: text_box, lines: 4 }
+      - id: "5f"
+        prompt: >
+          Signs at the crossing (crossbuck sign, emergency notification system
+          sign, multiple track sign, stop sign, and yield sign)
+        field: { type: text_box, lines: 4 }
+
+  - id: "6"
+    intro: "Do EACH of the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Explain how railroad signals operate and show two basic signal types
+          using color or configuration.
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: "Explain the meaning of three horn signals."
+        field: { type: text_box, lines: 4 }
+      - id: "6c"
+        prompt: "Describe a way to signal a train for an emergency stop."
+        field: { type: text_box, lines: 4 }
+      - id: "6d"
+        prompt: >
+          Explain the use and function of the EOTD (end-of-train device), or FRED
+          (flashing rear end device), used on the last car of most freight
+          trains.
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: "Do ONE of the following special-interest options:"
+    field:
+      type: checklist
+      items:
+        - "Option A: Model Railroading. With your parent or guardian's and counselor's approval, do TWO of the option A activities."
+        - "Option B: Railfanning. With your parent or guardian's and counselor's approval, do TWO of the option B activities."
+    children:
+      - id: "7a"
+        prompt: >
+          Option A: Model Railroading. With your parent or guardian's and
+          counselor's approval, do TWO of the following:
+        field:
+          type: checklist
+          items:
+            - "(1) Draw a layout of your own model railroad or one that could be built in your home. Design a point-to-point track or loop with different routings. Include one of the following: turnaround or terminal or yard or siding."
+            - "(2) Build one model railroad car kit or one locomotive kit."
+            - "(3) Name the scale of four popular model railroad gauges. Identify the scale of four model cars or locomotives."
+            - "(4) Locate the website of four model railroad-related manufacturers or magazine publishers. Print information on their products and services and discuss the information with your counselor."
+            - "(5) Build one railroad structure (from scratch or using a kit), paint and weather the structure, mount it on your layout or diorama, and make the surrounding area on the diorama scenic."
+            - "(6) Alone or with others, build a model railroad or modular layout including ballast and scenery. Make electrical connections and operate a train. Describe what you enjoyed most."
+            - "(7) Participate in a switching contest on a timesaver layout and record your time."
+            - "(8) Explain the difference between powering and controlling a model railroad by using direct current, and powering and controlling a model railroad using digital command control."
+      - id: "7a-notes"
+        prompt: "Notes from your chosen Option A activities"
+        field: { type: text_box, lines: 8 }
+      - id: "7b"
+        prompt: >
+          Option B: Railfanning. With your parent or guardian's and counselor's
+          approval, do TWO of the following:
+        field:
+          type: checklist
+          items:
+            - "(1) Visit a railroad museum, historical display, or a prototype railroad sponsored public event. With permission, photograph, digitally record, or sketch items of interest. Explain what you saw and describe your photos, sketches, or video."
+            - "(2) Purchase tickets and ride a scenic or historic railroad. Under supervision, photograph the equipment and discuss with your counselor the historic significance of the operation."
+            - "(3) Locate the website of four rail historical groups, then find information on the history of the rail preservation operations and purpose of each group. Talk with a member of one of the groups and find out how you might help."
+            - "(4) Plan a trip by rail between two points. Obtain a schedule and explain when the train should arrive at two intermediate points. Purchase the tickets and make the trip. Explain to your counselor what you saw."
+      - id: "7b-notes"
+        prompt: "Notes from your chosen Option B activities"
+        field: { type: text_box, lines: 8 }

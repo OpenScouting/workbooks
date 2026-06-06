@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openscouting-worksheets"
+version = "0.1.0"
+description = "Generate fillable PDF merit badge worksheets from YAML"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "OpenScouting" }]
+dependencies = [
+    "reportlab>=4.0",
+    "pydantic>=2.4",
+    "pyyaml>=6.0",
+    "click>=8.1",
+    "pypdf>=4",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+worksheets = "openscouting_worksheets.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

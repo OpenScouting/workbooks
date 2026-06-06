@@ -1,0 +1,175 @@
+badge:
+  name: Fire Safety
+  slug: fire-safety
+  requirements_revision: "2025-01-01"
+  description: >
+    The Fire Safety merit badge teaches you how fire behaves, how to prevent
+    fires at home, in public buildings, and at camp, and what to do when one
+    starts. You will learn to use fire extinguishers, plan a home escape, and
+    handle flames and fuels safely.
+
+requirements:
+  - id: "1"
+    intro: "Science of and Hazards of Fire. Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Explain the concept of fire."
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: "Name the parts of the fire tetrahedron and the products of combustion."
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: "Describe the life cycle of a fire."
+        field: { type: text_box, lines: 6 }
+      - id: "1d"
+        prompt: "Explain the three methods of heat transfer."
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Fire Extinguishers. Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Explain the different classes of fires."
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: "Identify the different classes of fire extinguishers and which should be used for each class of fire."
+        field: { type: text_box, lines: 7 }
+      - id: "2c"
+        field: { type: checkbox, label: "Demonstrate how to use a fire extinguisher and a fire blanket." }
+
+  - id: "3"
+    intro: "Fire-related Injuries. Do the following:"
+    children:
+      - id: "3a"
+        prompt: "Explain and demonstrate the technique of stop, drop, roll, cool, and call."
+        field: { type: text_box, lines: 5 }
+      - id: "3b"
+        prompt: "Describe how clothing fires occur, how to prevent them, and how clothing can prevent or contribute to burn injuries."
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: "Identify the most frequent causes of burn injuries and how to prevent them."
+        field: { type: text_box, lines: 6 }
+      - id: "3d"
+        prompt: "Review the prevention of, symptoms and signs of, and treatment of airway burns and carbon monoxide (CO) poisoning."
+        field: { type: text_box, lines: 7 }
+
+  - id: "4"
+    intro: "Origins of Fires. Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Explain the four classifications of fire origin (natural, accidental, incendiary, or undetermined) and give an example of each."
+        field: { type: text_box, lines: 7 }
+      - id: "4b"
+        prompt: "Describe how a fire classified as incendiary might lead to criminal prosecution of a person charged with arson."
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    intro: "Fire Safety at Home. Do the following:"
+    children:
+      - id: "5a"
+        prompt: "Describe how to prevent the frequent causes of home fires, including unattended cooking, electricity, smoking, clothes dryers, and rechargeable batteries."
+        field: { type: text_box, lines: 8 }
+      - id: "5b"
+        prompt: "Describe how to prevent frequent causes of seasonal and holiday-related home fires, including fires related to home heating, holiday trees, candles, and fireworks."
+        field: { type: text_box, lines: 8 }
+      - id: "5c"
+        prompt: "Demonstrate how to safely light and extinguish a candle. Discuss with your counselor, then with your family, how to safely use candles."
+        field: { type: text_box, lines: 6 }
+      - id: "5d"
+        prompt: "Using the Home Fire Safety Checklist in the Fire Safety merit badge pamphlet or one approved by your counselor, and with the help of an adult, inspect a home (or a similar building near where you live or at a camp) for fire safety hazards. Present your completed checklist to your counselor and discuss your findings."
+        field: { type: text_box, lines: 8 }
+      - id: "5e"
+        prompt: "Determine if, and what types of, smoke and CO alarms are required in homes in your community. List what types of smoke and CO alarms your home has, their locations, and their expiration dates."
+        field:
+          type: table
+          headers: ["Alarm type", "Location", "Expiration date"]
+          rows: 6
+          cols: 3
+      - id: "5f"
+        prompt: "Demonstrate maintenance of smoke and CO alarms to your counselor and review plans to replace expired alarms."
+        field: { type: text_box, lines: 5 }
+      - id: "5g"
+        prompt: "Develop a home fire-escape plan and a fire-drill schedule with your family, draw a floor plan of your home with exits marked and a map showing your family meeting point, and conduct a home fire drill."
+        field: { type: text_box, lines: 10 }
+      - id: "5h"
+        prompt: "Explain what to do and what not to do if you smell natural gas and if you smell smoke."
+        field: { type: text_box, lines: 6 }
+      - id: "5i"
+        prompt: "Explain how you would report a fire to have the fire department respond."
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    intro: "Safety with Flammable and Combustible Liquids. Do the following:"
+    children:
+      - id: "6a"
+        prompt: "Explain what flammable and combustible liquids are commonly used in homes and how to safely store them."
+        field: { type: text_box, lines: 6 }
+      - id: "6b"
+        prompt: "Describe the safe way to refuel a liquid-fueled engine, such as a lawn mower, outboard motor, farm machine, or automobile with fuel from an approved container."
+        field: { type: text_box, lines: 6 }
+      - id: "6c"
+        prompt: "Describe the options available for safely disposing of unwanted flammable, combustible, and hazardous substances in your community."
+        field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    intro: "Fire Safety in Public Buildings. Do the following:"
+    children:
+      - id: "7a"
+        prompt: "Explain how public buildings are designed for fire safety."
+        field: { type: text_box, lines: 6 }
+      - id: "7b"
+        prompt: "Explain what fire safety systems and equipment can be found in public buildings."
+        field: { type: text_box, lines: 6 }
+      - id: "7c"
+        prompt: "Explain what fire safety precautions you should take when you are in a public building."
+        field: { type: text_box, lines: 6 }
+
+  - id: "8"
+    intro: "Fire Safety at Camp. Do the following:"
+    children:
+      - id: "8a"
+        prompt: "Explain how the Leave No Trace Seven Principles and the Outdoor Code apply to camping fires."
+        field: { type: text_box, lines: 6 }
+      - id: "8b"
+        prompt: "Demonstrate lighting a match safely, the proper way to extinguish it, and to dispose of it. Explain the similarities and differences between safety matches and strike-anywhere matches."
+        field: { type: text_box, lines: 6 }
+      - id: "8c"
+        prompt: "Explain and demonstrate making sparks with flint and steel or with a ferro rod and catching a spark to create a flame. Extinguish the flame safely using one of principles of the fire tetrahedron."
+        field: { type: text_box, lines: 6 }
+      - id: "8d"
+        prompt: "Demonstrate the safe way to start a charcoal fire."
+        field: { type: checkbox, label: "Demonstrated the safe way to start a charcoal fire." }
+      - id: "8e"
+        prompt: "Describe three common campsite fire lays. Collect, prepare, and set up tinder, kindling, and fuel for a campfire following the Leave No Trace Seven Principles and the Outdoor Code. Ignite your fire lay and safely extinguish your fire."
+        field: { type: text_box, lines: 8 }
+      - id: "8f"
+        prompt: "Demonstrate using a camp stove."
+        field: { type: checkbox, label: "Demonstrated using a camp stove." }
+      - id: "8g"
+        prompt: "Explain how to set up and keep a campsite safe from fire."
+        field: { type: text_box, lines: 6 }
+      - id: "8h"
+        prompt: "Develop a lesson plan to teach a fire safety skill or topic, such as lighting a candle or a match or a charcoal fire or a lantern or a camp stove or using flint and steel or setting up a fire lay. Review your lesson plan with your counselor. Teach your skill or topic to one or more Scouts using the EDGE method."
+        field: { type: text_box, lines: 10 }
+
+  - id: "9"
+    intro: "Wildland Fires. Do the following:"
+    children:
+      - id: "9a"
+        prompt: "List causes of wildland fires and ways to prevent them."
+        field: { type: text_box, lines: 6 }
+      - id: "9b"
+        prompt: "Explain the social, economic, and environmental consequences of wildland fires."
+        field: { type: text_box, lines: 7 }
+
+  - id: "10"
+    prompt: "Careers. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Visit a fire station in-person. Identify the various types of fire service vehicles. From the firefighters you meet during your visit, learn about the fire prevention activities in your community and about their careers. Discuss with your counselor what you learned during your tour and interviews."
+        - "(b) Identify three career opportunities that would use skills and knowledge in the field of fire safety. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career."
+    children:
+      - id: "10-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }

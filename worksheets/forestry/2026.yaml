@@ -1,0 +1,136 @@
+badge:
+  name: Forestry
+  slug: forestry
+  requirements_revision: "2026-01-01"
+  description: >
+    Forests give us products, clean air and water, wildlife habitat, and places
+    to recreate. The Forestry merit badge teaches you to identify trees, study
+    how forests are managed, and understand the threats forests face and how to
+    reduce them.
+
+requirements:
+  - id: "1"
+    prompt: "Prepare a field notebook, make a collection, and identify 15 species of trees, wild shrubs, or vines in a local forested area. Write a description in which you identify and discuss the following:"
+    children:
+      - id: "1a"
+        prompt: "The characteristics of leaf, twig, cone, or fruiting bodies"
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: "The habitat in which these trees, shrubs, or vines are found."
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: "The important ways each tree, shrub, or vine is used by humans or wildlife and whether the species is native or was introduced to the area. If it is not native, explain whether it is considered invasive or potentially invasive."
+        field: { type: text_box, lines: 7 }
+
+  - id: "2"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Collect and identify wood samples of 10 species of trees. List several ways the wood of each species can be used."
+        - "(b) Find and examine three stumps, logs, or core samples that show variations in the growth rate of their ring patterns. In the field notebook you prepared for requirement 1, describe the location or origin of each example (including elevation, aspect, slope, and the position on the slope), and discuss possible reasons for the variations in growth rate. Photograph or sketch each example."
+        - "(c) Find and examine two types of animal, insect, or disease damage to trees. In the field notebook you prepared for requirement 1, identify the damage, explain how the damage was caused, and describe the effects of the damage on the trees. Photograph or sketch each example."
+    children:
+      - id: "2-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: "Describe the contributions forests make to:"
+        children:
+          - id: "3a1"
+            prompt: "Our economy in the form of products"
+            field: { type: text_box, lines: 3 }
+          - id: "3a2"
+            prompt: "Our social well-being, including recreation"
+            field: { type: text_box, lines: 3 }
+          - id: "3a3"
+            prompt: "Soil protection and increased fertility"
+            field: { type: text_box, lines: 3 }
+          - id: "3a4"
+            prompt: "Clean water"
+            field: { type: text_box, lines: 3 }
+          - id: "3a5"
+            prompt: "Clean air (carbon cycling, sequestration)"
+            field: { type: text_box, lines: 3 }
+          - id: "3a6"
+            prompt: "Wildlife habitat"
+            field: { type: text_box, lines: 3 }
+          - id: "3a7"
+            prompt: "Fisheries habitat"
+            field: { type: text_box, lines: 3 }
+          - id: "3a8"
+            prompt: "Threatened and endangered species of plants and animals"
+            field: { type: text_box, lines: 3 }
+      - id: "3b"
+        prompt: "Tell which watershed or other source your community relies on for its water supply."
+        field: { type: text_box, lines: 5 }
+
+  - id: "4"
+    prompt: "Describe what forest management means, including the following:"
+    children:
+      - id: "4a"
+        prompt: "Multiple-use management"
+        field: { type: text_box, lines: 4 }
+      - id: "4b"
+        prompt: "Sustainable forest management"
+        field: { type: text_box, lines: 4 }
+      - id: "4c"
+        prompt: "Even-aged and uneven-aged management and the silvicultural systems associated with each"
+        field: { type: text_box, lines: 5 }
+      - id: "4d"
+        prompt: "Intermediate cuttings"
+        field: { type: text_box, lines: 4 }
+      - id: "4e"
+        prompt: "The role of prescribed burning and related forest-management practices"
+        field: { type: text_box, lines: 5 }
+
+  - id: "5"
+    prompt: "With your parent or guardian's and counselor's approval, do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Visit a managed public or private forest area with the manager or a forester who is familiar with it. Write a brief report describing the type of forest, the management objectives, and the forestry techniques used to achieve the objectives."
+        - "(b) With a knowledgeable individual, visit a current or past logging operation or wood-using manufacturing plant. Write a brief report describing the items listed in the pamphlet (species and size of trees, origin of the forest, successional stage, land ownership or destination, products made, how products are made and used, and how waste materials are disposed of or utilized)."
+        - "(c) Take part in a forest-fire prevention campaign in cooperation with your local fire warden, state wildfire agency, forester, or counselor. Write a brief report describing the campaign, how it will help prevent wildfires, and your part in it."
+    children:
+      - id: "5-report"
+        prompt: "Your brief report"
+        field: { type: text_box, lines: 12 }
+
+  - id: "6"
+    prompt: "In your camp, local recreation area (park or equivalent), or neighborhood, do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Inventory the trees within a specific area above (campsite, road, trail, street, etc.) that may be a hazard to structures or people. Note the species and hazardous condition, and suggest a remedy (removal or trimming). Make your list available to the proper authority or agency."
+        - "(b) Review a hazardous tree report done by a professional for this area and visit those trees and the results of the prescription to prune or remove them."
+    children:
+      - id: "6-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "7"
+    intro: "Do the following:"
+    children:
+      - id: "7a"
+        prompt: "Describe the consequences to forests that result from FIVE of the following elements: wildfire, absence of fire, destructive insects, loss of pollinating insect population, tree diseases, air pollution, overgrazing, deer or other wildlife overpopulation, improper harvest, and urbanization."
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Element", type: text_field }
+            - { label: "Consequences", type: text_box, lines: 3 }
+      - id: "7b"
+        prompt: "Explain what can be done to reduce the consequences you discussed in 7(a)."
+        field: { type: text_box, lines: 8 }
+      - id: "7c"
+        prompt: "Describe what you should do if you discover a forest fire and how a professional firefighting crew might control it. Name your state or local wildfire control agency."
+        field: { type: text_box, lines: 7 }
+
+  - id: "8"
+    prompt: "Visit one or more local foresters and write a brief report about the person (or persons) OR write about a forester's occupation including the education, qualifications, career opportunities, and duties related to forestry."
+    field: { type: text_box, lines: 10 }

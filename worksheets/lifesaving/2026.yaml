@@ -1,0 +1,226 @@
+badge:
+  name: Lifesaving
+  slug: lifesaving
+  requirements_revision: "2026-01-01"
+  description: >
+    Lifesaving teaches you how to help others in the water safely and
+    effectively. An Eagle-required badge, it builds strong swimming skills and
+    the judgment to perform rescues while protecting yourself.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Before doing requirements 3 through 15, review with your counselor the
+      principles of Safe Swim Defense.
+    field: { type: checkbox, label: "Reviewed the principles of Safe Swim Defense with your counselor." }
+
+  - id: "2"
+    intro: "Before doing requirements 3 through 15:"
+    children:
+      - id: "2a"
+        prompt: "Earn the Swimming merit badge."
+        field: { type: checkbox, label: "Earned the Swimming merit badge." }
+      - id: "2b"
+        prompt: >
+          Swim continuously for 400 yards using each of the following strokes in
+          a strong manner, in good form with rhythmic breathing, for at least 50
+          continuous yards: front crawl, sidestroke, breaststroke, and elementary
+          backstroke.
+        field:
+          type: checklist
+          items:
+            - "Front crawl"
+            - "Sidestroke"
+            - "Breaststroke"
+            - "Elementary backstroke"
+
+  - id: "3"
+    intro: "Explain the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Common drowning situations and how to avoid them, such as unfenced
+          residential pools, drop offs, river currents, rip currents, and medical
+          emergencies.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: "How to identify persons in the water who need assistance."
+        field: { type: text_box, lines: 5 }
+      - id: "3c"
+        prompt: "The order of methods in water rescue."
+        field: { type: text_box, lines: 5 }
+      - id: "3d"
+        prompt: >
+          How rescue techniques vary depending on the setting and the condition
+          of the person needing assistance.
+        field: { type: text_box, lines: 5 }
+      - id: "3e"
+        prompt: "Situations for which in-water rescues should not be undertaken."
+        field: { type: text_box, lines: 5 }
+
+  - id: "4"
+    prompt: >
+      Demonstrate "reaching" rescues using various items such as arm, leg,
+      towels, shirts, paddles, poles.
+    field: { type: checkbox, label: 'Demonstrated "reaching" rescues using various items.' }
+
+  - id: "5"
+    prompt: >
+      Demonstrate "throwing" rescues using various items such as a line, ring
+      buoy, rescue bag, and free-floating support. Successfully place at least
+      one such aid within reach of a practice victim 25 feet from shore.
+    field: { type: checkbox, label: 'Demonstrated "throwing" rescues and placed an aid within reach of a practice victim 25 feet from shore.' }
+
+  - id: "6"
+    prompt: >
+      With your counselor's approval, view in-person or on video a rowing rescue
+      performed using a rowboat, canoe, kayak, or stand up paddleboard. Discuss
+      with your counselor how effectively and efficiently the rescue was
+      performed.
+    field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    prompt: >
+      List various items that can be used as aids in a "go" rescue. Explain why
+      buoyant aids are preferred.
+    field: { type: text_box, lines: 6 }
+
+  - id: "8"
+    prompt: >
+      Correctly demonstrate rescues of a conscious practice subject 30 feet from
+      shore in deep water using two types of buoyant aids provided by your
+      counselor. Use a proper entry and a strong approach stroke. Speak to the
+      subject to determine his or her condition and to provide instructions and
+      encouragement.
+    children:
+      - id: "8a"
+        prompt: >
+          Present one aid to a subject, release it, and swim at a safe distance
+          as the subject moves to safety.
+        field: { type: checkbox, label: "Presented one aid, released it, and swam at a safe distance as the subject moved to safety." }
+      - id: "8b"
+        prompt: >
+          In a separate rescue, present the other aid to a subject and use it to
+          tow the subject to safety.
+        field: { type: checkbox, label: "Presented the other aid and used it to tow the subject to safety." }
+
+  - id: "9"
+    prompt: >
+      Discuss with your counselor when it is appropriate to remove heavy clothing
+      before attempting a swimming rescue. Remove street clothes in 20 seconds or
+      less, enter the water, and approach a conscious practice subject 30 feet
+      from shore in deep water. Speak to the subject and use a nonbuoyant aid,
+      such as a shirt or towel, to tow the subject to safety.
+    field: { type: text_box, lines: 6 }
+
+  - id: "10"
+    prompt: >
+      Discuss with your counselor the importance of avoiding contact with an
+      active subject and demonstrate lead-and-wait techniques.
+    field: { type: text_box, lines: 6 }
+
+  - id: "11"
+    prompt: >
+      Perform the following nonequipment rescues for a conscious practice subject
+      30 feet from shore. Begin in the water from a position near the subject.
+      Speak to the subject to determine his or her condition and to provide
+      instructions and encouragement.
+    children:
+      - id: "11a"
+        prompt: >
+          Perform an armpit tow for a calm, responsive, tired swimmer resting
+          with a back float.
+        field: { type: checkbox, label: "Performed an armpit tow for a calm, responsive, tired swimmer resting with a back float." }
+      - id: "11b"
+        prompt: "Perform a cross-chest carry for an exhausted, responsive subject treading water."
+        field: { type: checkbox, label: "Performed a cross-chest carry for an exhausted, responsive subject treading water." }
+
+  - id: "12"
+    prompt: >
+      In deep water, show how to escape from a victim's grasp on your wrist.
+      Repeat for front and rear holds about the head and shoulders.
+    field:
+      type: checklist
+      items:
+        - "Escape from a grasp on your wrist."
+        - "Escape from a front hold about the head and shoulders."
+        - "Escape from a rear hold about the head and shoulders."
+
+  - id: "13"
+    prompt: >
+      Perform the following rescues for an unconscious practice subject at or near
+      the surface 30 feet from shore. Use a proper entry and strong approach
+      stroke. Speak to the subject and splash water on the subject to determine
+      his or her condition before making contact. Quickly remove the victim from
+      the water, with assistance if needed, and position for CPR.
+    children:
+      - id: "13a"
+        prompt: "Perform an equipment assist using a buoyant aid."
+        field: { type: checkbox, label: "Performed an equipment assist using a buoyant aid." }
+      - id: "13b"
+        prompt: "Perform a front approach and wrist tow."
+        field: { type: checkbox, label: "Performed a front approach and wrist tow." }
+      - id: "13c"
+        prompt: "Perform a rear approach and armpit tow."
+        field: { type: checkbox, label: "Performed a rear approach and armpit tow." }
+
+  - id: "14"
+    prompt: >
+      Discuss with your counselor how to respond if a victim submerges before
+      being reached by a rescuer, and do the following:
+    children:
+      - id: "14-discuss"
+        prompt: "Discuss how to respond if a victim submerges before being reached by a rescuer."
+        field: { type: text_box, lines: 5 }
+      - id: "14a"
+        prompt: "Recover a 10-pound weight in 8 to 10 feet of water using a feetfirst surface dive."
+        field: { type: checkbox, label: "Recovered a 10-pound weight in 8 to 10 feet of water using a feetfirst surface dive." }
+      - id: "14b"
+        prompt: "Repeat using a headfirst surface dive."
+        field: { type: checkbox, label: "Recovered the weight using a headfirst surface dive." }
+
+  - id: "15"
+    prompt: "Demonstrate management of a spinal injury to your counselor:"
+    children:
+      - id: "15a"
+        prompt: "Discuss the causes, signs, and symptoms of a spinal injury."
+        field: { type: text_box, lines: 5 }
+      - id: "15b"
+        prompt: "Support a faceup subject in calm water of standing depth."
+        field: { type: checkbox, label: "Supported a faceup subject in calm water of standing depth." }
+      - id: "15c"
+        prompt: >
+          Turn a subject from a facedown to a faceup position in water of standing
+          depth while maintaining support.
+        field: { type: checkbox, label: "Turned a subject from facedown to faceup in standing-depth water while maintaining support." }
+
+  - id: "16"
+    prompt: "Demonstrate knowledge of resuscitation procedure:"
+    children:
+      - id: "16a"
+        prompt: "Describe how to recognize the need for rescue breathing and CPR."
+        field: { type: text_box, lines: 5 }
+      - id: "16b"
+        prompt: >
+          Demonstrate CPR knowledge and skills, including rescue breathing, on a
+          mannequin under the guidance of a current CPR/AED instructor trained by
+          a nationally certified provider.
+        field: { type: checkbox, label: "Demonstrated CPR knowledge and skills, including rescue breathing, on a mannequin under qualified guidance." }
+
+  - id: "17"
+    prompt: >
+      With your counselor, discuss causes, prevention, and treatment of other
+      injuries or illnesses that could occur while swimming or boating, including
+      hypothermia, dehydration, heat-related illnesses, muscle cramps, sunburn,
+      stings, and hyperventilation.
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels:
+        - Hypothermia
+        - Dehydration
+        - Heat-related illnesses
+        - Muscle cramps
+        - Sunburn
+        - Stings
+        - Hyperventilation

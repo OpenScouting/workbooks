@@ -1,0 +1,107 @@
+badge:
+  name: Citizenship in the Nation
+  slug: citizenship-in-the-nation
+  requirements_revision: "2026-01-01"
+  description: >
+    Citizenship in the Nation examines the foundations of American government,
+    from the Constitution to the three branches and the documents that shape the
+    country. You study national issues and history and practice engaging with
+    your elected representatives.
+
+requirements:
+  - id: "1"
+    prompt: >
+      What is the Constitution of the United States? What does the Constitution
+      do? What principles does it reflect? Why is it important to have a
+      Constitution?
+    field: { type: text_box, lines: 9 }
+
+  - id: "2"
+    prompt: >
+      List the six purposes for creating the United States Constitution set forth
+      in the Preamble to the Constitution. How do these purposes affect your
+      family and community?
+    field: { type: text_box, lines: 9 }
+
+  - id: "3"
+    intro: "List the three branches of the United States government. Explain:"
+    children:
+      - id: "3a"
+        prompt: "The function of each branch of government"
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: "Why it is important to divide powers among different branches"
+        field: { type: text_box, lines: 5 }
+      - id: "3c"
+        prompt: "How each branch checks and balances the others"
+        field: { type: text_box, lines: 6 }
+      - id: "3d"
+        prompt: "How citizens can be involved in each branch of government"
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    intro: "Discuss the importance of:"
+    children:
+      - id: "4a"
+        prompt: "Declaration of Independence"
+        field: { type: text_box, lines: 5 }
+      - id: "4b"
+        prompt: "Bill of Rights (the first 10 Amendments to the Constitution) and the 14th Amendment"
+        field: { type: text_box, lines: 5 }
+      - id: "4c"
+        prompt: "E Pluribus Unum, the traditional United States motto"
+        field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    prompt: >
+      Watch the national evening news for five days in a row or read the main
+      stories in a national media organization (e.g., a newspaper or news website)
+      for five days in a row. Discuss the national issues that you learned about
+      with your counselor. Choose one issue and explain how it affects you, your
+      family, and community.
+    field: { type: text_box, lines: 9 }
+
+  - id: "6"
+    intro: "With your counselor's approval, choose a speech of national historical importance. Explain:"
+    children:
+      - id: "6a"
+        prompt: "Who the author was"
+        field: { type: text_box, lines: 3 }
+      - id: "6b"
+        prompt: "What the historical context was"
+        field: { type: text_box, lines: 4 }
+      - id: "6c"
+        prompt: "What difficulties the nation faced that the author wished to discuss"
+        field: { type: text_box, lines: 4 }
+      - id: "6d"
+        prompt: "What the author said"
+        field: { type: text_box, lines: 5 }
+      - id: "6e"
+        prompt: "Why the speech is important to the nation's history"
+        field: { type: text_box, lines: 5 }
+      - id: "6f"
+        prompt: >
+          Choose a sentence or two from the speech that has significant meaning to
+          you, and tell your counselor why.
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Visit a place that is listed as a National Historic Landmark or that is on the National Register of Historic Places. Tell your counselor what you learned about the landmark or site and what you found interesting about it."
+        - "(b) Tour your state capitol building or the U.S. Capitol. Tell your counselor what you learned about the capitol, its function, and the history."
+        - "(c) Tour a federal facility. Explain to your counselor what you saw and what you learned about its function in the local community and how it serves this nation."
+        - "(d) Choose a United States national monument that interests you. Using books, brochures, the internet (with your parent or guardian's permission), and other resources, find out more about the monument. Tell your counselor what you learned, and explain why the monument is important to this country's citizens."
+    children:
+      - id: "7notes"
+        prompt: "Notes from your two chosen options"
+        field: { type: text_box, lines: 10 }
+
+  - id: "8"
+    prompt: >
+      Name your representatives in the United States Congress. Write to your
+      representative in Congress explaining your views on a national issue. Show
+      your correspondence, along with any response you receive, to your counselor.
+    field: { type: text_box, lines: 9 }

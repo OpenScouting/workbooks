@@ -1,0 +1,337 @@
+badge:
+  name: Plant Science
+  slug: plant-science
+  requirements_revision: "2026-01-01"
+  description: >
+    Plant Science explores how plants grow, reproduce, and sustain life on
+    Earth. Earning this badge introduces you to plant biology, soil, and
+    pollination, then lets you dig deeper into agronomy, horticulture, or field
+    botany.
+
+requirements:
+  - id: "1"
+    prompt: "Make a drawing and identify five or more parts of a flowering plant. Tell what each part does."
+    field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    prompt: >
+      Explain photosynthesis and tell why this process is important. Tell at
+      least five ways that humans depend on plants.
+    children:
+      - id: "2a"
+        prompt: "Explain photosynthesis and tell why this process is important."
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: "Tell at least five ways that humans depend on plants."
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: "Explain how honeybees and other pollinating insects are important to plant life."
+    field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: >
+      Explain how water, light, air, temperature, and pests affect plants.
+      Describe the nature and function of soil and explain its importance. Tell
+      about the texture, structure, and composition of fertile soil. Tell how
+      soil may be improved.
+    children:
+      - id: "4a"
+        prompt: "Explain how water, light, air, temperature, and pests affect plants."
+        field: { type: text_box, lines: 6 }
+      - id: "4b"
+        prompt: "Describe the nature and function of soil and explain its importance."
+        field: { type: text_box, lines: 5 }
+      - id: "4c"
+        prompt: "Tell about the texture, structure, and composition of fertile soil."
+        field: { type: text_box, lines: 5 }
+      - id: "4d"
+        prompt: "Tell how soil may be improved."
+        field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    prompt: >
+      Tell how to propagate plants by seeds, roots, cuttings, tubers, and
+      grafting. Grow a plant by ONE of these methods.
+    children:
+      - id: "5a"
+        prompt: "Tell how to propagate plants by seeds, roots, cuttings, tubers, and grafting."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Seeds
+            - Roots
+            - Cuttings
+            - Tubers
+            - Grafting
+      - id: "5b"
+        prompt: "Grow a plant by ONE of these methods."
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    prompt: >
+      List by common name at least 10 native plants and 10 cultivated plants
+      that grow near your home. List five invasive non-native plants in your
+      area and tell how they may be harmful. Tell how the spread of invasive
+      plants may be avoided or controlled in ways that are not damaging to
+      humans, wildlife, and the environment.
+    children:
+      - id: "6a"
+        prompt: "List by common name at least 10 native plants and 10 cultivated plants that grow near your home."
+        field:
+          type: table
+          headers: ["Native plants", "Cultivated plants"]
+          rows: 10
+          cols: 2
+      - id: "6b"
+        prompt: "List five invasive non-native plants in your area and tell how they may be harmful."
+        field:
+          type: table
+          headers: ["Invasive non-native plant", "How it may be harmful"]
+          rows: 5
+          cols: 2
+      - id: "6c"
+        prompt: >
+          Tell how the spread of invasive plants may be avoided or controlled
+          in ways that are not damaging to humans, wildlife, and the
+          environment.
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - >
+          (a) Explore careers related to this merit badge. Research one career
+          to learn about the training and education needed, costs, job
+          prospects, salary, job duties, and career advancement. Your research
+          methods may include, with your parent or guardian's permission, an
+          internet or library search, an interview with a professional in the
+          field, or a visit to a location where people in this career work.
+          Discuss with your counselor both your findings and what about this
+          profession might make it an interesting career.
+        - >
+          (b) Explore how you could use knowledge and skills from this merit
+          badge to pursue a hobby or healthy lifestyle. Research any training
+          needed, expenses, and organizations that promote or support it.
+          Discuss with your counselor what short-term and long-term goals you
+          might have if you pursued this.
+    children:
+      - id: "7notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "8"
+    prompt: "Choose ONE of the following options and complete each requirement:"
+    field:
+      type: checklist
+      items:
+        - "Option A - Agronomy"
+        - "Option B - Horticulture"
+        - "Option C - Field Botany"
+    children:
+      - id: "8A"
+        intro: "Option A - Agronomy. Do ALL of the following:"
+        children:
+          - id: "8A1"
+            prompt: "Describe how to prepare a seedbed."
+            field: { type: text_box, lines: 5 }
+          - id: "8A2"
+            prompt: >
+              Make and use a seed germination tester to test 50 seeds of four
+              of the following plants: corn, cotton, alfalfa, soybeans, clover,
+              wheat, rice, rye, or barley. Determine the percentage of live
+              seeds.
+            field:
+              type: table
+              headers: ["Plant", "Seeds tested", "Seeds germinated", "Percent live"]
+              rows: 4
+              cols: 4
+          - id: "8A3"
+            prompt: >
+              Explain one important insect pest and one important disease that
+              damage each of the following: corn, small grains, and cotton.
+              Collect and name five weeds that compete with crops in your
+              locality. Tell how to control these weeds without harming people,
+              wildlife, or useful insects.
+            field: { type: text_box, lines: 9 }
+          - id: "8A4"
+            prompt: >
+              On a map of the United States, identify the chief regions where
+              corn, cotton, forage crops, small grain crops, and oil crops grow.
+              Tell how the climate and location of these regions make them
+              leaders in the production of these crops.
+            field: { type: text_box, lines: 8 }
+          - id: "8A5"
+            prompt: "Do ALL of the requirements in ONE of the following alternatives:"
+            field:
+              type: checklist
+              items:
+                - "(a) Corn"
+                - "(b) Cotton"
+                - "(c) Forage Crops"
+                - "(d) Small Grains"
+                - "(e) Oil Crops"
+            children:
+              - id: "8A5notes"
+                prompt: "Notes for your chosen alternative (complete all three numbered parts)"
+                field: { type: text_box, lines: 10 }
+
+      - id: "8B"
+        intro: "Option B - Horticulture. Do ALL of the following:"
+        children:
+          - id: "8B1"
+            prompt: >
+              Visit one of the following places and tell what you learned about
+              horticulture there: public garden, arboretum, retail nursery,
+              wholesale nursery, production greenhouse, or conservatory
+              greenhouse.
+            field: { type: text_box, lines: 6 }
+          - id: "8B2"
+            prompt: >
+              Explain the following terms: hardiness zone, shade tolerance, pH,
+              moisture requirement, native habitat, texture, cultivar, ultimate
+              size, disease resistance, habit, evergreen, deciduous, annual, and
+              perennial. Find out what hardiness zone you live in and list 10
+              landscape plants you like that are suitable for your climate,
+              giving the common name and scientific name for each.
+            field: { type: text_box, lines: 10 }
+          - id: "8B3"
+            prompt: "Do ONE of the following:"
+            field:
+              type: checklist
+              items:
+                - >
+                  (a) Explain the difference between vegetative and sexual
+                  propagation methods, and tell some horticultural advantages of
+                  each. Grow a plant from a stem or root cutting or graft.
+                - >
+                  (b) Transplant 12 seedlings or rooted cuttings to larger
+                  containers and grow them for at least one month.
+                - "(c) Demonstrate good pruning techniques and tell why pruning is important."
+                - >
+                  (d) After obtaining permission, plant a tree or shrub properly
+                  in an appropriate site.
+            children:
+              - id: "8B3notes"
+                prompt: "Notes from your chosen option"
+                field: { type: text_box, lines: 6 }
+          - id: "8B4"
+            prompt: "Do the following:"
+            children:
+              - id: "8B4a"
+                prompt: >
+                  Explain the importance of good landscape design and selection
+                  of plants that are suitable for particular sites and
+                  conditions.
+                field: { type: text_box, lines: 5 }
+              - id: "8B4b"
+                prompt: "Tell why it is important to know how big a plant will grow."
+                field: { type: text_box, lines: 4 }
+              - id: "8B4c"
+                prompt: "Tell why slower-growing landscape plants are sometimes a better choice than faster-growing varieties."
+                field: { type: text_box, lines: 4 }
+          - id: "8B5"
+            prompt: "Do ALL of the requirements in ONE of the following alternatives:"
+            field:
+              type: checklist
+              items:
+                - "(a) Bedding Plants"
+                - "(b) Fruit, Berry, and Nut Crops"
+                - "(c) Woody Ornamentals"
+                - "(d) Home Gardening"
+            children:
+              - id: "8B5notes"
+                prompt: "Notes for your chosen alternative (complete all numbered parts)"
+                field: { type: text_box, lines: 10 }
+
+      - id: "8C"
+        intro: "Option C - Field Botany. Do ALL of the following:"
+        children:
+          - id: "8C1"
+            prompt: "Visit a park, forest, Scout camp, or other natural area near your home. While you are there:"
+            children:
+              - id: "8C1a"
+                prompt: >
+                  Determine which species of plants are the largest and which
+                  are the most abundant. Note whether they cast shade on other
+                  plants.
+                field: { type: text_box, lines: 5 }
+              - id: "8C1b"
+                prompt: >
+                  Using information from maps, textbooks, or the internet,
+                  describe the environmental factors that may influence the
+                  presence of plants on your site, including latitude, climate,
+                  air and soil temperature, soil type and pH, geology,
+                  hydrology, and topography.
+                field: { type: text_box, lines: 7 }
+              - id: "8C1c"
+                prompt: >
+                  Record any differences in the types of plants you see at the
+                  edge of a forest, near water, in burned areas, or near a road
+                  or railroad.
+                field: { type: text_box, lines: 5 }
+          - id: "8C2"
+            prompt: >
+              Select a study site that is at least 100 by 100 feet. Make a list
+              of 10 woody plants (trees and shrubs) and 10 non-woody plants in
+              the study site. Find out which of these are native plants and
+              which are exotic (or non-native).
+            field:
+              type: table
+              headers: ["Plant", "Woody / non-woody", "Native / exotic"]
+              rows: 20
+              cols: 3
+          - id: "8C3"
+            prompt: >
+              Tell how an identification key works and use a simple key to
+              identify 10 kinds of plants (in addition to those in general
+              requirement 5 above). Tell the difference between common and
+              scientific names and tell why scientific names are important.
+            field: { type: text_box, lines: 8 }
+          - id: "8C4"
+            prompt: >
+              After gaining permission, collect, identify, press, mount, and
+              label 10 different plants that are common in your area. Tell why
+              voucher specimens are important for documentation of a field
+              botanist's discoveries.
+            field: { type: text_box, lines: 7 }
+          - id: "8C5"
+            prompt: >
+              Obtain a list of rare plants of your state. Tell what is being
+              done to protect rare plants and natural areas in your state. Write
+              a paragraph about one of the rare plants in your state.
+            field: { type: text_box, lines: 8 }
+          - id: "8C6"
+            prompt: "Do ALL of the requirements in ONE of the following alternatives:"
+            field:
+              type: checklist
+              items:
+                - "(a) Tree Inventory"
+                - "(b) Transect Study"
+                - "(c) Nested Plot"
+                - "(d) Herbarium Visit"
+                - "(e) Plant Conservation Organization Visit"
+            children:
+              - id: "8C6notes"
+                prompt: "Notes for your chosen alternative (complete all numbered parts)"
+                field: { type: text_box, lines: 10 }
+
+  - id: "9"
+    prompt: >
+      Discuss the importance of the Leave No Trace Seven Principles and the
+      Outdoor Code as they relate to plant science. Explain how you have
+      followed the Leave No Trace Seven Principles and the Outdoor Code while in
+      natural areas during field observation, specimen collection, and
+      identification.
+    field: { type: text_box, lines: 8 }
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

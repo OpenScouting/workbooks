@@ -1,0 +1,111 @@
+badge:
+  name: Mammal Study
+  slug: mammal-study
+  requirements_revision: "2026-01-01"
+  description: >
+    Mammals share our world in countless forms, from mice to whales. Earning the
+    Mammal Study merit badge, you learn how mammals are classified, observe them
+    in the wild, and explore how they fit into the web of life around you.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Explain the following terms: animal, invertebrate, vertebrate, and mammal.
+      Name three characteristics that distinguish mammals from all other animals.
+    children:
+      - id: "1-terms"
+        prompt: "Explain the terms: animal, invertebrate, vertebrate, and mammal."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Animal
+            - Invertebrate
+            - Vertebrate
+            - Mammal
+      - id: "1-characteristics"
+        prompt: "Name three characteristics that distinguish mammals from all other animals."
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    prompt: >
+      Explain how the animal kingdom is classified. Explain where mammals fit in
+      the classification of animals. Classify three mammals from phylum through
+      species.
+    children:
+      - id: "2-classification"
+        prompt: >
+          Explain how the animal kingdom is classified, and explain where mammals
+          fit in the classification of animals.
+        field: { type: text_box, lines: 8 }
+      - id: "2-classify"
+        prompt: "Classify three mammals from phylum through species."
+        field:
+          type: table
+          headers: ["Mammal", "Phylum", "Class", "Order", "Family", "Genus", "Species"]
+          rows: 3
+          cols: 7
+
+  - id: "3"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Spend three hours in two different kinds of natural habitats or at different elevations for a total of 6 hours. List the different mammal species and how many of each you identified by sight or sign. Tell why all mammals do not live in the same kind of habitat."
+        - "(b) Spend three hours on five different days in at least a 4-acre area (about the size of 3 football fields) for a total of 15 hours. List the mammal species you identified by sight or sign."
+        - "(c) From study and reading, write a simple life history of one nongame mammal that lives in your area. Tell how this mammal lived before its habitat was affected in any way by humans. Tell how it reproduces, what it eats, and its natural habitat. Describe its dependency upon plants and other animals (including humans), and how they depend upon it. Describe how humans have benefited from the mammal you have chosen and whether the mammal has benefited from association with humankind."
+    children:
+      - id: "3-notes"
+        prompt: "Notes, lists, or life history for your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Under the guidance of a nature center or natural history museum, make two study skins of rats or mice. Tell the uses of study skins and mounted specimens respectively."
+        - "(b) Take good pictures of two kinds of mammals in the wild. Record the date(s), time of day, weather conditions, approximate distance from the animal, habitat conditions, and any other factors you feel may have influenced the animal's activity and behavior."
+        - "(c) Write a life history of a native game mammal that lives in your area, covering the points outlined in requirement 3(c). List sources for this information."
+        - "(d) Make and bait a tracking pit. Report what mammals and other animals came to the bait."
+        - "(e) Visit a natural history museum. Report on how specimens are prepared and cataloged. Explain the purposes of museums."
+        - "(f) Write a report of 500 words on a book about a mammal species."
+        - "(g) Trace two possible food chains of carnivorous mammals from the soil through four stages to the mammal."
+    children:
+      - id: "4-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "5"
+    prompt: >
+      Working with your counselor, select and carry out one project that will
+      influence the numbers of one or more mammals.
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: >
+      Discuss the importance of the Leave No Trace Seven Principles and the
+      Outdoor Code as they relate to Mammal Study. Explain how you have followed
+      the Leave No Trace Seven Principles and the Outdoor Code while in natural
+      areas during field observation, specimen collection, and identification.
+    field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Explore careers related to this merit badge. Research one career to learn about the training and education needed, costs, job prospects, salary, job duties, and career advancement. Your research methods may include, with your parent or guardian's permission, an internet or library search, an interview with a professional in the field, or a visit to a location where people in this career work. Discuss with your counselor both your findings and what about this profession might make it an interesting career."
+        - "(b) Explore how you could use knowledge and skills from this merit badge to pursue a hobby or healthy lifestyle. Research any training needed, expenses, and organizations that promote or support it. Discuss with your counselor what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "7-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

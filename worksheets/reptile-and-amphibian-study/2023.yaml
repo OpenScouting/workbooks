@@ -1,0 +1,164 @@
+badge:
+  name: Reptile and Amphibian Study
+  slug: reptile-and-amphibian-study
+  requirements_revision: "2023-01-01"
+  description: >
+    The Reptile and Amphibian Study merit badge invites Scouts to observe and
+    learn about the snakes, lizards, turtles, frogs, and salamanders around them.
+    Scouts study identification, habitats, and behavior while caring for or
+    observing live specimens responsibly.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Describe the identifying characteristics of six species of reptiles and
+      four species of amphibians found in the United States. For any four of
+      these, make sketches from your own observations or take photographs. Show
+      markings, color patterns, or other characteristics that are important in
+      the identification of each of the four species. Discuss the habits and
+      habitats of all 10 species.
+    field:
+      type: repeated_block
+      count: 10
+      template:
+        - { label: "Species (reptile or amphibian)", type: text_field }
+        - { label: "Identifying characteristics", type: text_box, lines: 2 }
+        - { label: "Habits and habitat", type: text_box, lines: 2 }
+
+  - id: "2"
+    prompt: >
+      Discuss with your counselor the approximate number of species and general
+      geographic distribution of reptiles and amphibians in the United States.
+      Prepare a list of the most common species found in your local area or
+      state.
+    field: { type: text_box, lines: 8 }
+  - id: "2-list"
+    prompt: "List of the most common species found in your local area or state."
+    field:
+      type: table
+      headers: ["Species", "Reptile or amphibian"]
+      rows: 8
+      cols: 2
+
+  - id: "3"
+    prompt: "Describe the main differences between"
+    children:
+      - id: "3a"
+        prompt: "Amphibians and reptiles"
+        field: { type: text_box, lines: 4 }
+      - id: "3b"
+        prompt: "Alligators and crocodiles"
+        field: { type: text_box, lines: 4 }
+      - id: "3c"
+        prompt: "Toads and frogs"
+        field: { type: text_box, lines: 4 }
+      - id: "3d"
+        prompt: "Snakes and lizards"
+        field: { type: text_box, lines: 4 }
+
+  - id: "4"
+    prompt: >
+      Explain how reptiles and amphibians are an important component of the
+      natural environment. List four species that are officially protected by
+      the federal government or by the state you live in, and tell why each is
+      protected. List three species of reptiles and three species of amphibians
+      found in your local area that are not protected. Discuss the food habits of
+      all 10 species.
+    field: { type: text_box, lines: 6 }
+  - id: "4-protected"
+    prompt: "Four protected species and why each is protected"
+    field:
+      type: repeated_block
+      count: 4
+      template:
+        - { label: "Species", type: text_field }
+        - { label: "Why it is protected", type: text_box, lines: 2 }
+  - id: "4-unprotected"
+    prompt: >
+      Three reptiles and three amphibians in your local area that are not
+      protected, with the food habits of all 10 species.
+    field:
+      type: table
+      headers: ["Species", "Reptile or amphibian", "Food habits"]
+      rows: 6
+      cols: 3
+
+  - id: "5"
+    prompt: "Compare how reptiles reproduce to how amphibians reproduce."
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: >
+      From observation, describe how snakes move forward. Describe the functions
+      of the muscles, ribs, and belly plates.
+    field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Describe in detail six venomous snakes and the one venomous lizard found in
+      the United States. Describe their habits and geographic range. Tell what
+      you should do in case of a bite by a venomous species.
+    field:
+      type: repeated_block
+      count: 7
+      template:
+        - { label: "Species", type: text_field }
+        - { label: "Description", type: text_box, lines: 2 }
+        - { label: "Habits and geographic range", type: text_box, lines: 2 }
+  - id: "7-bite"
+    prompt: "Tell what you should do in case of a bite by a venomous species."
+    field: { type: text_box, lines: 6 }
+
+  - id: "8"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Take custody of one or more reptiles or amphibians in a manner approved by your counselor, and maintain them for at least a month (or keep eggs from laying until hatching or transformation), keeping records of food, eating methods, coloration, shedding, general habits, and your care of the animal."
+        - "(b) Choose a reptile or amphibian to observe or foster at a local zoo, aquarium, nature center, local rescue, or other exhibit, studying it weekly for three months."
+    children:
+      - id: "8-notes"
+        prompt: "Records and notes from your chosen option"
+        field: { type: text_box, lines: 12 }
+
+  - id: "9"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Identify at night three kinds of toads or frogs by their voices. Imitate the song of each for your counselor. Stalk each with a flashlight and discover how each sings and from where."
+        - "(b) Identify by sight eight species of reptiles or amphibians."
+        - "(c) Using visual aids, give a brief talk to a small group on three different reptiles and amphibians."
+    children:
+      - id: "9-notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 10 }
+
+  - id: "10"
+    prompt: >
+      Tell five superstitions or false beliefs about reptiles and amphibians and
+      give a correct explanation for each. Give seven examples of unusual
+      behavior or other true facts about reptiles and amphibians.
+    field: { type: text_box, lines: 6 }
+  - id: "10-superstitions"
+    prompt: "Five superstitions or false beliefs and a correct explanation for each"
+    field:
+      type: repeated_block
+      count: 5
+      template:
+        - { label: "Superstition or false belief", type: text_field }
+        - { label: "Correct explanation", type: text_box, lines: 2 }
+  - id: "10-facts"
+    prompt: "Seven examples of unusual behavior or other true facts"
+    field:
+      type: table
+      rows: 7
+      cols: 1
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

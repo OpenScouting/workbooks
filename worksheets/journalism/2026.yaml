@@ -1,0 +1,126 @@
+badge:
+  name: Journalism
+  slug: journalism
+  requirements_revision: "2026-01-01"
+  description: >
+    Journalism is the work of gathering, verifying, and reporting the news that
+    keeps a free society informed. This badge explores press freedom and ethics,
+    the craft of news and feature writing, and the many ways stories reach
+    audiences in print, on air, and online.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Explain what freedom of the press is and how the First Amendment
+      guarantees that you can voice your opinion. In your discussion, tell how to
+      distinguish between fact and opinion, and explain the terms libel, slander,
+      defamation, fair comment and criticism, public figure, privacy, and
+      malice. Discuss how these matters relate to ethics in journalism.
+    field: { type: text_box, lines: 12 }
+
+  - id: "2"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Option A: Newspaper, Magazine, and Online Journalism"
+        - "Option B: Radio and Television Journalism"
+    children:
+      - id: "2A"
+        prompt: >
+          Option A. Newspaper, Magazine, and Online Journalism. (Ask your parent
+          or guardian's permission for online option). Do ALL of the following:
+        children:
+          - id: "2A1"
+            prompt: >
+              On the same day, read a local news source or newspaper, a national
+              news source or newspaper, a news magazine (online or printed) and a
+              social media news feed. From each source, clip, read, and compare a
+              story about the same event. Tell your counselor how long each story
+              is and how fair and accurate the stories are in presenting
+              different points of view. Tell how each source handled the story.
+            field: { type: text_box, lines: 10 }
+          - id: "2A2"
+            prompt: >
+              Visit the office of a newspaper, magazine, or internet news site.
+              Ask for a tour of the various divisions (editorial, business, and
+              printing). During your tour, talk to an executive from the business
+              side about management's relations with reporters, editors, and
+              photographers and what makes a "good" newspaper, magazine, or
+              internet news site. Note: If there are no opportunities for
+              in-person visits in your community, a virtual visit is acceptable
+              with the news site of your choice, provided your counselor approves
+              this option in advance. (You can request a virtual visit with Scout
+              Life magazine.)
+            field: { type: text_box, lines: 10 }
+      - id: "2B"
+        prompt: "Option B. Radio and Television Journalism. Do ALL of the following:"
+        children:
+          - id: "2B1"
+            prompt: >
+              All on the same day, watch a local and national network newscast,
+              listen to a radio newscast, and (with your parent or guardian's
+              permission) view a national broadcast news source online. List the
+              different news items and features presented, the different elements
+              used, and the time in minutes and seconds and the online space
+              devoted to each story. Compare the story lists and discuss whether
+              the stories are fair and accurate. Explain why different news
+              outlets treated the stories differently and/or presented a
+              different point of view.
+            field: { type: text_box, lines: 10 }
+          - id: "2B2"
+            prompt: >
+              Visit a radio or television station. Ask for a tour of the various
+              departments, concentrating on those related to news broadcasts.
+              During your tour, talk to the station manager or other station
+              management executive about station operations, particularly how
+              management and the news staff work together, and what makes a
+              "good" station. If possible, go with a reporter to cover a news
+              event.
+            field: { type: text_box, lines: 10 }
+
+  - id: "3"
+    prompt: >
+      Discuss the differences between a hard news story and a feature story.
+      Explain what the five W's and H are. Then do ONE of the following:
+    children:
+      - id: "3-discuss"
+        prompt: "Differences between a hard news story and a feature story, and the five W's and H"
+        field: { type: text_box, lines: 8 }
+      - id: "3-choice"
+        prompt: "Then do ONE of the following:"
+        field:
+          type: checklist
+          items:
+            - "Choose a current or an unusual event of interest to you, and write either a hard news article OR a feature article about the event. Gear the article for print OR online OR audio OR video journalism. Share your article with your counselor."
+            - "With your parent or guardian's permission and counselor's approval, interview someone in your community who is influential because of his or her leadership, talent, career, or life experiences. Then present to your counselor either a written or oral report telling what you learned about this person."
+            - "With your parent or guardian's permission and counselor's approval, read an autobiography written by a journalist you want to learn more about. Write an article that tells what you learned about this person and the contributions this person has made to the field of journalism."
+            - "Attend a Scouting event and write a 200-word article (feature or hard news) about the event. Use either the inverted pyramid style or the chronological style. Review the article with your counselor, then submit it to your community newspaper or Scouting America local council or district newsletter for consideration."
+        children:
+          - id: "3-notes"
+            prompt: "Notes from your chosen option"
+            field: { type: text_box, lines: 8 }
+
+  - id: "4"
+    prompt: "Attend a public event and do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Write two articles about the event, one using the inverted pyramid style and one using the chronological style."
+        - "Using a radio, television, or podcasting style, write a news story, a feature story, and a critical review of the event."
+        - "Take a series of photographs to help tell the story of the event in pictures. Include news photos and feature photos in your presentation. Write a brief synopsis of the event as well as captions for your photos."
+    children:
+      - id: "4-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Identify three career opportunities that would use skills and knowledge in
+      journalism. Pick one and research the training, education, certification
+      requirements, experience, and expenses associated with entering the field.
+      Research the prospects for employment, starting salary, advancement
+      opportunities and career goals associated with this career. Discuss what
+      you learned with your counselor and whether you might be interested in this
+      career.
+    field: { type: text_box, lines: 10 }

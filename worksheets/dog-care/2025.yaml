@@ -1,0 +1,194 @@
+badge:
+  name: Dog Care
+  slug: dog-care
+  requirements_revision: "2025-01-01"
+  description: >
+    Dogs are loyal companions that depend on responsible owners for their health
+    and happiness. This badge teaches you how to feed, train, groom, and care for
+    a dog, recognize and respond to health problems, and understand what
+    responsible pet ownership means.
+
+requirements:
+  - id: "1"
+    prompt: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Briefly discuss the historical origin and domestication of the dog."
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: >
+          Describe some common characteristics of the dogs that make up each of
+          the seven major dog groups.
+        field:
+          type: repeated_block
+          count: 7
+          template:
+            - { label: "Dog group", type: text_field }
+            - { label: "Common characteristics", type: text_box, lines: 2 }
+      - id: "1c"
+        prompt: >
+          Tell some specific characteristics of seven breeds of dogs (one from
+          each major group), OR give a short history of one breed.
+        field: { type: text_box, lines: 10 }
+
+  - id: "2"
+    prompt: >
+      Point out on a dog or a sketch at least 10 body parts. Give the correct
+      name of each one.
+    field:
+      type: table
+      headers: ["Body part", "Correct name"]
+      rows: 10
+      cols: 2
+
+  - id: "3"
+    prompt: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Explain the importance of house-training, obedience training, and
+          socialization training for your dog.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: 'Explain what "responsible pet ownership" means.'
+        field: { type: text_box, lines: 5 }
+      - id: "3c"
+        prompt: >
+          Explain what issues (including temperament) must be considered when
+          deciding on what breed of dog to get as a family pet.
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: >
+      For two months, keep and care for your dog. Maintain a log of your
+      activities during this period that includes these items: feeding schedule,
+      types of food used, amount fed, exercise periods, training schedule, a
+      weekly body weight record, grooming and bathing schedules, veterinary care,
+      if necessary, and costs. Also include a brief description of the type of
+      housing/shelter arrangements you have for your dog.
+    field:
+      type: table
+      headers: ["Date", "Feeding / food / amount", "Exercise & training", "Weight, grooming, vet care, costs"]
+      rows: 12
+      cols: 4
+    children:
+      - id: "4-housing"
+        prompt: "Brief description of the housing/shelter arrangements you have for your dog"
+        field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    prompt: >
+      Explain the correct way to obedience train a dog and what equipment you
+      would need. Show with your dog any three of these commands: "come," "sit,"
+      "down," "heel," "stay," "fetch," "get it," "drop it."
+    field: { type: text_box, lines: 8 }
+    children:
+      - id: "5-commands"
+        prompt: "Three commands you showed with your dog"
+        field:
+          type: checklist
+          items:
+            - "Come"
+            - "Sit"
+            - "Down"
+            - "Heel"
+            - "Stay"
+            - "Fetch"
+            - "Get it"
+            - "Drop it"
+
+  - id: "6"
+    prompt: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Discuss the proper vaccination schedule for a dog in your area from
+          puppyhood through adulthood.
+        field: { type: text_box, lines: 6 }
+      - id: "6b"
+        prompt: >
+          Discuss the control methods for preventing fleas, ticks, heartworms,
+          and intestinal parasites (worms) for a dog in your area from puppyhood
+          through adulthood.
+        field: { type: text_box, lines: 6 }
+      - id: "6c"
+        prompt: "Explain the importance of dental care and tooth brushing to your pet's health."
+        field: { type: text_box, lines: 5 }
+      - id: "6d"
+        prompt: "Discuss the benefits of grooming your dog's coat and nails on a regular basis."
+        field: { type: text_box, lines: 5 }
+      - id: "6e"
+        prompt: >
+          Discuss with your counselor any seasonal conditions (like hot summers,
+          cold winters, or extreme humidity) where you live that need to be
+          considered for your dog.
+        field: { type: text_box, lines: 5 }
+      - id: "6f"
+        prompt: >
+          Discuss with your counselor the considerations and advantages of
+          spaying or neutering your dog.
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: "Do the following:"
+    children:
+      - id: "7a"
+        prompt: "Explain precautions to take in handling a hurt dog."
+        field: { type: text_box, lines: 5 }
+      - id: "7b"
+        prompt: "Show how to put on an emergency muzzle."
+        field: { type: checkbox, label: "Showed how to put on an emergency muzzle." }
+      - id: "7c"
+        prompt: "Explain how to treat wounds. Explain first aid for a dog bite."
+        field: { type: text_box, lines: 6 }
+      - id: "7d"
+        prompt: >
+          Show how to put on a simple dressing and bandage the foot, body, or
+          head of your dog.
+        field: { type: checkbox, label: "Showed how to put on a simple dressing and bandage the foot, body, or head of my dog." }
+      - id: "7e"
+        prompt: "Explain what to do if a dog is hit by a car."
+        field: { type: text_box, lines: 5 }
+      - id: "7f"
+        prompt: "List the things needed in every dog owner's first-aid kit."
+        field: { type: text_box, lines: 6 }
+      - id: "7g"
+        prompt: "Tell the dangers of home treatment of a serious ailment."
+        field: { type: text_box, lines: 5 }
+      - id: "7h"
+        prompt: >
+          Briefly discuss the cause and method of spread, the signs and symptoms
+          and the methods of prevention of rabies, parvovirus, distemper, and
+          heartworms in dogs.
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Disease (rabies, parvovirus, distemper, heartworms)", type: text_field }
+            - { label: "Cause and method of spread", type: text_box, lines: 2 }
+            - { label: "Signs and symptoms", type: text_box, lines: 2 }
+            - { label: "Methods of prevention", type: text_box, lines: 2 }
+
+  - id: "8"
+    prompt: >
+      Visit a veterinary hospital or an animal shelter and give a report about
+      your visit to your counselor.
+    field: { type: text_box, lines: 8 }
+
+  - id: "9"
+    prompt: >
+      Know the laws and ordinances involving dogs that are in force in your
+      community.
+    field: { type: text_box, lines: 6 }
+
+  - id: "10"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Identify three career opportunities that would use skills and knowledge in working with dogs. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career."
+        - "(b) Identify how you might use the skills and knowledge in working with dogs to pursue a personal hobby and/or healthy lifestyle. Research the additional training required, expenses, and affiliation with organizations that would help you maximize the enjoyment and benefit you might gain from it. Discuss what you learned with your counselor and share what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "10-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
