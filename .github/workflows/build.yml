@@ -1,12 +1,24 @@
-name: Build worksheets
+name: Build & deploy
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one Pages deploy at a time; don't cancel an in-flight deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
+  # Validate + build every workbook + run tests on every push and PR.
   check:
     runs-on: ubuntu-latest
     steps:
@@ -14,16 +26,36 @@ jobs:
       - uses: jdx/mise-action@v2
       - run: mise run check
 
-  publish:
-    needs: check
+  # Incrementally build the site and publish to GitHub Pages (main only).
+  build:
     if: github.ref == 'refs/heads/main'
+    needs: check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: jdx/mise-action@v2
-      - run: mise run build-all
-      - uses: actions/upload-artifact@v4
         with:
-          name: workbooks
-          path: dist/*.pdf
-          if-no-files-found: error
+          fetch-depth: 0          # full history so per-file "updated" dates are accurate
+      - uses: jdx/mise-action@v2
+      # Restore the previously-built site so unchanged PDFs are reused.
+      # Unique key per run + prefix restore-keys => always save fresh, restore latest.
+      - uses: actions/cache@v4
+        with:
+          path: dist
+          key: pages-site-${{ github.run_id }}
+          restore-keys: pages-site-
+      - run: mise run publish
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
