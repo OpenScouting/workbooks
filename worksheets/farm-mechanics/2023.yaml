@@ -21,7 +21,7 @@ requirements:
         field: { type: text_box, lines: 7 }
       - id: "1b"
         prompt: "Draw a plan showing a well-equipped farm shop. Point out the shop's mandatory safety devices and features."
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 5 }
       - id: "1c"
         prompt: "Find all the universal warning and safety symbols on a piece of equipment and explain what they mean."
         field: { type: text_box, lines: 6 }

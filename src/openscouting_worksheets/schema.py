@@ -28,6 +28,14 @@ class TextBoxDef(_FieldBase):
     lines: int = _F(default=5, ge=1, le=40)
 
 
+class DrawAreaDef(_FieldBase):
+    type: Literal["draw_area"] = "draw_area"
+    # Box height in inches. Defaults to 3" — roughly twice a typical
+    # multi-line text box — giving room to sketch, diagram, or illustrate
+    # by hand. Unlike text_box it has no writing rules: it's a blank canvas.
+    height: float = _F(default=3.0, ge=1.0, le=8.0)
+
+
 class CheckboxDef(_FieldBase):
     type: Literal["checkbox"] = "checkbox"
     label: Optional[str] = None
@@ -90,6 +98,7 @@ FieldDef = Annotated[
     Union[
         TextFieldDef,
         TextBoxDef,
+        DrawAreaDef,
         CheckboxDef,
         ChecklistDef,
         LabeledRowsDef,

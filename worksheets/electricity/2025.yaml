@@ -57,7 +57,7 @@ requirements:
 
   - id: "5"
     prompt: "Make a simple drawing to show how a battery and an electric bell work. Describe the purpose of each of the components."
-    field: { type: text_box, lines: 10 }
+    field: { type: draw_area, height: 4 }
 
   - id: "6"
     intro: "Do the following:"
@@ -77,7 +77,7 @@ requirements:
 
   - id: "7"
     prompt: "Make a floor plan wiring diagram of the lights, switches, and outlets for a room in your home. Show which fuse or circuit breaker protects each one."
-    field: { type: text_box, lines: 10 }
+    field: { type: draw_area, height: 5 }
 
   - id: "8"
     intro: "Do the following:"

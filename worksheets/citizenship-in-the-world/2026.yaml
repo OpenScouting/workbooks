@@ -64,7 +64,7 @@ requirements:
         field: { type: text_box, lines: 5 }
       - id: "5c"
         prompt: "Show on a world map countries that use each of these five different forms of government."
-        field: { type: text_box, lines: 5 }
+        field: { type: draw_area, height: 4 }
 
   - id: "6"
     intro: "Do the following:"

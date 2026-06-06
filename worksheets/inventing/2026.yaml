@@ -79,7 +79,7 @@ requirements:
       camping trip with your troop. Make recommendations for improving the
       product, and make a sketch that shows your recommendations. Discuss your
       recommendations with your counselor.
-    field: { type: text_box, lines: 8 }
+    field: { type: draw_area, height: 4 }
 
   - id: "6"
     prompt: >

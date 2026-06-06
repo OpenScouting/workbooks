@@ -62,7 +62,7 @@ requirements:
           lines to show the flow of water: upstream V, downstream V, riffle,
           eddy with an eddy line, ledge, river bend, shallows, current at
           different depths, drop, horizon line, and hydraulic.
-        field: { type: text_box, lines: 5 }
+        field: { type: draw_area, height: 4 }
       - id: "2b"
         prompt: >
           Describe how waves form including standing waves and wave trains.

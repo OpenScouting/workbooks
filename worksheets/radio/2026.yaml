@@ -34,7 +34,7 @@ requirements:
             prompt: >
               Draw a chart of the electromagnetic spectrum covering 300 kilohertz
               (kHz) to 3,000 megahertz (MHz).
-            field: { type: text_box, lines: 6 }
+            field: { type: draw_area, height: 4 }
           - id: "2a2"
             prompt: >
               Label the MF, HF, VHF, UHF, and microwave portions of the spectrum
@@ -67,7 +67,7 @@ requirements:
         prompt: >
           Sketch a diagram showing how different radio wavelengths can travel
           locally or around the world.
-        field: { type: text_box, lines: 6 }
+        field: { type: draw_area, height: 4 }
       - id: "3b"
         prompt: >
           Explain how the radio stations WWV and WWVH can be used to help
@@ -113,7 +113,7 @@ requirements:
           Draw a block diagram for a radio station that shows a microphone,
           speaker, transceiver, transmitter, receiver, amplifier, feedline, and
           antenna and discuss the function of these components.
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 4 }
       - id: "5c"
         prompt: "List consumer devices and services that use analog or digital radio communications."
         field: { type: text_box, lines: 5 }

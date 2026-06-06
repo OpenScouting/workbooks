@@ -21,10 +21,10 @@ requirements:
     children:
       - id: "2a"
         prompt: "Sketch or trace a perched bird and then label 15 different parts of the bird."
-        field: { type: text_box, lines: 10 }
+        field: { type: draw_area, height: 5 }
       - id: "2b"
         prompt: "Sketch or trace an extended wing and label six types of wing feathers."
-        field: { type: text_box, lines: 10 }
+        field: { type: draw_area, height: 5 }
 
   - id: "3"
     prompt: >

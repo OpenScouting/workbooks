@@ -11,7 +11,7 @@ badge:
 requirements:
   - id: "1"
     prompt: "Make a drawing and identify five or more parts of a flowering plant. Tell what each part does."
-    field: { type: text_box, lines: 8 }
+    field: { type: draw_area, height: 4 }
 
   - id: "2"
     prompt: >

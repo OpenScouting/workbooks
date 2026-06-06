@@ -46,7 +46,7 @@ requirements:
           Include in your drawings exit routes from each room and a meeting place
           outside. Conduct a fire-escape drill. Review your plan and your drill
           with your counselor.
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 5 }
       - id: "2f"
         prompt: >
           Develop a family emergency action plan for evacuation because of

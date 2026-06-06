@@ -55,7 +55,7 @@ requirements:
           in your home. Draw a floor plan with escape routes and a map with a
           safe meeting place. Discuss your family's home escape plan with your
           counselor.
-        field: { type: text_box, lines: 9 }
+        field: { type: draw_area, height: 5 }
       - id: "2c"
         prompt: >
           Using a checklist in the Emergency Preparedness merit badge pamphlet or

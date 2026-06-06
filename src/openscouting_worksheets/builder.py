@@ -275,6 +275,8 @@ def _render_field(field: S.FieldDef, styles, name_prefix: str,
         out.append(F.TextFieldFlowable(name=name_prefix))
     elif isinstance(field, S.TextBoxDef):
         out.append(F.TextBoxFlowable(name=name_prefix, lines=field.lines))
+    elif isinstance(field, S.DrawAreaDef):
+        out.append(F.DrawAreaFlowable(height=field.height * inch))
     elif isinstance(field, S.CheckboxDef):
         out.append(F.CheckboxFlowable(name=name_prefix, label=field.label or ""))
     elif isinstance(field, S.ChecklistDef):

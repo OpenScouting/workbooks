@@ -40,6 +40,32 @@ def test_pdf_has_form_fields(tmp_path):
     assert any("hypothermia" in n.lower() for n in names)
 
 
+def test_draw_area_renders_without_form_field(tmp_path):
+    """A draw_area is a blank canvas: it draws a box but registers no widget."""
+    pypdf = pytest.importorskip("pypdf")
+    yaml_text = (
+        "badge:\n"
+        "  name: Test\n"
+        "  slug: test\n"
+        "requirements:\n"
+        "  - id: '1'\n"
+        "    prompt: Sketch your design.\n"
+        "    field: { type: draw_area, height: 4 }\n"
+        "  - id: '2'\n"
+        "    prompt: Describe it.\n"
+        "    field: { type: text_box, lines: 3 }\n"
+    )
+    src = tmp_path / "test.yaml"
+    src.write_text(yaml_text)
+    out = tmp_path / "Test.pdf"
+    builder.build(src, out, base_dir=REPO)
+    reader = pypdf.PdfReader(str(out))
+    fields = reader.get_fields() or {}
+    # The text_box (req_2) is fillable; the draw_area (req_1) is not.
+    assert any(n.startswith("req_2") for n in fields)
+    assert not any(n.startswith("req_1") for n in fields)
+
+
 def test_shared_header_fields_are_linked(tmp_path):
     """Scout name & troop number widgets across pages share one logical field."""
     pypdf = pytest.importorskip("pypdf")

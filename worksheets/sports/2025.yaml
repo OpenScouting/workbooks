@@ -142,7 +142,7 @@ requirements:
             - { label: "Rules and etiquette", type: text_box, lines: 6 }
       - id: "5f"
         prompt: "Draw and explain a diagram of the playing area for each sport."
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 4 }
       - id: "5g"
         prompt: >
           Participate in each sport as a competitive individual or as a member

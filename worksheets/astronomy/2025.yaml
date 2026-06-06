@@ -126,7 +126,7 @@ requirements:
           for four nights (or days) within a one-week period by direct
           observation. Include landmarks on the horizon such as hills, trees, and
           buildings. Explain the changes you observe.
-        field: { type: text_box, lines: 6 }
+        field: { type: draw_area, height: 4 }
       - id: "6c"
         prompt: "List the factors that keep the Moon in orbit around Earth."
         field: { type: text_box, lines: 5 }

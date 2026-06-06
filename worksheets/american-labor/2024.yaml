@@ -46,7 +46,7 @@ requirements:
         prompt: >
           Draw a diagram showing how the organization is structured, from the
           local to the national level, if applicable.
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 4 }
 
   - id: "3"
     prompt: >

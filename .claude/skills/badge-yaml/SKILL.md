@@ -52,6 +52,7 @@ reference_pages:                            # OPTIONAL — only include when the
 | Type             | Use it for                                                                                |
 |------------------|--------------------------------------------------------------------------------------------|
 | `text_box`       | Multi-line written response. Set `lines:` (3–12 typical).                                  |
+| `draw_area`      | A blank bordered box (no writing rules, not fillable) for a sketch/diagram/illustration the Scout draws **in the workbook**. Use when the prompt's main verb is draw/sketch/diagram/illustrate/map AND the drawing is meant to live on the page. Set `height:` in inches (default 3, range 1–8; 4–5 for a full diagram). **Do not** use it when the drawing is produced elsewhere (on drafting paper, in CAD, in a notebook) and the workbook only records *notes* about it — that stays a `text_box`. |
 | `text_field`     | Single-line input. Rare in body content; mostly used inside `repeated_block` sub-templates. |
 | `checkbox`       | One attestation checkbox with a label.                                                     |
 | `checklist`      | A group of related checkboxes that should stay together on the page. **Always prefer this over multiple sibling `checkbox` children** — siblings can split across pages, a checklist can't. |

@@ -23,7 +23,7 @@ requirements:
       use to attract airborne search-and-rescue personnel if lost in the outdoors
       or trying to summon assistance during a disaster. Illustrate these
       signaling examples by the use of photos or drawings.
-    field: { type: text_box, lines: 8 }
+    field: { type: draw_area, height: 4 }
 
   - id: "3"
     intro: "Do the following:"

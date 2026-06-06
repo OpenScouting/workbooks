@@ -20,7 +20,7 @@ requirements:
         prompt: >
           Draw a lower molar, using the radiographs as a guide. Label its parts
           and surfaces. Show surrounding structures such as bone and gum tissues.
-        field: { type: text_box, lines: 10 }
+        field: { type: draw_area, height: 5 }
       - id: "1c"
         prompt: >
           Show on your drawing where the nerves and blood vessels enter and leave
