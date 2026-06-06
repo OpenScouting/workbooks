@@ -67,3 +67,17 @@ def test_render_index_lists_rows_and_links():
     assert "OpenScouting Merit Badge Workbooks" in html
     # live-filter script + search box present
     assert 'id="q"' in html and "addEventListener" in html
+    # release index carries no draft warning banner (the CSS class is always
+    # defined; the banner element and its text are what's conditional)
+    assert "DRAFT PREVIEW" not in html
+    assert 'role="alert"' not in html
+
+
+def test_draft_index_has_prominent_warning():
+    rows = [{"name": "Camping", "pdf": "Camping.pdf", "updated": "2026-06-06",
+             "revision": "2024"}]
+    html = publish._render_index(rows, draft=True)
+    assert "draft-banner" in html
+    assert "DRAFT PREVIEW" in html
+    assert 'class="draft"' in html        # header switches to alert styling
+    assert 'href="../"' in html           # links back to the release site

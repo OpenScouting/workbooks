@@ -2,15 +2,10 @@ name: Build & deploy
 
 on:
   push:
-    branches: [main]
+    branches: [main, release]
   pull_request:
-    branches: [main]
+    branches: [main, release]
   workflow_dispatch:
-    inputs:
-      draft:
-        description: "Deploy the site with a DRAFT watermark on every workbook"
-        type: boolean
-        default: false
 
 permissions:
   contents: read
@@ -27,44 +22,66 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: jdx/mise-action@v2
+      - uses: actions/checkout@v6
+      - uses: jdx/mise-action@v4
       - run: mise run check
 
-  # Incrementally build the site and publish to GitHub Pages (main only).
+  # Build ONE Pages artifact holding both sites:
+  #   /         clean release workbooks, built from the `release` branch
+  #   /draft/   DRAFT-watermarked workbooks, built from `main`
+  # GitHub serves one site per repo, so every deploy rebuilds both (each
+  # incrementally) and combines them — pushing to main refreshes /draft/,
+  # merging main -> release refreshes the clean root.
   build:
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request'
     needs: check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
-          fetch-depth: 0          # full history so per-file "updated" dates are accurate
-      - uses: jdx/mise-action@v2
-      # Restore the previously-built site so unchanged PDFs are reused.
-      # Unique key per run + prefix restore-keys => always save fresh, restore latest.
-      - uses: actions/cache@v4
+          fetch-depth: 0          # all branches + history (per-file dates; branch switching)
+      - uses: jdx/mise-action@v4
+
+      # Reuse each site's unchanged PDFs across runs (unique key per run +
+      # prefix restore-keys => always save fresh, restore latest).
+      - uses: actions/cache@v5
         with:
-          path: dist
-          key: pages-site-${{ github.run_id }}
-          restore-keys: pages-site-
-      # Normal pushes deploy a clean (release) site. A manual run with the
-      # draft input checked stamps every workbook DRAFT — share the Pages link
-      # while it's under review, then push (or re-run unchecked) to go clean.
-      - name: Build site
+          path: site-draft
+          key: pages-draft-${{ github.run_id }}
+          restore-keys: pages-draft-
+      - uses: actions/cache@v5
+        with:
+          path: site-release
+          key: pages-release-${{ github.run_id }}
+          restore-keys: pages-release-
+
+      - name: Build draft site (from main)
         run: |
-          if [ "${{ inputs.draft }}" = "true" ]; then
-            mise run publish-draft
-          else
-            mise run publish
-          fi
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+          git switch main
+          mise run install
+          mise exec -- worksheets publish -o site-draft --draft
+
+      - name: Build release site (from release)
+        run: |
+          git switch release
+          mise run install
+          mise exec -- worksheets publish -o site-release --release
+
+      - name: Assemble combined site
+        run: |
+          rm -rf dist
+          mkdir -p dist/draft
+          cp -a site-release/. dist/
+          cp -a site-draft/. dist/draft/
+          rm -f dist/build-manifest.json dist/draft/build-manifest.json
+
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -72,4 +89,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
