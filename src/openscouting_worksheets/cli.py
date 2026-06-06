@@ -99,6 +99,24 @@ def build_all(badges_dir: Path, output_dir: Path) -> None:
 
 
 @main.command()
+@click.option("-o", "--output-dir", type=click.Path(path_type=Path),
+              default="dist", help="Site output directory (default: dist).")
+def publish(output_dir: Path) -> None:
+    """Incrementally build all active workbooks + index.html for GitHub Pages.
+
+    Only badges whose inputs changed since the last run are rebuilt; unchanged
+    PDFs are reused from output_dir (restored from CI cache between runs).
+    """
+    from . import publish as _publish
+    base_dir = Path.cwd()
+    stats = _publish.build_site(base_dir, output_dir)
+    click.echo(
+        f"Published {stats['total']} workbooks "
+        f"({stats['built']} built, {stats['reused']} reused) to {output_dir}"
+    )
+
+
+@main.command()
 @click.argument("badges_dir", type=click.Path(exists=True, file_okay=False,
                                               path_type=Path))
 def validate(badges_dir: Path) -> None:

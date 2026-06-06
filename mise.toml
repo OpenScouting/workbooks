@@ -34,6 +34,11 @@ description = "Build every badge YAML in badges/ to dist/"
 depends = ["install"]
 run = "worksheets build-all worksheets/ -o dist/"
 
+[tasks.publish]
+description = "Incrementally build the GitHub Pages site (PDFs + index.html) into dist/"
+depends = ["install"]
+run = "worksheets publish -o dist/"
+
 [tasks.test]
 description = "Run the pytest suite"
 depends = ["install"]
