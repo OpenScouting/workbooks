@@ -50,7 +50,7 @@ requirements:
       movements of the cold and warm air, the frontal slope, the location and
       types of clouds associated with each type of front, and the location of
       precipitation.
-    field: { type: text_box, lines: 10 }
+    field: { type: draw_area, height: 5 }
 
   - id: "5"
     prompt: "Tell what causes wind, why it rains, and how lightning and hail are formed."
@@ -72,7 +72,7 @@ requirements:
     prompt: >
       Draw a diagram of the water cycle and label its major processes. Explain
       the water cycle to your counselor.
-    field: { type: text_box, lines: 8 }
+    field: { type: draw_area, height: 4 }
 
   - id: "8"
     prompt: >

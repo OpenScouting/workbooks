@@ -20,7 +20,7 @@ requirements:
           Draw a simple schematic diagram. It must show resistors, capacitors,
           and transistors or integrated circuits. Use the correct symbols.
           Label all parts.
-        field: { type: text_box, lines: 10 }
+        field: { type: draw_area, height: 5 }
       - id: "2b"
         prompt: "Tell the purpose of each part."
         field: { type: text_box, lines: 6 }

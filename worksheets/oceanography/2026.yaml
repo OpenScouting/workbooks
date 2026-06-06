@@ -72,7 +72,7 @@ requirements:
           Draw a cross-section of underwater topography. Name and put on your
           drawing the following: seamount, guyot, rift valley, canyon, trench,
           and oceanic ridge.
-        field: { type: text_box, lines: 10 }
+        field: { type: draw_area, height: 5 }
       - id: "4compare"
         prompt: "Compare the depths in the oceans with the heights of mountains on land."
         field: { type: text_box, lines: 5 }

@@ -77,7 +77,7 @@ requirements:
         field: { type: text_box, lines: 8 }
       - id: "5d"
         prompt: "Draw the game elements."
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 4 }
 
   - id: "6"
     prompt: "Do the following: Note: You must have your counselor's approval of your concept before you begin creating the prototype."

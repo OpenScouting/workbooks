@@ -90,7 +90,7 @@ requirements:
         field: { type: text_box, lines: 5 }
       - id: "5g"
         prompt: "Develop a home fire-escape plan and a fire-drill schedule with your family, draw a floor plan of your home with exits marked and a map showing your family meeting point, and conduct a home fire drill."
-        field: { type: text_box, lines: 10 }
+        field: { type: draw_area, height: 5 }
       - id: "5h"
         prompt: "Explain what to do and what not to do if you smell natural gas and if you smell smoke."
         field: { type: text_box, lines: 6 }

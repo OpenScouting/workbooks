@@ -50,7 +50,7 @@ requirements:
             field: { type: text_box, lines: 7 }
           - id: "4A3"
             prompt: "On a stream diagram, show areas where you will find the following features: cut bank, fill bank, point bar, medial channel bars, lake delta. Describe the relative sediment grain size found in each feature."
-            field: { type: text_box, lines: 6 }
+            field: { type: draw_area, height: 4 }
           - id: "4A4"
             prompt: "Conduct an experiment approved by your counselor that shows how some sedimentary material carried by water may be too small for you to see without a magnifier."
             field: { type: text_box, lines: 5 }

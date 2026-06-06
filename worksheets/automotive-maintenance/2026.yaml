@@ -182,7 +182,7 @@ requirements:
             - "Lighting system"
       - id: "8a-diagram"
         prompt: "Diagram and explanation of your chosen electrical system"
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 4 }
       - id: "8b"
         prompt: "Explain the engine's firing order."
         field: { type: text_box, lines: 4 }
@@ -207,7 +207,7 @@ requirements:
     children:
       - id: "9a"
         prompt: "Diagram the drive train and explain the different parts."
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 4 }
       - id: "9b"
         prompt: "Explain the difference between automatic and standard transmissions."
         field: { type: text_box, lines: 5 }

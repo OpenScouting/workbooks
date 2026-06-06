@@ -33,12 +33,12 @@ requirements:
         prompt: >
           Make a drawing and explain how a home hot- and cold-water supply
           system works. Tell how you would make it safe from freezing.
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 4 }
       - id: "2b"
         prompt: >
           Make a drawing and explain the drainage system of the plumbing in a
           house. Show and explain the use of drains and vents.
-        field: { type: text_box, lines: 8 }
+        field: { type: draw_area, height: 4 }
 
   - id: "3"
     prompt: "Show how to use five important plumber's tools."

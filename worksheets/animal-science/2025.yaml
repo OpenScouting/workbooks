@@ -37,7 +37,7 @@ requirements:
       poultry. Explain how the differences in structure and function among these
       types of digestive tracts affect the nutritional management of these
       species.
-    field: { type: text_box, lines: 10 }
+    field: { type: draw_area, height: 5 }
 
   - id: "4"
     prompt: >

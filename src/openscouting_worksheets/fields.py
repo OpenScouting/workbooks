@@ -144,6 +144,36 @@ class TextBoxFlowable(Flowable):
                      multiline=True, lined=True)
 
 
+# ---------- draw_area ----------
+
+class DrawAreaFlowable(Flowable):
+    """A blank bordered box for hand-drawn sketches, diagrams, or illustrations.
+
+    Unlike a text box it has no writing rules and registers no AcroForm
+    widget — typing into ruled lines is useless for drawing. It's an empty
+    canvas meant to be printed and drawn in, used wherever a requirement asks
+    the Scout to draw/sketch/diagram/illustrate something.
+    """
+
+    def __init__(self, height: float):
+        super().__init__()
+        self._h = height
+
+    def wrap(self, avail_w, avail_h):
+        self.width = avail_w
+        self.height = self._h
+        return self.width, self.height
+
+    def draw(self):
+        c = self.canv
+        c.saveState()
+        c.setStrokeColor(BORDER_COLOR)
+        c.setFillColor(FILL_COLOR)
+        c.setLineWidth(0.5)
+        c.rect(0, 0, self.width, self.height, stroke=1, fill=1)
+        c.restoreState()
+
+
 # ---------- checkbox ----------
 
 class CheckboxFlowable(Flowable):
