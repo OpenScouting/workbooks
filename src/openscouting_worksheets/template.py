@@ -28,6 +28,10 @@ from .schema import Badge
 LOGO_FILENAME = "openscouting-logo.png"
 BADGE_DIR = "badges"
 
+# Public home for the workbook catalogue (shown + linked on the cover).
+SITE_URL = "https://openscouting.github.io/workbooks/"
+SITE_LABEL = "openscouting.github.io/workbooks"
+
 
 PAGE_W, PAGE_H = letter
 MARGIN_L = 0.7 * inch
@@ -168,14 +172,19 @@ class WorkbookDoc(BaseDocTemplate):
 
     def _draw_cover_chrome(self, canvas: Canvas, doc) -> None:
         canvas.saveState()
-        # OpenScouting logo (or text wordmark fallback) + workbook line
+        # OpenScouting logo (or text wordmark fallback) on the left, the public
+        # catalogue URL (clickable) on the right.
         self._draw_brand_mark(canvas,
                               x=MARGIN_L, y=PAGE_H - 0.52 * inch,
                               height=20, wordmark_size=14)
-        canvas.setFillColor(BRAND_MUTED)
-        canvas.setFont("Helvetica", 10)
-        canvas.drawRightString(PAGE_W - MARGIN_R, PAGE_H - 0.45 * inch,
-                               "Merit Badge Workbook")
+        url_y = PAGE_H - 0.45 * inch
+        canvas.setFillColor(BRAND_PRIMARY)
+        canvas.setFont("Helvetica-Bold", 10)
+        url_w = canvas.stringWidth(SITE_LABEL, "Helvetica-Bold", 10)
+        url_x = PAGE_W - MARGIN_R - url_w
+        canvas.drawString(url_x, url_y, SITE_LABEL)
+        canvas.linkURL(SITE_URL, (url_x, url_y - 2, url_x + url_w, url_y + 10),
+                       relative=0, thickness=0)
         self._draw_chrome_rule(canvas, PAGE_H - 0.62 * inch)
         self._draw_footer(canvas, doc, footer_text=(
             "© OpenScouting · CC BY-SA 4.0 · "
