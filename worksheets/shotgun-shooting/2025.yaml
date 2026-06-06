@@ -1,0 +1,219 @@
+badge:
+  name: Shotgun Shooting
+  slug: shotgun-shooting
+  requirements_revision: "2025-01-01"
+  description: >
+    The Shotgun Shooting merit badge builds safe, disciplined skills for
+    breaking moving targets with a shotgun. Working under certified instructors,
+    you will learn firearm safety, the parts and care of a shotgun, and the
+    fundamentals of hitting a target in flight.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain what a projectile is, and why any device that shoots a
+          projectile at high speed must be handled with care and respect, and
+          used only in approved locations.
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: "Explain the basic rules of safe gun handling that apply to all firearms."
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: >
+          Describe how you would react if a friend visiting your home asked to
+          see your or your family's firearm.
+        field: { type: text_box, lines: 5 }
+      - id: "1d"
+        prompt: "Explain the need for, types, and use of eye protection and hearing protection."
+        field: { type: text_box, lines: 6 }
+      - id: "1e"
+        prompt: "Explain the main points of the laws for owning and using guns in your community and state."
+        field: { type: text_box, lines: 6 }
+      - id: "1f"
+        prompt: "Explain how hunting is related to the wise use of renewable wildlife resources."
+        field: { type: text_box, lines: 6 }
+      - id: "1g"
+        prompt: >
+          Successfully complete a state hunter education course, or obtain a copy
+          of the hunting laws for your state, then do the following:
+        children:
+          - id: "1g1"
+            prompt: >
+              Explain the main points of hunting laws in your state, and any
+              special laws on the use of guns and ammunition, AND
+            field: { type: text_box, lines: 6 }
+          - id: "1g2"
+            prompt: "List the kinds of wildlife that can be legally hunted in your state."
+            field: { type: text_box, lines: 5 }
+      - id: "1h"
+        prompt: "Explain to your counselor the proper hygienic guidelines followed while shooting."
+        field: { type: text_box, lines: 5 }
+      - id: "1i"
+        prompt: >
+          List and explain three shotgun sports. Identify places in your
+          community where you could practice these sports, and explain how you
+          can join or be a part of range and target activities.
+        field: { type: text_box, lines: 8 }
+      - id: "1j"
+        prompt: >
+          Discuss with your counselor a list of sources you could contact for
+          information on firearms and their use.
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    prompt: >
+      Working under the supervision of a certified National Rifle Association
+      (NRA) Shotgun instructor and a certified range safety officer, at a
+      nationally authorized camp property or at a commercial firearm range (as
+      defined in the Scouting America National Range and Target Activities
+      Manual), do ONE of the following options:
+    children:
+      - id: "2-choice"
+        prompt: "Check the option you completed:"
+        field:
+          type: checklist
+          items:
+            - "Option A: Shotgun Shooting (Modern Shotshell Type). Do ALL of the following."
+            - "Option B: Muzzleloading Shotgun Shooting. Do ALL of the following."
+
+      - id: "2A"
+        intro: "Option A: Shotgun Shooting (Modern Shotshell Type). Do ALL of the following:"
+        children:
+          - id: "2A1"
+            prompt: "Identify and explain the principal parts of a shotgun, action types, and how they function."
+            field: { type: text_box, lines: 6 }
+          - id: "2A2"
+            prompt: "Identify and demonstrate the rules for safely storing and handling a shotgun."
+            field: { type: text_box, lines: 6 }
+          - id: "2A3"
+            prompt: "Identify the parts of a shotgun shell and their functions."
+            field: { type: text_box, lines: 5 }
+          - id: "2A4"
+            prompt: >
+              Identify the various gauges of shotguns. Explain which you would
+              choose for a particular use and why.
+            field: { type: text_box, lines: 6 }
+          - id: "2A5"
+            prompt: >
+              Identify the causes of a shotgun's failure to fire, and explain
+              what a misfire, hangfire, and squib fire are. Explain and
+              demonstrate proper preventive measures, and the procedures to
+              follow in response to each.
+            field: { type: text_box, lines: 8 }
+          - id: "2A6"
+            prompt: >
+              Demonstrate the knowledge, skills, and attitude necessary to safely
+              shoot a shotgun on a range, including understanding and following
+              range procedures and commands.
+            field:
+              type: checkbox
+              label: "I demonstrated safe shooting and followed range procedures and commands."
+          - id: "2A7"
+            prompt: "Explain the basic safety rules for cleaning a shotgun, and identify the materials needed."
+            field: { type: text_box, lines: 6 }
+          - id: "2A8"
+            prompt: "Demonstrate how to clean a shotgun properly and safely."
+            field:
+              type: checkbox
+              label: "I demonstrated how to clean a shotgun properly and safely."
+          - id: "2A9"
+            prompt: "Discuss what points you would consider in selecting a shotgun."
+            field: { type: text_box, lines: 5 }
+          - id: "2A10"
+            prompt: >
+              Shoot a moving target with a shotgun using the four fundamentals of
+              firing a shot: position, mount, vision, and movement. Shooting
+              score required: Hit at least 12 out of 25 targets (48 percent) in
+              two 25-target groups. The two groups need not be shot in
+              consecutive order. A minimum of 50 shots must be fired. Shooting
+              skill rules: Targets may be thrown by a hand trap, manual
+              mechanical trap, or on any trap or skeet field. If using a hand
+              trap or manual mechanical trap, the trap operator should be at
+              least 5 feet to the right and 3 feet to the rear of the shooter. If
+              throwing left-handed with a hand trap, the trap operator should be
+              at least 5 feet to the left and 3 feet to the rear of the shooter.
+            field:
+              type: checkbox
+              label: "I met the shooting score required for Option A."
+
+      - id: "2B"
+        intro: "Option B: Muzzleloading Shotgun Shooting. Do ALL of the following:"
+        children:
+          - id: "2B1"
+            prompt: "Discuss with your counselor a brief history of the development of the muzzleloading shotgun."
+            field: { type: text_box, lines: 6 }
+          - id: "2B2"
+            prompt: "Identify principal parts of muzzleloading shotguns and discuss how they function."
+            field: { type: text_box, lines: 6 }
+          - id: "2B3"
+            prompt: "Identify and demonstrate the rules for safely storing and handling a muzzleloading shotgun."
+            field: { type: text_box, lines: 6 }
+          - id: "2B4"
+            prompt: "Identify the various grades of black powder and explain their proper and safe use."
+            field: { type: text_box, lines: 6 }
+          - id: "2B5"
+            prompt: "Discuss proper safety procedures pertaining to black powder storage."
+            field: { type: text_box, lines: 5 }
+          - id: "2B6"
+            prompt: "Discuss proper components of a load."
+            field: { type: text_box, lines: 5 }
+          - id: "2B7"
+            prompt: "Identify proper procedures and accessories used for safely loading a muzzleloading shotgun."
+            field: { type: text_box, lines: 6 }
+          - id: "2B8"
+            prompt: >
+              Identify the causes of a muzzleloading shotgun's failure to fire,
+              and explain what a misfire, hangfire, and squib fire are. Explain
+              and demonstrate proper preventive measures, and the procedures to
+              follow in response to each.
+            field: { type: text_box, lines: 8 }
+          - id: "2B9"
+            prompt: >
+              Demonstrate the knowledge, skills, and attitude necessary to safely
+              shoot a muzzleloading shotgun on a range, including understanding
+              and following range procedures and commands.
+            field:
+              type: checkbox
+              label: "I demonstrated safe shooting and followed range procedures and commands."
+          - id: "2B10"
+            prompt: "Explain the basic safety rules for cleaning a muzzleloading shotgun, and identify the materials needed."
+            field: { type: text_box, lines: 6 }
+          - id: "2B11"
+            prompt: "Demonstrate how to clean a muzzleloading shotgun properly and safely."
+            field:
+              type: checkbox
+              label: "I demonstrated how to clean a muzzleloading shotgun properly and safely."
+          - id: "2B12"
+            prompt: "Discuss what points you would consider in selecting a muzzleloading shotgun."
+            field: { type: text_box, lines: 5 }
+          - id: "2B13"
+            prompt: >
+              Shoot a moving target with a muzzleloading shotgun using the four
+              fundamentals of firing a shot: position, mount, vision, and
+              movement. Shooting score required: Hit at least 5 out of 15 targets
+              in each of two 15-target groups. The two groups need not be shot in
+              consecutive order. A minimum of 30 shots must be fired. Shooting
+              skill rules: Targets may be thrown by a hand trap, manual
+              mechanical trap, or on any trap or skeet field. If using a hand
+              trap or manual mechanical trap, the trap operator should be at
+              least 5 feet to the right and 3 feet to the rear of the shooter. If
+              throwing left-handed with a hand trap, the trap operator should be
+              at least 5 feet to the left and 3 feet to the rear of the shooter.
+            field:
+              type: checkbox
+              label: "I met the shooting score required for Option B."
+
+  - id: "3"
+    prompt: >
+      Identify how you could apply the skills and knowledge of safe and
+      responsible use of firearms you learned in this merit badge to pursue a
+      career or personal hobby. Research the additional training and experience
+      you would need, expenses you may incur, and the affiliation with
+      organizations that could help you maximize the positive impact and
+      enjoyment you gain from it. Discuss what you learned with your counselor,
+      and share what short-term and long-term goals you might have if you
+      pursued this.
+    field: { type: text_box, lines: 10 }

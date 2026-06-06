@@ -1,0 +1,166 @@
+badge:
+  name: Athletics
+  slug: athletics
+  requirements_revision: "2026-01-01"
+  description: >
+    The Athletics merit badge builds physical fitness and an understanding of
+    healthy training. You will design and follow a personal training program,
+    track your progress, learn the rules and sportsmanship of athletic events, and
+    test yourself across several athletic activities.
+
+requirements:
+  - id: "1"
+    intro: "Do the following with your counselor:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          during athletics activities, and what you should do to anticipate, help
+          prevent, mitigate, and respond to these hazards.
+        field: { type: text_box, lines: 7 }
+      - id: "1b"
+        prompt: >
+          Show that you know first aid for injuries or illnesses that could occur
+          while participating in athletics events, including sprains, strains,
+          contusions, abrasions, blisters, dehydration, heat reactions, and
+          concussions.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Sprains
+            - Strains
+            - Contusions
+            - Abrasions
+            - Blisters
+            - Dehydration
+            - Heat reactions
+            - Concussions
+
+  - id: "2"
+    intro: "Do the following with your counselor:"
+    children:
+      - id: "2a"
+        prompt: >
+          Discuss the importance of having a physical examination each year.
+          Discuss why overall health, immunizations, medications, allergies, and
+          medical history are covered during an examination. Tell your counselor
+          when you last underwent a physical examination.
+        field: { type: text_box, lines: 7 }
+      - id: "2b"
+        prompt: >
+          Explain how you maintain good health habits, especially during training,
+          and how the use of tobacco products, alcohol, and other harmful
+          substances can negatively affect your health and your performance in
+          athletic activities.
+        field: { type: text_box, lines: 7 }
+      - id: "2c"
+        prompt: >
+          Describe the elements of a nutritious, balanced diet, and explain what
+          you do to maintain a healthy diet.
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: "Select an athletic activity that interests you, then do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          With guidance from your counselor, establish a personal training program
+          suited to the activity you have chosen. Follow this training program for
+          three months.
+        field: { type: text_box, lines: 8 }
+      - id: "3b"
+        prompt: "Use a chart or other tracking method to monitor your progress during this time."
+        field:
+          type: table
+          headers: ["Date", "Activity", "Result / progress"]
+          rows: 10
+          cols: 3
+      - id: "3c"
+        prompt: >
+          Explain to your counselor the equipment necessary to participate in this
+          activity and the appropriate clothing for the activity and the time of
+          year.
+        field: { type: text_box, lines: 6 }
+      - id: "3d"
+        prompt: >
+          At the end of three months, review your records from requirement 3(b),
+          and discuss with your counselor what progress you have made during
+          training. Tell how your development has affected you mentally and
+          physically.
+        field: { type: text_box, lines: 7 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: >
+          Explain the rules for two athletic activities, one of which is the
+          activity you chose for requirement 3.
+        field: { type: text_box, lines: 7 }
+      - id: "4b"
+        prompt: "Discuss the importance of warming up and cooling down before and after each training session or event."
+        field: { type: text_box, lines: 6 }
+      - id: "4c"
+        prompt: "Explain to your counselor what an amateur athlete is and the differences between an amateur and a professional athlete."
+        field: { type: text_box, lines: 6 }
+      - id: "4d"
+        prompt: >
+          Discuss the traits and importance of good sportsmanship. Tell what role
+          sportsmanship plays in both individual and group athletic activities.
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    prompt: >
+      Complete the activities in FOUR of the following options and show
+      improvement over a three-month period:
+    field:
+      type: checklist
+      items:
+        - "Option A. Sprinting. Do ALL of the following: 100-meter dash; 200-meter dash."
+        - "Option B. Long-Distance Running. Do ALL of the following: 3k run; 5k run."
+        - "Option C. Long Jump OR High Jump. Do ALL of the following: running long jump OR running high jump (best of three tries); standing long jump OR standing high jump (best of three tries)."
+        - "Option D. Swimming. Do ALL of the following: 100-meter swim; 200-meter swim."
+        - "Option E. Pull-Ups AND Push-Ups. Do ALL of the following: pull-ups in two minutes; push-ups in two minutes."
+        - "Option F. Baseball Throw. Do ALL of the following: baseball throw for accuracy, 10 throws at a target (distance to be determined by age); baseball throw for distance, five throws (total distance)."
+        - "Option G. Basketball Shooting. Do ALL the following: basketball shot for accuracy, 10 free-throw shots; basketball throw for skill and agility, the layup and spot shots described in the requirement."
+        - "Option H. Football Kick OR Soccer Kick. Do ALL of the following: goals from the 10-yard line, eight kicks; football kick or soccer kick for distance, five kicks (total distance)."
+        - "Option I. Weight Training. Do ALL of the following: chest/bench press, two sets of 15 repetitions each; leg curls, two sets of 15 repetitions each."
+    children:
+      - id: "5-record"
+        prompt: "Record your results for your four chosen options, showing improvement over the three-month period."
+        field:
+          type: table
+          headers: ["Option / activity", "Starting result", "Ending result"]
+          rows: 8
+          cols: 3
+
+  - id: "6"
+    intro: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Prepare plans for conducting a sports meet or field day that includes 10
+          activities, at least five of which must come from the groups mentioned in
+          requirement 5. Outline the duties of each official needed and list the
+          equipment the meet will require.
+        field: { type: text_box, lines: 10 }
+      - id: "6b"
+        prompt: >
+          With your parent or guardian's and counselor's approval, serve as an
+          official or volunteer at a sports meet to observe officials in action.
+          Tell your counselor about your responsibilities at the meet and discuss
+          what you learned.
+        field: { type: text_box, lines: 7 }
+
+  - id: "7"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Explore three careers related to athletics. Research one career area by interviewing an expert in the field, visiting a site, or using other resources. Learn about training, education, expenses, job outlook, salary, and advancement. Discuss your findings and career interest with your counselor."
+        - "Explore how an area of athletics could contribute to a hobby or healthy lifestyle. Research education, costs, and organizations related to this activity. Discuss your findings and goals with your counselor."
+    children:
+      - id: "7-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }

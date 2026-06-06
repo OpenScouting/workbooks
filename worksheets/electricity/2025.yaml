@@ -1,0 +1,136 @@
+badge:
+  name: Electricity
+  slug: electricity
+  requirements_revision: "2025-01-01"
+  description: >
+    Electricity explores how electrical power is produced, delivered, and used
+    safely in your home. You will respond to electrical emergencies, study
+    circuits and currents, and learn the terms and equipment that electricians
+    work with every day.
+
+requirements:
+  - id: "1"
+    prompt: "Demonstrate that you know how to respond to electrical emergencies by doing the following:"
+    children:
+      - id: "1a"
+        prompt: "Explain how to turn off power for a particular circuit and the whole house in the event of an emergency."
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: "Demonstrate how to rescue a person touching a live wire in the home."
+        field: { type: text_box, lines: 5 }
+      - id: "1c"
+        prompt: "Describe how to safely get out of a car in an accident if you suspect a utility wire is on the car."
+        field: { type: text_box, lines: 5 }
+      - id: "1d"
+        prompt: "Show how to render first aid to a person who is unconscious from an apparent electrical shock."
+        field: { type: text_box, lines: 5 }
+      - id: "1e"
+        prompt: "Show how to treat an electrical burn."
+        field: { type: text_box, lines: 4 }
+      - id: "1f"
+        prompt: "Explain what to do in the event of an electrical fire."
+        field: { type: text_box, lines: 4 }
+      - id: "1g"
+        prompt: "Explain what to do if caught out in the open during an electrical storm."
+        field: { type: text_box, lines: 4 }
+
+  - id: "2"
+    prompt: >
+      Complete an electrical home safety inspection of your home, using the
+      checklist found in the Electricity merit badge pamphlet or one approved
+      by your counselor. Discuss what you find with your counselor.
+    field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    prompt: "Make a simple electromagnet and use it to show magnetic attraction and repulsion."
+    field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Explain the difference between direct current and alternating current, the advantages and disadvantages of each, and give a practical example of the use of each type."
+        field: { type: text_box, lines: 8 }
+      - id: "4b"
+        prompt: "Explain three ways that electricity is produced."
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    prompt: "Make a simple drawing to show how a battery and an electric bell work. Describe the purpose of each of the components."
+    field: { type: text_box, lines: 10 }
+
+  - id: "6"
+    intro: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: "Define what overloading an electric circuit means. Tell what you have done to make sure your home circuits are not overloaded."
+        field: { type: text_box, lines: 6 }
+      - id: "6b"
+        prompt: "Determine if there is an overload on a branch circuit by either getting the current draw from all the equipment plugged into the circuit or use the power equation to calculate the current draws."
+        field: { type: text_box, lines: 7 }
+      - id: "6c"
+        prompt: "Explain why a fuse blows and a circuit breaker trips."
+        field: { type: text_box, lines: 5 }
+      - id: "6d"
+        prompt: "Tell how to find a blown fuse and a tripped circuit breaker in your home. Show how to safely reset the circuit breaker."
+        field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    prompt: "Make a floor plan wiring diagram of the lights, switches, and outlets for a room in your home. Show which fuse or circuit breaker protects each one."
+    field: { type: text_box, lines: 10 }
+
+  - id: "8"
+    intro: "Do the following:"
+    children:
+      - id: "8a"
+        prompt: "Read a meter associated with an electric bill. Determine the total power used since the bill, and the cost of that power."
+        field: { type: text_box, lines: 6 }
+      - id: "8b"
+        prompt: "Explain other charges on the bill that were taxes or fees."
+        field: { type: text_box, lines: 5 }
+      - id: "8c"
+        prompt: "Discuss with your counselor five ways your family can conserve energy."
+        field: { type: text_box, lines: 7 }
+
+  - id: "9"
+    prompt: "Explain the following:"
+    children:
+      - id: "9a"
+        prompt: "Electrical terms - Current, energy, power, resistance, and voltage"
+        field: { type: text_box, lines: 6 }
+      - id: "9b"
+        prompt: "Units of measure - Ampere (amps), ohms, volts, watts, and watt-hours"
+        field: { type: text_box, lines: 6 }
+      - id: "9c"
+        prompt: "Electrical conditions - Generating source with example, ground, open circuit, overvoltage, potential difference, and short circuit"
+        field: { type: text_box, lines: 8 }
+      - id: "9d"
+        prompt: "Equipment and their use - circuit, conductor, Ground Fault Circuit Interrupter (GFCI), insulator, inverter, rectifier, rheostat, substation, surge protection, solar panel, transformer, transmission and distribution systems, and wind turbine."
+        field: { type: text_box, lines: 12 }
+
+  - id: "10"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "Connect a buzzer, bell, or light with a battery. Have a key or switch in the line."
+        - "Make and run a simple electric motor (from a kit is acceptable, if approved by your counselor ahead of time)."
+        - "Build a simple rheostat. Show that it works."
+        - "Build a single-pole, double-throw switch. Show that it works."
+        - "Explain how 3-way switch wiring works in a lighting circuit."
+        - "Connect two lights together in a series circuit along with a battery and a switch. Then connect the same circuit in parallel. Discuss the differences in the two circuits."
+    children:
+      - id: "10-notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 8 }
+
+  - id: "11"
+    prompt: >
+      Identify three career opportunities that would use skills and knowledge
+      in electricity. Pick one and research the training, education,
+      certification requirements, experience, and expenses associated with
+      entering the field. Research the prospects for employment, starting
+      salary, advancement opportunities and career goals associated with this
+      career. Discuss what you learned with your counselor and whether you
+      might be interested in this career.
+    field: { type: text_box, lines: 10 }

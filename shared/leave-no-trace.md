@@ -1,0 +1,7 @@
+- Plan Ahead and Prepare
+- Travel and Camp on Durable Surfaces
+- Dispose of Waste Properly (Pack It In, Pack It Out)
+- Leave What You Find
+- Minimize Campfire Impacts
+- Respect Wildlife
+- Be Considerate of Other Visitors

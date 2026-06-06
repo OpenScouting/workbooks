@@ -1,0 +1,180 @@
+badge:
+  name: Wilderness Survival
+  slug: wilderness-survival
+  requirements_revision: "2026-01-01"
+  description: >
+    Wilderness Survival prepares you to stay calm, safe, and alive when an
+    outdoor trip goes wrong. Earning this badge teaches the priorities of
+    survival, how to build shelter and fire, signal for rescue, and treat
+    water so you can handle an emergency in the backcountry.
+
+requirements:
+  - id: "1"
+    intro: "Hazards and First Aid. Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Show or explain first aid for, and prevention of, injuries and
+          conditions that could occur in backcountry settings, including:
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Dehydration
+            - Heatstroke
+            - Hypothermia
+            - Shock
+            - Blisters
+            - Eye injuries
+            - Ankle and knee sprains
+            - "Bug bites of chiggers, ticks, mosquitoes, and biting gnats"
+            - Bee stings
+            - Bites of spiders
+            - Sting of a scorpion
+            - Bite of a wild mammal
+            - Bite of a venomous snake
+      - id: "1b"
+        prompt: >
+          Explain how the Scout Basic Essentials address hazards of survival
+          situations and are basic to a survival kit.
+        field: { type: text_box, lines: 7 }
+      - id: "1c"
+        prompt: >
+          Explain how a trip plan could help prevent a wilderness survival
+          situation.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    prompt: >
+      Priorities for Survival. Explain the importance of each of the seven
+      priorities of survival in a wilderness location.
+    field:
+      type: repeated_block
+      count: 7
+      template:
+        - { label: "Priority", type: text_field }
+        - { label: "Why it is important", type: text_box, lines: 3 }
+
+  - id: "3"
+    prompt: >
+      Avoiding Panic. Describe ways to avoid panic and to maintain a high level
+      of morale when lost, and explain why this is important.
+    field: { type: text_box, lines: 8 }
+
+  - id: "4"
+    prompt: >
+      First Aid Kits. Put together a personal first aid kit and a personal
+      survival kit. Show how items in the kits are used.
+    children:
+      - id: "4-firstaid"
+        prompt: "Personal first aid kit contents"
+        field:
+          type: table
+          headers: ["Item", "How it is used"]
+          rows: 10
+          cols: 2
+      - id: "4-survival"
+        prompt: "Personal survival kit contents"
+        field:
+          type: table
+          headers: ["Item", "How it is used"]
+          rows: 10
+          cols: 2
+
+  - id: "5"
+    intro: "Shelter. Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          Describe the steps you would take to survive in the following exposure
+          conditions:
+        field:
+          type: labeled_rows
+          lines_each: 3
+          labels:
+            - Cold and snowy
+            - Wet
+            - Hot and dry
+            - Windy
+            - At or on the water
+      - id: "5b"
+        prompt: >
+          Show that you know the proper clothing to wear while in the outdoors
+          during extremely hot and cold weather and during wet conditions.
+        field: { type: text_box, lines: 7 }
+      - id: "5c"
+        prompt: "Explain how to protect yourself from bears and raccoons."
+        field: { type: text_box, lines: 5 }
+      - id: "5d"
+        prompt: >
+          Describe how to build or find survival shelters in a forest or in
+          snow.
+        field: { type: text_box, lines: 7 }
+      - id: "5e"
+        prompt: >
+          Improvise a natural shelter. For the purpose of this demonstration,
+          use techniques that have little negative impact on the environment.
+          Spend a night in your shelter.
+        field: { type: checkbox, label: "Improvised a natural shelter and spent a night in it." }
+
+  - id: "6"
+    prompt: >
+      Fire Building. Using three different methods (other than matches), build
+      and light three fires.
+    field:
+      type: repeated_block
+      count: 3
+      template:
+        - { label: "Method", type: text_field }
+        - { label: "Notes", type: text_box, lines: 2 }
+
+  - id: "7"
+    intro: "Signaling. Do the following:"
+    children:
+      - id: "7a"
+        prompt: >
+          Explain and show how lost or stranded Scouts could send signals to
+          attract the attention of ground, airborne, or water search teams.
+        field: { type: text_box, lines: 7 }
+      - id: "7b"
+        prompt: "Demonstrate how to use a signal mirror."
+        field: { type: checkbox, label: "Demonstrated how to use a signal mirror." }
+      - id: "7c"
+        prompt: >
+          Describe from memory five ground-to-air signals and tell what they
+          mean.
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Signal", type: text_field }
+            - { label: "Meaning", type: text_field }
+
+  - id: "8"
+    prompt: >
+      Water. Demonstrate three ways to treat water found in the outdoors to
+      prepare it for drinking.
+    field:
+      type: repeated_block
+      count: 3
+      template:
+        - { label: "Method", type: text_field }
+        - { label: "Notes", type: text_box, lines: 2 }
+
+  - id: "9"
+    prompt: >
+      Food. Explain why it usually is not wise to eat wild plants or wildlife in
+      a wilderness survival situation.
+    field: { type: text_box, lines: 6 }
+
+  - id: "10"
+    prompt: "Careers. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Explore careers related to this merit badge. Research one career to learn about the training and education needed, costs, job prospects, salary, job duties, and career advancement. With permission of your parent or guardian, your research methods may include an internet or library search, an interview with a professional in the field, or a visit to a location where people in this career work. Discuss with your counselor both your findings and what about this profession might make it an interesting career."
+        - "(b) Explore how you could use knowledge and skills from the Wilderness Survival merit badge to pursue a hobby or to serve as volunteer. Research any training needed, expenses, and organizations that promote or support it. Discuss with your counselor what short-term and long-term goals you might have if you pursue this."
+    children:
+      - id: "10-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }

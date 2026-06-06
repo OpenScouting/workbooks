@@ -1,0 +1,100 @@
+badge:
+  name: Textile
+  slug: textile
+  requirements_revision: "2004-01-01"
+  description: >
+    Textiles surround us every day, from clothing to furnishings to industrial
+    materials. Scouts learn how fibers become fabric, compare natural and
+    manufactured fibers, try hands-on textile crafts, and explore careers in the
+    industry.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Discuss with your counselor the importance of textiles. Explain the terms
+      fiber, fabric, and textile. Give examples of textiles you use every day.
+    field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Get swatches of two natural fiber fabrics (100 percent cotton, linen,
+          wool or silk; no blends). Get swatches of two synthetic fiber fabrics
+          (nylon, polyester, acrylic, olefin, or spandex). Get a sample of one
+          cellulosic fabric (rayon, acetate or lyocell).
+        field: { type: checkbox, label: "Gathered swatches of two natural, two synthetic, and one cellulosic fabric." }
+      - id: "2b"
+        prompt: >
+          Give the origin, major characteristics, and general content of each
+          type of fiber obtained for 2(a). Explain the difference between a
+          cellulosic manufactured fiber and a synthetic manufactured fiber.
+        field: { type: text_box, lines: 10 }
+      - id: "2c"
+        prompt: >
+          Describe the main steps in making raw fiber into yarn, and yarn into
+          fabric.
+        field: { type: text_box, lines: 7 }
+      - id: "2d"
+        prompt: >
+          Assume you will soon buy a new garment or other textile item. Tell
+          your counselor what fiber or blend of fibers you want the item to be,
+          and give reasons for your choice.
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Visit a textile plant, textile products manufacturer or textile school or college. Report on what you saw and learned."
+        - "(b) Weave a belt, headband, place mat or wall hanging. Use a simple loom that you have made yourself."
+        - "(c) With a magnifying glass, examine a woven fabric, a nonwoven fabric, and a knitted fabric. Sketch what you see. Explain how the three constructions are different."
+        - "(d) Make a piece of felt."
+        - "(e) Make two natural dyes and use them to dye a garment or a piece of fabric."
+        - "(f) Waterproof a fabric."
+        - "(g) Demonstrate how to identify fibers, using microscope identification or the breaking test."
+    children:
+      - id: "3-notes"
+        prompt: "Notes from your two chosen options"
+        field: { type: text_box, lines: 12 }
+
+  - id: "4"
+    prompt: >
+      Explain the meaning of 10 of the following terms: warp, harness, heddle,
+      shed, aramid, spandex, sliver, yarn, spindle, distaff, loom, cellulose,
+      sericulture, extrusion, carbon fibers, spinneret, staple, worsted,
+      nonwoven, and greige goods.
+    field:
+      type: repeated_block
+      count: 10
+      template:
+        - { label: "Term", type: text_field }
+        - { label: "Meaning", type: text_box, lines: 2 }
+
+  - id: "5"
+    prompt: >
+      List the advantages and disadvantages of natural plant fibers, natural
+      animal fibers, cellulosic manufactured fibers, and synthetic manufactured
+      fibers. Identify and discuss at least four ecological concerns regarding
+      the production and care of textiles.
+    children:
+      - id: "5-fibers"
+        prompt: "Advantages and disadvantages of each fiber type"
+        field:
+          type: table
+          headers: ["Fiber type", "Advantages", "Disadvantages"]
+          rows: 4
+          cols: 3
+      - id: "5-ecology"
+        prompt: "At least four ecological concerns regarding the production and care of textiles"
+        field: { type: text_box, lines: 7 }
+
+  - id: "6"
+    prompt: >
+      Explain to your counselor, either verbally or in a written report, five
+      career possibilities in the textile industry. Tell about two positions
+      that interest you the most and the education, cost of training and specific
+      duties those positions require.
+    field: { type: text_box, lines: 10 }

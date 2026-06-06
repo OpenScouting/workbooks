@@ -1,0 +1,132 @@
+badge:
+  name: Hiking
+  slug: hiking
+  requirements_revision: "2024-01-01"
+  description: >
+    Hiking is one of the simplest and most rewarding ways to explore the
+    outdoors on your own two feet. Earning this badge builds the fitness,
+    planning, and trail skills you need to cover long distances safely and to
+    enjoy the country you pass through.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while hiking, and what you should do to anticipate, help prevent,
+          mitigate and respond to these hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Show that you know first aid for injuries or illnesses that could
+          occur while hiking, including hypothermia, frostbite, dehydration,
+          heat exhaustion, heatstroke, sunburn, hyperventilation, altitude
+          sickness, sprained ankle, blisters, insect stings, tick bites, and
+          snakebite.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Hypothermia
+            - Frostbite
+            - Dehydration
+            - Heat exhaustion
+            - Heatstroke
+            - Sunburn
+            - Hyperventilation
+            - Altitude sickness
+            - Sprained ankle
+            - Blisters
+            - Insect stings
+            - Tick bites
+            - Snakebite
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Explain and, where possible, show the points of good hiking practices
+          including proper outdoor ethics, hiking safety in the daytime and at
+          night, courtesy to others, choice of footwear, and proper care of feet
+          and footwear.
+        field: { type: text_box, lines: 8 }
+      - id: "2b"
+        prompt: >
+          Read aloud or recite the Leave No Trace Seven Principles, and discuss
+          why each is important while hiking.
+        field: { type: text_box, lines: 8 }
+      - id: "2c"
+        prompt: >
+          Read aloud or recite the Outdoor Code, and give examples of how to
+          follow it on a hike.
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: >
+      Explain how hiking is an aerobic activity. Develop a plan for conditioning
+      yourself for 10-mile hikes, and describe how you will increase your
+      fitness for longer hikes.
+    field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    prompt: >
+      Take four 10-mile hikes and one 20-mile hike, each on a different day, and
+      each of continuous miles. Prepare a written hike plan before each hike and
+      share it with your counselor or a designee for approval before starting
+      the hike. Include map routes, a clothing and equipment list, and a list of
+      items for a trail lunch. You may stop for as many short rest periods as
+      needed, as well as one meal, during each hike, but not for an extended
+      period such as overnight.
+    children:
+      - id: "4a"
+        prompt: "10-mile hike #1: written hike plan"
+        field: { type: text_box, lines: 8 }
+      - id: "4b"
+        prompt: "10-mile hike #2: written hike plan"
+        field: { type: text_box, lines: 8 }
+      - id: "4c"
+        prompt: "10-mile hike #3: written hike plan"
+        field: { type: text_box, lines: 8 }
+      - id: "4d"
+        prompt: "10-mile hike #4: written hike plan"
+        field: { type: text_box, lines: 8 }
+      - id: "4e"
+        prompt: "20-mile hike: written hike plan"
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      After each of the hikes (or during each hike if on one continuous trek) in
+      requirement 4, write a short report on your hike. For each hike, give the
+      date and description (or map) of the route covered, the weather, any
+      interesting things you saw, and any challenges you had and how you overcame
+      them. It may include something you learned about yourself, about the
+      outdoors, or about others you were hiking with. Share this with your
+      counselor.
+    children:
+      - id: "5a"
+        prompt: "Report: 10-mile hike #1"
+        field: { type: text_box, lines: 8 }
+      - id: "5b"
+        prompt: "Report: 10-mile hike #2"
+        field: { type: text_box, lines: 8 }
+      - id: "5c"
+        prompt: "Report: 10-mile hike #3"
+        field: { type: text_box, lines: 8 }
+      - id: "5d"
+        prompt: "Report: 10-mile hike #4"
+        field: { type: text_box, lines: 8 }
+      - id: "5e"
+        prompt: "Report: 20-mile hike"
+        field: { type: text_box, lines: 8 }
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

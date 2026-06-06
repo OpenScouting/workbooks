@@ -1,0 +1,136 @@
+badge:
+  name: Model Design and Building
+  slug: model-design-and-building
+  requirements_revision: "2026-01-01"
+  description: >
+    Model Design and Building turns ideas into scale models using traditional
+    tools and modern computer design. Earning this badge, you plan, design, and
+    construct an original model and explore how models help us understand the
+    world.
+
+requirements:
+  - id: "1"
+    intro: >
+      Safety. Discuss all safety procedures with your counselor before beginning
+      your modelmaking project, and explain why each is important, both in
+      traditional and computer-assisted design and construction:
+    children:
+      - id: "1a"
+        prompt: >
+          Explain the requirements for personal safety when using modelmaking
+          hand tools, and when to use proper protective equipment.
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: >
+          Explain digital safety best practices when using computer design
+          software, and digital fabrication tools.
+        field: { type: text_box, lines: 5 }
+      - id: "1c"
+        prompt: "Explain what precautions to take when using flammable or hazardous materials."
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    intro: "Types of Models and Materials. Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Explain the uses for each of the following types of models:
+          architectural, structural, process, mechanical, and industrial.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Architectural
+            - Structural
+            - Process
+            - Mechanical
+            - Industrial
+      - id: "2b"
+        prompt: >
+          Explain to your counselor how either traditional and/or computer design
+          tools can be used to create plans, simulate function, visualize models,
+          and assist in constructing or fabricating parts.
+        field: { type: text_box, lines: 6 }
+      - id: "2c"
+        prompt: >
+          Describe to your counselor traditional and modern materials and
+          fabrication methods that can be used for making these models. Include
+          physical and digital materials and methods.
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    intro: >
+      Planning Your Project. With your counselor's advice, select a subject from
+      requirement 4 for your model project. (You must not use a pre-made kit; your
+      project must be your original design.) Do the following:
+    children:
+      - id: "3a"
+        prompt: "Prepare the necessary plans to the proper scale."
+        field: { type: checkbox, label: "Prepared the necessary plans to the proper scale." }
+      - id: "3b"
+        prompt: "Make a list of materials."
+        field: { type: table, rows: 8, cols: 2, headers: ["Material", "Notes"] }
+      - id: "3c"
+        prompt: "Create a list of the required tools."
+        field: { type: table, rows: 8, cols: 2, headers: ["Tool", "Notes"] }
+      - id: "3d"
+        prompt: "This model should be your own original work. Tell why you selected this subject."
+        field: { type: text_box, lines: 5 }
+      - id: "3e"
+        prompt: "Discuss with your counselor if you plan to integrate computer design tools to complete your project."
+        field: { type: text_box, lines: 4 }
+
+  - id: "4"
+    prompt: >
+      Build Your Model. Do ONE of the following using physical and/or computer
+      design methods. Before beginning any model, discuss your approach with your
+      counselor, including the possible use of computer design software such as
+      CAD or 3D modeling tools. Present your plans and completed model to your
+      counselor.
+    field:
+      type: checklist
+      items:
+        - '(a) Architectural Model. Design and build a model of a house to a scale of 1/4" = 1''0" (1:48 scale). Begin by creating floor plans and elevations. Include windows, doors, and structural elements. Discuss with your counselor the materials you intend to use, the amount of detail required, outside treatment (finish, shrubbery, walks, etc.), and color selections. You may choose to 3D print elements or use laser-cut parts based on using computer design. Present both your design and final model to your counselor for evaluation.'
+        - '(b) Structural Model. Construct a scale model showing corner construction of a wood-frame building to a scale of 1 1/2" = 1''0" (1:8 scale). Begin with a structural layout showing the parts of the floor and wall frames, such as intermediate girder, joist, bridging, subfloor, sill, sole plate, stud, and rafter. Use your plans to assist in building a physical model with cardboard, foam board, or wood. Review with your counselor the parts of the structure and discuss challenges in both your design and build process, gathering the materials and supporting the structure.'
+        - '(c) Process Model. Design and build a model showing the plumbing system of your house to a scale of 3/4" = 1''0" (1:16 scale) or an agreed upon scale. Show hot and cold-water supply, all waste returns, and venting. After creating your plan, talk to your counselor about how to begin this model, and present the scale and the materials you will use. Build the model using appropriate materials such as tubing, straws, or printed parts. After completion, present your model to your counselor, and be prepared to discuss any problems you had building this model.'
+        - "(d) Mechanical Model. Build a model of a mechanical device that incorporates at least two of the six simple machines. You can use digital tools to design and simulate the device before constructing it. Once your design is approved by your counselor, build a working physical model using materials such as wood, plastic, or 3D printed parts. Present your models to your counselor and be prepared to discuss materials used, the machine's function, and challenges you encountered during the construction process."
+        - '(e) Industrial Model. Build a model of an actual passenger-carrying vehicle to a scale of 1" = 1''0" or 1/2" = 1''0" (1:12 or 1:24 scale). Begin by measuring a real vehicle and modeling it from multiple views (top, front, rear, sides). You can draw it or use computer design software. From your plans, build a physical model or use digital rendering or 3D printing to produce the final version. Discuss with your counselor which parts were most challenging.'
+    children:
+      - id: "4-notes"
+        prompt: "Notes on your chosen model: materials, process, and challenges"
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    intro: >
+      Special-Effects Fantasy Model. Design and build a fantasy spacecraft model
+      suitable for a science-fiction film, using traditional modeling and/or
+      computer design techniques. Determine an appropriate scale for your design,
+      one that makes practical sense. Do the following:
+    children:
+      - id: "5a"
+        prompt: "Research real-world aircraft, submarines, and naval ships for design inspiration."
+        field: { type: text_box, lines: 5 }
+      - id: "5b"
+        prompt: "Design individual components (such as the cockpit, living areas, engines, and storage)."
+        field: { type: text_box, lines: 5 }
+      - id: "5c"
+        prompt: "Produce a final sketch or a rendered image of the complete model from multiple angles."
+        field: { type: checkbox, label: "Produced a final sketch or rendered image of the complete model from multiple angles." }
+      - id: "5d"
+        prompt: >
+          Discuss your design process and scale choices with your counselor.
+          Describe the materials (physical and/or digital) you used, how you
+          engineered your model and discuss any difficulties you encountered and
+          what you learned.
+        field: { type: text_box, lines: 7 }
+
+  - id: "6"
+    prompt: >
+      Careers. Explore careers related to this merit badge. Research one career to
+      learn about the training and education needed, costs, job prospects, salary,
+      job duties, and career advancement. Your research methods may include, with
+      your parent or guardian's permission, an internet or library search, an
+      interview with a professional in the field, or a visit to a location where
+      people in this career work. Discuss with your counselor both your findings
+      and what about this profession might make it an interesting career.
+    field: { type: text_box, lines: 8 }

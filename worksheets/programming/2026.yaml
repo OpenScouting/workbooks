@@ -1,0 +1,121 @@
+badge:
+  name: Programming
+  slug: programming
+  requirements_revision: "2026-01-01"
+  description: >
+    Programming is how we tell computers what to do, powering everything from
+    phones to spacecraft. Earning this badge teaches you the history of
+    programming, how software is protected and shared, and how to write,
+    debug, and explain working programs in several languages.
+
+requirements:
+  - id: "1"
+    intro: "Safety. Do the following:"
+    children:
+      - id: "1a"
+        prompt: 'View the Personal Safety Awareness "Digital Safety" video (with your parent or guardian''s permission.)'
+        field: { type: checkbox, label: 'View the Personal Safety Awareness "Digital Safety" video (with your parent or guardian''s permission.)' }
+      - id: "1b"
+        prompt: >
+          Discuss first aid and prevention for the types of injuries that could
+          occur during programming activities, including repetitive stress
+          injuries and eyestrain.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    prompt: >
+      History. Discuss with your counselor the history of programming and the
+      evolution of programming languages, including at least three milestones
+      related to the advancement or development of programming over time.
+    field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    intro: "General Knowledge. Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Create a list of five popular programming languages in use today and
+          describe which industry or industries they are primarily used in and
+          why.
+        field:
+          type: table
+          headers: ["Programming language", "Industry / industries and why"]
+          rows: 5
+          cols: 2
+      - id: "3b"
+        prompt: "Describe three different programmed devices you rely on every day."
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Device", type: text_field }
+            - { label: "Description", type: text_box, lines: 3 }
+
+  - id: "4"
+    intro: "Intellectual Property. Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Explain the four types of intellectual property used to protect computer programs."
+        field: { type: text_box, lines: 6 }
+      - id: "4b"
+        prompt: "Describe the difference between licensing and owning software."
+        field: { type: text_box, lines: 5 }
+      - id: "4c"
+        prompt: >
+          Describe the differences between freeware, open source, and
+          commercial software, and why it is important to respect the terms of
+          use of each.
+        field: { type: text_box, lines: 7 }
+
+  - id: "5"
+    prompt: >
+      Project. With your counselor's guidance, select three different
+      programming languages and development environments. For each
+      sub-requirement below, do the following: Write or modify a program using
+      the indicated programming language and development environment. The
+      program must take input and produce output based on computations and
+      decisions made on the input. Debug and demonstrate the program to your
+      counselor. Explain how each program processes inputs, makes decisions
+      based on those inputs, and provides outputs based on computations and
+      decision making.
+    children:
+      - id: "5a"
+        prompt: >
+          In the first language and environment, write or modify a program,
+          debug and demonstrate, and explain as above.
+        field: { type: text_box, lines: 8 }
+      - id: "5b"
+        prompt: >
+          In the second language and environment, write or modify a program,
+          debug and demonstrate, and explain as above.
+        field: { type: text_box, lines: 8 }
+      - id: "5c"
+        prompt: >
+          In the third language and environment, write or modify a program,
+          debug and demonstrate, and explain as above.
+        field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: "Careers. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - >
+          (a) Explore careers related to this merit badge. Research one career
+          to learn about the training and education needed, costs, job
+          prospects, salary, job duties, and career advancement. Your research
+          methods may include, with your parent or guardian's permission, an
+          internet or library search, an interview with a professional in the
+          field, or a visit to a location where people in this career work.
+          Discuss with your counselor both your findings and what about this
+          profession might make it an interesting career.
+        - >
+          (b) Explore how you could use knowledge and skills from this merit
+          badge to pursue a hobby or healthy lifestyle. Research any training
+          needed, expenses, and organizations that promote or support it.
+          Discuss with your counselor what short-term and long-term goals you
+          might have if you pursued this.
+    children:
+      - id: "6notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }

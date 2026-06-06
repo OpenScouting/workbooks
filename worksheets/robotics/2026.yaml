@@ -1,0 +1,141 @@
+badge:
+  name: Robotics
+  slug: robotics
+  requirements_revision: "2026-01-01"
+  description: >
+    The Robotics merit badge introduces Scouts to the design, building, and
+    programming of robots. Scouts work through the engineering process to create
+    a working robot or subsystem and explore how robotics shapes industry and
+    careers.
+
+requirements:
+  - id: "1"
+    intro: "Safety. Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while working with robots and what you should do to anticipate,
+          mitigate and prevent, and respond to these hazards. Describe the
+          appropriate safety gear and clothing that should be used when working
+          with robotics.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Discuss first aid and prevention for the types of injuries that could
+          occur while participating in robotics activities and competitions,
+          including cuts, eye injuries, and burns (chemical or heat).
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Cuts"
+            - "Eye injuries"
+            - "Burns (chemical or heat)"
+
+  - id: "2"
+    intro: "Robotics Industry. Discuss the following with your counselor:"
+    children:
+      - id: "2a"
+        prompt: "The kinds of things robots can do and how robots are best used today."
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: >
+          The similarities and differences between remote-control vehicles,
+          telerobots, and autonomous robots.
+        field: { type: text_box, lines: 6 }
+      - id: "2c"
+        prompt: >
+          Three different methods robots can use to move themselves other than
+          wheels or tracks. Describe when it would be appropriate to use each
+          method.
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: >
+      General Knowledge. Discuss with your counselor three of the five major
+      fields of robotics (human-robot interface, mobility, manipulation,
+      programming, sensors) and their importance to robotics development. Discuss
+      either the three fields as they relate to a single robot system OR talk
+      about each field in general. Find pictures or at least one video to aid
+      your discussion.
+    field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    intro: "Design, Build, Program, Test. Do the following:"
+    children:
+      - id: "4a"
+        prompt: >
+          With your counselor's approval, choose a task for the robot or robotic
+          subsystem that you plan to build. Include sensor feedback and
+          programming in the task. Document this information in your robot
+          engineering notebook.
+        field: { type: text_box, lines: 6 }
+      - id: "4b"
+        prompt: >
+          Design your robot. The robot design should use sensors and programming
+          and have at least 2 degrees of freedom. Document the design in your
+          robot engineering notebook using drawings and a written description.
+        field: { type: text_box, lines: 8 }
+      - id: "4c"
+        prompt: >
+          Build a robot or robotic subsystem of your original design to
+          accomplish the task you chose for requirement 4(a).
+        field: { type: text_box, lines: 5 }
+      - id: "4d"
+        prompt: >
+          Discuss with your counselor the programming options available for your
+          robot. Then do ONE of the following:
+        field:
+          type: checklist
+          items:
+            - "(1) Program your robot to perform the task you chose for your robot in 4(a). Include a sample of your program's source code in your robot engineering notebook."
+            - "(2) Prepare a flowchart of the desired steps to program your robot for accomplishing the task in 4(a). Include procedures that show activities based on sensor inputs. Place this in your robot engineering notebook."
+        children:
+          - id: "4d-notes"
+            prompt: "Notes on the programming option you chose"
+            field: { type: text_box, lines: 6 }
+      - id: "4e"
+        prompt: >
+          Test your robot and record the results in your robot engineering
+          notebook. Include suggestions on how you could improve your robot, as
+          well as pictures or sketches of your finished robot.
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    intro: "Demonstrate. Do the following:"
+    children:
+      - id: "5a"
+        prompt: "Demonstrate for your counselor the robot you built in requirement 4."
+        field: { type: text_box, lines: 4 }
+      - id: "5b"
+        prompt: >
+          Share your robot engineering notebook with your counselor. Talk about
+          how well your robot accomplished the task, the improvements you would
+          make in your next design, and what you learned about the design
+          process.
+        field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: "Competitions. Do ONE of the following."
+    field:
+      type: checklist
+      items:
+        - "(a) Attend a robotics competition and report to your counselor what you saw and learned about the competition and how teams are organized and managed."
+        - "(b) Learn about three youth robotics competitions. Tell your counselor about these, including the type of competition, time commitment, age of the participants, and how many teams are involved."
+    children:
+      - id: "6-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Identify three career opportunities that would use skills and knowledge in Robotics. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career."
+        - "(b) Identify how you might use the skills and knowledge in robotics to pursue a personal hobby. Research the additional training required, expenses, and affiliation with organizations that would help you maximize the enjoyment and benefit you might gain from it. Discuss what you learned with your counselor and share what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "7-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }

@@ -1,0 +1,218 @@
+badge:
+  name: Small-Boat Sailing
+  slug: small-boat-sailing
+  requirements_revision: "2026-01-01"
+  description: >
+    The Small-Boat Sailing merit badge teaches you to handle a sailboat under
+    wind and water power. You will learn boat parts, points of sail, knots, and
+    safety afloat, then prove you can rig, sail, and recover a small craft with a
+    buddy.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while participating in small-boat sailing activities, and what you
+          should do to anticipate, help prevent, mitigate, and respond to these
+          hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Review prevention, symptoms, and first-aid treatment for the following
+          injuries or illnesses that can occur while sailing: blisters,
+          cold-water shock and hypothermia, dehydration, heat-related illnesses,
+          sunburn, sprains, and strains.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Blisters
+            - Cold-water shock and hypothermia
+            - Dehydration
+            - Heat-related illnesses
+            - Sunburn
+            - Sprains
+            - Strains
+      - id: "1c"
+        prompt: >
+          Discuss the Scouting America Safety Afloat policy. Tell how it applies
+          to small-boat sailing activities.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    prompt: >
+      Before doing the following requirements, successfully complete the
+      Scouting America swimmer test. Note: See the Swimming merit badge pamphlet
+      for details about the Scouting America swimmer test.
+    field:
+      type: checkbox
+      label: "I have completed the Scouting America swimmer test."
+
+  - id: "3"
+    prompt: >
+      Describe the boat you will be using for the sailing requirement, naming all
+      of the major parts and the function of those parts. Note: The skills may be
+      demonstrated on any boat available to the Scout; sailboards are not
+      acceptable. While no specific sail plan is recommended, it is suggested that
+      the craft be smaller than 20 feet. The boat must be capsizable and have the
+      capability of sailing to windward.
+    field:
+      type: table
+      headers: ["Major part", "Function"]
+      rows: 10
+      cols: 2
+
+  - id: "4"
+    intro: "Before going afloat, do the following:"
+    children:
+      - id: "4a"
+        prompt: "Discuss the nine points of the Scouting America Safety Afloat plan."
+        field: { type: text_box, lines: 8 }
+      - id: "4b"
+        prompt: >
+          Explain the rules of the road in general and any specific rules or laws
+          that apply to your area or state.
+        field: { type: text_box, lines: 6 }
+      - id: "4c"
+        prompt: >
+          Explain how water conditions, the hazards of weather, and heavy winds
+          can affect both safety and performance in sailing.
+        field: { type: text_box, lines: 6 }
+      - id: "4d"
+        prompt: >
+          Discuss the warning signs of inclement weather and what to do should
+          heavy winds develop or a storm approach.
+        field: { type: text_box, lines: 6 }
+      - id: "4e"
+        prompt: "Prepare a typical float plan."
+        field: { type: text_box, lines: 8 }
+      - id: "4f"
+        prompt: >
+          Discuss the proper clothing, footwear, and personal gear required for
+          small-boat sailing in warm weather and in cool weather. Explain how
+          choosing the proper clothing, footwear, and personal gear will help
+          keep you comfortable and safe while sailing.
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Discuss with your counselor how to identify the wind direction and wind
+      indicators. Explain the importance of this task before setting sail.
+    field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    prompt: >
+      Following the Scouting America Safety Afloat plan, show that you and a buddy
+      can sail a boat properly. Do the following:
+    children:
+      - id: "6a"
+        prompt: "Prepare a boat for sailing, including a safety inspection."
+        field:
+          type: checkbox
+          label: "I prepared a boat for sailing, including a safety inspection."
+      - id: "6b"
+        prompt: "Get underway from a dock, mooring, or beach."
+        field:
+          type: checkbox
+          label: "I got underway from a dock, mooring, or beach."
+      - id: "6c"
+        prompt: >
+          Properly set sails for a round-trip course approved by your counselor
+          that will include running, beating, and reaching, the basic points of
+          sail. While sailing, demonstrate good helmsmanship skills.
+        field:
+          type: checkbox
+          label: "I sailed the approved round-trip course and demonstrated good helmsmanship."
+      - id: "6d"
+        prompt: "Change direction by tacking; change direction by jibing."
+        field:
+          type: checkbox
+          label: "I changed direction by tacking and by jibing."
+      - id: "6e"
+        prompt: "Demonstrate getting out of irons."
+        field:
+          type: checkbox
+          label: "I demonstrated getting out of irons."
+      - id: "6f"
+        prompt: "Demonstrate the safety position."
+        field:
+          type: checkbox
+          label: "I demonstrated the safety position."
+      - id: "6g"
+        prompt: >
+          Demonstrate capsize procedures and the rescue of a person overboard.
+          Note: Capsize procedures should be conducted under the close
+          supervision of the counselor. A rescue boat should be standing by to
+          assist, if necessary, and to tow the capsized craft to shore.
+          Self-bailing boats are acceptable for this requirement. Extreme care
+          should be taken to avoid personal injury and damage to the boat or
+          equipment.
+        field:
+          type: checkbox
+          label: "I demonstrated capsize procedures and a person-overboard rescue."
+      - id: "6h"
+        prompt: "Demonstrate the procedure to take after running aground."
+        field:
+          type: checkbox
+          label: "I demonstrated the procedure to take after running aground."
+      - id: "6i"
+        prompt: >
+          Accept a single line or side tow and maneuver the craft being towed
+          safely for 20 boat lengths.
+        field:
+          type: checkbox
+          label: "I accepted a tow and maneuvered the craft safely for 20 boat lengths."
+      - id: "6j"
+        prompt: >
+          Upon returning to the dock, mooring, or beach, properly secure all
+          equipment, furl or stow sails, and prepare the craft for unattended
+          docking or beaching overnight or longer.
+        field:
+          type: checkbox
+          label: "I secured all equipment and prepared the craft for unattended docking or beaching."
+
+  - id: "7"
+    prompt: >
+      Demonstrate a working knowledge of marlinespike seamanship. Do the
+      following:
+    children:
+      - id: "7a"
+        prompt: >
+          Show how to tie a square (reef) knot, clove hitch, two half hitches,
+          bowline, cleat hitch, and figure-eight knot. Demonstrate the use of
+          each.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Square (reef) knot"
+            - Clove hitch
+            - Two half hitches
+            - Bowline
+            - Cleat hitch
+            - Figure-eight knot
+      - id: "7b"
+        prompt: "Show how to heave a line, coil a line, and fake down a line."
+        field:
+          type: checkbox
+          label: "I showed how to heave, coil, and fake down a line."
+      - id: "7c"
+        prompt: >
+          Discuss the kinds of lines used on sailboats and the types of fibers
+          used in their manufacture. Explain the advantages and disadvantages of
+          each.
+        field: { type: text_box, lines: 8 }
+
+  - id: "8"
+    prompt: "Describe how you would care for and maintain a sailboat and its gear throughout the year."
+    field: { type: text_box, lines: 8 }
+
+  - id: "9"
+    prompt: >
+      With your counselor, review sailing terminology and the points of sail.
+      Discuss various types of sailboats in use today and explain their
+      differences.
+    field: { type: text_box, lines: 8 }

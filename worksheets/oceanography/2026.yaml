@@ -1,0 +1,199 @@
+badge:
+  name: Oceanography
+  slug: oceanography
+  requirements_revision: "2026-01-01"
+  description: >
+    Oceanography is the scientific study of the seas: their waters, waves,
+    floor, chemistry, and life. Earning this badge introduces you to the
+    tools and methods scientists use to explore the ocean and to understand
+    its role in weather, climate, and the web of life.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Name four branches of oceanography. Describe at least five reasons why
+      it is important for people to learn about the oceans.
+    children:
+      - id: "1a"
+        prompt: "Name four branches of oceanography."
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: "Describe at least five reasons why it is important for people to learn about the oceans."
+        field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    prompt: >
+      Explain the following terms: salinity, temperature, and density.
+      Describe how these important properties of seawater are measured by an
+      oceanographer. Discuss the circulation and currents of the ocean.
+      Describe the effects of the oceans on weather and climate.
+    children:
+      - id: "2a"
+        prompt: "Explain the following terms: salinity, temperature, and density."
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: "Describe how these important properties of seawater are measured by an oceanographer."
+        field: { type: text_box, lines: 6 }
+      - id: "2c"
+        prompt: "Discuss the circulation and currents of the ocean."
+        field: { type: text_box, lines: 6 }
+      - id: "2d"
+        prompt: "Describe the effects of the oceans on weather and climate."
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: "Describe the characteristics of ocean waves and do the following:"
+    children:
+      - id: "3char"
+        prompt: "Describe the characteristics of ocean waves."
+        field: { type: text_box, lines: 6 }
+      - id: "3a"
+        prompt: "Point out the differences among the storm surge, tsunami, tidal wave, and tidal bore."
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: "Explain the difference between sea, swell, and surf."
+        field: { type: text_box, lines: 5 }
+      - id: "3c"
+        prompt: "Explain how breakers are formed."
+        field: { type: text_box, lines: 4 }
+      - id: "3d"
+        prompt: "Explain what a rip current is, how to avoid them, and what to do if you are caught in one."
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: >
+      Draw a cross-section of underwater topography. Name and put on your
+      drawing the following: seamount, guyot, rift valley, canyon, trench, and
+      oceanic ridge. Compare the depths in the oceans with the heights of
+      mountains on land. Show what is meant by:
+    children:
+      - id: "4draw"
+        prompt: >
+          Draw a cross-section of underwater topography. Name and put on your
+          drawing the following: seamount, guyot, rift valley, canyon, trench,
+          and oceanic ridge.
+        field: { type: text_box, lines: 10 }
+      - id: "4compare"
+        prompt: "Compare the depths in the oceans with the heights of mountains on land."
+        field: { type: text_box, lines: 5 }
+      - id: "4a"
+        prompt: "Show what is meant by: Continental shelf"
+        field: { type: text_box, lines: 3 }
+      - id: "4b"
+        prompt: "Show what is meant by: Continental slope"
+        field: { type: text_box, lines: 3 }
+      - id: "4c"
+        prompt: "Show what is meant by: Abyssal plain"
+        field: { type: text_box, lines: 3 }
+
+  - id: "5"
+    prompt: >
+      List the main salts, gases, and nutrients in seawater. Describe some
+      important properties of water. Tell how the animals and plants of the
+      ocean affect the chemical composition of seawater. Explain how
+      differences in evaporation and precipitation affect the salt content of
+      the oceans.
+    children:
+      - id: "5a"
+        prompt: "List the main salts, gases, and nutrients in seawater."
+        field: { type: text_box, lines: 6 }
+      - id: "5b"
+        prompt: "Describe some important properties of water."
+        field: { type: text_box, lines: 5 }
+      - id: "5c"
+        prompt: "Tell how the animals and plants of the ocean affect the chemical composition of seawater."
+        field: { type: text_box, lines: 5 }
+      - id: "5d"
+        prompt: "Explain how differences in evaporation and precipitation affect the salt content of the oceans."
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    prompt: >
+      Describe some of the biologically important properties of seawater.
+      Define benthos, nekton, and plankton. Name some of the plants and
+      animals that make up each of these groups. Describe the place and
+      importance of phytoplankton in the oceanic food chain.
+    children:
+      - id: "6a"
+        prompt: "Describe some of the biologically important properties of seawater."
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: >
+          Define benthos, nekton, and plankton. Name some of the plants and
+          animals that make up each of these groups.
+        field: { type: text_box, lines: 6 }
+      - id: "6c"
+        prompt: "Describe the place and importance of phytoplankton in the oceanic food chain."
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - >
+          (a) Make a plankton net. Tow the net by a dock, wade with it, hold it
+          in a current, or tow it from a rowboat. Do this for about 20 minutes.
+          Save the sample. Examine it under a microscope or high-power glass.
+          Identify the three most common types of plankton in the sample. Note:
+          May be done in lakes or streams.
+        - >
+          (b) Make a series of models (clay or plaster and wood) of a volcanic
+          island. Show the growth of an atoll from a fringing reef through a
+          barrier reef. Describe the Darwinian theory of coral reef formation.
+        - >
+          (c) Measure the water temperature at the surface, midwater, and bottom
+          of a body of water four times daily for five consecutive days. You may
+          measure depth with a rock tied to a line. Make a Secchi disk to
+          measure turbidity (how much suspended sedimentation is in the water).
+          Measure the air temperature. Note the cloud cover and roughness of the
+          water. Show your findings (air and water temperature, turbidity) on a
+          graph. Tell how the water temperature changes with air temperature.
+        - >
+          (d) Make a model showing the inshore sediment movement by littoral
+          currents, tidal movement, and wave action. Include such formations as
+          high and low waterlines, low-tide terrace, berm, and coastal cliffs.
+          Show how offshore bars are built up and torn down.
+        - >
+          (e) Make a wave generator. Show reflection and refraction of waves.
+          Show how groins, jetties, and breakwaters affect these patterns.
+        - >
+          (f) With your counselor's and parent or guardian's approval and
+          permission, track and monitor satellite images available on the
+          internet for a specific location for three weeks. Describe what you
+          have learned to your counselor.
+    children:
+      - id: "7notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "8"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Write a 500-word report on a book about oceanography approved by your counselor."
+        - >
+          (b) Visit one of the following and write a 500-word report about your
+          visit: (1) Oceanographic research ship; (2) Oceanographic institute,
+          marine laboratory, or marine aquarium.
+        - >
+          (c) Explain to your troop, in a five-minute prepared speech "Why
+          Oceanography Is Important," or describe "Career Opportunities in
+          Oceanography." (Before making your speech, show your speech outline to
+          your counselor for approval.)
+    children:
+      - id: "8notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "9"
+    prompt: >
+      Describe four methods that marine scientists use to investigate the
+      ocean, underlying geology, and organisms living in the water.
+    field:
+      type: repeated_block
+      count: 4
+      template:
+        - { label: "Method", type: text_field }
+        - { label: "Description", type: text_box, lines: 4 }

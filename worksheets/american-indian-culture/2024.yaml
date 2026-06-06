@@ -1,0 +1,108 @@
+badge:
+  name: American Indian Culture
+  slug: american-indian-culture
+  requirements_revision: "2024-01-01"
+  former_names:
+    - Indian Lore
+  description: >
+    The American Indian Culture merit badge introduces Scouts to the rich
+    histories, traditions, languages, and contemporary lives of the
+    Indigenous peoples of the Americas. Scouts research a tribe in depth,
+    explore language and place names, and visit a museum or gathering.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Identify the different American Indian cultural areas. Explain what
+      makes each one unique.
+    field: { type: text_box, lines: 12 }
+
+  - id: "2"
+    prompt: >
+      Research an American Indian tribe, group, or nation. Tell your
+      counselor about traditional dwellings, way of life, tribal government,
+      religious beliefs, family and clan relationships, language, clothing
+      styles, arts and crafts, food cultivation, foraging and preparation,
+      means of getting around, games, customs in warfare, and where and how
+      they live today.
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels:
+        - "Tribe / nation chosen"
+        - "Traditional dwellings"
+        - "Way of life"
+        - "Tribal government"
+        - "Religious beliefs"
+        - "Family and clan relationships"
+        - "Language"
+        - "Clothing styles"
+        - "Arts and crafts"
+        - "Food cultivation, foraging, and preparation"
+        - "Means of getting around"
+        - "Games"
+        - "Customs in warfare"
+        - "Where and how they live today"
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: "Learn 10 common terms in an American Indian language and their meanings."
+        field:
+          type: table
+          headers: ["Term", "Meaning"]
+          rows: 10
+          cols: 2
+      - id: "3b"
+        prompt: "Identify the meaning of 10 place names of American Indian origin in the United States."
+        field:
+          type: table
+          headers: ["Place name", "Meaning / origin"]
+          rows: 10
+          cols: 2
+      - id: "3c"
+        prompt: >
+          Name five well-known American Indian leaders, either from the
+          past or people of today. Give their tribes or nations. Describe
+          what they did or do now that makes them notable.
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Leader", type: text_field }
+            - { label: "Tribe / nation", type: text_field }
+            - { label: "Why notable", type: text_box, lines: 3 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: >
+          Describe how life might have been different for the European
+          settlers if there had been no Native Americans to meet them when
+          they came to this continent.
+        field: { type: text_box, lines: 10 }
+      - id: "4b"
+        prompt: "Describe eight things adopted by others from American Indians."
+        field:
+          type: repeated_block
+          count: 8
+          template:
+            - { label: "What was adopted", type: text_field }
+            - { label: "How it has been used", type: text_box, lines: 2 }
+      - id: "4c"
+        prompt: "Learn a game played by a group or tribe. Teach and lead it with a Scout group."
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Visit a museum (in-person or virtually) to see American Indian exhibitions and collections. Discuss two exhibitions and identify 10 artifacts by tribe or nation, shape, size, and use."
+        - "(b) Attend a contemporary American Indian gathering. Discuss proper etiquette as well as what you learned and observed during your visit."
+    children:
+      - id: "5-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 12 }

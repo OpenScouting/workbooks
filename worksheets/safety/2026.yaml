@@ -1,0 +1,179 @@
+badge:
+  name: Safety
+  slug: safety
+  requirements_revision: "2026-01-01"
+  description: >
+    The Safety merit badge helps Scouts recognize hazards and take action to keep
+    themselves, their families, and their communities safe. Scouts plan for
+    emergencies at home, guard against crime, and learn to stay safe in public,
+    online, and while traveling.
+
+requirements:
+  - id: "1"
+    intro: "Safety and Hazards. Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Explain what safety is and what it means to be safe."
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: >
+          Explain what hazards are and how people manage hazards to reduce risks
+          of harm and to improve safety.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Family and Home Safety. Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Explain common causes of and prevention of home injuries."
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: "Discuss the dangers involved with the use of fireworks."
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: "Explain common causes of and prevention of home fires."
+        field: { type: text_box, lines: 6 }
+      - id: "2d"
+        prompt: >
+          Using the Home Safety Checklist in the Safety merit badge pamphlet, or
+          one approved by your counselor, inspect your home or a similar building
+          for hazards with an adult. Review your checklist and findings with your
+          counselor.
+        field: { type: text_box, lines: 6 }
+      - id: "2e"
+        prompt: >
+          Develop a fire-escape plan for your home or for a similar building.
+          Include in your drawings exit routes from each room and a meeting place
+          outside. Conduct a fire-escape drill. Review your plan and your drill
+          with your counselor.
+        field: { type: text_box, lines: 8 }
+      - id: "2f"
+        prompt: >
+          Develop a family emergency action plan for evacuation because of
+          weather or other natural disasters that occur in your area. Using a
+          checklist in the Safety merit badge pamphlet or one approved by your
+          counselor, assemble or inspect an emergency supplies kit. Explain to
+          your counselor how a family would use the plan and the kit supplies in
+          an emergency.
+        field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    intro: "Safety from Crime. Do the following:"
+    children:
+      - id: "3a"
+        prompt: "Explain common types of crimes that can affect teens."
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: >
+          Using a Home Security Checklist in the Safety merit badge pamphlet or
+          one approved by your counselor, inspect your home or a similar building
+          for crime security measures with an adult. Review your checklist and
+          findings with your counselor.
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    intro: "Safety in Public Places. Explain each of the following to your counselor:"
+    children:
+      - id: "4a"
+        prompt: >
+          How a person would safely exit from public buildings, a hotel, and a
+          stadium in an emergency
+        field: { type: text_box, lines: 5 }
+      - id: "4b"
+        prompt: "How and why Scouts would take shelter at camp"
+        field: { type: text_box, lines: 5 }
+      - id: "4c"
+        prompt: "How should Scouts respond to an active shooter"
+        field: { type: text_box, lines: 5 }
+      - id: "4d"
+        prompt: 'The meaning of this saying: "If You See Something, Say Something®"'
+        field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    intro: "Safeguarding Youth. Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          Discuss Scouting America's Safeguarding Youth guidelines that adults and
+          Scouts must follow so that everyone is safe at Scouting activities.
+        field: { type: text_box, lines: 6 }
+      - id: "5b"
+        prompt: >
+          Discuss with your counselor what situations and behaviors would prompt
+          you to Recognize, Resist, and Report a possible abuse situation.
+        field: { type: text_box, lines: 6 }
+      - id: "5c"
+        prompt: >
+          Discuss how you, other Scouts, leaders, and anyone can report
+          situations suspicious for abuse through the Scouts First Helpline and
+          other means.
+        field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    intro: "Safety from Assault. Explain how to avoid or prevent:"
+    children:
+      - id: "6a"
+        prompt: "Assault on a street"
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: "Assault at a restaurant event"
+        field: { type: text_box, lines: 5 }
+      - id: "6c"
+        prompt: "Sexual assault at a party or on a date"
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    intro: "Online Safety. Discuss the following with your counselor:"
+    children:
+      - id: "7a"
+        prompt: "How to avoid being the victim of online crimes"
+        field: { type: text_box, lines: 5 }
+      - id: "7b"
+        prompt: "Common online financial scams"
+        field: { type: text_box, lines: 5 }
+      - id: "7c"
+        prompt: "Effective online security"
+        field: { type: text_box, lines: 5 }
+      - id: "7d"
+        prompt: "Identity theft and how to prevent it"
+        field: { type: text_box, lines: 5 }
+      - id: "7e"
+        prompt: "How criminals use social media to target victims"
+        field: { type: text_box, lines: 5 }
+      - id: "7f"
+        prompt: "How bullying, texting, and sharing photos can become crimes"
+        field: { type: text_box, lines: 5 }
+
+  - id: "8"
+    intro: "Travel Safety. Explain guidelines for traveling safely:"
+    children:
+      - id: "8a"
+        prompt: "As a pedestrian in a city"
+        field: { type: text_box, lines: 4 }
+      - id: "8b"
+        prompt: "In a friend's car or truck"
+        field: { type: text_box, lines: 4 }
+      - id: "8c"
+        prompt: "In a rideshare vehicle"
+        field: { type: text_box, lines: 4 }
+      - id: "8d"
+        prompt: "On a bus"
+        field: { type: text_box, lines: 4 }
+      - id: "8e"
+        prompt: "On a subway or train"
+        field: { type: text_box, lines: 4 }
+      - id: "8f"
+        prompt: "On a commercial airplane"
+        field: { type: text_box, lines: 4 }
+
+  - id: "9"
+    prompt: "Careers. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Explore careers related to Safety merit badge. Research one career to learn about the training and education needed, costs, job prospects, salary, job duties, and career advancement. With permission of your parent or guardian, your research methods may include an internet or library search, an interview with a professional in the field, or a visit to a location where people in this career work. Discuss with your counselor both your findings and what about this profession might make it an interesting career."
+        - "(b) Explore how you could use knowledge and skills related to safety to pursue a hobby, lifestyle, or service as a volunteer. Research any training needed, expenses, and organizations that promote or support it. Discuss with your counselor what short-term and long-term goals you might have if you pursue this."
+    children:
+      - id: "9-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }

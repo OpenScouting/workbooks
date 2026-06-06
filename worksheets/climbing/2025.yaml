@@ -1,0 +1,231 @@
+badge:
+  name: Climbing
+  slug: climbing
+  requirements_revision: "2025-01-01"
+  description: >
+    Climbing and rappelling demand skill, focus, and a constant attention to
+    safety. Earning this badge, you learn the gear, knots, signals, and belay
+    techniques that let you climb rock faces and walls and descend them under
+    control.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while participating in climbing and rappelling activities and what you
+          should do to anticipate, help prevent, mitigate, and respond to these
+          hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Show that you know first aid for and how to prevent injuries or
+          illnesses that could occur during climbing activities, including heat
+          and cold reactions, dehydration, stopped breathing, sprains, abrasions,
+          fractures, rope burns, blisters, snakebite, concussions, and insect
+          bites or stings.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Heat and cold reactions
+            - Dehydration
+            - Stopped breathing
+            - Sprains
+            - Abrasions
+            - Fractures
+            - Rope burns
+            - Blisters
+            - Snakebite
+            - Concussions
+            - Insect bites or stings
+      - id: "1c"
+        prompt: "Identify the conditions that must exist before performing CPR on a person."
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    prompt: >
+      Learn the Leave No Trace Seven Principles and the Outdoor Code and explain
+      what they mean.
+    children:
+      - id: "2lnt"
+        prompt: "Leave No Trace Seven Principles: what they mean"
+        field: { type: text_box, lines: 6 }
+      - id: "2oc"
+        prompt: "Outdoor Code: what it means"
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: >
+      Present yourself properly dressed for belaying, climbing, and rappelling.
+      Explain why you are wearing each piece of gear and discuss qualities of easy
+      movement, entanglement free and good weather protection and comfort.
+    field: { type: text_box, lines: 8 }
+
+  - id: "4"
+    intro: "Location. Do the following:"
+    children:
+      - id: "4a"
+        prompt: >
+          Explain how the difficulty of climbs is classified, and apply
+          classifications to the rock faces or walls where you will demonstrate
+          your climbing skills.
+        field: { type: text_box, lines: 6 }
+      - id: "4b"
+        prompt: "Explain the following: top-rope climbing, lead climbing, and bouldering."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Top-rope climbing
+            - Lead climbing
+            - Bouldering
+      - id: "4c"
+        prompt: >
+          Evaluate the safety of a particular climbing area. Consider weather,
+          visibility, the condition of the climbing surface, and any other
+          environmental hazards.
+        field: { type: text_box, lines: 6 }
+      - id: "4d"
+        prompt: >
+          Determine how to summon aid to the climbing area in case of an
+          emergency. Discuss what medical training is needed for your group when
+          climbing and rappelling in remote areas.
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    intro: >
+      Verbal signals. Explain the importance of using verbal signals during every
+      climb and rappel, and while bouldering. With the help of the counselor or
+      another Scout, demonstrate the verbal signals used by each of the following:
+    children:
+      - id: "5a"
+        prompt: "Climbers"
+        field: { type: text_box, lines: 3 }
+      - id: "5b"
+        prompt: "Rappellers"
+        field: { type: text_box, lines: 3 }
+      - id: "5c"
+        prompt: "Belayers"
+        field: { type: text_box, lines: 3 }
+      - id: "5d"
+        prompt: "Boulderers and their spotters"
+        field: { type: text_box, lines: 3 }
+
+  - id: "6"
+    intro: "Rope. Do the following:"
+    children:
+      - id: "6a"
+        prompt: "Describe the kinds of rope acceptable for use in climbing and rappelling."
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: "Show how to examine a rope for signs of wear or damage."
+        field: { type: text_box, lines: 4 }
+      - id: "6c"
+        prompt: "Discuss ways to prevent a rope from being damaged."
+        field: { type: text_box, lines: 4 }
+      - id: "6d"
+        prompt: "Explain when and how a rope should be retired."
+        field: { type: text_box, lines: 4 }
+      - id: "6e"
+        prompt: "Properly coil a rope."
+        field: { type: checkbox }
+
+  - id: "7"
+    prompt: >
+      Knots. Demonstrate the ability to tie each of the following knots. Give at
+      least one example of how each knot is used in belaying, climbing, or
+      rappelling.
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels:
+        - "Figure eight on a bight"
+        - "Figure eight follow-through"
+        - "Water knot"
+        - "Double fisherman's knot (grapevine knot)"
+        - "Prusik hitch applied to rope"
+
+  - id: "8"
+    intro: >
+      Harness, Helmet & Gloves. Explain the purpose of each of the following and
+      demonstrate how to put them on correctly.
+    children:
+      - id: "8a"
+        prompt: "Commercially made climbing harness"
+        field: { type: text_box, lines: 3 }
+      - id: "8b"
+        prompt: "Climbing helmet"
+        field: { type: text_box, lines: 3 }
+      - id: "8c"
+        prompt: "Climbing or rappelling gloves"
+        field: { type: text_box, lines: 3 }
+
+  - id: "9"
+    prompt: >
+      Identify the elements of the CHECK system and describe the meaning of each
+      one to your counselor.
+    field: { type: text_box, lines: 6 }
+
+  - id: "10"
+    intro: "Belaying. Do the following:"
+    children:
+      - id: "10a"
+        prompt: "Explain the importance of belaying climbers and rappellers and when it is necessary."
+        field: { type: text_box, lines: 5 }
+      - id: "10b"
+        prompt: "Belay three different climbers on three different routes."
+        field: { type: checkbox }
+      - id: "10c"
+        prompt: "Serve as a backup belayer on three different climbs."
+        field: { type: checkbox }
+      - id: "10d"
+        prompt: "Belay three different rappellers on three different routes."
+        field: { type: checkbox }
+      - id: "10e"
+        prompt: "Serve as a backup belayer on three different rappels."
+        field: { type: checkbox }
+
+  - id: "11"
+    intro: "Climbing. Do the following:"
+    children:
+      - id: "11a"
+        prompt: "Show the correct way to directly tie a belay rope to your harness."
+        field: { type: checkbox }
+      - id: "11b"
+        prompt: >
+          Climb at least three different routes on a rock face or climbing wall,
+          demonstrating good technique and using verbal signals with a belayer.
+        field: { type: checkbox }
+
+  - id: "12"
+    intro: "Rappelling. Do the following:"
+    children:
+      - id: "12a"
+        prompt: "Show the correct way to directly tie a belay rope to your harness."
+        field: { type: checkbox }
+      - id: "12b"
+        prompt: "Using a carabiner and a rappel device, attach a rappel rope to your harness."
+        field: { type: checkbox }
+      - id: "12c"
+        prompt: >
+          Rappel down three different rock faces or three rappel routes on a
+          climbing wall. Use verbal signals to communicate with a belayer, and
+          demonstrate good rappelling technique.
+        field: { type: checkbox }
+
+  - id: "13"
+    prompt: >
+      Demonstrate ways to store rope, hardware, and other gear used for climbing,
+      rappelling, and belaying.
+    field: { type: text_box, lines: 6 }
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

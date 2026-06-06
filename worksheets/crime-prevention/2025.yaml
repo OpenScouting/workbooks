@@ -1,0 +1,221 @@
+badge:
+  name: Crime Prevention
+  slug: crime-prevention
+  requirements_revision: "2025-01-01"
+  description: >
+    Crime prevention is about understanding why crime happens and what citizens,
+    communities, and law enforcement can do to stop it. This badge explores
+    laws, safety surveys, reporting, and the role you can play in keeping your
+    home and neighborhood secure.
+
+requirements:
+  - id: "1"
+    intro: "Laws and Society. Discuss the following with your counselor:"
+    children:
+      - id: "1a"
+        prompt: "Why we have criminal laws."
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: >
+          What are types of crimes, including property crimes, crimes against
+          people, white collar crime, and environmental crime.
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: "Why people commit crimes."
+        field: { type: text_box, lines: 5 }
+      - id: "1d"
+        prompt: "Why everyone should follow the law even when no one is watching."
+        field: { type: text_box, lines: 5 }
+      - id: "1e"
+        prompt: "What is the meaning of crime prevention."
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    prompt: >
+      Groups Working to Prevent Crime. Research how the following groups
+      contribute to crime prevention and share your findings with your
+      counselor:
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels:
+        - "Citizens, including youth"
+        - "Schools"
+        - "Neighborhood, social and civic groups, including youth groups"
+        - "Private security"
+        - "Law enforcement agencies"
+        - "Courts"
+        - "Corrections and rehabilitation programs"
+
+  - id: "3"
+    intro: "Crime in Your Community, State, and Nation. Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          With your parent or guardian's permission and the approval of your
+          counselor, research local, state, or national news coverage of three
+          crimes of different types. Research how common these types of crimes
+          are in your state or in the United States.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Crime and type", type: text_field }
+            - { label: "News coverage and how common this type of crime is", type: text_box, lines: 4 }
+      - id: "3b"
+        prompt: >
+          Record notes on which law enforcement agencies and courts were
+          involved in the pursuit of justice for the victims and the accused
+          person, why you think these crimes were committed, and what could be
+          done to prevent similar crimes. Review your research with your
+          counselor.
+        field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    intro: "Home and Neighborhood Crime Prevention. Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Discuss the following with your counselor:"
+        children:
+          - id: "4a1"
+            prompt: >
+              How participation in activities of families, churches, sports
+              teams, and clubs prevents crime.
+            field: { type: text_box, lines: 5 }
+          - id: "4a2"
+            prompt: >
+              How designs of houses, neighborhoods, public buildings, stores,
+              streets, and parks prevent crime.
+            field: { type: text_box, lines: 5 }
+      - id: "4b"
+        prompt: >
+          Conduct a security survey of a home, a neighborhood, a park, or a camp
+          building with adult supervision and following youth protection
+          guidelines using a security checklist in the Crime Prevention merit
+          badge pamphlet or one approved by your counselor.
+        field: { type: text_box, lines: 8 }
+      - id: "4c"
+        prompt: >
+          Use information from your survey for requirement 4(b) and the EDGE
+          method to develop a lesson about how a family or Scouts can protect
+          themselves from crime. Review your teaching plan with your counselor,
+          then present your lesson to your family or to Scouts.
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Retail Crime Prevention. Research the following topics and review them with
+      your counselor:
+    children:
+      - id: "5a"
+        prompt: >
+          The impact of shoplifting and employee theft (also known as shrinkage)
+          and loss prevention on retail finances, customer service, and
+          reputation.
+        field: { type: text_box, lines: 6 }
+      - id: "5b"
+        prompt: "Techniques used by retail stores to prevent shoplifting."
+        field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    intro: "Reporting Crime. Discuss the following with your counselor:"
+    children:
+      - id: "6a"
+        prompt: "When and how to report a crime or an impending crime."
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: >
+          The warning signs for child abuse and domestic violence and how to
+          report these situations.
+        field: { type: text_box, lines: 5 }
+      - id: "6c"
+        prompt: "The three R's of personal safety and protection and how to apply them."
+        field: { type: text_box, lines: 5 }
+      - id: "6d"
+        prompt: >
+          How reporting a crime can help law enforcement provide resources for
+          crime victims.
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    intro: "Peers and Crime. Discuss the following with your counselor:"
+    children:
+      - id: "7a"
+        prompt: >
+          The role that peers play in crime, crime prevention, and experiencing
+          crime.
+        field: { type: text_box, lines: 5 }
+      - id: "7b"
+        prompt: "How to resist peer influence."
+        field: { type: text_box, lines: 5 }
+      - id: "7c"
+        prompt: >
+          Bullying and hazing behaviors and signs that a friend may be bullying
+          you or someone else.
+        field: { type: text_box, lines: 5 }
+      - id: "7d"
+        prompt: "Explain the impact of gangs on communities."
+        field: { type: text_box, lines: 5 }
+
+  - id: "8"
+    intro: "Substance Use and Crime. Discuss the following with your counselor:"
+    children:
+      - id: "8a"
+        prompt: >
+          The legal and health consequences of using alcohol, tobacco and vaping
+          products, illegal drugs, and diverted prescription drugs.
+        field: { type: text_box, lines: 6 }
+      - id: "8b"
+        prompt: >
+          How substance use contributes to violence and property crime and
+          increases a person's risk of becoming a victim of crime.
+        field: { type: text_box, lines: 5 }
+      - id: "8c"
+        prompt: >
+          How drug abuse awareness, prevention, and recovery programs help
+          prevent crime.
+        field: { type: text_box, lines: 5 }
+      - id: "8d"
+        prompt: "How to get help if you or someone you know needs help with drugs or alcohol."
+        field: { type: text_box, lines: 5 }
+
+  - id: "9"
+    intro: "Online Crime and You. Discuss the following with your counselor:"
+    children:
+      - id: "9a"
+        prompt: "How to avoid being the victim of online crimes."
+        field: { type: text_box, lines: 5 }
+      - id: "9b"
+        prompt: "Common online financial scams."
+        field: { type: text_box, lines: 5 }
+      - id: "9c"
+        prompt: "Effective online security."
+        field: { type: text_box, lines: 5 }
+      - id: "9d"
+        prompt: "Identity theft and how to prevent it."
+        field: { type: text_box, lines: 5 }
+      - id: "9e"
+        prompt: "How criminals use social media to target victims."
+        field: { type: text_box, lines: 5 }
+      - id: "9f"
+        prompt: "How bullying, texting, and sharing photos can become crimes."
+        field: { type: text_box, lines: 5 }
+
+  - id: "10"
+    prompt: >
+      Interview. With your parent or guardian's permission and your counselor's
+      approval, interview a law enforcement officer or a civil servant about
+      their work in crime prevention. Learn about how they chose this career and
+      about their duties. Discuss what you learned with your counselor.
+    field: { type: text_box, lines: 10 }
+
+  - id: "11"
+    prompt: >
+      Careers. Identify three career opportunities that would use skills and
+      knowledge in the field of crime prevention. Pick one and research the
+      training, education, certification requirements, experience, and expenses
+      associated with entering the field. Research the prospects for employment,
+      starting salary, advancement opportunities and career goals associated
+      with this career. Discuss what you learned with your counselor and whether
+      you might be interested in this career.
+    field: { type: text_box, lines: 10 }

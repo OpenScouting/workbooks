@@ -1,0 +1,44 @@
+badge:
+  name: Public Speaking
+  slug: public-speaking
+  requirements_revision: "2003-01-01"
+  description: >
+    The Public Speaking merit badge builds the confidence and skills to stand
+    in front of an audience and share ideas clearly. Scouts practice preparing,
+    organizing, and delivering talks ranging from impromptu remarks to a
+    polished prepared speech.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Give a three- to five-minute introduction of yourself to an audience such
+      as your troop, class at school, or some other group.
+    field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    prompt: >
+      Prepare a three- to five-minute talk on a topic of your choice that
+      incorporates body language and visual aids.
+    field: { type: text_box, lines: 10 }
+
+  - id: "3"
+    prompt: >
+      Give an impromptu talk of at least two minutes, either as part of a group
+      discussion or before your counselor. Use a subject selected by your
+      counselor that is interesting to you but that is not known to you in
+      advance and for which you do not have time to prepare.
+    field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: >
+      Select a topic of interest to your audience. Collect and organize
+      information about the topic and prepare an outline. Write an eight- to
+      10-minute speech, practice it, then deliver it in a conversational way.
+    field: { type: text_box, lines: 12 }
+
+  - id: "5"
+    prompt: >
+      Show you know parliamentary procedure by leading a discussion or meeting
+      according to accepted rules of order; or by answering questions on the
+      rules of order.
+    field: { type: text_box, lines: 8 }

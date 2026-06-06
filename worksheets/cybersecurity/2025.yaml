@@ -1,0 +1,249 @@
+badge:
+  name: Cybersecurity
+  slug: cybersecurity
+  requirements_revision: "2025-01-01"
+  description: >
+    Cybersecurity is about protecting computers, networks, and personal
+    information from threats. This badge covers digital safety, ethics, common
+    attacks and defenses, cryptography, and the careers that keep our connected
+    world secure.
+
+requirements:
+  - id: "1"
+    intro: "Safety. Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          View the Personal Safety Awareness "Digital Safety" video (with your
+          parent or guardian's permission).
+        field: { type: checkbox, label: "Viewed the Personal Safety Awareness \"Digital Safety\" video." }
+      - id: "1b"
+        prompt: >
+          Explain to your counselor how to protect your digital footprint, such
+          as while using social media, mobile device apps, and online gaming.
+          Show how to set privacy settings to protect your personal information,
+          including photos of yourself or your location.
+        field: { type: text_box, lines: 7 }
+      - id: "1c"
+        prompt: >
+          Discuss first aid and prevention for potential injuries, such as eye
+          strain, repetitive injuries, and handling electronics devices, that
+          could occur during repeated use. Discuss how to keep yourself
+          physically safe while using a mobile device (for example while walking
+          or biking).
+        field: { type: text_box, lines: 7 }
+
+  - id: "2"
+    intro: "Ethics. Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Relate three points of the Scout law to things people do on the
+          internet or with computers, phones, and other connected electronic
+          devices.
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: >
+          Discuss with your counselor examples of ethical and unethical behavior
+          in cyberspace. Include how to act responsibly when you encounter
+          situations such as: coming across an unattended or unlocked computer or
+          mobile device; observing someone type their password or seeing it
+          written down near a computer; or discovering a website that is not
+          properly secured. Explain why these situations require good judgement,
+          and how the Scout Law and personal values should guide your actions.
+        field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    intro: "Fundamentals. Do the following and discuss each with your counselor:"
+    children:
+      - id: "3a"
+        prompt: "Describe three types of computer systems that need protecting and explain why."
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Type of computer system", type: text_field }
+            - { label: "Why it needs protecting", type: text_box, lines: 2 }
+      - id: "3b"
+        prompt: >
+          Explain the "C.I.A. Triad," Confidentiality, Integrity, and
+          Availability, and why these three principles are fundamental to
+          cybersecurity.
+        field: { type: text_box, lines: 7 }
+
+  - id: "4"
+    intro: >
+      Cyber Threats, Vulnerabilities, and Attacks. Do the following and discuss
+      each with your counselor:
+    children:
+      - id: "4a"
+        prompt: >
+          Define the terms vulnerability, threat, and exploit, and give an
+          example of each that might apply to a website or software product you
+          use.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Vulnerability"
+            - "Threat"
+            - "Exploit"
+      - id: "4b"
+        prompt: >
+          Pick one type of malware (such as virus, worm, Trojan, backdoor,
+          spyware, or ransomware) and find out how it works. Explain what it does
+          and the harm it can cause.
+        field: { type: text_box, lines: 6 }
+      - id: "4c"
+        prompt: >
+          Identify two risks of using public Wi-Fi and describe how to reduce or
+          avoid those risks.
+        field: { type: text_box, lines: 6 }
+      - id: "4d"
+        prompt: >
+          Describe what spoofing and phishing are, and how to recognize a message
+          or website that might be trying to trick you. Explain what steps you
+          should take to protect yourself and others if you come across one.
+        field: { type: text_box, lines: 7 }
+      - id: "4e"
+        prompt: "Current Events. Do ONE of the following:"
+        field:
+          type: checklist
+          items:
+            - "(1) Read an article or a news report about a recent cybersecurity incident, such as a data breach or malware infection. Explain how the incident happened (to the best of your ability based on the information available) and what the consequences are or might be to the victim."
+            - "(2) With your parent or guardian's permission, watch a movie or read a book in which cybersecurity plays a significant role. Discuss how cybersecurity topics were depicted and how realistic you think it was."
+        children:
+          - id: "4e-notes"
+            prompt: "Notes from your chosen option"
+            field: { type: text_box, lines: 6 }
+      - id: "4f"
+        prompt: >
+          Create a list of what is part of your cyber attack surface including
+          all the ways someone could try to access your personal information or
+          devices, such as online accounts, apps, or home networks.
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    intro: "Cyber Defenses. Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          Describe three technologies that are used to defend a computer or
+          network, such as access controls, antivirus software, firewall,
+          intrusion detection/prevention systems, and Virtual Private Network.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Technology", type: text_field }
+            - { label: "How it defends a computer or network", type: text_box, lines: 2 }
+      - id: "5b"
+        prompt: "Installing updates. Do the following:"
+        children:
+          - id: "5b1"
+            prompt: >
+              Explain to your counselor the importance of installing the latest
+              updates on your computer, why they are needed, and what kinds of
+              problems they can prevent.
+            field: { type: text_box, lines: 6 }
+          - id: "5b2"
+            prompt: >
+              Demonstrate to your counselor how to check for, download, and
+              install the latest updates for your computer or mobile device, or
+              another computer you have permission to use (if you are unable to do
+              this on your computer, you may use an online guide with screenshots
+              to demonstrate this). Show your counselor how to verify that your
+              computer or mobile device is up-to-date.
+            field: { type: text_box, lines: 6 }
+      - id: "5c"
+        prompt: >
+          System security. With your parent or guardian's permission, do THREE of
+          the following using a computer or mobile device, and discuss with your
+          counselor:
+        field:
+          type: checklist
+          items:
+            - "(1) Describe what makes a good password and why. Set or change an account password to one that is \"strong.\""
+            - "(2) Describe multi-factor authentication (MFA) and how it can be used to improve security. Demonstrate how to use an authenticator app or other MFA function."
+            - "(3) Install and set up a password manager. Demonstrate how it works to your counselor."
+            - "(4) Run a virus scan. Show the results to your counselor."
+            - "(5) Using a command line or other built-in tool, see what programs or processes are running on your computer. Discuss with your counselor what you see and what surprises you."
+            - "(6) Use a command line interface to view your computer's open network connections. Discuss the results with your counselor."
+            - "(7) Demonstrate how to back up your data from a mobile device to a local computer or the cloud."
+            - "(8) Research best practices for protecting a home computer or network, and make a checklist of FIVE things you and your family can do to stay secure."
+            - "(9) Identify one or more other vulnerabilities on your home computer or network or another computer or network you have permission to use and discuss with your counselor. With permission from the system owner, take the necessary actions to fix it."
+        children:
+          - id: "5c-notes"
+            prompt: "Notes from your three chosen options"
+            field: { type: text_box, lines: 10 }
+
+  - id: "6"
+    intro: "Cryptography. Do the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Research and explain to your counselor three situations where
+          encryption is used in cybersecurity. For each situation, describe what
+          kind of encryption is used and why it is important.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Situation", type: text_field }
+            - { label: "Kind of encryption used and why it is important", type: text_box, lines: 3 }
+      - id: "6b"
+        prompt: "Show how you can know if your connection to a website is encrypted."
+        field: { type: text_box, lines: 5 }
+      - id: "6c"
+        prompt: "Do ONE of the following:"
+        field:
+          type: checklist
+          items:
+            - "(1) Create your own encryption code, such as a substitution cipher or code book, and demonstrate using it to encrypt and decrypt a message. Describe the strengths and weaknesses of your code."
+            - "(2) Download and set up an app (from an official app store) that uses end-to-end encryption. Explain to your counselor what this means, how it works, and why it is more secure than other forms of communication (e.g. SMS)."
+            - "(3) Use a hashing tool (for example, using SHA or MD5) to create a checksum for a file, document, or piece of text. Have a fellow Scout or your counselor make a change to it, then recreate the checksum and compare the new checksum to the original as a demonstration of file integrity checking."
+            - "(4) Create your own PGP (pretty good privacy) email key. Share your public key with others (and your counselor). Also, get their public keys and add them to your computer's key ring. Send a message that has been digitally encrypted."
+        children:
+          - id: "6c-notes"
+            prompt: "Notes from your chosen option"
+            field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Connected Devices and Internet of Things (IoT). Describe to your counselor
+      four electronic devices you encounter that could be connected to the
+      internet, why this connectivity can be useful, what risks are posed by the
+      connectivity, and how they could be protected.
+    field:
+      type: repeated_block
+      count: 4
+      template:
+        - { label: "Device", type: text_field }
+        - { label: "Why connectivity is useful", type: text_box, lines: 2 }
+        - { label: "Risks posed by connectivity", type: text_box, lines: 2 }
+        - { label: "How it could be protected", type: text_box, lines: 2 }
+
+  - id: "8"
+    prompt: "Cybersecurity Activities. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Learn about a cybersecurity competition, camp, or other activity you could participate in (either now or in the future). Share what you learned with your counselor, including the type of activity, time commitment, and age of participants."
+        - "(b) Participate in a cybersecurity competition with members of your troop, school, or some other group approved by your counselor. Either design your own competition or use an existing platform."
+        - "(c) Give a presentation to your patrol, troop, or another group approved by your counselor, on a cybersecurity topic of your choice. Your presentation must include at least one demonstration and/or hands-on activity."
+    children:
+      - id: "8-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "9"
+    prompt: "Careers. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Identify three career opportunities that would use skills and knowledge in cybersecurity. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career."
+        - "(b) Visit a business or organization that does work in cybersecurity. Find out about different work roles, what they do, and how they acquired their knowledge through college degrees or certifications. Share what you learned with your counselor."
+    children:
+      - id: "9-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }

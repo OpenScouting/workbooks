@@ -1,0 +1,136 @@
+badge:
+  name: Swimming
+  slug: swimming
+  requirements_revision: "2026-01-01"
+  description: >
+    Swimming is a lifelong skill that supports fitness, water safety, and many
+    other Scouting adventures. Scouts master a range of strokes, learn water
+    rescue and survival techniques, and practice safe swimming under the Safe
+    Swim Defense guidelines.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Review with your counselor how Scouting America's Safe Swim Defense
+          guidelines anticipates and deals with common drowning situations such
+          as unfenced residential pools, nonswimmers entering deep water, risky
+          behaviors, medical impairment in the water, drop-offs, cold water,
+          murky water, river currents, rip currents, and surf.
+        field: { type: text_box, lines: 9 }
+      - id: "1b"
+        prompt: >
+          Discuss the prevention and treatment of health concerns that could
+          occur while swimming, including hypothermia, dehydration, sunburn,
+          heat exhaustion, heatstroke, muscle cramps, hyperventilation, spinal
+          injury, stings and bites, and cuts and scrapes.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Hypothermia
+            - Dehydration
+            - Sunburn
+            - Heat exhaustion
+            - Heatstroke
+            - Muscle cramps
+            - Hyperventilation
+            - Spinal injury
+            - "Stings and bites"
+            - "Cuts and scrapes"
+
+  - id: "2"
+    prompt: >
+      Before doing the following requirements, successfully complete the
+      Scouting America swimmer test, found in the Swimming merit badge pamphlet.
+    field: { type: checkbox, label: "Successfully completed the Scouting America swimmer test." }
+
+  - id: "3"
+    prompt: "Correctly perform the following strokes:"
+    field:
+      type: checklist
+      items:
+        - "(a) Demonstrate the front crawl or the trudgen using good form."
+        - "(b) Demonstrate the back crawl using good form."
+        - "(c) Demonstrate the sidestroke using good form."
+        - "(d) Demonstrate the breaststroke using good form."
+        - "(e) Demonstrate the elementary backstroke using good form."
+
+  - id: "4"
+    prompt: >
+      Swim continuously for 150 yards in a strong manner using each of the
+      following strokes in any order; front crawl or trudgen (25 yards); back
+      crawl (25 yards); sidestroke (25 yards); breaststroke (25 yards); and
+      elementary backstroke (50 yards).
+    field: { type: checkbox, label: "Swam 150 yards continuously using each stroke as described." }
+
+  - id: "5"
+    intro: "Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          Demonstrate water rescue methods by reaching with your arm or leg, by
+          reaching with a suitable object, and by throwing lines and objects.
+          Explain why swimming rescues should not be attempted when a reaching
+          or throwing rescue is possible, and explain why and how a rescue
+          swimmer should avoid contact with the victim.
+        field: { type: text_box, lines: 8 }
+      - id: "5b"
+        prompt: >
+          With a helper and a practice victim, show a line rescue both as tender
+          and as rescuer. The practice victim should be approximately 30 feet
+          from shore in deep water.
+        field: { type: checkbox, label: "Showed a line rescue as both tender and rescuer." }
+
+  - id: "6"
+    intro: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Float faceup in a resting position for at least three minutes with
+          minimal movement.
+        field: { type: checkbox, label: "Floated faceup for at least three minutes with minimal movement." }
+      - id: "6b"
+        prompt: "Demonstrate survival floating for at least five minutes."
+        field: { type: checkbox, label: "Demonstrated survival floating for at least five minutes." }
+      - id: "6c"
+        prompt: >
+          While wearing a properly fitted U.S. Coast Guard-approved life jacket,
+          demonstrate the HELP and huddle positions. Explain their purposes.
+        field: { type: text_box, lines: 6 }
+      - id: "6d"
+        prompt: >
+          Explain why swimming or survival floating will hasten the onset of
+          hypothermia in cold water.
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: >
+      In water over your head, but not to exceed 10 feet, do the following:
+    field:
+      type: checklist
+      items:
+        - "(a) Use the feetfirst method of surface diving and bring an object up from the bottom."
+        - "(b) Do a headfirst surface dive (pike or tuck), and bring the object up again."
+        - "(c) Do a headfirst surface dive to a depth of at least 5 feet and swim underwater for three strokes. Come to the surface, take a breath, and repeat the sequence twice."
+
+  - id: "8"
+    prompt: >
+      Following the guidelines set in the Scouting America Safe Swim Defense
+      guidelines, in water at least 7 feet deep, show a standing headfirst dive
+      from a dock or pool deck. Show a long shallow dive, also from the dock or
+      pool deck. Note: If your state, city, or local community requires a water
+      depth greater than 7 feet, it is important to abide by that mandate.
+    field:
+      type: checklist
+      items:
+        - "Showed a standing headfirst dive from a dock or pool deck."
+        - "Showed a long shallow dive from a dock or pool deck."
+
+  - id: "9"
+    prompt: >
+      Explain the health benefits of regular aerobic exercise, and discuss why
+      swimming is favored as both fitness and therapeutic exercise.
+    field: { type: text_box, lines: 8 }

@@ -1,0 +1,171 @@
+badge:
+  name: Motorboating
+  slug: motorboating
+  requirements_revision: "2026-01-01"
+  description: >
+    Motorboating opens the water to exploration and recreation. Earning this
+    badge, you learn how motorboats work, the safety rules that keep everyone
+    aboard secure, and the boat-handling skills to operate one with confidence.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Discuss with your counselor the following hazards you might encounter
+          while motorboating: flammable fuel; carbon monoxide; propellers;
+          collisions; falls overboard; capsize; or running aground. Explain what
+          you should do to anticipate, prevent, mitigate and respond to these
+          hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Explain first aid for injuries or illnesses that could occur while
+          motorboating, including hypothermia, heat reactions, dehydration, motion
+          sickness, bug bites, blisters.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Hypothermia
+            - Heat reactions
+            - Dehydration
+            - Motion sickness
+            - Bug bites
+            - Blisters
+      - id: "1c"
+        prompt: >
+          Discuss the Scouting America Safety Afloat policy. Tell how it applies to
+          motorboating activities.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Before doing requirement 5, successfully complete the Scouting America
+          swimmer test. Note: See the Swimming merit badge pamphlet for details
+          about the Scouting America swimmer test.
+        field: { type: checkbox, label: "Successfully completed the Scouting America swimmer test." }
+      - id: "2b"
+        prompt: >
+          Name the different types of personal flotation devices (PFDs), and
+          explain when each type should be used. Show how to choose and properly
+          fit a PFD.
+        field: { type: text_box, lines: 7 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Explain inboard, outboard, and inboard/outboard motors, and the uses and
+          advantages of each.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: >
+          Explain the safety procedures and precautions involving handling fuel and
+          engine servicing, and equipment storage and placement.
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: "Explain how to winterize a boat motor and tell why this procedure is necessary."
+        field: { type: text_box, lines: 5 }
+      - id: "3d"
+        prompt: >
+          Explain the safety procedures and precautions involving swimmers and
+          skiers in the water, passenger positions underway, and boat wakes.
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    intro: "Show you know safety guidelines for motorboating by doing the following:"
+    children:
+      - id: "4a"
+        prompt: >
+          Review how each item of the Scouting America Safety Afloat policy
+          applies, including checking the weather prior to and during time on the
+          water, confirming all required equipment is present and functional, and
+          following a float plan.
+        field: { type: text_box, lines: 6 }
+      - id: "4b"
+        prompt: >
+          Explain the rules or laws that apply to recreational boating in your area
+          or state. Have a permit to operate a motorboat, if required by the laws
+          of your state. Discuss how you would find information regarding the
+          boating laws in different states.
+        field: { type: text_box, lines: 6 }
+      - id: "4c"
+        prompt: >
+          Discuss how hazards of weather and heavy water conditions can affect
+          safety and performance in motorboating.
+        field: { type: text_box, lines: 5 }
+      - id: "4d"
+        prompt: >
+          Promise that you will follow Scouting America Safety Afloat guidelines.
+          Explain the meaning of each point.
+        field: { type: text_box, lines: 6 }
+      - id: "4e"
+        prompt: >
+          Explain and show the correct use of equipment required by both state and
+          federal regulations to be carried aboard a motorboat.
+        field: { type: text_box, lines: 6 }
+      - id: "4f"
+        prompt: >
+          Explain federal and state rules for a ventilation system, and tell why
+          these rules are required.
+        field: { type: text_box, lines: 5 }
+      - id: "4g"
+        prompt: "Explain the use of lights (sight signals) and sound signals on motorboats."
+        field: { type: text_box, lines: 5 }
+      - id: "4h"
+        prompt: >
+          Discuss the common types of anchors used in motorboating and under what
+          conditions each would be preferred. Explain proper anchoring techniques.
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    intro: >
+      With your counselor or other adults on board, demonstrate proper
+      boat-handling procedures and skills by doing the following:
+    children:
+      - id: "5a"
+        prompt: >
+          Board and assist others in boarding. Confirm that all passengers on board
+          are wearing properly fitted life jackets.
+        field: { type: checkbox, label: "Boarded and assisted others in boarding, confirming all passengers wore properly fitted life jackets." }
+      - id: "5b"
+        prompt: "Fuel the boat and complete a safety check."
+        field: { type: checkbox, label: "Fueled the boat and completed a safety check." }
+      - id: "5c"
+        prompt: >
+          If equipped, attach the engine cut-off switch link and safely start the
+          motor. Get underway from dockside or from a beach launch.
+        field: { type: checkbox, label: "Attached the engine cut-off switch link (if equipped), safely started the motor, and got underway." }
+      - id: "5d"
+        prompt: >
+          Run a course for at least a mile, showing procedures for overtaking and
+          passing slower vessels, yielding right-of-way, passing oncoming traffic,
+          making turns, reversing direction, and using navigation aids.
+        field: { type: checkbox, label: "Ran a course for at least a mile, demonstrating the required procedures." }
+      - id: "5e"
+        prompt: >
+          Stop and secure the boat in position on the open water using anchors.
+          Raise and stow the anchor and get underway.
+        field: { type: checkbox, label: "Stopped and secured the boat on open water using anchors, then raised and stowed the anchor and got underway." }
+      - id: "5f"
+        prompt: "Land or dock the boat, disembark, and assist others in doing the same."
+        field: { type: checkbox, label: "Landed or docked the boat, disembarked, and assisted others." }
+      - id: "5g"
+        prompt: "Moor, dock, or beach the boat and secure all gear."
+        field: { type: checkbox, label: "Moored, docked, or beached the boat and secured all gear." }
+      - id: "5h"
+        prompt: "Demonstrate knots used in boating: cleating hitch, bowline, clove hitch, anchor bend, sheet bend."
+        field:
+          type: checklist
+          items:
+            - "Cleating hitch"
+            - "Bowline"
+            - "Clove hitch"
+            - "Anchor bend"
+            - "Sheet bend"

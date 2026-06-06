@@ -1,0 +1,136 @@
+badge:
+  name: Salesmanship
+  slug: salesmanship
+  requirements_revision: "2023-01-01"
+  description: >
+    The Salesmanship merit badge teaches Scouts how selling serves customers and
+    drives the economy. Scouts research a product, build and deliver a sales
+    presentation, and gain real selling experience while exploring careers in
+    sales.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain the responsibilities of a salesperson and how a salesperson
+          serves customers and helps stimulate the economy.
+        field: { type: text_box, lines: 7 }
+      - id: "1b"
+        prompt: >
+          Explain the differences between a business-to-business salesperson and
+          a consumer salesperson.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Explain why it is important for a salesperson to do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Research the market to be sure the product or service meets the needs
+          of customers.
+        field: { type: text_box, lines: 5 }
+      - id: "2b"
+        prompt: "Learn all about the product to be sold."
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: >
+          If possible, visit the location where the product is built and learn
+          how it is constructed. If a service is being sold, learn about the
+          benefits of the service to the customer.
+        field: { type: text_box, lines: 5 }
+      - id: "2d"
+        prompt: >
+          Follow up with customers after their purchase to confirm their
+          satisfaction and discuss their concerns about the product.
+        field: { type: text_box, lines: 5 }
+
+  - id: "3"
+    prompt: >
+      Write and present a sales plan for a product and a sales territory assigned
+      by your counselor.
+    field: { type: text_box, lines: 12 }
+
+  - id: "4"
+    prompt: "Make a sales presentation of a product assigned by your counselor."
+    field: { type: text_box, lines: 10 }
+
+  - id: "5"
+    prompt: >
+      Do ONE of the following and keep a record (cost sheet). Use the sales
+      techniques you have learned, and share your experience with your counselor:
+    field:
+      type: checklist
+      items:
+        - "(a) Help your unit raise funds through sales of merchandise or of tickets to a Scout event."
+        - "(b) Sell your services such as lawn raking or mowing, pet watching, dog walking, show shoveling, and car washing to your neighbors. Follow up after the service has been completed and determine the customer's satisfaction."
+        - "(c) Earn money through retail selling."
+    children:
+      - id: "5-record"
+        prompt: "Record (cost sheet) and notes on your experience"
+        field:
+          type: table
+          headers: ["Item or service", "Cost", "Sale price", "Notes"]
+          rows: 8
+          cols: 4
+
+  - id: "6"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Interview a salesperson."
+        - "(b) Interview a retail store owner."
+    children:
+      - id: "6a"
+        prompt: "Option (a): Interview a salesperson and learn the following:"
+        children:
+          - id: "6a1"
+            prompt: "What made the person choose sales as a profession?"
+            field: { type: text_box, lines: 4 }
+          - id: "6a2"
+            prompt: "What are the most important things to remember when talking to customers?"
+            field: { type: text_box, lines: 4 }
+          - id: "6a3"
+            prompt: "How is the product sold?"
+            field: { type: text_box, lines: 4 }
+          - id: "6a4"
+            prompt: "Include your own questions."
+            field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: "Option (b): Interview a retail store owner and learn the following:"
+        children:
+          - id: "6b1"
+            prompt: "How often is the owner approached by a sales representative?"
+            field: { type: text_box, lines: 4 }
+          - id: "6b2"
+            prompt: >
+              What good traits should a sales representative have? What habits
+              should the sales representative avoid?
+            field: { type: text_box, lines: 4 }
+          - id: "6b3"
+            prompt: >
+              What does the owner consider when deciding whether to establish an
+              account with a sales representative?
+            field: { type: text_box, lines: 4 }
+          - id: "6b4"
+            prompt: "Include at least two of your own questions."
+            field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: >
+      Investigate and report on career opportunities in sales, then do the
+      following:
+    children:
+      - id: "7a"
+        prompt: >
+          Prepare a written statement of your qualifications and experience.
+          Include relevant classes you have taken in school and merit badges you
+          have earned.
+        field: { type: text_box, lines: 8 }
+      - id: "7b"
+        prompt: >
+          Discuss with your counselor what education, experience, or training you
+          should obtain so you are prepared to serve in a sales position.
+        field: { type: text_box, lines: 6 }

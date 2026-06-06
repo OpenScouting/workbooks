@@ -1,0 +1,246 @@
+badge:
+  name: Personal Fitness
+  slug: personal-fitness
+  requirements_revision: "2026-01-01"
+  description: >
+    Personal Fitness is about taking charge of your own physical, mental,
+    emotional, and social well-being. This Eagle-required badge guides you
+    through assessing your fitness, designing and following a 12-week program,
+    and building lifelong habits of healthy living.
+
+requirements:
+  - id: "1"
+    intro: "Defining Personal Fitness. Explain to your counselor what personal fitness means to you, including:"
+    children:
+      - id: "1a"
+        prompt: "Describe a person who is physically fit."
+        field: { type: text_box, lines: 5 }
+      - id: "1b"
+        prompt: "Describe a person who is mentally, emotionally and socially fit."
+        field: { type: text_box, lines: 5 }
+      - id: "1c"
+        prompt: "Describe a person who is spiritually fit."
+        field: { type: text_box, lines: 5 }
+      - id: "1d"
+        prompt: "Explain why it is important to be fit in all of these ways."
+        field: { type: text_box, lines: 5 }
+      - id: "1e"
+        prompt: "Discuss how each aspect of personal fitness relates to the Scout Oath and Scout Law."
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Monitoring Your Health. Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Discuss with your counselor the importance of having a physical
+          examination each year. Discuss why overall health, immunizations,
+          medications, allergies, and medical history are covered during an
+          examination. Tell your counselor when you last underwent a physical
+          examination.
+        field: { type: text_box, lines: 8 }
+      - id: "2b"
+        prompt: >
+          Explain why it is important to have a routine dental examination.
+          Explain what preventive or corrective treatments your dentist can
+          provide, and why daily oral care is an important part of staying
+          well. Tell your counselor when you last underwent a dental
+          examination.
+        field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    intro: "Your Fitness Knowledge and Habits. Do the following with your counselor:"
+    children:
+      - id: "3a"
+        prompt: >
+          Explain the physical exercise you regularly do, whether your routine
+          includes all four components of physical fitness (cardiorespiratory
+          fitness, muscular strength and endurance, flexibility, and body
+          composition), and how your current practices increase or decrease
+          your likelihood of developing cardiovascular disease or other
+          conditions in adulthood.
+        field: { type: text_box, lines: 8 }
+      - id: "3b"
+        prompt: >
+          Discuss what harmful substances you consciously avoid, and how these
+          actions affect your risk factors now and in the future.
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: >
+          Explain what common diseases can be prevented or mitigated by
+          vaccinations, and whether you are immunized according to the advice
+          of your healthcare provider and the direction of your parent or
+          guardian.
+        field: { type: text_box, lines: 6 }
+      - id: "3d"
+        prompt: >
+          Discuss how good nutrition is related to the other components of
+          personal fitness, and if you follow a nutritious, balanced diet.
+        field: { type: text_box, lines: 6 }
+      - id: "3e"
+        prompt: "Discuss what a healthy weight is for you, and what you do to maintain a healthy weight."
+        field: { type: text_box, lines: 5 }
+      - id: "3f"
+        prompt: "Explain why getting adequate sleep is important, and whether you get enough hours of sleep each night."
+        field: { type: text_box, lines: 5 }
+      - id: "3g"
+        prompt: >
+          Discuss whether you spend quality time with your family and friends
+          in social and recreational activities, and how you contribute to
+          creating and maintaining a good home life.
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: >
+      Measures of Physical Fitness. Determine with your counselor the
+      assessments of physical fitness and nutrition you will do before,
+      during, and after completing the 12-week program in requirement 7.
+    children:
+      - id: "4a"
+        prompt: >
+          Include a measure of cardiorespiratory (aerobic) fitness: Record the
+          time required to complete a mile walk or run as fast as you can. If
+          you are unable to walk or run as a result of a disability that is
+          permanent or is expected to last for longer than two years, work with
+          your counselor to define a test with a similar degree of aerobic
+          challenge.
+        field: { type: text_box, lines: 4 }
+      - id: "4b"
+        prompt: >
+          Include two measures of muscular strength and endurance: Record
+          either the number of sit-ups done in 60 seconds OR how long a plank
+          was held; AND, record the number of either push-ups OR pull-ups done
+          in 60 seconds. If you are unable to complete one of these exercises
+          safely and correctly, work with your counselor to replace it with a
+          different exercise that measures strength and endurance.
+        field: { type: text_box, lines: 5 }
+      - id: "4c"
+        prompt: >
+          Include at least one measure of flexibility, such as a back-saver
+          sit-and-reach test or a back scratch test.
+        field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    intro: "Pre-Assessment of Physical Fitness. Before beginning the 12-week program in requirement 7, do the following:"
+    children:
+      - id: "5a"
+        prompt: "Complete each of the assessments you defined in requirement 4, and record your results."
+        field:
+          type: table
+          headers: ["Assessment", "Pre-assessment result"]
+          rows: 5
+          cols: 2
+      - id: "5b"
+        prompt: >
+          Identify your weakest and strongest area of physical fitness, and
+          choose an area to target for improvement.
+        field: { type: text_box, lines: 5 }
+      - id: "5c"
+        prompt: "Keep a log of what you eat and drink for a period of three days."
+        field:
+          type: table
+          headers: ["Day", "Meal / snack", "Food and drink consumed"]
+          rows: 12
+          cols: 3
+      - id: "5d"
+        prompt: "Based on your diet log, identify at least two improvement goals related to diet and nutrition."
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    prompt: >
+      Plan the Program. Outline with your counselor a comprehensive 12-week
+      physical fitness and nutrition program that you will complete based on
+      your improvement goals and ability. The program must incorporate the
+      following:
+    children:
+      - id: "6a"
+        prompt: "Warm-up: low-intensity movement or gentle muscle stretching before each more rigorous workout"
+        field: { type: text_box, lines: 4 }
+      - id: "6b"
+        prompt: >
+          Cardiorespiratory (aerobic) element: an activity that raises your
+          heart and respiratory rate for 15 to 30 minutes at least three times
+          per week
+        field: { type: text_box, lines: 4 }
+      - id: "6c"
+        prompt: >
+          Muscular strength and endurance element: repetitive exercises that
+          target different muscles - upper body, core, and/or legs - based on
+          your improvement goals and potential
+        field: { type: text_box, lines: 4 }
+      - id: "6d"
+        prompt: >
+          Flexibility element: movements that arch/lower/stretch/relax your
+          back, rotate your trunk, or stretch your hamstrings
+        field: { type: text_box, lines: 4 }
+      - id: "6e"
+        prompt: >
+          Cool-down: low-intensity movement or gentle stretching to prevent
+          muscle cramps and enhance the benefits of exercise
+        field: { type: text_box, lines: 4 }
+      - id: "6f"
+        prompt: "A plan for achieving your two improvement goals related to diet and nutrition"
+        field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    intro: "Complete the Program. Do the following:"
+    children:
+      - id: "7a"
+        prompt: >
+          Complete and keep a log, over 12 consecutive weeks, of the physical
+          fitness and nutrition program you have outlined. (If your program is
+          interrupted by illness or unavoidable conflicts for less than two
+          weeks, you may resume where you left off, adding the missed days or
+          weeks at the end).
+        field:
+          type: table
+          headers: ["Week", "Activities completed", "Notes"]
+          rows: 12
+          cols: 3
+      - id: "7b"
+        prompt: >
+          During week 4 and week 8 of your program, repeat the assessments you
+          did in requirement 5(a) before you began. Repeat the same tests for a
+          final assessment within two weeks after completing the 12-week
+          program. Show improvement over your pre-assessment results.
+        field:
+          type: table
+          headers: ["Assessment", "Week 4", "Week 8", "Final"]
+          rows: 5
+          cols: 4
+      - id: "7c"
+        prompt: >
+          For three days during week 8, and again during week 12, keep a log of
+          what you eat and drink. Show improvement toward the diet and
+          nutrition goals you set in requirement 5(d).
+        field:
+          type: table
+          headers: ["Week", "Day", "Food and drink consumed"]
+          rows: 12
+          cols: 3
+      - id: "7d"
+        prompt: >
+          Discuss your results, improvements, insights, and experiences with
+          your counselor after completing the program and assessments.
+        field: { type: text_box, lines: 8 }
+
+  - id: "8"
+    intro: "Future Career or Lifestyle. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - >
+          (a) Explore three careers related to personal fitness. Research one
+          career area by interviewing an expert in the field, visiting a site,
+          or using other resources. Learn about training, education, expenses,
+          job outlook, salary, and advancement. Discuss your findings and
+          career interest with your counselor.
+        - >
+          (b) Explore how an area of personal fitness could contribute to a
+          hobby or healthy lifestyle. Research education, costs, and
+          organizations related to this activity. Discuss your findings and
+          goals with your counselor.
+    children:
+      - id: "8notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }

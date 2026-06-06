@@ -1,0 +1,391 @@
+badge:
+  name: Cooking
+  slug: cooking
+  requirements_revision: "2025-01-01"
+  description: >
+    Cooking is a skill you will use for the rest of your life. This
+    Eagle-required badge covers food safety, nutrition, and cooking techniques,
+    and has you plan, prepare, and serve full meals at home, in camp, and on the
+    trail.
+
+requirements:
+  - id: "1"
+    intro: "Health and safety. Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while participating in cooking activities and what you should do to
+          anticipate, help prevent, mitigate, and respond to these hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Show that you know first aid for and how to prevent injuries or
+          illnesses that could occur while preparing meals and eating, including
+          burns and scalds, cuts, choking, and allergic reactions.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Burns and scalds"
+            - "Cuts"
+            - "Choking"
+            - "Allergic reactions"
+      - id: "1c"
+        prompt: >
+          Describe how meat, fish, chicken, eggs, dairy products, and fresh
+          vegetables should be stored, transported, and properly prepared for
+          cooking. Explain how to prevent cross-contamination.
+        field: { type: text_box, lines: 8 }
+      - id: "1d"
+        prompt: >
+          Discuss with your counselor food allergies, food intolerance, and
+          food-related illnesses and diseases. Explain why someone who handles
+          or prepares food needs to be aware of these concerns.
+        field: { type: text_box, lines: 6 }
+      - id: "1e"
+        prompt: >
+          Discuss with your counselor why reading food labels is important.
+          Explain how to identify common allergens such as peanuts, tree nuts,
+          milk, eggs, wheat, soy, and shellfish.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Nutrition. Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Using the MyPlate food guide or the current USDA nutrition model, give
+          five examples for EACH of the following food groups, the recommended
+          number of daily servings, and the recommended serving size: (1) Fruits
+          (2) Vegetables (3) Grains (4) Proteins (5) Dairy
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Food group", type: text_field }
+            - { label: "Five examples", type: text_box, lines: 2 }
+            - { label: "Recommended daily servings and serving size", type: text_box, lines: 2 }
+      - id: "2b"
+        prompt: "Explain why you should limit your intake of oils and sugars."
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: >
+          Track your daily level of activity and your daily caloric need based
+          on your activity for five days. Then, based on the MyPlate food guide,
+          discuss with your counselor an appropriate meal plan for yourself for
+          one day.
+        field:
+          type: table
+          headers: ["Day", "Activity level", "Daily caloric need"]
+          rows: 5
+          cols: 3
+      - id: "2c-plan"
+        prompt: "Appropriate meal plan for yourself for one day"
+        field: { type: text_box, lines: 6 }
+      - id: "2d"
+        prompt: >
+          Discuss your current eating habits with your counselor and what you
+          can do to eat healthier, based on the MyPlate food guide.
+        field: { type: text_box, lines: 6 }
+      - id: "2e"
+        prompt: >
+          Discuss the following food label terms: calorie, fat, saturated fat,
+          trans fat, cholesterol, sodium, carbohydrate, dietary fiber, sugar,
+          and protein. Explain how to calculate total carbohydrates and
+          nutritional values for two servings, based on the serving size
+          specified on the label.
+        field:
+          type: labeled_rows
+          lines_each: 1
+          labels:
+            - "Calorie"
+            - "Fat"
+            - "Saturated fat"
+            - "Trans fat"
+            - "Cholesterol"
+            - "Sodium"
+            - "Carbohydrate"
+            - "Dietary fiber"
+            - "Sugar"
+            - "Protein"
+      - id: "2e-calc"
+        prompt: >
+          Explain how to calculate total carbohydrates and nutritional values
+          for two servings, based on the serving size specified on the label.
+        field: { type: text_box, lines: 5 }
+
+  - id: "3"
+    intro: "Cooking Basics. Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Discuss the following cooking methods. For each one, describe the
+          equipment needed, how temperature control is maintained, and name at
+          least one food that can be cooked using that method: baking, boiling,
+          broiling, pan frying, simmering, microwaving, air frying, grilling,
+          foil cooking, and Dutch oven.
+        field:
+          type: repeated_block
+          count: 10
+          template:
+            - { label: "Cooking method", type: text_field }
+            - { label: "Equipment needed", type: text_box, lines: 2 }
+            - { label: "How temperature control is maintained", type: text_box, lines: 2 }
+            - { label: "A food that can be cooked this way", type: text_field }
+      - id: "3b"
+        prompt: >
+          Discuss the benefits of using a camp stove on an outing vs. a charcoal
+          or wood fire.
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: >
+          Describe for your counselor how to manage your time when preparing a
+          meal so components for each course are ready to serve at the correct
+          time.
+        field: { type: text_box, lines: 6 }
+      - id: "3d"
+        prompt: >
+          Explain and give examples of how taste, texture, and smell impact what
+          we eat.
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    intro: >
+      Cooking at Home. Do the following: Note: The meals for requirement 4 may
+      be prepared on different days, and they need not be prepared
+      consecutively. The requirement calls for Scouts to plan, prepare, and
+      serve one breakfast, one lunch, and one dinner to at least one adult; those
+      served need not be the same for all meals.
+    children:
+      - id: "4a"
+        prompt: >
+          Using the MyPlate food guide or the current USDA nutrition model, plan
+          menus for three full days of meals (three breakfasts, three lunches,
+          and three dinners) plus one dessert. Your menus should include enough
+          to feed yourself and at least one adult, keeping in mind any special
+          needs (such as food allergies) and how you keep your foods safe and
+          free from cross-contamination. List the equipment and utensils needed
+          to prepare and serve these meals.
+        field:
+          type: repeated_block
+          count: 10
+          template:
+            - { label: "Meal (Breakfast 1, Lunch 1, Dinner 1, ..., Dessert)", type: text_field }
+            - { label: "Menu", type: text_box, lines: 3 }
+            - { label: "Equipment and utensils needed", type: text_box, lines: 2 }
+      - id: "4b"
+        prompt: >
+          Find recipes for each meal. Create a shopping list for your meals
+          showing the amount of food needed to prepare for the number of people
+          you will serve. Determine the cost for each meal.
+        field:
+          type: table
+          headers: ["Meal", "Recipe / food and amount", "Cost"]
+          rows: 10
+          cols: 3
+      - id: "4c"
+        prompt: "Share and discuss your meal plan and shopping list with your counselor."
+        field: { type: checkbox, label: "Shared and discussed my meal plan and shopping list with my counselor." }
+      - id: "4d"
+        prompt: >
+          Using at least five of the 10 cooking methods from requirement 3,
+          prepare and serve yourself and at least one adult (parent, family
+          member, guardian, or other responsible adult) one breakfast, one
+          lunch, one dinner, and one dessert from the meals you planned.
+        field:
+          type: checklist
+          items:
+            - "Prepared and served one breakfast"
+            - "Prepared and served one lunch"
+            - "Prepared and served one dinner"
+            - "Prepared and served one dessert"
+            - "Used at least five of the 10 cooking methods from requirement 3"
+      - id: "4e"
+        prompt: >
+          Time your cooking to have each meal ready to serve at the proper time.
+          Have an adult verify the preparation of the meal to your counselor.
+        field: { type: checkbox, label: "Timed each meal to be ready at the proper time; an adult verified the preparation to my counselor." }
+      - id: "4f"
+        prompt: >
+          After each meal, ask a person you served to evaluate the meal on
+          presentation and taste, then evaluate your own meal. Discuss what you
+          learned with your counselor, including any adjustments that could have
+          improved or enhanced your meals. Tell how planning and preparation
+          help ensure a successful meal.
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    intro: "Camp Cooking. Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          Using the MyPlate food guide or the current USDA nutrition model, plan
+          a menu that includes four meals, one snack, and one dessert for your
+          patrol (or a similar size group of up to eight youth, including you) on
+          a camping trip. These four meals must include two breakfasts, one
+          lunch, and one dinner. Additionally, you must plan one snack and one
+          dessert. Your menus should include enough food for each person, keeping
+          in mind any special needs (such as food allergies) and how you keep
+          your foods safe and free from cross-contamination. List the equipment
+          and utensils needed to prepare and serve these meals.
+        field:
+          type: repeated_block
+          count: 6
+          template:
+            - { label: "Item (Breakfast 1, Breakfast 2, Lunch, Dinner, Snack, Dessert)", type: text_field }
+            - { label: "Menu", type: text_box, lines: 3 }
+            - { label: "Equipment and utensils needed", type: text_box, lines: 2 }
+      - id: "5b"
+        prompt: >
+          Find or create recipes for the four meals, the snack, and the dessert
+          you have planned. Adjust menu items in the recipes for the number to be
+          served. Create a shopping list and budget to determine the per-person
+          cost.
+        field:
+          type: table
+          headers: ["Item", "Recipe / food and amount", "Cost"]
+          rows: 8
+          cols: 3
+      - id: "5b-cost"
+        prompt: "Per-person cost"
+        field: { type: text_box, lines: 2 }
+      - id: "5c"
+        prompt: "Share and discuss your menu plans and shopping list with your counselor."
+        field: { type: checkbox, label: "Shared and discussed my menu plans and shopping list with my counselor." }
+      - id: "5d"
+        prompt: >
+          In the outdoors, using your menu plans and recipes for this
+          requirement, cook two of the four meals you planned using either a camp
+          stove OR backpacking stove. Use a skillet OR a Dutch oven over campfire
+          coals for the third meal, and cook the fourth meal in a foil pack OR on
+          a skewer. Serve all of these meals to your patrol or a group of youth.
+        field:
+          type: checklist
+          items:
+            - "Cooked two of the four meals using a camp stove or backpacking stove"
+            - "Cooked the third meal using a skillet or Dutch oven over campfire coals"
+            - "Cooked the fourth meal in a foil pack or on a skewer"
+            - "Served all of these meals to my patrol or a group of youth"
+      - id: "5e"
+        prompt: >
+          In the outdoors, using your menu plans and recipes for this
+          requirement, prepare one snack and one dessert. Serve both of these to
+          your patrol or a group of youth.
+        field:
+          type: checklist
+          items:
+            - "Prepared and served one snack"
+            - "Prepared and served one dessert"
+      - id: "5f"
+        prompt: >
+          After each meal, have those you served evaluate the meal on
+          presentation and taste, and then evaluate your own meal. Discuss what
+          you learned with your counselor, including any adjustments that could
+          have improved or enhanced your meals. Tell how planning and preparation
+          help ensure successful outdoor cooking.
+        field: { type: text_box, lines: 8 }
+      - id: "5g"
+        prompt: >
+          Lead the clean-up of equipment, utensils, and the cooking site
+          thoroughly after each meal. Properly store or dispose unused
+          ingredients, leftover food, dishwater and garbage.
+        field: { type: text_box, lines: 5 }
+      - id: "5h"
+        prompt: >
+          Discuss how you followed the Leave No Trace Seven Principles and the
+          Outdoor Code when preparing your meals.
+        field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    intro: "Trail and backpacking meals. Do the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Using the MyPlate food guide or the current USDA nutrition model, plan
+          a day of meals for trail hiking or backpacking that includes one
+          breakfast, one lunch, one dinner, and one snack. These meals must
+          consider weight, not require refrigeration and are to be consumed by
+          three to five people (including you). List the equipment and utensils
+          needed to prepare and serve these meals.
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Meal (Breakfast, Lunch, Dinner, Snack)", type: text_field }
+            - { label: "Menu", type: text_box, lines: 3 }
+            - { label: "Equipment and utensils needed", type: text_box, lines: 2 }
+      - id: "6b"
+        prompt: >
+          Create a shopping list for your meals, showing the amount of food
+          needed to prepare and serve each meal, and the cost for each meal.
+        field:
+          type: table
+          headers: ["Meal", "Food and amount needed", "Cost"]
+          rows: 6
+          cols: 3
+      - id: "6c"
+        prompt: >
+          Share and discuss your menu and shopping list with your counselor.
+          Your plan must include how to repackage foods for your hike or
+          backpacking trip to eliminate as much bulk, weight, and garbage as
+          possible.
+        field: { type: text_box, lines: 6 }
+      - id: "6d"
+        prompt: >
+          While on a trail hike or backpacking trip, prepare and serve two meals
+          and a snack from the menu planned for this requirement. At least one of
+          those meals must be cooked over a fire, or an approved trail stove
+          (with proper supervision).
+        field:
+          type: checklist
+          items:
+            - "Prepared and served two meals from the planned menu"
+            - "Prepared and served a snack from the planned menu"
+            - "At least one meal was cooked over a fire or an approved trail stove"
+      - id: "6e"
+        prompt: >
+          After each meal, have those you served evaluate the meal on
+          presentation and taste, then evaluate your own meal. Discuss what you
+          learned with your counselor, including any adjustments that could have
+          improved or enhanced your meals. Tell how planning and preparation help
+          ensure successful trail hiking or backpacking meals.
+        field: { type: text_box, lines: 8 }
+      - id: "6f"
+        prompt: >
+          Explain to your counselor how you should divide the food and cooking
+          supplies among the patrol in order to share the load. Discuss how to
+          properly clean the cooking area and store your food to protect it from
+          animals.
+        field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    intro: "Careers and Hobbies. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Identify three career opportunities that would use skills and knowledge in cooking. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career."
+        - "(b) Identify how you might use the skills and knowledge in cooking to pursue a personal hobby or healthy lifestyle. Research the additional training required, expenses, and affiliation with organizations that would help you maximize the enjoyment and benefit you might gain from it. Discuss what you learned with your counselor and share what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "7-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "8note"
+    field:
+      type: callout
+      text: >
+        <b>Important:</b> The meals prepared for Cooking merit badge
+        requirements 4, 5, and 6 count only toward this merit badge and may not
+        be used for rank advancement or any other merit badge. Meals prepared
+        for rank advancement or other merit badges may not be counted toward the
+        Cooking merit badge. Menus used for meals in requirements 4, 5, and 6
+        must not be repeated.
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

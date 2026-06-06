@@ -1,0 +1,69 @@
+badge:
+  name: Bugling
+  slug: bugling
+  requirements_revision: "2024-01-01"
+  description: >
+    The bugle has signaled Scouts and soldiers for generations. Earning this
+    badge, you learn the history and care of the instrument, sound the
+    traditional calls, and serve your troop as its bugler. A bugle, trumpet, or
+    cornet may be used to meet these requirements.
+
+requirements:
+  - id: "1"
+    prompt: "Give a brief history of the bugle."
+    field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Explain and demonstrate how the bugle makes sound, and explain how the
+          bugle is related to other brass wind instruments.
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: >
+          Compose a bugle call for your troop or patrol to signal a common group
+          activity, such as assembling for mealtime or striking a campsite. Play
+          the call that you have composed before your unit or patrol.
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: >
+      Sound 10 of the following bugle calls: "First Call," "Reveille,"
+      "Assembly," "Mess," "Drill," "Fatigue," "Officers," "Recall," "Church,"
+      "Swimming," "Fire," "Retreat," "To the Colors," "Call to Quarters," and
+      "Taps."
+    field:
+      type: checklist
+      items:
+        - "First Call"
+        - "Reveille"
+        - "Assembly"
+        - "Mess"
+        - "Drill"
+        - "Fatigue"
+        - "Officers"
+        - "Recall"
+        - "Church"
+        - "Swimming"
+        - "Fire"
+        - "Retreat"
+        - "To the Colors"
+        - "Call to Quarters"
+        - "Taps"
+
+  - id: "4"
+    prompt: "Explain when each of the calls in requirement 3 is used."
+    field:
+      type: table
+      headers: ["Call", "When it is used"]
+      rows: 10
+      cols: 2
+
+  - id: "5"
+    prompt: "Explain how to care for, clean, and maintain a bugle."
+    field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    field: { type: checkbox, label: "Serve as bugler in your troop for three months." }

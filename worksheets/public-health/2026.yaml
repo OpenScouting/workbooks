@@ -1,0 +1,195 @@
+badge:
+  name: Public Health
+  slug: public-health
+  requirements_revision: "2026-01-01"
+  description: >
+    The Public Health merit badge looks at how communities prevent disease and
+    keep people healthy. Scouts study how illnesses spread, the importance of
+    immunization, clean water and food, and the agencies and professionals who
+    protect public health.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Explain what public health is."
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: >
+          Explain how Escherichia coli (E. coli), tetanus, AIDS, encephalitis,
+          salmonellosis, Lyme disease, and coronavirus (COVID-19) are contracted.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Escherichia coli (E. coli)"
+            - "Tetanus"
+            - "AIDS"
+            - "Encephalitis"
+            - "Salmonellosis"
+            - "Lyme disease"
+            - "Coronavirus (COVID-19)"
+      - id: "1c"
+        prompt: >
+          Choose any four of the following diseases and explain how each one is
+          contracted and possibly prevented: gonorrhea, West Nile virus,
+          botulism, influenza, syphilis, hepatitis, emphysema, meningitis,
+          herpes, or lead poisoning.
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Disease", type: text_field }
+            - { label: "How it is contracted", type: text_box, lines: 3 }
+            - { label: "How it is possibly prevented", type: text_box, lines: 3 }
+      - id: "1d"
+        prompt: >
+          For all 10 diseases from 1(c), explain the type or form of the disease
+          (viral, bacterial, environmental, toxin), any possible vectors for
+          transmission, ways to help prevent exposure or the spread of infection,
+          and available treatments.
+        field:
+          type: table
+          headers: ["Disease", "Type or form", "Vectors", "Prevention", "Treatments"]
+          rows: 10
+          cols: 5
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Explain the meaning of immunization."
+        field: { type: text_box, lines: 5 }
+      - id: "2b"
+        prompt: >
+          Name eight diseases against which a young child should be immunized,
+          two diseases against which everyone should be reimmunized periodically,
+          and one immunization everyone should receive annually.
+        field: { type: text_box, lines: 8 }
+      - id: "2c"
+        prompt: >
+          Using the list of diseases and conditions in requirement 1, discuss
+          with your counselor those which currently have no immunization
+          available.
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: >
+      Discuss the importance of safe drinking water in terms of the spread of
+      disease. Then, demonstrate two ways for making water safe to drink that can
+      be used while at camp. In your demonstration, explain how dishes and
+      utensils should be washed, dried, and kept sanitary at home and in camp.
+    field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    prompt: >
+      Explain what a vector is and how insects and rodents can be controlled in
+      your home, in your community, and at camp. Tell why this is important. In
+      your discussion, explain which vectors can be easily controlled by
+      individuals and which ones require long-term, collective action.
+    field: { type: text_box, lines: 10 }
+
+  - id: "5"
+    prompt: >
+      With your parent or guardian's and counselor's approval, do ONE of the
+      following:
+    field:
+      type: checklist
+      items:
+        - "(a) Visit a municipal wastewater treatment facility or a solid-waste management operation in your community."
+        - "(b) Visit a food service facility, such as a restaurant or school cafeteria."
+    children:
+      - id: "5a"
+        prompt: >
+          Option (a): Visit a municipal wastewater treatment facility or a
+          solid-waste management operation in your community.
+        children:
+          - id: "5a1"
+            prompt: >
+              Describe how the facility safely treats and disposes of sewage or
+              solid waste.
+            field: { type: text_box, lines: 5 }
+          - id: "5a2"
+            prompt: "Discuss your visit and what you learned with your counselor."
+            field: { type: text_box, lines: 5 }
+          - id: "5a3"
+            prompt: >
+              Describe how sewage and solid waste should be disposed of under
+              wilderness camping conditions.
+            field: { type: text_box, lines: 5 }
+      - id: "5b"
+        prompt: >
+          Option (b): Visit a food service facility, such as a restaurant or
+          school cafeteria.
+        children:
+          - id: "5b1"
+            prompt: >
+              Observe food preparation, handling, and storage. Learn how the
+              facility keeps food from becoming contaminated.
+            field: { type: text_box, lines: 5 }
+          - id: "5b2"
+            prompt: >
+              Find out what conditions allow microorganisms to multiply in food,
+              what can be done to help prevent them from growing and spreading,
+              and how to kill them.
+            field: { type: text_box, lines: 5 }
+          - id: "5b3"
+            prompt: "Discuss the importance of using a thermometer to check food temperatures."
+            field: { type: text_box, lines: 5 }
+          - id: "5b4"
+            prompt: "Discuss your visit and what you learned with your counselor."
+            field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    intro: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: "Describe the health dangers from air, water, and noise pollution."
+        field: { type: text_box, lines: 6 }
+      - id: "6b"
+        prompt: "Describe health dangers from tobacco use and alcohol and drug abuse."
+        field: { type: text_box, lines: 6 }
+      - id: "6c"
+        prompt: "Describe the health dangers from abusing illegal and prescription drugs."
+        field: { type: text_box, lines: 6 }
+
+  - id: "7"
+    prompt: >
+      With your parent or guardian's and counselor's approval, do the following:
+    children:
+      - id: "7a"
+        prompt: "Do ONE of the following:"
+        field:
+          type: checklist
+          items:
+            - "(1) Visit your city, county, state or federal public health agency."
+            - "(2) Familiarize yourself with your city, county, state, or a federal health agency's website."
+      - id: "7b"
+        prompt: "After completing either 7(a) do the following:"
+        children:
+          - id: "7b1"
+            prompt: >
+              Compare the four leading causes of mortality (death) in your
+              community for any of the past five years with the four leading
+              causes of disease in your community. Explain how the public health
+              agency you visited is trying to reduce the mortality and morbidity
+              rates of these leading causes of illness and death.
+            field: { type: text_box, lines: 8 }
+          - id: "7b2"
+            prompt: "Explain the role of your health agency as it relates to the outbreak of diseases."
+            field: { type: text_box, lines: 6 }
+          - id: "7b3"
+            prompt: >
+              Discuss the kinds of public assistance the agency is able to
+              provide in case of disasters such as floods, storms, tornadoes,
+              earthquakes, and other acts of destruction. Your discussion can
+              include the cleanup necessary after the disaster.
+            field: { type: text_box, lines: 8 }
+
+  - id: "8"
+    prompt: >
+      Pick a profession in the public health sector that interests you. Find out
+      the education, training, and experience required to work in this
+      profession. Discuss what you learn with your counselor.
+    field: { type: text_box, lines: 10 }

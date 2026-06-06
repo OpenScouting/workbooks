@@ -1,0 +1,352 @@
+badge:
+  name: Camping
+  slug: camping
+  requirements_revision: "2024-01-01"
+  # workbook_version: pin a string here to override the auto build-date stamp
+  description: >
+    Camping is one of the best-known traditions of Scouting. Earning the Camping
+    merit badge teaches you the skills to safely enjoy nights under the stars in
+    a variety of conditions, work as a patrol, and care for the land you visit.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while participating in camping activities and what you should do to
+          anticipate, help prevent, mitigate, and respond to these hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Discuss with your counselor why it is important to be aware of weather
+          conditions before and during your camping activities.
+        field: { type: text_box, lines: 6 }
+      - id: "1b-prep"
+        prompt: "Tell how you can prepare should the weather turn bad during your campouts."
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: >
+          Show that you know first aid for and how to prevent injuries or
+          illnesses that could occur while camping, including hypothermia,
+          frostbite, heat reactions, dehydration, altitude sickness, insect
+          stings, tick bites, snakebite, blisters, and hyperventilation.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Hypothermia
+            - Frostbite
+            - Heat reactions
+            - Dehydration
+            - Altitude sickness
+            - Insect stings
+            - Tick bites
+            - Snakebite
+            - Blisters
+            - Hyperventilation
+
+  - id: "2"
+    prompt: >
+      Learn the Leave No Trace Seven Principles and the Outdoor Code, and
+      explain what they mean. Write a personal and group plan for implementing
+      these principles on your next outing.
+    children:
+      - id: "2a"
+        prompt: "Leave No Trace: what it means"
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: "Outdoor Code: what it means"
+        field: { type: text_box, lines: 6 }
+      - id: "2c"
+        prompt: "Personal and group plan for your next outing"
+        field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    prompt: >
+      Make a written plan for an overnight trek and show how to get to your
+      camping spot by using a topographical map and one of the following:
+    field:
+      type: checklist
+      items:
+        - "Compass"
+        - "GPS receiver"
+        - "Smartphone with a GPS app"
+    children:
+      - id: "3plan"
+        prompt: "Written plan"
+        notes:
+          - 'Tip: the Scouting America <a href="https://filestore.scouting.org/filestore/boyscouts/pdf/512-505-2016-scout-planning-worksheet.pdf" color="#1B4332"><b>Scout Planning Worksheet</b></a> is a good template. Search Scouting.org for the latest version if this link goes stale.'
+        field: { type: text_box, lines: 12 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: >
+          Make a duty roster showing how your patrol is organized for an actual
+          overnight campout. List assignments for each member.
+        field: { type: text_box, lines: 10 }
+      - id: "4b"
+        prompt: >
+          Help a Scout patrol or a Webelos Scout unit in your area prepare for
+          an actual campout, including:
+        field:
+          type: checklist
+          items:
+            - "Duty roster"
+            - "Menu planning"
+            - "Equipment needs"
+            - "General planning"
+            - "Setting up camp"
+
+  - id: "5"
+    intro: "Do the following:"
+    children:
+      - id: "5a-warm"
+        prompt: "Prepare a list of clothing you would need for an overnight campout in WARM weather."
+        field: { type: table, rows: 5, cols: 3 }
+      - id: "5a-cold"
+        prompt: "Prepare a list of clothing you would need for an overnight campout in COLD weather."
+        field: { type: table, rows: 5, cols: 3 }
+      - id: "5a-layer"
+        prompt: 'Explain the term "layering".'
+        field: { type: text_box, lines: 5 }
+      - id: "5b"
+        prompt: >
+          Discuss footwear for different kinds of weather and how the right
+          footwear is important for protecting your feet.
+        field: { type: text_box, lines: 7 }
+      - id: "5c"
+        prompt: "Explain the proper care and storage of camping equipment (clothing, footwear, bedding)."
+        field: { type: text_box, lines: 9 }
+      - id: "5d"
+        prompt: "List the Scout Basic Essentials necessary for any campout, and explain why each item is needed."
+        field:
+          type: table
+          headers: ["Item", "Why is it needed"]
+          rows: 10
+          cols: 2
+      - id: "5e"
+        field:
+          type: checklist
+          items:
+            - "Present yourself to your Scoutmaster with your pack for inspection."
+            - "Be correctly clothed and equipped for an overnight campout."
+
+  - id: "6"
+    intro: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: >
+          Describe the features of four types of tents, when and where they
+          could be used.
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Type", type: text_field }
+            - { label: "Features", type: text_box, lines: 3 }
+            - { label: "When to use", type: text_box, lines: 2 }
+            - { label: "Where to use", type: text_box, lines: 2 }
+      - id: "6a-care"
+        prompt: "How to care for tents."
+        field: { type: text_box, lines: 4 }
+      - id: "6a-pitch"
+        field: { type: checkbox, label: "Working with another Scout, pitch a tent." }
+      - id: "6b"
+        prompt: "Discuss the importance of camp sanitation and tell why water treatment is essential."
+        field: { type: text_box, lines: 5 }
+      - id: "6b-treat"
+        field: { type: checkbox, label: "Then demonstrate two ways to treat water." }
+      - id: "6c"
+        prompt: "Describe the factors to be considered in deciding where to pitch your tent."
+        field: { type: text_box, lines: 5 }
+      - id: "6d"
+        prompt: >
+          Tell the difference between internal- and external-frame packs. Discuss
+          the advantages and disadvantages of each.
+        field: { type: text_box, lines: 5 }
+      - id: "6d-pair"
+        field:
+          type: pair_grid
+          left_title: "Internal Frame Pack"
+          right_title: "External Frame Pack"
+          col_headers: ["Advantages", "Disadvantages"]
+          rows: 5
+      - id: "6e"
+        prompt: "Discuss the types of sleeping bags and what kind would be suitable for different conditions."
+        field:
+          type: table
+          headers: ["Type of sleeping bag", "Appropriate conditions"]
+          rows: 5
+          cols: 2
+      - id: "6e-care"
+        prompt: "Explain the proper care of your sleeping bag and how to keep it dry."
+        field: { type: text_box, lines: 7 }
+      - id: "6e-bed"
+        field: { type: checkbox, label: "Make a comfortable ground bed." }
+
+  - id: "7"
+    prompt: "Prepare for an overnight campout with your patrol by doing the following:"
+    children:
+      - id: "7a-personal"
+        prompt: "Personal gear checklist"
+        field: { type: table, rows: 6, cols: 4 }
+      - id: "7a-patrol"
+        prompt: "Patrol gear checklist"
+        field: { type: table, rows: 5, cols: 4 }
+      - id: "7b"
+        field:
+          type: checkbox
+          label: >
+            Pack your own gear and your share of the patrol equipment and food
+            for proper carrying. Show that your pack is right for quickly
+            getting what is needed first, and that it has been assembled
+            properly for comfort, weight, balance, size, and neatness.
+
+  - id: "8"
+    intro: "Do the following:"
+    children:
+      - id: "8a"
+        prompt: "Explain the safety procedures for:"
+        children:
+          - id: "8a1"
+            prompt: "Using a propane or butane / propane stove"
+            field: { type: text_box, lines: 6 }
+          - id: "8a2"
+            prompt: "Using a liquid fuel stove"
+            field: { type: text_box, lines: 6 }
+          - id: "8a3"
+            prompt: "Proper storage of extra fuel"
+            field: { type: text_box, lines: 5 }
+      - id: "8b"
+        prompt: "Discuss the advantages and disadvantages of different types of lightweight cooking stoves."
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Type", type: text_field }
+            - { label: "Advantages", type: text_box, lines: 3 }
+            - { label: "Disadvantages", type: text_box, lines: 3 }
+      - id: "8c"
+        prompt: >
+          Prepare a camp menu. Explain how the menu would differ from a menu
+          for a backpacking or float trip.
+        field: { type: text_box, lines: 8 }
+      - id: "8c-menus"
+        prompt: >
+          Give recipes and make a food list for your patrol. Plan two
+          breakfasts, three lunches, and two suppers. Label each row
+          with the meal (Breakfast 1, Lunch 1, Supper 1, …).
+        field:
+          type: repeated_block
+          count: 7
+          template:
+            - { label: "Meal", type: text_field }
+            - { label: "Food list", type: text_box, lines: 4 }
+            - { label: "Recipes", type: text_box, lines: 6 }
+      - id: "8c-protect"
+        prompt: "Discuss how to protect your food against bad weather, animals, and contamination."
+        field: { type: text_box, lines: 5 }
+      - id: "8d"
+        prompt: >
+          While camping in the outdoors, cook at least one breakfast, one
+          lunch, and one dinner for your patrol from the meals you have planned
+          for requirement 8c. At least one of those meals must be a trail meal
+          requiring the use of a lightweight stove.
+        field:
+          type: checklist
+          items:
+            - "Cooked one breakfast"
+            - "Cooked one lunch"
+            - "Cooked one dinner"
+            - "At least one meal was a trail meal cooked on a lightweight stove"
+      - id: "8note"
+        field:
+          type: callout
+          text: >
+            <b>Important:</b> Meals prepared for Camping merit badge requirement
+            8d may not also count toward Cooking merit badge requirements 4, 5,
+            or 6. Meals prepared for Cooking merit badge requirements 4, 5, and 6
+            may not count toward Camping merit badge requirement 8d. Plan your
+            menus so the same meal isn't used to satisfy two different badges.
+
+  - id: "9"
+    prompt: "Show experience in camping by doing the following:"
+    children:
+      - id: "9a"
+        prompt: >
+          Camp for at least 20 nights at designated Scouting activities or
+          events. One long-term camping experience of up to six consecutive
+          nights may be applied toward this requirement. Two nights may be
+          counted toward the total for each additional long-term camping trip.
+          Each night must be spent either under the sky, in a tent you have
+          pitched yourself (if a tent is provided and already set up, you do
+          not need to pitch your own), in a hammock that is safely strung
+          outdoors, in a lean-to, or other three-sided shelter with an open
+          front. Nights spent in indoor lock-in events, cabin camping, hotel
+          stays, or other covered accommodations do not count toward the 20
+          nights.
+        field:
+          type: table
+          headers: ["Date(s)", "Location", "Nights", "Notes"]
+          rows: 6
+          cols: 4
+      - id: "9b"
+        prompt: >
+          On any of these camping experiences, you must do TWO of the following,
+          only with proper preparation and under qualified supervision.
+        field:
+          type: checklist
+          items:
+            - "Hike up a mountain, gaining at least 1,000 vertical feet."
+            - "Backpack, snowshoe, or cross-country ski for at least 4 miles."
+            - "Take a bike trip of at least 15 miles or at least four hours."
+            - "Take a nonmotorized trip on the water of at least four hours or 5 miles."
+            - "Plan and carry out an overnight snow camping experience."
+            - "Rappel down a rappel route of 30 feet or more."
+      - id: "9c"
+        field:
+          type: checkbox
+          label: >
+            On any of these camping experiences, perform a conservation project
+            approved by the landowner or land managing agency. This can be done
+            alone or with others.
+
+  - id: "10"
+    prompt: >
+      Discuss how the things you did to earn this badge have taught you about
+      personal health and safety, survival, public health, conservation, and
+      good citizenship. In your discussion, tell how Scout spirit and the
+      Scout Oath and Scout Law apply to camping and outdoor ethics.
+    children:
+      - id: "10a"
+        prompt: "Personal health and safety"
+        field: { type: text_box, lines: 4 }
+      - id: "10b"
+        prompt: "Survival"
+        field: { type: text_box, lines: 4 }
+      - id: "10c"
+        prompt: "Public health"
+        field: { type: text_box, lines: 4 }
+      - id: "10d"
+        prompt: "Conservation"
+        field: { type: text_box, lines: 4 }
+      - id: "10e"
+        prompt: "Good citizenship"
+        field: { type: text_box, lines: 4 }
+      - id: "10f"
+        prompt: "How Scout spirit and the Scout Oath and Law apply to camping and outdoor ethics"
+        field: { type: text_box, lines: 6 }
+
+reference_pages:
+  - title: "Wilderness Use Policy"
+    body: shared/wilderness-use-policy.md
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

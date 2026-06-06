@@ -1,0 +1,221 @@
+badge:
+  name: Search and Rescue
+  slug: search-and-rescue
+  requirements_revision: "2026-01-01"
+  description: >
+    The Search and Rescue merit badge teaches the skills used to find and help
+    people who are lost or in danger in the outdoors. You will study maps,
+    signaling, the Incident Command System, and lost-person behavior, then plan
+    and run a practice search of your own.
+
+requirements:
+  - id: "1"
+    intro: "Hazards and First Aid. Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Show or explain first aid for, and prevention of, injuries and
+          conditions that searchers and subjects could develop during an SAR
+          situation, including:
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Dehydration
+            - Heatstroke
+            - Hypothermia
+            - Shock
+            - Blisters
+            - Eye injuries
+            - Ankle and knee sprains
+            - "Bug bites of chiggers, ticks, mosquitoes, and biting gnats"
+            - Bee stings
+            - Bites of spiders
+            - Sting of a scorpion
+            - Bite of a wild mammal
+            - Bite of a venomous snake
+      - id: "1b"
+        prompt: >
+          Explain how the Scout Basic Essentials address hazards outdoors and
+          help lost Scouts stay safe before they are rescued.
+        field: { type: text_box, lines: 6 }
+      - id: "1c"
+        prompt: >
+          Discuss how the safety gear carried by SAR team members in their field
+          packs address SAR hazards.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    intro: "Staying and Getting Found. Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Explain how a trip plan and the buddy system help Scouts with staying
+          found and getting found.
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: "Explain how seasonal and daily weather changes affect Trip Plans."
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: >
+          Explain and show how a lost Scout could send signals that would alert
+          a ground, airborne, or water SAR team to their location.
+        field: { type: text_box, lines: 6 }
+      - id: "2d"
+        prompt: "Demonstrate how to use a signaling mirror."
+        field:
+          type: checkbox
+          label: "I demonstrated how to use a signaling mirror."
+      - id: "2e"
+        prompt: >
+          Explain how a Personal Locator Beacon (PLB) works and the role of the
+          Air Force Rescue Coordination Center (AFRCC).
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: >
+      Maps. Using a map, a compass and a GPS device or app approved by your
+      counselor, do the following:
+    children:
+      - id: "3a"
+        prompt: >
+          Point out and explain the 5 D's (Date, Description, Details, Direction
+          or Declination, Distance) of the map.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: >
+          Choose a location on the map and record the altitude, latitude,
+          longitude, and US National Grid coordinates. Describe how these
+          coordinate systems differ.
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: >
+          Orient the map and take a bearing to another map location. Estimate
+          the distance between, and describe the terrain between, the two
+          locations.
+        field: { type: text_box, lines: 6 }
+      - id: "3d"
+        prompt: >
+          Show a hypothetical place last seen and point out an area on your map
+          that could be used for containment using natural or human-made
+          boundaries.
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    intro: "Incident Command System (ICS). Do the following:"
+    children:
+      - id: "4a"
+        prompt: >
+          Explain how a local ICS is organized and how it compares with
+          Scouting's patrol method.
+        field: { type: text_box, lines: 6 }
+      - id: "4b"
+        prompt: >
+          Explain how local community agencies work to train for and manage
+          search and rescue situations.
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    intro: "SAR Teams. Do the following:"
+    children:
+      - id: "5a"
+        prompt: "Explain the official duties of a search and rescue team."
+        field: { type: text_box, lines: 6 }
+      - id: "5b"
+        prompt: "Explain the differences between wilderness, urban, and water SARs."
+        field: { type: text_box, lines: 6 }
+      - id: "5c"
+        prompt: >
+          Identify four types of search and rescue teams and explain situations
+          where they are used.
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Type of team", type: text_field }
+            - { label: "When it is used", type: text_box, lines: 2 }
+
+  - id: "6"
+    intro: "Search and Rescue Procedures. Do the following:"
+    children:
+      - id: "6a"
+        prompt: "Explain the difference between search and rescue."
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: "Explain the difference between PLS (place last seen) and LKP (last known point)."
+        field: { type: text_box, lines: 5 }
+      - id: "6c"
+        prompt: "Explain the importance of effective communication in SAR operations."
+        field: { type: text_box, lines: 5 }
+      - id: "6d"
+        prompt: >
+          Explain how predictions of "lost person behavior" determine SAR search
+          plans for a young child, a teenager, and an adult.
+        field: { type: text_box, lines: 6 }
+      - id: "6e"
+        prompt: "Explain the following terms:"
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "(1) Evaluating search urgency"
+            - "(2) Establishing confinement"
+            - "(3) Scent item"
+            - "(4) Area air scent dog"
+            - "(5) Briefing and debriefing"
+            - "(6) Clue awareness"
+            - "(7) Evidence preservation"
+            - "(8) Tracking a subject"
+            - "(9) Locating a subject using attraction"
+            - "(10) Hasty search"
+            - "(11) Trail sweep search"
+            - "(12) Grid search"
+
+  - id: "7"
+    prompt: >
+      Plan and Complete a Search. Do the following with a team of Scouts,
+      friends, or family to execute a practice SAR exercise:
+    children:
+      - id: "7a"
+        prompt: >
+          Choose a hypothetical SAR scenario, either one presented in the Search
+          and Rescue merit badge pamphlet or one approved by your counselor.
+        field: { type: text_box, lines: 5 }
+      - id: "7b"
+        prompt: >
+          Develop an Incident Action Plan (IAP) for a hasty search using the
+          scenario information.
+        field: { type: text_box, lines: 8 }
+      - id: "7c"
+        prompt: >
+          Before the search begins, conduct a PAUSE briefing to review hazards,
+          safety concerns, personal and shared Scout Basic Essentials, and other
+          gear.
+        field:
+          type: checkbox
+          label: "I conducted a PAUSE briefing before the search."
+      - id: "7d"
+        prompt: "Execute the search."
+        field:
+          type: checkbox
+          label: "I executed the search."
+      - id: "7e"
+        prompt: >
+          After the search, hold a team debriefing to discuss the search,
+          problems, successful and unsuccessful tactics, and ideas for
+          improvement.
+        field: { type: text_box, lines: 6 }
+
+  - id: "8"
+    intro: "Careers. Do ONE of the following:"
+    children:
+      - id: "8-choice"
+        prompt: "Check the option you chose:"
+        field:
+          type: checklist
+          items:
+            - "(a) Explore careers related to Search and Rescue merit badge or emergency management. Research one career to learn about the training and education needed, costs, job prospects, salary, job duties, and career advancement. With permission of your parent or guardian, your research methods may include an internet or library search, an interview with a professional in the field, or a visit to a location where people in this career work. Discuss with your counselor both your findings and what about this profession might make it an interesting career."
+            - "(b) Explore how you could use knowledge and skills from this merit badge to serve as a volunteer on a disaster relief team, a wilderness rescue team, or a ski patrol. Research any training needed, expenses, and organizations that promote or support it. Discuss with your counselor what short-term and long-term goals you might have if you pursue this."
+      - id: "8-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }

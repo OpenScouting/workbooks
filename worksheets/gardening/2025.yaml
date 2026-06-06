@@ -1,0 +1,117 @@
+badge:
+  name: Gardening
+  slug: gardening
+  requirements_revision: "2025-01-01"
+  description: >
+    Gardening teaches you how to grow vegetables, flowers, and other plants from
+    seed and seedling to harvest. Along the way you will learn about soil,
+    pests, pollinators, composting, and the nutritional value of what you grow.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Explain to your counselor the most likely hazards associated with gardening and what you should do to anticipate, help prevent, mitigate, and respond to these hazards."
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: "Discuss the prevention of and treatment for health concerns that could occur while gardening, including cuts, scratches, puncture wounds, insect bites, anaphylactic shock, heat reactions, and reactions from exposure to pesticides and fertilizers."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Cuts"
+            - "Scratches"
+            - "Puncture wounds"
+            - "Insect bites"
+            - "Anaphylactic shock"
+            - "Heat reactions"
+            - "Reactions from exposure to pesticides and fertilizers"
+
+  - id: "2"
+    prompt: "Do the following, and discuss your observations throughout the process with your counselor:"
+    children:
+      - id: "2a"
+        prompt: "Grow six vegetables, three from seeds and three from seedlings, through harvest."
+        field: { type: table, headers: ["Vegetable", "Seed or seedling", "Observations"], rows: 6, cols: 3 }
+      - id: "2b"
+        prompt: "Grow six flowers, three from seeds and three from seedlings, through flowering."
+        field: { type: table, headers: ["Flower", "Seed or seedling", "Observations"], rows: 6, cols: 3 }
+
+  - id: "3"
+    prompt: "Give the nutritional value of the following:"
+    children:
+      - id: "3a"
+        prompt: "Three root or tuber crops"
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Crop", type: text_field }
+            - { label: "Nutritional value", type: text_box, lines: 2 }
+      - id: "3b"
+        prompt: "Three vegetables that bear above the ground"
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Vegetable", type: text_field }
+            - { label: "Nutritional value", type: text_box, lines: 2 }
+      - id: "3c"
+        prompt: "Three fruits"
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Fruit", type: text_field }
+            - { label: "Nutritional value", type: text_box, lines: 2 }
+
+  - id: "4"
+    prompt: "Test 100 seeds for germination. Determine the percentage of seeds that germinate. Explain why you think some did not germinate."
+    field: { type: text_box, lines: 7 }
+
+  - id: "5"
+    prompt: "Visit your county extension agent's office, local university, agricultural college, nursery, farm, or a botanical garden or arboretum. Report on what you learned."
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: "Explain to your counselor how and why honeybees are used in pollinating food crops and the problems that face the bee population today. Discuss what the impact to humanity would be if there were no pollinators."
+    field: { type: text_box, lines: 9 }
+
+  - id: "7"
+    prompt: "Identify five garden pests (insects, diseased plants). Recommend two solutions for each pest. At least one of the two solutions must be an organic method."
+    field:
+      type: repeated_block
+      count: 5
+      template:
+        - { label: "Pest", type: text_field }
+        - { label: "Solution 1", type: text_box, lines: 2 }
+        - { label: "Solution 2 (at least one solution must be organic)", type: text_box, lines: 2 }
+
+  - id: "8"
+    prompt: "Do ONE of the following and record weekly observations. Discuss the results of your project with your counselor."
+    field:
+      type: checklist
+      items:
+        - "(a) Build a compost bin and maintain it for 90 days."
+        - "(b) Build a vermipost bin (worm compost bin) and maintain it for 90 days."
+        - "(c) Build a hydroponic garden containing three vegetables or herbs, or three ornamental plants. Maintain this garden through harvest or flowering, or for 90 days."
+        - "(d) Build one water garden, either in a container (at least 12 by 6 inches and 6 inches deep), or in the ground as a small, decorative pond no larger than 6 by 3 feet and 24 inches deep. Maintain the water garden for 90 days."
+        - "(e) Prepare a honey super for use on a hive or colony. Remove a filled honey super from the hive or colony and prepare the honey for sale."
+        - "(f) Grow a garden of your own using soil from seed or plantings to harvest or for 90 days, whichever is earlier. This can be an outdoor garden or indoors using appropriate containers, and should include at least three types of plants approved by your counselor."
+    children:
+      - id: "8-log"
+        prompt: "Weekly observations for your chosen project"
+        field: { type: table, headers: ["Week", "Date", "Observations"], rows: 12, cols: 3 }
+
+  - id: "9"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Identify three career opportunities that would use skills and knowledge in gardening. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career."
+        - "(b) Identify how you might use the skills and knowledge in gardening to pursue a personal hobby and/or healthy lifestyle. Research the additional training required, expenses, and affiliation with organizations that would help you maximize the enjoyment and benefit you might gain from it. Discuss what you learned with your counselor and share what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "9-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }

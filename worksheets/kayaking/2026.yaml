@@ -1,0 +1,136 @@
+badge:
+  name: Kayaking
+  slug: kayaking
+  requirements_revision: "2026-01-01"
+  description: >
+    Kayaking lets you explore lakes, rivers, and coastlines under your own
+    paddle power. Earning this badge builds the water-safety knowledge, rescue
+    skills, and paddling strokes you need to handle a kayak confidently and
+    responsibly.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the hazards you are most likely to encounter
+          while participating in kayaking activities, including weather and
+          water-related hazards, and what you should do to anticipate, help
+          prevent, mitigate, and respond to these hazards.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Review prevention, symptoms, and first-aid treatment for the following
+          injuries or illnesses that can occur while kayaking: blisters,
+          cold-water shock and hypothermia, heat-related illnesses, dehydration,
+          sunburn, sprains, and strains.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Blisters
+            - "Cold-water shock and hypothermia"
+            - "Heat-related illnesses"
+            - Dehydration
+            - Sunburn
+            - Sprains
+            - Strains
+      - id: "1c"
+        prompt: >
+          Review the Scouting America Safety Afloat policy. Explain to your
+          counselor how this applies to kayaking.
+        field: { type: text_box, lines: 6 }
+
+  - id: "2"
+    prompt: >
+      Before doing requirements 3 through 8, successfully complete the Scouting
+      America swimmer test. Note: See the Swimming merit badge pamphlet for
+      details about the Scouting America swimmer test.
+    field: { type: checkbox, label: "Successfully completed the Scouting America swimmer test." }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Review the characteristics of life jackets most appropriate for
+          kayaking and understand why one must always be worn while paddling.
+          Then demonstrate how to select and fit a life jacket for kayaking.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: >
+          Review the importance of safety equipment such as a signal device,
+          extra paddle, sponge, bilge pump, flotation bags, and throw bag.
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Name and point out the major parts of a kayak."
+        field: { type: text_box, lines: 5 }
+      - id: "4b"
+        prompt: >
+          Review the differences in the design between recreational, whitewater,
+          and sea or touring kayaks. Include how length, width, stability, and
+          rocker are involved in the design of each type.
+        field: { type: text_box, lines: 8 }
+      - id: "4c"
+        prompt: "Explain the care, maintenance, and storage of a kayak."
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    prompt: "Discuss the following:"
+    children:
+      - id: "5a"
+        prompt: "Correct methods for the use of a kayak paddle"
+        field: { type: text_box, lines: 5 }
+      - id: "5b"
+        prompt: "Parts of a paddle"
+        field: { type: text_box, lines: 4 }
+      - id: "5c"
+        prompt: "The care and maintenance of a paddle"
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    prompt: >
+      Using a properly equipped kayak with an open cockpit, a sit-on-top, or an
+      inflatable kayak, do the following:
+    field:
+      type: checklist
+      items:
+        - "Safely capsize and perform a wet exit."
+        - "Reenter the kayak with assistance from a buddy boat."
+        - "Demonstrate a kayak-over-kayak rescue."
+        - "Demonstrate the HELP position."
+        - "Capsize the kayak, swim it and the paddle to shore, and empty water from the kayak with assistance if needed."
+
+  - id: "7"
+    prompt: >
+      As a solo paddler, use a properly equipped kayak to demonstrate the
+      following:
+    field:
+      type: checklist
+      items:
+        - "Forward stroke"
+        - "Backstroke"
+        - "Forward sweep"
+        - "Reverse sweep"
+        - "Draw stroke"
+        - "Stern draw"
+
+  - id: "8"
+    prompt: >
+      As a solo paddler, use a properly equipped kayak to demonstrate the
+      following:
+    field:
+      type: checklist
+      items:
+        - "Paddle a straight line for 15 to 20 boat lengths using appropriate strokes while maintaining trim and balance of the kayak."
+        - "Spin or pivot from a stationary position 180 degrees (half circle) to the right and left within two boat lengths."
+        - "Move abeam to the right 10 feet and to the left 10 feet."
+        - "Stop the boat in one boat length."
+        - "While maintaining forward motion, turn the kayak 90 degrees to the right and left."
+        - "Move the kayak backward three to four boat lengths using appropriate and effective reverse strokes."
+        - "Paddle the kayak in a buoyed figure 8 course around markers three to four boat lengths apart."

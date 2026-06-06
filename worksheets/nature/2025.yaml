@@ -1,0 +1,178 @@
+badge:
+  name: Nature
+  slug: nature
+  requirements_revision: "2025-01-01"
+  description: >
+    Nature study reveals how plants and animals depend on one another and on the
+    land. Earning this badge, you observe and identify living things across many
+    fields and learn to explore the outdoors responsibly.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Name three ways in which plants are important to animals. Name a plant that
+      is protected in your state or region, and explain why it is at risk.
+    field: { type: text_box, lines: 7 }
+
+  - id: "2"
+    prompt: >
+      Name three ways in which animals are important to plants. Name an animal that
+      is protected in your state or region, and explain why it is at risk.
+    field: { type: text_box, lines: 7 }
+
+  - id: "3"
+    prompt: >
+      Explain the term "food chain." Give an example of a four-step land food chain
+      and a four-step water food chain.
+    field: { type: text_box, lines: 7 }
+
+  - id: "4"
+    prompt: "Do all the requirements in FIVE of the following fields:"
+    field:
+      type: checklist
+      items:
+        - "(a) Birds"
+        - "(b) Mammals"
+        - "(c) Reptiles and Amphibians"
+        - "(d) Insects and Spiders"
+        - "(e) Fish"
+        - "(f) Mollusks and Crustaceans"
+        - "(g) Plants"
+        - "(h) Soils and Rocks"
+    children:
+      - id: "4a"
+        intro: "(a) Birds. Do ALL of the following:"
+        children:
+          - id: "4a1"
+            prompt: "In the field, identify eight species of birds."
+            field: { type: table, headers: ["Species identified"], rows: 8, cols: 1 }
+          - id: "4a2"
+            prompt: >
+              Make and set out a birdhouse OR a feeding station OR a birdbath. List
+              what birds used it during a period of one month.
+            field: { type: text_box, lines: 5 }
+      - id: "4b"
+        intro: "(b) Mammals. Do ALL of the following:"
+        children:
+          - id: "4b1"
+            prompt: "In the field, identify three species of wild mammals."
+            field: { type: text_box, lines: 4 }
+          - id: "4b2"
+            prompt: "Make plaster casts of the tracks of a wild mammal."
+            field: { type: checkbox, label: "Made plaster casts of the tracks of a wild mammal." }
+      - id: "4c"
+        intro: "(c) Reptiles and Amphibians. Do ALL of the following:"
+        children:
+          - id: "4c1"
+            prompt: "Show that you can recognize the venomous snakes in your area."
+            field: { type: text_box, lines: 4 }
+          - id: "4c2"
+            prompt: "In the field, identify three species of reptiles or amphibians."
+            field: { type: text_box, lines: 4 }
+          - id: "4c3"
+            prompt: >
+              Recognize one species of toad or frog by voice; OR identify one
+              reptile or amphibian by eggs, den, burrow, or other signs.
+            field: { type: text_box, lines: 4 }
+      - id: "4d"
+        intro: "(d) Insects and Spiders. Do ALL of the following:"
+        children:
+          - id: "4d1"
+            prompt: >
+              Collect and identify either in the field or through photographs 10
+              species of insects or spiders. Photos may be taken with your own
+              equipment or gathered from other sources.
+            field: { type: table, headers: ["Species identified"], rows: 10, cols: 1 }
+          - id: "4d2"
+            prompt: >
+              Hatch an insect from the pupa or cocoon; OR hatch adults from nymphs;
+              OR keep larvae until they form pupae or cocoons; OR keep a colony of
+              ants or bees through one season.
+            field: { type: text_box, lines: 4 }
+      - id: "4e"
+        intro: "(e) Fish. Do ALL of the following:"
+        children:
+          - id: "4e1"
+            prompt: "Identify two species of fish native to your area."
+            field: { type: text_box, lines: 3 }
+          - id: "4e2"
+            prompt: "Collect four kinds of animal food eaten by fish in the wild."
+            field: { type: text_box, lines: 4 }
+      - id: "4f"
+        intro: "(f) Mollusks and Crustaceans. Do ALL of the following:"
+        children:
+          - id: "4f1"
+            prompt: "Identify five species of mollusks and crustaceans."
+            field: { type: text_box, lines: 4 }
+          - id: "4f2"
+            prompt: "Collect, mount, and label six shells."
+            field: { type: checkbox, label: "Collected, mounted, and labeled six shells." }
+      - id: "4g"
+        intro: "(g) Plants. Do ALL of the following:"
+        children:
+          - id: "4g1"
+            prompt: "In the field, identify 15 species of wild plants."
+            field: { type: table, headers: ["Species identified"], rows: 15, cols: 1 }
+          - id: "4g2"
+            prompt: "Do ONE of the following:"
+            field:
+              type: checklist
+              items:
+                - "(a) Collect and label the seeds of six plants OR the leaves of 12 plants."
+                - "(b) Photograph the seeds of six plants OR the leaves of 12 plants and create a catalog of your photos."
+      - id: "4h"
+        intro: "(h) Soils and Rocks. Do ALL of the following:"
+        children:
+          - id: "4h1"
+            prompt: >
+              Collect and identify three different types of soil that represent
+              soils high in sand, clay and humus.
+            field: { type: text_box, lines: 4 }
+          - id: "4h2"
+            prompt: "Collect and identify five different types of rocks from your area."
+            field: { type: text_box, lines: 4 }
+
+  - id: "5"
+    prompt: >
+      Discuss the importance of the Leave No Trace Seven Principles and the Outdoor
+      Code and how they relate to nature. Explain how you have followed the Leave
+      No Trace Seven Principles and the Outdoor Code while in natural areas during
+      field observation, specimen collection, and identification.
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    intro: "Do the following:"
+    children:
+      - id: "6a"
+        prompt: "Explain what succession is to your counselor."
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: >
+          Visit a natural area (forest, grassland, meadow, water feature) and
+          explain what stage of succession (both plant and animal) the area is in.
+          Talk about what community/succession stages may have been there before
+          and what community/succession stages may replace what you see now.
+          Discuss what disturbances or changes have taken place in the past to
+          create this landscape and what changes may occur in the future to change
+          the landscape further.
+        field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Identify three career opportunities that would use skills and knowledge in Nature. Pick one and research the training, education, certification requirements, experience, and expenses associated with entering the field. Research the prospects for employment, starting salary, advancement opportunities and career goals associated with this career. Discuss what you learned with your counselor and whether you might be interested in this career."
+        - "(b) Identify how you might use the skills and knowledge in Nature to pursue a personal hobby. Research the additional training required, expenses, and affiliation with organizations that would help you maximize the enjoyment and benefit you might gain from it. Discuss what you learned with your counselor and share what short-term and long-term goals you might have if you pursued this."
+    children:
+      - id: "7-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

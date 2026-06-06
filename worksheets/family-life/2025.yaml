@@ -1,0 +1,111 @@
+badge:
+  name: Family Life
+  slug: family-life
+  requirements_revision: "2025-01-01"
+  description: >
+    Family Life asks you to reflect on your role in your family and to
+    strengthen it through shared work and honest conversation. You will take on
+    home duties, complete projects with and for your family, and lead family
+    meetings on the issues that matter most.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Prepare an outline on what a family is and discuss this with your
+      counselor. Tell why families are important to individuals and to society.
+      Discuss how the actions of one member can affect other members.
+    children:
+      - id: "1-outline"
+        prompt: "Outline on what a family is"
+        field: { type: text_box, lines: 8 }
+      - id: "1-importance"
+        prompt: "Why families are important to individuals and to society, and how the actions of one member can affect other members"
+        field: { type: text_box, lines: 7 }
+
+  - id: "2"
+    prompt: "List several reasons why you are important to your family and discuss this with your parent or guardian and with your counselor."
+    field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    prompt: >
+      Prepare a list of your regular home duties or chores (at least five) and
+      do them for 90 days. Keep a record of how often you do each of them.
+      Discuss with your counselor the effect your chores had on your family.
+    children:
+      - id: "3-record"
+        prompt: "List of your regular home duties or chores and a record of how often you do each"
+        field:
+          type: table
+          headers: ["Chore or duty", "How often / record over 90 days"]
+          rows: 8
+          cols: 2
+      - id: "3-effect"
+        prompt: "The effect your chores had on your family"
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    prompt: >
+      With the approval of your parent or guardian and your counselor, decide on
+      and carry out an individual project that you would do around the home that
+      would benefit your family. After completion, discuss the objective or goal
+      and the results of the project with your family and then your counselor.
+    field: { type: text_box, lines: 10 }
+
+  - id: "5"
+    prompt: >
+      Plan and carry out a project that involves the participation of your
+      family. After completing the project, discuss the following with your
+      counselor:
+    children:
+      - id: "5a"
+        prompt: "The objective or goal of the project"
+        field: { type: text_box, lines: 5 }
+      - id: "5b"
+        prompt: "How individual members of your family participated"
+        field: { type: text_box, lines: 6 }
+      - id: "5c"
+        prompt: "The results of the project"
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    intro: "Do the following:"
+    notes:
+      - "Note: Some of the issues surrounding requirement 6 for the family meeting could be considered of a personal nature. Use discretion when reviewing this requirement with the Scout. Discussion of each of these subjects will very likely carry over to more than one family meeting."
+    children:
+      - id: "6a"
+        prompt: "Discuss with your counselor how to plan and carry out a family meeting."
+        field: { type: text_box, lines: 6 }
+      - id: "6b"
+        prompt: >
+          Prepare a meeting agenda that includes the following topics, review it
+          with your parent or guardian, and then carry out one or more family
+          meetings:
+        children:
+          - id: "6b1"
+            prompt: "How living the principles of the Scout Oath and Scout Law contributes to your family life"
+            field: { type: text_box, lines: 5 }
+          - id: "6b2"
+            prompt: "The greatest dangers and addictions facing youth in today's society (examples include mental health challenges, use of tobacco products, alcohol, or drugs and other items such as debts, social media, etc.)"
+            field: { type: text_box, lines: 6 }
+          - id: "6b3"
+            prompt: "Discuss with a parent or guardian how bodily changes can affect the choices you make as you physically and mentally mature."
+            field: { type: text_box, lines: 5 }
+          - id: "6b4"
+            prompt: "Personal and family finances"
+            field: { type: text_box, lines: 5 }
+          - id: "6b5"
+            prompt: "A crisis situation within your family and whom you can turn to for support during these situations."
+            field: { type: text_box, lines: 5 }
+          - id: "6b6"
+            prompt: "The effect of technology on your family"
+            field: { type: text_box, lines: 5 }
+          - id: "6b7"
+            prompt: "Good etiquette and manners"
+            field: { type: text_box, lines: 5 }
+
+  - id: "7"
+    prompt: >
+      Discuss with your counselor your understanding of what makes an effective
+      parent or guardian and why, and your thoughts on the parent or guardian's
+      role and responsibilities in the family.
+    field: { type: text_box, lines: 9 }

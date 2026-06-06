@@ -1,0 +1,118 @@
+badge:
+  name: Game Design
+  slug: game-design
+  requirements_revision: "2023-01-01"
+  description: >
+    Game Design is about understanding what makes games fun and then designing,
+    prototyping, and testing one of your own. You will analyze existing games,
+    learn key design terms, and iterate on a game through playtesting until it
+    works.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Analyze four games you have played, each from a different medium. Identify the medium, player format, objectives, rules, resources, and theme (if relevant). Discuss with your counselor the play experience, what you enjoy in each game, and what you dislike. Make a chart to compare and contrast the games."
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Game and medium", type: text_field }
+            - { label: "Player format", type: text_field }
+            - { label: "Objectives", type: text_box, lines: 2 }
+            - { label: "Rules", type: text_box, lines: 2 }
+            - { label: "Resources", type: text_box, lines: 2 }
+            - { label: "Theme", type: text_field }
+            - { label: "Likes and dislikes", type: text_box, lines: 3 }
+      - id: "1b"
+        prompt: "Describe four types of play value and provide an example of a game built around each concept. Discuss with your counselor other reasons people play games."
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Type of play value", type: text_field }
+            - { label: "Example game", type: text_field }
+
+  - id: "2"
+    prompt: "Discuss with your counselor FIVE of the following 17 game design terms. For each term that you pick, describe how it relates to a specific game: story, setting, characters, play sequence, level design, interface design, difficulty, balance, depth, pace, replay value, age appropriateness, single-player vs. multiplayer, cooperative vs. competitive, turn-based vs. real-time, strategy vs. reflex vs. chance, or abstract vs. thematic."
+    field:
+      type: repeated_block
+      count: 5
+      template:
+        - { label: "Term", type: text_field }
+        - { label: "How it relates to a specific game", type: text_box, lines: 3 }
+
+  - id: "3"
+    prompt: "Define the term intellectual property. Describe the types of intellectual property associated with the game design industry. Describe how intellectual property is protected and why protection is necessary. Define and give an example of a licensed property."
+    field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Pick a game where the players can change the rules or objectives (examples: basketball, hearts, chess, kickball). Briefly summarize the standard rules and objectives and play through the game normally."
+        field: { type: text_box, lines: 7 }
+      - id: "4b"
+        prompt: "Propose changes to several rules or objectives. Predict how each change will affect gameplay."
+        field: { type: text_box, lines: 7 }
+      - id: "4c"
+        prompt: "Play the game with one rule or objective change, observing how the players' actions and emotional experiences are affected by the rule change. Repeat this process with two other changes."
+        field: { type: text_box, lines: 8 }
+      - id: "4d"
+        prompt: "Explain to your counselor how the changes affected the actions and experience of the players. Discuss the accuracy of your predictions."
+        field: { type: text_box, lines: 7 }
+
+  - id: "5"
+    prompt: "Design a new game. Any game medium or combination of mediums is acceptable. Record your work in a game design notebook."
+    children:
+      - id: "5a"
+        prompt: "Write a vision statement for your game. Identify the medium, player format, objectives, and theme of the game. If suitable, describe the setting, story, and characters."
+        field: { type: text_box, lines: 8 }
+      - id: "5b"
+        prompt: "Describe the reason that someone would want to play your game."
+        field: { type: text_box, lines: 5 }
+      - id: "5c"
+        prompt: "Make a preliminary list of the rules of the game. Define the resources."
+        field: { type: text_box, lines: 8 }
+      - id: "5d"
+        prompt: "Draw the game elements."
+        field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: "Do the following: Note: You must have your counselor's approval of your concept before you begin creating the prototype."
+    children:
+      - id: "6a"
+        prompt: "Prototype your game from requirement 5. If applicable, demonstrate to your counselor that you have addressed player safety through the rules and equipment. Record your work in your game design notebook."
+        field: { type: text_box, lines: 7 }
+      - id: "6b"
+        prompt: "Test your prototype with as many other people as you need to meet the player format. Compare the play experience to your descriptions from requirement 5(b). Correct unclear rules, holes in the rules, dead ends, and obvious rule exploits. Change at least one rule, mechanic, or objective from your first version of the game, and describe why you are making the change. Play the game again. Record in your game design notebook whether or not your change had the expected effect."
+        field: { type: text_box, lines: 9 }
+      - id: "6c"
+        prompt: "Repeat 6(b) at least two more times and record the results in your game design notebook."
+        field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: "Blind test your game. Do the following:"
+    children:
+      - id: "7a"
+        prompt: "Write an instruction sheet that includes all of the information needed to play the game. Clearly describe how to set up the game, play the game, and end the game. List the game objectives."
+        field: { type: text_box, lines: 9 }
+      - id: "7b"
+        prompt: "Share your prototype from requirement 6 with a group of players that has not played it or witnessed a previous playtest. Provide them with your instruction sheet(s) and any physical components. Watch them play the game, but do not provide them with instruction. Record their feedback in your game design notebook."
+        field: { type: text_box, lines: 8 }
+      - id: "7c"
+        prompt: "Share your game design notebook with your counselor. Discuss the player reactions to your project and what you learned about the game design process. Based on your testing, determine what you like most about your game and suggest one or more changes."
+        field: { type: text_box, lines: 8 }
+
+  - id: "8"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) With your parent or guardian's permission and your counselor's approval, visit with a professional in the game development industry and ask them about their job and how it fits into the overall development process."
+        - "(b) Meet with a professional in game development education and discuss the skills they emphasize in the classroom."
+    children:
+      - id: "8-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }

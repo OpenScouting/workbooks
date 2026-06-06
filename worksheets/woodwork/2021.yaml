@@ -1,0 +1,121 @@
+badge:
+  name: Woodwork
+  slug: woodwork
+  requirements_revision: "2021-01-01"
+  description: >
+    Woodwork is the craft of shaping lumber into useful and lasting objects
+    with hand tools. Earning this badge teaches you to work safely, understand
+    wood and how it is produced, care for and sharpen your tools, and design
+    and build projects of your own.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Explain to your counselor the most likely hazards you may encounter
+          while participating in woodwork activities, and what you should do to
+          anticipate, help prevent, mitigate, and respond to these hazards.
+          Explain what precautions you should take to safely use your tools.
+        field: { type: text_box, lines: 8 }
+      - id: "1b"
+        prompt: >
+          Show that you know first aid for injuries that could occur while
+          woodworking, including splinters, scratches, cuts, severe bleeding,
+          and shock. Tell what precautions must be taken to help prevent loss of
+          eyesight or hearing, and explain why and when it is necessary to use a
+          dust mask.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Splinters
+            - Scratches
+            - Cuts
+            - Severe bleeding
+            - Shock
+            - Preventing loss of eyesight or hearing
+            - Why and when to use a dust mask
+      - id: "1c"
+        prompt: "Earn the Totin' Chip recognition."
+        field: { type: checkbox, label: "Earned the Totin' Chip recognition." }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Describe how timber is grown, harvested, and milled. Tell how lumber
+          is cured, seasoned, graded, and sized.
+        field: { type: text_box, lines: 8 }
+      - id: "2b"
+        prompt: >
+          Collect and label blocks of six kinds of wood useful in woodworking.
+          Describe the chief qualities of each. Give the best uses of each.
+        field:
+          type: repeated_block
+          count: 6
+          template:
+            - { label: "Kind of wood", type: text_field }
+            - { label: "Chief qualities", type: text_box, lines: 2 }
+            - { label: "Best uses", type: text_box, lines: 2 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Show the proper care, use, and storage of all working tools and
+          equipment that you own or use at home or school.
+        field: { type: text_box, lines: 7 }
+      - id: "3b"
+        prompt: "Sharpen correctly the cutting edges of two different tools."
+        field: { type: checkbox, label: "Sharpened correctly the cutting edges of two different tools." }
+
+  - id: "4"
+    prompt: >
+      Using a saw, plane, hammer, brace, and bit, make something useful of wood.
+      Cut parts from lumber that you have squared and measured from working
+      drawings.
+    field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Create your own woodworking project. Begin by making working drawings,
+      list the materials you will need to complete your project, and then build
+      your project. Keep track of the time you spend and the cost of the
+      materials.
+    children:
+      - id: "5-materials"
+        prompt: "List of materials needed"
+        field:
+          type: table
+          headers: ["Material", "Quantity", "Cost"]
+          rows: 8
+          cols: 3
+      - id: "5-time"
+        prompt: "Time spent and total cost of materials"
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Make working drawings of a project needing beveled or rounded edges and build it."
+        - "(b) Make working drawings of a project needing curved or incised cuttings and build it."
+        - "(c) Make working drawings of a project needing miter, dowel, or mortise and tenon joints and build it."
+        - "(d) Make a cabinet, box, or something else with a door or lid fastened with inset hinges."
+        - "(e) Help make wooden toys for underprivileged children; OR help carry out a woodworking service project approved by your counselor for a charitable organization."
+    children:
+      - id: "6-notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Talk with a cabinetmaker or finish carpenter. Learn about training,
+      apprenticeships, career opportunities, work conditions, work hours, pay
+      rates, and union organization that woodworking experts have in your area.
+    field: { type: text_box, lines: 10 }

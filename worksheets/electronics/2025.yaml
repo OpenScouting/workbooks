@@ -1,0 +1,99 @@
+badge:
+  name: Electronics
+  slug: electronics
+  requirements_revision: "2025-01-01"
+  description: >
+    Electronics takes you inside the circuits that power modern life. You will
+    learn to read schematics, solder safely, work with digital and analog
+    components, and build a working project of your own.
+
+requirements:
+  - id: "1"
+    prompt: "Describe the safety precautions you must exercise when using, building, altering, or repairing electronic devices."
+    field: { type: text_box, lines: 8 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Draw a simple schematic diagram. It must show resistors, capacitors,
+          and transistors or integrated circuits. Use the correct symbols.
+          Label all parts.
+        field: { type: text_box, lines: 10 }
+      - id: "2b"
+        prompt: "Tell the purpose of each part."
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    intro: "Do the following:"
+    children:
+      - id: "3a"
+        prompt: "Show the right way to solder and desolder."
+        field: { type: text_box, lines: 5 }
+      - id: "3b"
+        prompt: "Show how to avoid heat damage to electronic components."
+        field: { type: text_box, lines: 5 }
+      - id: "3c"
+        prompt: "Tell about the function of a printed circuit board. Tell what precautions should be observed when soldering printed circuit boards."
+        field: { type: text_box, lines: 6 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Discuss each of the following with your counselor:"
+        children:
+          - id: "4a1"
+            prompt: "How to use electronics for a control purpose."
+            field: { type: text_box, lines: 5 }
+          - id: "4a2"
+            prompt: "Explain the basic principles of digital logic."
+            field: { type: text_box, lines: 5 }
+          - id: "4a3"
+            prompt: "How to use electronics for three different analog applications."
+            field: { type: text_box, lines: 6 }
+      - id: "4b"
+        prompt: "Show how to change three decimal numbers into binary numbers and three binary numbers into decimal numbers."
+        field: { type: text_box, lines: 7 }
+      - id: "4c"
+        prompt: >
+          Choose ONE of the following THREE projects. For your project, find or
+          create a schematic diagram. To the best of your ability, explain to
+          your counselor how the circuit you built operates.
+        field:
+          type: checklist
+          items:
+            - "A control device"
+            - "A digital circuit"
+            - "An analog circuit"
+      - id: "4c-notes"
+        prompt: "Explain how the circuit you built operates"
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    intro: "Do the following:"
+    children:
+      - id: "5a"
+        prompt: "Show how to solve a simple problem involving current, voltage, and resistance using Ohm's law."
+        field: { type: text_box, lines: 6 }
+      - id: "5b"
+        prompt: "Tell about the need for and the use of test equipment in electronics. Name three types of test equipment. Tell how they operate."
+        field: { type: text_box, lines: 7 }
+      - id: "5c"
+        prompt: "Demonstrate to your counselor how to read the colored bands of a resistor to determine its resistance value."
+        field: { type: text_box, lines: 5 }
+      - id: "5d"
+        prompt: "Explain the differences between Through Hole and Surface Mount assembly technologies and give three advantages of each."
+        field: { type: text_box, lines: 7 }
+
+  - id: "6"
+    prompt: >
+      Identify three career opportunities that would use skills and knowledge
+      in electronics. Pick one and research the training, education,
+      certification requirements, experience, and expenses associated with
+      entering the field. Research the prospects for employment, starting
+      salary, advancement opportunities and career goals associated with this
+      career. Discuss what you learned with your counselor and whether you
+      might be interested in this career.
+    field: { type: text_box, lines: 10 }

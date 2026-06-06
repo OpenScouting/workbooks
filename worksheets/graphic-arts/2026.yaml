@@ -1,0 +1,95 @@
+badge:
+  name: Graphic Arts
+  slug: graphic-arts
+  requirements_revision: "2026-01-01"
+  description: >
+    Graphic arts is the craft of turning ideas into printed and digital
+    communication. Earning this badge introduces you to the major printing
+    processes, type and design choices, and the careers that bring words and
+    images to life on the page and screen.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Review with your counselor the processes for producing printed
+      communications: offset lithography, screen printing, electronic/digital,
+      relief, and gravure. Collect samples of three products, each one produced
+      using a different printing process, or draw diagrams to help you with your
+      description.
+    field: { type: text_box, lines: 10 }
+
+  - id: "2"
+    prompt: >
+      Explain the differences between continuous tone, line, and halftone
+      artwork. Describe how digital images can be created and/or stored in a
+      computer.
+    field: { type: text_box, lines: 8 }
+
+  - id: "3"
+    prompt: >
+      Design a printed piece (flyer, T-shirt, program, form, etc.). Explain your
+      decisions for the typeface or typefaces you use and the way you arrange
+      the elements in your design. Explain which printing process is best suited
+      for printing your design. If desktop publishing is available, identify
+      what hardware and software would be appropriate for outputting your design.
+    field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    prompt: >
+      Produce the design you created for requirement 3 using one of the
+      following printing processes:
+    field:
+      type: checklist
+      items:
+        - "Offset lithography: Make a layout, and produce a plate using a process approved by your counselor. Run the plate and print at least 50 copies."
+        - "Screen printing: Make a hand-cut or photographic stencil and attach it to a screen that you have prepared. Mask the screen and print at least 20 copies."
+        - "Electronic/digital printing: Create a layout in electronic form, download it to the press or printer, and run 50 copies. If no electronic interface to the press or printer is available, you may print and scan a paper copy of the layout."
+        - "Relief printing: Prepare a layout or set the necessary type. Make a plate or lock up the form. Use this to print 50 copies."
+    children:
+      - id: "4-notes"
+        prompt: "Notes on the printing process you used"
+        field: { type: text_box, lines: 6 }
+
+  - id: "5"
+    intro: "Postpress Operations. Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          Discuss the finishing operations of padding, drilling, cutting, and
+          trimming with your counselor.
+        field: { type: text_box, lines: 6 }
+      - id: "5b"
+        prompt: >
+          Collect, describe, or identify examples of the following types of
+          binding: perfect, spiral, plastic comb, saddle stitch, and case.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - Perfect
+            - Spiral
+            - Plastic comb
+            - Saddle stitch
+            - Case
+
+  - id: "6"
+    prompt: "Do ONE of the following, and then describe the highlights of your visit:"
+    field:
+      type: checklist
+      items:
+        - "Visit a newspaper printing plant: Follow a story from the editor to the press."
+        - "Visit a retail, commercial, or in-plant printing facility. Follow a project from beginning to end."
+        - "Visit a school's graphic arts program. Find out what courses are available and what the prerequisites are."
+        - "With your parent or guardian's permission, visit three websites that belong to graphic arts professional organizations and/or printing-related companies (suppliers, manufacturers, printers). Print out or download product or service information from two of the sites."
+    children:
+      - id: "6-notes"
+        prompt: "Highlights of your visit"
+        field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Find out about three career opportunities in graphic arts. Pick one and
+      find out the education, training, and experience required for this
+      profession. Discuss this with your counselor, and explain why this
+      profession might interest you.
+    field: { type: text_box, lines: 10 }

@@ -1,0 +1,120 @@
+badge:
+  name: Dentistry
+  slug: dentistry
+  requirements_revision: "2025-01-01"
+  description: >
+    Dentistry keeps your teeth and gums healthy for a lifetime. This badge
+    explores tooth structure, the causes of decay and gum disease, how to
+    prevent dental problems, and the careers in the field.
+
+requirements:
+  - id: "1"
+    prompt: >
+      Using X-ray (radiographic) films or images and with your counselor's
+      guidance, do the following:
+    children:
+      - id: "1a"
+        prompt: "Study the tooth structure and look for decay."
+        field: { type: checkbox, label: "Studied the tooth structure and looked for decay." }
+      - id: "1b"
+        prompt: >
+          Draw a lower molar, using the radiographs as a guide. Label its parts
+          and surfaces. Show surrounding structures such as bone and gum tissues.
+        field: { type: text_box, lines: 10 }
+      - id: "1c"
+        prompt: >
+          Show on your drawing where the nerves and blood vessels enter and leave
+          the tooth.
+        field: { type: checkbox, label: "Showed on my drawing where the nerves and blood vessels enter and leave the tooth." }
+      - id: "1d"
+        prompt: "Show on your drawing where bacterial plaque is most likely to be found."
+        field: { type: checkbox, label: "Showed on my drawing where bacterial plaque is most likely to be found." }
+
+  - id: "2"
+    prompt: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Tell or write about what causes dental decay and gum disease. Tell how
+          each of the following contributes to dental decay and gum disease:
+          bacterial plaque, sugars, and acid.
+        field:
+          type: labeled_rows
+          lines_each: 3
+          labels:
+            - "Bacterial plaque"
+            - "Sugars"
+            - "Acid"
+      - id: "2b"
+        prompt: >
+          Tell the possible causes for traumatic tooth loss, describe the types
+          of mouth guards used to help prevent tooth trauma, and list the
+          athletic activities during which a person should wear a mouth guard.
+        field: { type: text_box, lines: 8 }
+      - id: "2c"
+        prompt: "Explain the first-aid procedure for saving a tooth that has been knocked out."
+        field: { type: text_box, lines: 6 }
+      - id: "2d"
+        prompt: "Discuss how the use of tobacco products can negatively affect your oral health."
+        field: { type: text_box, lines: 6 }
+
+  - id: "3"
+    prompt: >
+      Arrange for a visit with a dentist. Before you go, ask whether your visit
+      can include a dental examination and a plaque-control demonstration.
+      Afterward, ask questions about things you want to know. Then tell your
+      counselor what the dentist does during a checkup examination.
+    field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Name at least five instruments and five pieces of equipment a dentist uses."
+        - "(b) With the help of a dentist, prepare a dental stone cast using a vibrator, a mixing bowl, a water measure, a plastic measure, model stone, and a spatula."
+        - "(c) Keep a record of everything you eat for three days. Circle those items that may provide the sugars that bacterial plaque needs to make acid. List snacks that you should avoid to help maintain the best oral health."
+    children:
+      - id: "4-notes"
+        prompt: "Notes from your two chosen options"
+        field: { type: text_box, lines: 10 }
+
+  - id: "5"
+    prompt: "Discuss with your counselor the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          How fluorides help prevent tooth decay and the ways fluorides can be
+          provided to the teeth.
+        field: { type: text_box, lines: 6 }
+      - id: "5b"
+        prompt: >
+          How the mouth is related to the rest of the body. Topics might include
+          chewing, saliva, enzymes, nutrition, and speech.
+        field: { type: text_box, lines: 6 }
+
+  - id: "6"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Make a model tooth out of soap, clay, paper-mache, or wax. Using a string and a large hand brush, show your troop or a school class proper tooth-brushing and flossing procedures."
+        - "(b) Make a poster on the prevention of dental disease. Show the importance of good oral health."
+        - "(c) Collect at least five advertisements for different toothpastes. List the claims that each one makes. Tell about the accuracy of the advertisements."
+        - "(d) Write a feature story for your school newspaper on the proper care of teeth and gums. Include in your story how the use of tobacco products can negatively affect a person's oral health."
+        - "(e) Make drawings and write about the progress of dental decay. Describe the types of dental filling and treatments a dentist can use to repair dental decay problems."
+    children:
+      - id: "6-notes"
+        prompt: "Notes from your two chosen options"
+        field: { type: text_box, lines: 10 }
+
+  - id: "7"
+    prompt: >
+      Identify three career opportunities that would use skills and knowledge in
+      dentistry. Pick one and research the training, education, certification
+      requirements, experience, and expenses associated with entering the field.
+      Research the prospects for employment, starting salary, advancement
+      opportunities and career goals associated with this career. Discuss what
+      you learned with your counselor and whether you might be interested in this
+      career.
+    field: { type: text_box, lines: 10 }

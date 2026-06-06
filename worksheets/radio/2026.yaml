@@ -1,0 +1,352 @@
+badge:
+  name: Radio
+  slug: radio
+  requirements_revision: "2026-01-01"
+  description: >
+    The Radio merit badge explores how radio waves carry information across the
+    room and around the world. Scouts learn radio fundamentals, hardware, and
+    regulation, then dive into a specialty such as amateur radio, broadcasting,
+    or shortwave listening.
+
+requirements:
+  - id: "1"
+    intro: "Radio Safety. Explain the safety precautions for working with radio gear, including:"
+    children:
+      - id: "1a"
+        prompt: >
+          Grounding for direct and alternating current circuits, power outlets,
+          antennas, and lightning.
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: "Preventing and treating electrical burns"
+        field: { type: text_box, lines: 5 }
+      - id: "1c"
+        prompt: "Preventing lithium-ion battery fires in cell phones and other devices."
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    intro: "Radio Fundamentals. Do the following:"
+    children:
+      - id: "2a"
+        prompt: "Do the following:"
+        children:
+          - id: "2a1"
+            prompt: >
+              Draw a chart of the electromagnetic spectrum covering 300 kilohertz
+              (kHz) to 3,000 megahertz (MHz).
+            field: { type: text_box, lines: 6 }
+          - id: "2a2"
+            prompt: >
+              Label the MF, HF, VHF, UHF, and microwave portions of the spectrum
+              on your diagram.
+            field: { type: text_box, lines: 4 }
+          - id: "2a3"
+            prompt: >
+              Locate on your chart at least eight radio services, such as AM and
+              FM commercial broadcast, citizens band (CB), television, amateur
+              radio (at least four amateur radio bands), public service (police
+              and fire), cellular, Wi-Fi, and Bluetooth.
+            field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: "Discuss the following topics with your counselor:"
+        children:
+          - id: "2b1"
+            prompt: "The definition of radio"
+            field: { type: text_box, lines: 4 }
+          - id: "2b2"
+            prompt: "The differences between broadcast radio and two-way radio"
+            field: { type: text_box, lines: 4 }
+          - id: "2b3"
+            prompt: "The differences between commercial broadcast radio and hobby radio"
+            field: { type: text_box, lines: 4 }
+
+  - id: "3"
+    intro: "How Radio Waves Travel. Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Sketch a diagram showing how different radio wavelengths can travel
+          locally or around the world.
+        field: { type: text_box, lines: 6 }
+      - id: "3b"
+        prompt: >
+          Explain how the radio stations WWV and WWVH can be used to help
+          determine what you can expect to hear when you listen to a shortwave
+          radio.
+        field: { type: text_box, lines: 6 }
+      - id: "3c"
+        prompt: "Explain the difference between a distant (DX) and a local station."
+        field: { type: text_box, lines: 5 }
+
+  - id: "4"
+    intro: "Information by Radio. Discuss the following with your counselor:"
+    children:
+      - id: "4a"
+        prompt: >
+          How radio waves carry information using continuous wave (CW) Morse Code
+          transmission, amplitude modulation (AM), frequency modulation (FM),
+          single sideband (SSB) transmission, and frequency hopping.
+        field: { type: text_box, lines: 6 }
+      - id: "4b"
+        prompt: >
+          How digitized radio standards including Bluetooth, Wi-Fi, and 5G can
+          offer more reliable data transmission and reception than analog
+          standards.
+        field: { type: text_box, lines: 6 }
+      - id: "4c"
+        prompt: "How the effective range varies for different methods of information encoding."
+        field: { type: text_box, lines: 5 }
+      - id: "4d"
+        prompt: >
+          How the maximum data rate from a Wi-Fi radio system compares to a
+          hard-wired or fiber-optic system.
+        field: { type: text_box, lines: 5 }
+
+  - id: "5"
+    intro: "Radio Hardware and Services. Do the following:"
+    children:
+      - id: "5a"
+        prompt: "Explain the differences between a block diagram and a schematic diagram."
+        field: { type: text_box, lines: 5 }
+      - id: "5b"
+        prompt: >
+          Draw a block diagram for a radio station that shows a microphone,
+          speaker, transceiver, transmitter, receiver, amplifier, feedline, and
+          antenna and discuss the function of these components.
+        field: { type: text_box, lines: 8 }
+      - id: "5c"
+        prompt: "List consumer devices and services that use analog or digital radio communications."
+        field: { type: text_box, lines: 5 }
+      - id: "5d"
+        prompt: "Explain how NOAA Weather Radio (NWR) can alert you to danger."
+        field: { type: text_box, lines: 5 }
+      - id: "5e"
+        prompt: "Explain how RFID works and what are some of its uses in everyday life."
+        field: { type: text_box, lines: 5 }
+
+  - id: "6"
+    intro: "Radio Regulation. Discuss the following with your counselor:"
+    children:
+      - id: "6a"
+        prompt: >
+          What the Federal Communications Commission (FCC) does and how it is
+          different from the International Telecommunication Union (ITU).
+        field: { type: text_box, lines: 5 }
+      - id: "6b"
+        prompt: "How radio station call signs are used in broadcast radio and amateur radio."
+        field: { type: text_box, lines: 5 }
+      - id: "6c"
+        prompt: "How the phonetic alphabet is used to communicate clearly."
+        field: { type: text_box, lines: 4 }
+
+  - id: "7"
+    intro: "Cell Phones. Do the following:"
+    children:
+      - id: "7a"
+        prompt: "Explain how cellular systems differ from broadcast and hobby radio."
+        field: { type: text_box, lines: 5 }
+      - id: "7b"
+        prompt: "Explain what Airplane Mode is and why it is important."
+        field: { type: text_box, lines: 4 }
+      - id: "7c"
+        prompt: "Explain how cell phones keep the correct time and show locations and elevations."
+        field: { type: text_box, lines: 5 }
+      - id: "7d"
+        prompt: "Explain the benefits and limitations of cell phones in emergencies."
+        field: { type: text_box, lines: 5 }
+      - id: "7e"
+        prompt: "Explain wireless charging for cell phones and other devices."
+        field: { type: text_box, lines: 4 }
+
+  - id: "8"
+    prompt: "Amateur and Professional Radio. Do ONE of the following options:"
+    field:
+      type: checklist
+      items:
+        - "Option A: Amateur Radio. Do ALL of the option A steps."
+        - "Option B: Radio Broadcasting. Do ALL of the option B steps."
+        - "Option C: Shortwave and Medium-Wave Listening. Do ALL of the option C steps."
+        - "Option D: Amateur Radio Direction Finding. Do ALL of the option D steps."
+        - "Option E: Family Radio Service (FRS) and General Mobile Radio Service (GMRS) Walkie Talkies. Do ALL of the option E steps."
+    children:
+      - id: "8a"
+        prompt: "Option A: Amateur Radio. Do ALL of the following:"
+        children:
+          - id: "8a1"
+            prompt: >
+              Tell why the FCC has an amateur radio service. Describe activities
+              that amateur radio operators can do on the air, once they have
+              earned an amateur radio license.
+            field: { type: text_box, lines: 6 }
+          - id: "8a2"
+            prompt: >
+              Explain differences between the Technician, General, and Extra Class
+              license requirements and privileges. Explain who administers amateur
+              radio exams.
+            field: { type: text_box, lines: 6 }
+          - id: "8a3"
+            prompt: "Explain at least five Q signals or amateur radio terms."
+            field: { type: text_box, lines: 5 }
+          - id: "8a4"
+            prompt: "Explain how you would make an emergency call on voice or Morse code."
+            field: { type: text_box, lines: 5 }
+          - id: "8a5"
+            prompt: >
+              Explain the differences between handheld, mobile, and base station
+              transceivers and their uses. Explain the use of amateur radio
+              repeaters.
+            field: { type: text_box, lines: 6 }
+          - id: "8a6"
+            prompt: >
+              Using proper call signs, Q signals, and abbreviations, carry on a
+              10-minute real or simulated amateur radio contact using voice, Morse
+              code, or digital mode. Properly log the real or simulated amateur
+              radio contact, and record the signal report. Note: Licensed amateur
+              radio operators may substitute five QSL cards as evidence of
+              contacts with five amateur radio operators.
+            field: { type: text_box, lines: 6 }
+      - id: "8b"
+        prompt: "Option B: Radio Broadcasting. Do ALL of the following:"
+        children:
+          - id: "8b1"
+            prompt: >
+              Discuss with your counselor FCC broadcast regulations. Include power
+              levels, frequencies, and the regulations for low-power stations.
+            field: { type: text_box, lines: 6 }
+          - id: "8b2"
+            prompt: >
+              Prepare a program schedule for radio station "KBSA" of exactly
+              one-half hour, including music, news, commercials, and proper
+              station identification. Record your program on audiotape or in a
+              digital audio format, using proper techniques.
+            field: { type: text_box, lines: 8 }
+          - id: "8b3"
+            prompt: >
+              Listen to and properly log 15 broadcast stations. Determine the
+              program format and target audience for five of these stations.
+            field:
+              type: table
+              headers: ["Station", "Frequency", "Format", "Target audience"]
+              rows: 15
+              cols: 4
+          - id: "8b4"
+            prompt: >
+              Explain to your counselor at least eight terms used in commercial
+              broadcasting, such as segue, cut, fade, continuity, remote,
+              Emergency Alert System, network, cue, dead air, PSA, and playlist.
+            field: { type: text_box, lines: 6 }
+          - id: "8b5"
+            prompt: >
+              Discuss with your counselor alternative radio platforms such as
+              internet streaming, satellite radio, and podcasts.
+            field: { type: text_box, lines: 5 }
+      - id: "8c"
+        prompt: "Option C: Shortwave and Medium-Wave Listening. Do ALL of the following:"
+        children:
+          - id: "8c1"
+            prompt: >
+              Listen across several shortwave bands for four one-hour periods, at
+              least one period during daylight hours and at least one period at
+              night. Log the stations properly and locate them geographically on a
+              map, globe, or web-based mapping service.
+            field:
+              type: table
+              headers: ["Date/Time", "Frequency/Band", "Station", "Location"]
+              rows: 10
+              cols: 4
+          - id: "8c2"
+            prompt: >
+              Listen to several medium-wave stations for two one-hour periods, one
+              period during daylight hours and one period at night. Log the
+              stations properly and locate them on a map, globe, or web-based
+              mapping service.
+            field:
+              type: table
+              headers: ["Date/Time", "Frequency", "Station", "Location"]
+              rows: 8
+              cols: 4
+          - id: "8c3"
+            prompt: >
+              Compare your daytime and nighttime logs; note the frequencies on
+              which your selected stations were loudest during each session.
+              Explain differences in the signal strength from one period to the
+              next.
+            field: { type: text_box, lines: 6 }
+          - id: "8c4"
+            prompt: >
+              Compare your medium-wave broadcast station logs and explain why some
+              distant stations are heard at your location only during the night.
+            field: { type: text_box, lines: 6 }
+          - id: "8c5"
+            prompt: >
+              Demonstrate listening to a radio broadcast using a
+              smartphone/cell phone. Include international broadcasts in your
+              demonstration.
+            field: { type: text_box, lines: 5 }
+      - id: "8d"
+        prompt: "Option D: Amateur Radio Direction Finding. Do ALL of the following:"
+        children:
+          - id: "8d1"
+            prompt: >
+              Describe amateur radio direction finding and explain why direction
+              finding is important as both an activity and in competition.
+            field: { type: text_box, lines: 6 }
+          - id: "8d2"
+            prompt: "Describe what frequencies and equipment are used for ARDF or fox hunting."
+            field: { type: text_box, lines: 5 }
+          - id: "8d3"
+            prompt: >
+              Build a simple directional antenna for either of the two frequencies
+              used in ARDF.
+            field: { type: checkbox, label: "Built a simple directional antenna." }
+          - id: "8d4"
+            prompt: "Participate in a simple fox hunt using your antenna along with a provided receiver."
+            field: { type: text_box, lines: 5 }
+          - id: "8d5"
+            prompt: 'Show, on a map, how you located the "fox" using your receiver.'
+            field: { type: text_box, lines: 5 }
+      - id: "8e"
+        prompt: >
+          Option E: Family Radio Service (FRS) and General Mobile Radio Service
+          (GMRS) Walkie Talkies. Do ALL of the following:
+        children:
+          - id: "8e1"
+            prompt: >
+              Explain what the Family Radio Service (FRS) and General Mobile Radio
+              Service (GMRS) are and how they are different from each other, from
+              other commercial two-way radios, and from Citizens Band (CB) and
+              amateur radio (ham).
+            field: { type: text_box, lines: 6 }
+          - id: "8e2"
+            prompt: >
+              Explain each of the following for using a FRS radio or GMRS walkie
+              talkie:
+            field:
+              type: labeled_rows
+              lines_each: 2
+              labels:
+                - "(a) Is any type of license needed to use these radios? If so: what kind?"
+                - "(b) What radio frequencies are used and how is information encoded?"
+                - "(c) How much power can be used when transmitting?"
+                - "(d) What type of antenna can be used?"
+                - "(e) What is the effective range and what limits it?"
+                - "(f) What are common everyday uses for these radios?"
+                - "(g) How can these radios be useful in an emergency?"
+          - id: "8e3"
+            prompt: >
+              Use the FRS radios or GMRS walkie talkies with family, friends, or
+              Scouts on a hike, at an event, or in a team game. Discuss what you
+              learned with your counselor.
+            field: { type: text_box, lines: 5 }
+
+  - id: "9"
+    prompt: "Careers. Do ONE of the following."
+    field:
+      type: checklist
+      items:
+        - "(a) Explore careers related to radio. Research one career to learn about the training and education needed, costs, job prospects, salary, job duties, and advancement. With permission of your parent or guardian, your research methods may include an internet or library search, an interview with a professional in the field, or a visit to a location where people in this career work or train. Discuss your findings and career interest with your counselor."
+        - "(b) Explore how you could use radio knowledge and skills to develop a hobby or to serve as a volunteer. If possible, with permission of your parent or guardian, interview a radio hobbyist or volunteer. Research training and licensing needed, expenses, and organizations that promote or support your objectives. Discuss with your counselor what short-term and long-term goals you might have if you pursue this."
+    children:
+      - id: "9-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }

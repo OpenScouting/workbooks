@@ -1,0 +1,125 @@
+badge:
+  name: Reading
+  slug: reading
+  requirements_revision: "2026-01-01"
+  description: >
+    The Reading merit badge encourages Scouts to discover the joy and value of
+    reading. Scouts explore libraries, read across many genres, share books with
+    others, and give the gift of reading through service.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Take a tour of a library. Discuss with your counselor how the library
+          is organized and what resources and/or services are offered in the
+          library.
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: >
+          Learn how to search for material using a library's card catalog or
+          computerized catalog by author, title, and subject.
+        field: { type: text_box, lines: 5 }
+      - id: "1c"
+        prompt: >
+          In a library, search the card catalog or computerized catalog for six
+          books of four different types, such as poetry, fiction, nonfiction, and
+          biographies.
+        field:
+          type: table
+          headers: ["Title", "Author", "Type"]
+          rows: 6
+          cols: 3
+      - id: "1d"
+        prompt: >
+          With the assistance of your counselor or the librarian, see if you can
+          locate on the shelves the six books you selected.
+        field: { type: text_box, lines: 4 }
+      - id: "1e"
+        prompt: "Explain what a library card is, why it is needed, and how to get one."
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    intro: "Do the following:"
+    children:
+      - id: "2a"
+        prompt: >
+          Identify a book you have enjoyed. Find out what other books the author
+          has written.
+        field: { type: text_box, lines: 6 }
+      - id: "2b"
+        prompt: >
+          Look at one or more "best books" lists. These can be based on year,
+          subject, or even all time. Identify at least one book you would like to
+          read.
+        field: { type: text_box, lines: 5 }
+
+  - id: "3"
+    prompt: >
+      Read four different types of books, such as poetry, fiction, nonfiction, or
+      biographies. Do one of the following for each book you have read:
+    field:
+      type: checklist
+      items:
+        - "(a) Write a review of the book. Include what you liked and/or didn't like about the book. Include whether you would recommend this book, and if so, who might enjoy reading it."
+        - "(b) Watch a movie based on the book. What was the same between the book and movie? What was different? Which did you enjoy more? Discuss this with your counselor."
+        - "(c) Give a book talk to your class, troop, or patrol."
+    children:
+      - id: "3-books"
+        prompt: "Record each of the four books and the response you chose for it."
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Book and type", type: text_field }
+            - { label: "Response (review, movie comparison, or book talk)", type: text_box, lines: 5 }
+
+  - id: "4"
+    prompt: >
+      Read a nonfiction book or magazine that teaches you how to do something
+      like cooking, wood-building projects, video game design, science
+      experiments, knot-tying, etc. With your counselor's and parent or
+      guardian's permission, complete a project from the book. Share your
+      experience with your counselor. Reading a merit badge pamphlet will not
+      count toward completing this requirement.
+    field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Read about the world around you from any two sources: books, magazines,
+      newspapers, the internet (with your parent or guardian's permission), field
+      manuals, etc. Topics may include Scouting, sports, environmental problems,
+      politics, social issues, current events, nature, religion, etc. Discuss
+      what you have learned with your counselor.
+    field: { type: text_box, lines: 8 }
+
+  - id: "6"
+    prompt: >
+      With your counselor's and parent or guardian's permission, choose ONE of
+      the following activities and devote at least four hours of service to that
+      activity. Discuss your participation with your counselor.
+    field:
+      type: checklist
+      items:
+        - "(a) Read to a sick, blind, or homebound person in a hospital or in an extended-care facility."
+        - "(b) Perform volunteer work at your school library or a public library."
+        - "(c) Read stories to younger children, in a group or individually."
+        - "(d) Organize a book swap in your troop, school, or place of worship."
+        - "(e) Organize a book drive to collect books. Donate them to an organization in need."
+    children:
+      - id: "6-notes"
+        prompt: "Notes on your chosen service activity"
+        field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Identify three career opportunities that would use skills and knowledge in
+      reading. Pick one and research the training, education, certification
+      requirements, experience, and expenses associated with entering the field.
+      Research the prospects for employment, starting salary, advancement
+      opportunities and career goals associated with this career. Discuss what
+      you learned with your counselor and whether you might be interested in this
+      career.
+    field: { type: text_box, lines: 10 }

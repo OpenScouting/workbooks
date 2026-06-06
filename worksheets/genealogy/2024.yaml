@@ -1,0 +1,105 @@
+badge:
+  name: Genealogy
+  slug: genealogy
+  requirements_revision: "2024-01-01"
+  description: >
+    Genealogy is the study of your family's history and the records that
+    document it. Earning this badge, you will build a family tree, interview a
+    relative, track down genealogical records, and discover the stories behind
+    your ancestors.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: "Explain to your counselor what the words genealogy, ancestor, and descendant mean."
+        field: { type: text_box, lines: 6 }
+      - id: "1b"
+        prompt: "Explain what a family tree is and what information would be kept there."
+        field: { type: text_box, lines: 5 }
+      - id: "1c"
+        prompt: "Explain what a family group record is and what information would be kept there."
+        field: { type: text_box, lines: 5 }
+
+  - id: "2"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "(a) Create a timeline for yourself or for a relative. Then write a short biography based on that time line."
+        - "(b) Keep a journal for six weeks. You must write in it at least once a week."
+    children:
+      - id: "2-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 10 }
+
+  - id: "3"
+    prompt: "With your parent or guardian's help, choose a relative or a family acquaintance you can interview in person, by telephone, or by email or letter. Record the information you collect so you do not forget it."
+    field: { type: text_box, lines: 10 }
+
+  - id: "4"
+    intro: "Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Name three types of physical genealogical resources and where you can find them, and explain how these resources can help you chart your family tree."
+        field: { type: text_box, lines: 7 }
+      - id: "4b"
+        prompt: "Name three types of digital genealogical resources and where you can find them, and explain how these resources can help you chart your family tree."
+        field: { type: text_box, lines: 7 }
+      - id: "4c"
+        prompt: "Obtain at least one genealogical document that supports an event that is or can be recorded on your pedigree chart or family group record."
+        field: { type: text_box, lines: 4 }
+      - id: "4d"
+        prompt: "Tell how you found it and how you would evaluate the genealogical information you found for requirement 4(c)."
+        field: { type: text_box, lines: 6 }
+      - id: "4e"
+        prompt: "Tell a likely place to find these type of genealogical records: marriage record, census record, birth record, and burial information."
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Marriage record"
+            - "Census record"
+            - "Birth record"
+            - "Burial information"
+
+  - id: "5"
+    prompt: "Contact ONE of the following individuals or institutions. Ask what genealogical services, records, or activities this individual or institution provides, and report the results:"
+    field:
+      type: checklist
+      items:
+        - "(a) A genealogical or lineage society"
+        - "(b) A professional genealogist (someone who gets paid for doing genealogical research)"
+        - "(c) A surname organization, such as your family's organization"
+        - "(d) A genealogical educational facility or institution"
+        - "(e) A genealogical record repository of any type (courthouse, genealogical library, state or national archive, state library, etc.)"
+    children:
+      - id: "5-results"
+        prompt: "Report the results of your contact"
+        field: { type: text_box, lines: 9 }
+
+  - id: "6"
+    prompt: "Begin your family tree by listing yourself and include at least two additional generations. You may complete this requirement by using the chart provided in the Genealogy merit badge pamphlet or the genealogy software program of your choice."
+    field: { type: text_box, lines: 10 }
+
+  - id: "7"
+    prompt: "Complete a family group record form, listing yourself and your brothers and sisters as the children. On another family group record form, show one of your parents and his or her brothers and sisters as the children. This requirement may be completed using the chart provided or the genealogy software program of your choice."
+    field: { type: text_box, lines: 10 }
+
+  - id: "8"
+    intro: "Do the following:"
+    children:
+      - id: "8a"
+        prompt: "Explain the effect computers and the internet are having on the world of genealogy."
+        field: { type: text_box, lines: 6 }
+      - id: "8b"
+        prompt: "Explain how photography (including microfilming) has influenced genealogy."
+        field: { type: text_box, lines: 6 }
+      - id: "8c"
+        prompt: "Explain how record indexing works and how that has influenced genealogy."
+        field: { type: text_box, lines: 6 }
+
+  - id: "9"
+    prompt: "Discuss what you have learned about your family and your family members through your genealogical research."
+    field: { type: text_box, lines: 10 }

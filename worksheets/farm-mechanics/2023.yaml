@@ -1,0 +1,103 @@
+badge:
+  name: Farm Mechanics
+  slug: farm-mechanics
+  requirements_revision: "2023-01-01"
+  description: >
+    Farm Mechanics teaches you how to safely maintain and repair the engines,
+    tools, and machinery that keep a farm running. You will practice shop
+    safety, preventive maintenance, and basic repair skills used by working
+    farmers and technicians.
+
+requirements:
+  - id: "1"
+    intro: "Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Discuss with your counselor the safety equipment, tools, and clothing
+          used while checking or repairing farm equipment. Use this equipment,
+          tools, and/or clothing (when needed or called for) in meeting the
+          requirements for this merit badge.
+        field: { type: text_box, lines: 7 }
+      - id: "1b"
+        prompt: "Draw a plan showing a well-equipped farm shop. Point out the shop's mandatory safety devices and features."
+        field: { type: text_box, lines: 8 }
+      - id: "1c"
+        prompt: "Find all the universal warning and safety symbols on a piece of equipment and explain what they mean."
+        field: { type: text_box, lines: 6 }
+      - id: "1d"
+        prompt: >
+          Describe what a safety data sheet (SDS) is and tell why it is used.
+          Obtain the SDS for any engine coolant, oil, grease, fuel, hydraulic
+          or transmission fluid, or other flammable or hazardous materials you
+          use in meeting the requirements for this merit badge.
+        field: { type: text_box, lines: 7 }
+
+  - id: "2"
+    prompt: "Explain how power is produced or transferred in a:"
+    children:
+      - id: "2a"
+        prompt: "Diesel engine"
+        field: { type: text_box, lines: 5 }
+      - id: "2b"
+        prompt: "Hydraulic system"
+        field: { type: text_box, lines: 5 }
+      - id: "2c"
+        prompt: "Transmission or any other power system"
+        field: { type: text_box, lines: 5 }
+
+  - id: "3"
+    prompt: "Do TWO of the following:"
+    field:
+      type: checklist
+      items:
+        - "Replace the handle of any tool found on the farm."
+        - "Organize a tool rack or a storage system for nails, bolts, nuts, and washers."
+        - "Using a hand file, properly dress the mushroomed head of a chisel or punch."
+        - "Using a hand file, correctly dress a screwdriver tip."
+    children:
+      - id: "3-notes"
+        prompt: "Notes from your chosen options"
+        field: { type: text_box, lines: 8 }
+
+  - id: "4"
+    prompt: "Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "On an engine-powered machine: Grease all fittings, change the oil and oil filter, clean the air filter, clean the radiator fins, and replace the fuel filters."
+        - "For any engine-powered machine, create a preoperational checklist; include checking the engine coolant, engine oil, hydraulic and/or transmission fluid, and battery voltage (using a voltmeter). Using your checklist, conduct a preoperational check of that machinery or equipment."
+        - "Prepare any farm machine for winter storage."
+    children:
+      - id: "4-notes"
+        prompt: "Notes from your chosen option"
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    prompt: >
+      Visit an implement dealer. Interview the dealer technician or service
+      manager for hints on good preventive maintenance. Ask why it is
+      important, the costs, and what causes wear or damage. Report what you
+      learn.
+    field: { type: text_box, lines: 10 }
+
+  - id: "6"
+    prompt: "Explain each step in ONE of the following maintenance procedures:"
+    field:
+      type: checklist
+      items:
+        - "Tightening hydraulic fittings."
+        - "Checking the air filter."
+        - "Cleaning a work piece with a wire-brush wheel."
+    children:
+      - id: "6-notes"
+        prompt: "Explain each step of your chosen procedure"
+        field: { type: text_box, lines: 8 }
+
+  - id: "7"
+    prompt: >
+      Find out about three career opportunities in farm mechanics. Pick one and
+      find out the education, training, and experience required for this
+      profession. Discuss this with your counselor, and explain why this
+      profession might interest you.
+    field: { type: text_box, lines: 10 }
