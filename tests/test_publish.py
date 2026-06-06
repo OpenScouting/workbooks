@@ -44,6 +44,17 @@ def test_badge_hash_changes_with_content(tmp_path):
     assert publish._badge_hash(yml, emblem, g) != h1        # emblem change
 
 
+def test_badge_hash_distinguishes_draft_and_release(tmp_path):
+    yml = tmp_path / "2024.yaml"
+    emblem = tmp_path / "x.png"
+    yml.write_text("badge: a")
+    emblem.write_bytes(b"PNG")
+    g = "globalhash"
+    release = publish._badge_hash(yml, emblem, g, draft=False)
+    draft = publish._badge_hash(yml, emblem, g, draft=True)
+    assert release != draft        # toggling mode forces a rebuild
+
+
 def test_render_index_lists_rows_and_links():
     rows = [
         {"name": "Camping", "pdf": "Camping.pdf", "updated": "2026-06-06", "revision": "2024"},

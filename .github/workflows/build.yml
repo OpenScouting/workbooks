@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      draft:
+        description: "Deploy the site with a DRAFT watermark on every workbook"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -43,7 +48,16 @@ jobs:
           path: dist
           key: pages-site-${{ github.run_id }}
           restore-keys: pages-site-
-      - run: mise run publish
+      # Normal pushes deploy a clean (release) site. A manual run with the
+      # draft input checked stamps every workbook DRAFT — share the Pages link
+      # while it's under review, then push (or re-run unchecked) to go clean.
+      - name: Build site
+        run: |
+          if [ "${{ inputs.draft }}" = "true" ]; then
+            mise run publish-draft
+          else
+            mise run publish
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -59,7 +59,9 @@ def main() -> None:
 @click.argument("target", type=click.Path(exists=True, path_type=Path))
 @click.option("-o", "--output", type=click.Path(path_type=Path), required=True,
               help="Output PDF path.")
-def build(target: Path, output: Path) -> None:
+@click.option("--draft/--release", default=False,
+              help="Stamp a DRAFT watermark on every page (default: release).")
+def build(target: Path, output: Path, draft: bool) -> None:
     """Build a PDF from a badge.
 
     TARGET may be a badge directory (builds its latest year) or a specific
@@ -71,8 +73,8 @@ def build(target: Path, output: Path) -> None:
             raise click.ClickException(f"No <year>.yaml found in {target}")
     else:
         yml = target
-    builder.build(yml, output)
-    click.echo(f"Built {output} (from {yml})")
+    builder.build(yml, output, draft=draft)
+    click.echo(f"Built {output} (from {yml}){' [DRAFT]' if draft else ''}")
 
 
 @main.command("build-all")
@@ -80,7 +82,9 @@ def build(target: Path, output: Path) -> None:
                                               path_type=Path))
 @click.option("-o", "--output-dir", type=click.Path(path_type=Path),
               required=True, help="Output directory for PDFs.")
-def build_all(badges_dir: Path, output_dir: Path) -> None:
+@click.option("--draft/--release", default=False,
+              help="Stamp a DRAFT watermark on every page (default: release).")
+def build_all(badges_dir: Path, output_dir: Path, draft: bool) -> None:
     """Build the latest revision of every badge in BADGES_DIR to PDFs."""
     output_dir.mkdir(parents=True, exist_ok=True)
     dirs = _badge_dirs(badges_dir)
@@ -92,7 +96,7 @@ def build_all(badges_dir: Path, output_dir: Path) -> None:
         # Title-case each slug segment for the filename (camping -> Camping).
         out = output_dir / (
             "-".join(p.capitalize() for p in d.name.split("-")) + ".pdf")
-        builder.build(yml, out)
+        builder.build(yml, out, draft=draft)
         click.echo(f"Built {out}")
     if skipped:
         click.echo(f"Skipped {skipped} retired badge(s).")
@@ -101,18 +105,22 @@ def build_all(badges_dir: Path, output_dir: Path) -> None:
 @main.command()
 @click.option("-o", "--output-dir", type=click.Path(path_type=Path),
               default="dist", help="Site output directory (default: dist).")
-def publish(output_dir: Path) -> None:
+@click.option("--draft/--release", default=False,
+              help="Watermark every workbook DRAFT (for sharing a not-yet-ready link).")
+def publish(output_dir: Path, draft: bool) -> None:
     """Incrementally build all active workbooks + index.html for GitHub Pages.
 
     Only badges whose inputs changed since the last run are rebuilt; unchanged
     PDFs are reused from output_dir (restored from CI cache between runs).
+    Switching between --draft and --release forces a full rebuild.
     """
     from . import publish as _publish
     base_dir = Path.cwd()
-    stats = _publish.build_site(base_dir, output_dir)
+    stats = _publish.build_site(base_dir, output_dir, draft=draft)
     click.echo(
         f"Published {stats['total']} workbooks "
         f"({stats['built']} built, {stats['reused']} reused) to {output_dir}"
+        f"{' [DRAFT]' if draft else ''}"
     )
 
 

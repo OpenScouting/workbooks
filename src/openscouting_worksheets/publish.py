@@ -42,16 +42,20 @@ def _global_hash(base_dir: Path) -> str:
     return h.hexdigest()
 
 
-def _badge_hash(yaml_path: Path, emblem: Path, global_hash: str) -> str:
+def _badge_hash(yaml_path: Path, emblem: Path, global_hash: str,
+                draft: bool = False) -> str:
     h = hashlib.sha256()
     h.update(global_hash.encode())
+    # Draft vs release produce different PDFs from identical source, so the
+    # mode is part of the cache key — toggling it forces every badge to rebuild.
+    h.update(b"draft" if draft else b"release")
     h.update(yaml_path.read_bytes())
     if emblem.exists():
         h.update(emblem.read_bytes())
     return h.hexdigest()
 
 
-def build_site(base_dir: Path, output_dir: Path) -> dict:
+def build_site(base_dir: Path, output_dir: Path, draft: bool = False) -> dict:
     """Incrementally build all active workbooks + index into output_dir."""
     worksheets_dir = base_dir / "worksheets"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -69,14 +73,14 @@ def build_site(base_dir: Path, output_dir: Path) -> dict:
         yml = cli._latest_yaml(d)
         badge = builder.load_badge(yml)
         emblem = base_dir / "badges" / slug / f"{slug}.png"
-        h = _badge_hash(yml, emblem, global_hash)
+        h = _badge_hash(yml, emblem, global_hash, draft)
         pdf_name = _pdf_name(slug)
         pdf_path = output_dir / pdf_name
 
         if prior.get(slug) == h and pdf_path.exists():
             reused += 1
         else:
-            builder.build(yml, pdf_path, base_dir=base_dir)
+            builder.build(yml, pdf_path, base_dir=base_dir, draft=draft)
             built += 1
 
         manifest[slug] = h

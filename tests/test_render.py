@@ -40,6 +40,19 @@ def test_pdf_has_form_fields(tmp_path):
     assert any("hypothermia" in n.lower() for n in names)
 
 
+def test_draft_watermark_present_only_in_draft(tmp_path):
+    """Draft builds stamp DRAFT on the page; release builds don't."""
+    pypdf = pytest.importorskip("pypdf")
+
+    def page1_text(draft):
+        out = tmp_path / f"Camping-{draft}.pdf"
+        builder.build(BADGE, out, base_dir=REPO, draft=draft)
+        return pypdf.PdfReader(str(out)).pages[0].extract_text() or ""
+
+    assert "DRAFT" in page1_text(True)
+    assert "DRAFT" not in page1_text(False)
+
+
 def test_draw_area_renders_without_form_field(tmp_path):
     """A draw_area is a blank canvas: it draws a box but registers no widget."""
     pypdf = pytest.importorskip("pypdf")
