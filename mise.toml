@@ -20,24 +20,37 @@ description = "Validate every YAML in badges/ against the schema"
 depends = ["install"]
 run = "worksheets validate worksheets/"
 
+# Dev builds render with a DRAFT watermark for review. Use the `release` /
+# `publish` tasks (or `--release`) to render clean, distributable copies.
+
 [tasks.build]
-description = "Build one badge's latest revision: mise run build <slug> (default camping)"
+description = "Build one badge's latest revision (DRAFT): mise run build <slug> (default camping)"
 depends = ["install"]
 run = '''
 slug="{{arg(name="slug", default="camping")}}"
 name=$(echo "$slug" | sed -E 's/(^|-)([a-z])/\1\U\2/g')
-worksheets build "worksheets/$slug" -o "dist/${name}.pdf"
+worksheets build "worksheets/$slug" -o "dist/${name}.pdf" --draft
 '''
 
 [tasks."build-all"]
-description = "Build every badge YAML in badges/ to dist/"
+description = "Build every badge to dist/ (DRAFT watermarked)"
 depends = ["install"]
-run = "worksheets build-all worksheets/ -o dist/"
+run = "worksheets build-all worksheets/ -o dist/ --draft"
+
+[tasks.release]
+description = "Render clean release PDFs (no DRAFT watermark) for every badge to dist/"
+depends = ["install"]
+run = "worksheets build-all worksheets/ -o dist/ --release"
 
 [tasks.publish]
-description = "Incrementally build the GitHub Pages site (PDFs + index.html) into dist/"
+description = "Incrementally build the clean GitHub Pages site (PDFs + index.html) into dist/"
 depends = ["install"]
 run = "worksheets publish -o dist/"
+
+[tasks."publish-draft"]
+description = "Build the full Pages site with DRAFT watermarks (to share a not-yet-ready link)"
+depends = ["install"]
+run = "worksheets publish -o dist/ --draft"
 
 [tasks.test]
 description = "Run the pytest suite"

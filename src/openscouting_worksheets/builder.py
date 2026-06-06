@@ -49,14 +49,19 @@ def _find_repo_root(start: Path) -> Path:
 
 
 def build(badge_path: Path, output_path: Path,
-          base_dir: Path | None = None) -> None:
-    """Build one badge YAML into a PDF at output_path."""
+          base_dir: Path | None = None, draft: bool = False) -> None:
+    """Build one badge YAML into a PDF at output_path.
+
+    When `draft` is True, every page gets a light DRAFT watermark beneath its
+    content — used for local dev/review builds. Release builds pass draft=False.
+    """
     badge = load_badge(badge_path)
     base_dir = base_dir or _find_repo_root(badge_path)
     asset_dir = base_dir / "assets"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    doc = WorkbookDoc(str(output_path), badge=badge, asset_dir=asset_dir)
+    doc = WorkbookDoc(str(output_path), badge=badge, asset_dir=asset_dir,
+                      draft=draft)
     styles = make_styles()
 
     story: list[Flowable] = []

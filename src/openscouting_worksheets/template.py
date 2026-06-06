@@ -47,6 +47,18 @@ BRAND_ACCENT = colors.HexColor("#F59E0B")    # warm amber
 BRAND_MUTED = colors.HexColor("#6B7280")     # neutral gray
 BRAND_RULE = colors.HexColor("#1F2937")      # near-black hairline for chrome
 
+# DRAFT watermark: large outlined letters in a light tint, running along the
+# page diagonal (lower-left to upper-right) beneath all page content. Drawn
+# only on draft builds (local dev default); release/Pages builds omit it.
+WATERMARK_TEXT = "DRAFT"
+WATERMARK_COLOR = colors.HexColor("#CBD5E1")  # light gray — low ink, non-distracting
+# Run corner-to-corner along the page diagonal (lower-left -> upper-right) so the
+# big outlined letters cross the margins and gaps on every page, reading clearly
+# behind content no matter what sits in the page center.
+WATERMARK_ANGLE = 52                           # ~atan(792/612), the letter diagonal
+WATERMARK_SIZE = 200                           # points
+WATERMARK_WIDTH = 2.0                          # stroke weight of the outline
+
 
 def make_styles():
     s = getSampleStyleSheet()
@@ -126,7 +138,7 @@ class WorkbookDoc(BaseDocTemplate):
     """The document template owning chrome for cover + body pages."""
 
     def __init__(self, filename: str, badge: Badge,
-                 asset_dir: Path | None = None, **kw):
+                 asset_dir: Path | None = None, draft: bool = False, **kw):
         super().__init__(
             filename,
             pagesize=letter,
@@ -141,6 +153,7 @@ class WorkbookDoc(BaseDocTemplate):
         )
         self.badge = badge
         self.asset_dir = asset_dir
+        self.draft = draft
         logo = (asset_dir / LOGO_FILENAME) if asset_dir else None
         self.logo_path = logo if logo and logo.exists() else None
 
@@ -170,8 +183,32 @@ class WorkbookDoc(BaseDocTemplate):
     # is reserved for the brand accent (a short amber tab on the rule) which
     # uses negligible toner when printed.
 
+    def _draw_watermark(self, canvas: Canvas) -> None:
+        """Light outlined DRAFT along the page diagonal, beneath all content.
+
+        Drawn from the onPage callback, which fires before the frame lays down
+        its flowables, so the watermark sits underneath every requirement,
+        field, and chrome element. Outlined (stroke-only) glyphs keep it light
+        and clearly non-final without obscuring anything written on top.
+        """
+        canvas.saveState()
+        canvas.translate(PAGE_W / 2, PAGE_H / 2)
+        canvas.rotate(WATERMARK_ANGLE)
+        w = canvas.stringWidth(WATERMARK_TEXT, "Helvetica-Bold", WATERMARK_SIZE)
+        canvas.setStrokeColor(WATERMARK_COLOR)
+        canvas.setLineWidth(WATERMARK_WIDTH)
+        text = canvas.beginText()
+        text.setTextRenderMode(1)  # 1 = stroke only -> outlined glyphs
+        text.setFont("Helvetica-Bold", WATERMARK_SIZE)
+        text.setTextOrigin(-w / 2, -WATERMARK_SIZE * 0.34)
+        text.textLine(WATERMARK_TEXT)
+        canvas.drawText(text)
+        canvas.restoreState()
+
     def _draw_cover_chrome(self, canvas: Canvas, doc) -> None:
         canvas.saveState()
+        if self.draft:
+            self._draw_watermark(canvas)
         # OpenScouting logo (or text wordmark fallback) on the left, the public
         # catalogue URL (clickable) on the right.
         self._draw_brand_mark(canvas,
@@ -194,6 +231,8 @@ class WorkbookDoc(BaseDocTemplate):
 
     def _draw_body_chrome(self, canvas: Canvas, doc) -> None:
         canvas.saveState()
+        if self.draft:
+            self._draw_watermark(canvas)
         # Minimal header: just Scout's Name + Troop fields. OpenScouting
         # branding and badge identity live in the footer instead, so the
         # top of every body page is dedicated to identifying *whose* work
