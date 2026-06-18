@@ -102,7 +102,7 @@ requirements:
               what a misfire, hangfire, and squib fire are. Explain and
               demonstrate proper preventive measures, and the procedures to
               follow in response to each.
-            field: { type: text_box, lines: 8 }
+            field: { type: text_box, lines: 10 }
           - id: "2A6"
             prompt: >
               Demonstrate the knowledge, skills, and attitude necessary to safely
@@ -169,7 +169,7 @@ requirements:
               and explain what a misfire, hangfire, and squib fire are. Explain
               and demonstrate proper preventive measures, and the procedures to
               follow in response to each.
-            field: { type: text_box, lines: 8 }
+            field: { type: text_box, lines: 10 }
           - id: "2B9"
             prompt: >
               Demonstrate the knowledge, skills, and attitude necessary to safely

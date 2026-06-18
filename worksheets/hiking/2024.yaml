@@ -109,19 +109,19 @@ requirements:
     children:
       - id: "5a"
         prompt: "Report: 10-mile hike #1"
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 10 }
       - id: "5b"
         prompt: "Report: 10-mile hike #2"
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 10 }
       - id: "5c"
         prompt: "Report: 10-mile hike #3"
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 10 }
       - id: "5d"
         prompt: "Report: 10-mile hike #4"
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 10 }
       - id: "5e"
         prompt: "Report: 20-mile hike"
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 10 }
 
 reference_pages:
   - title: "Outdoor Ethics"

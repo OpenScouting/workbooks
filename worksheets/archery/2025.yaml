@@ -39,7 +39,12 @@ requirements:
         field: { type: text_box, lines: 4 }
       - id: "2b"
         prompt: "Describe three or more different types of arrows."
-        field: { type: text_box, lines: 5 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Arrow type", type: text_field }
+            - { label: "Description", type: text_box, lines: 3 }
       - id: "2c"
         prompt: "Name the four principal materials for making arrow shafts."
         field: { type: text_box, lines: 3 }
@@ -87,7 +92,7 @@ requirements:
         prompt: >
           How the National Field Archery Association (NFAA) black-and-white field
           targets and blue indoor targets are scored
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 6 }
 
   - id: "5"
     prompt: >

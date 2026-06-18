@@ -73,10 +73,10 @@ requirements:
         children:
           - id: "2c1"
             prompt: "When entering and exiting an eddy."
-            field: { type: text_box, lines: 4 }
+            field: { type: text_box, lines: 5 }
           - id: "2c2"
             prompt: "When ferrying in downstream and upstream directions."
-            field: { type: text_box, lines: 4 }
+            field: { type: text_box, lines: 5 }
       - id: "2d"
         prompt: >
           Explain when, why, and how you should scout a river while ashore,

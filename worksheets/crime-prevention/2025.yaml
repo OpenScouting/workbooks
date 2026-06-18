@@ -19,7 +19,7 @@ requirements:
         prompt: >
           What are types of crimes, including property crimes, crimes against
           people, white collar crime, and environmental crime.
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 8 }
       - id: "1c"
         prompt: "Why people commit crimes."
         field: { type: text_box, lines: 5 }
@@ -112,7 +112,7 @@ requirements:
           The impact of shoplifting and employee theft (also known as shrinkage)
           and loss prevention on retail finances, customer service, and
           reputation.
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 8 }
       - id: "5b"
         prompt: "Techniques used by retail stores to prevent shoplifting."
         field: { type: text_box, lines: 6 }

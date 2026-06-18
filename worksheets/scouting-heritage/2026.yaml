@@ -111,7 +111,13 @@ requirements:
       requirement 5) over the age of 40 who were Scouts. Find out about their
       Scouting experiences. Ask about the impact that Scouting has had on their
       lives. Share what you learned with your counselor.
-    field: { type: text_box, lines: 10 }
+    field:
+      type: repeated_block
+      count: 3
+      template:
+        - { label: "Person", type: text_field }
+        - { label: "Their Scouting experiences", type: text_box, lines: 3 }
+        - { label: "Impact Scouting has had on their life", type: text_box, lines: 2 }
 
   - id: "9"
     intro: "Careers. Do ONE of the following:"

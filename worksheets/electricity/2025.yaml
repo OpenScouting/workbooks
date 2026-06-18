@@ -26,13 +26,13 @@ requirements:
         field: { type: text_box, lines: 5 }
       - id: "1e"
         prompt: "Show how to treat an electrical burn."
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 5 }
       - id: "1f"
         prompt: "Explain what to do in the event of an electrical fire."
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 5 }
       - id: "1g"
         prompt: "Explain what to do if caught out in the open during an electrical storm."
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 5 }
 
   - id: "2"
     prompt: >
@@ -53,7 +53,12 @@ requirements:
         field: { type: text_box, lines: 8 }
       - id: "4b"
         prompt: "Explain three ways that electricity is produced."
-        field: { type: text_box, lines: 6 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Way electricity is produced", type: text_field }
+            - { label: "Explanation", type: text_box, lines: 3 }
 
   - id: "5"
     prompt: "Make a simple drawing to show how a battery and an electric bell work. Describe the purpose of each of the components."
@@ -103,7 +108,7 @@ requirements:
         field: { type: text_box, lines: 6 }
       - id: "9c"
         prompt: "Electrical conditions - Generating source with example, ground, open circuit, overvoltage, potential difference, and short circuit"
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 9 }
       - id: "9d"
         prompt: "Equipment and their use - circuit, conductor, Ground Fault Circuit Interrupter (GFCI), insulator, inverter, rectifier, rheostat, substation, surge protection, solar panel, transformer, transmission and distribution systems, and wind turbine."
         field: { type: text_box, lines: 12 }

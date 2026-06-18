@@ -128,7 +128,7 @@ requirements:
         field: { type: text_box, lines: 4 }
       - id: "6d"
         prompt: "Explain when and how a rope should be retired."
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 6 }
       - id: "6e"
         prompt: "Properly coil a rope."
         field: { type: checkbox }

@@ -23,7 +23,7 @@ requirements:
           Discuss the prevention of and treatment for health concerns that could
           occur while working with ants and bees, including insect bites and
           anaphylactic shock.
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 8 }
 
   - id: "2"
     intro: "Anatomy. Do the following:"

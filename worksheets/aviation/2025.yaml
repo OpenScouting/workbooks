@@ -20,13 +20,13 @@ requirements:
         field: { type: text_box, lines: 7 }
       - id: "1c"
         prompt: "Explain the difference between a fixed wing and a rotary wing aircraft, and the benefits of each."
-        field: { type: text_box, lines: 5 }
+        field: { type: text_box, lines: 6 }
       - id: "1d"
         prompt: "Explain the operation of piston, turbine, and jet engines."
         field: { type: text_box, lines: 6 }
       - id: "1e"
         prompt: "Using a model aircraft, describe the four forces that act on an aircraft in flight."
-        field: { type: text_box, lines: 5 }
+        field: { type: text_box, lines: 7 }
       - id: "1f"
         prompt: "Explain how an airfoil generates lift, specifically noting Bernoulli's principle."
         field: { type: text_box, lines: 5 }

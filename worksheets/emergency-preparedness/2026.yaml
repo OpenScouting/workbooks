@@ -81,16 +81,16 @@ requirements:
     children:
       - id: "4a"
         prompt: "Live household electric wire"
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 5 }
       - id: "4b"
         prompt: "A structure filled with carbon monoxide"
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 5 }
       - id: "4c"
         prompt: "Clothes on fire"
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 5 }
       - id: "4d"
         prompt: "Drowning, using nonswimming rescues (including accidents on ice)"
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 6 }
 
   - id: "5"
     intro: "Signaling for Help. Do the following:"
@@ -134,16 +134,16 @@ requirements:
         children:
           - id: "8a1"
             prompt: "Crowd and traffic control"
-            field: { type: text_box, lines: 4 }
+            field: { type: text_box, lines: 6 }
           - id: "8a2"
             prompt: "Messenger service during an incident"
-            field: { type: text_box, lines: 4 }
+            field: { type: text_box, lines: 6 }
           - id: "8a3"
             prompt: "Collection and distribution services"
-            field: { type: text_box, lines: 4 }
+            field: { type: text_box, lines: 6 }
           - id: "8a4"
             prompt: "Group feeding, shelter, and sanitation"
-            field: { type: text_box, lines: 4 }
+            field: { type: text_box, lines: 6 }
       - id: "8b"
         prompt: "Prepare a written plan for mobilizing your troop when needed to do emergency service. If your troop already has a mobilization plan, present the plan to your counselor and tell your part in making the plan work."
         field: { type: text_box, lines: 10 }

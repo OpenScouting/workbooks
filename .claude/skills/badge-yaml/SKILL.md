@@ -176,14 +176,18 @@ Use `table` with descriptive headers:
 
 ## Line-count heuristics for `text_box`
 
-| Question shape                  | `lines:`           |
-|---------------------------------|--------------------|
-| Short concept ("Explain X")     | 4–6                |
-| Multi-part explanation          | 6–8                |
-| Plan / story / process          | 8–12               |
-| Per-item rows in labeled_rows   | 2–3 (`lines_each`) |
+Match the box to what the prompt actually demands. Count the distinct things the Scout must write — clauses/verbs (explain, describe, discuss, tell, list, compare, why, how), colon-led lists, and "including A, B, C". Each distinct sub-point needs roughly 2–3 lines.
 
-Err small. Text boxes now split across page boundaries, so a writer who needs more room continues onto the next page — but an oversized empty box wastes printable space.
+| Question shape                                   | `lines:`           |
+|--------------------------------------------------|--------------------|
+| Short factual recall ("Define X", "Name three Y")| 3–5                |
+| Single concept explained with reasoning          | 5–6                |
+| Two distinct parts                               | 6–7                |
+| Three+ distinct parts, or "describe in detail", or an enumerated list of items to address | 8–10 |
+| Plan / story / process / report / essay          | 10–14              |
+| Per-item rows in labeled_rows                    | 2–3 (`lines_each`) |
+
+Don't starve a multi-part prompt: a question that asks for three or four things needs an 8–10 line box, not 4. Text boxes split across page boundaries, so 14 is the practical ceiling. Cap there — an oversized empty box on a single-fact question still wastes printable space.
 
 ## Style rules
 

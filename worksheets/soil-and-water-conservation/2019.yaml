@@ -17,7 +17,12 @@ requirements:
         field: { type: text_box, lines: 6 }
       - id: "1b"
         prompt: "Describe three kinds of soil. Tell how they are different."
-        field: { type: text_box, lines: 6 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Kind of soil", type: text_field }
+            - { label: "Description and how it differs", type: text_box, lines: 3 }
       - id: "1c"
         prompt: >
           Name the three main plant nutrients in fertile soil. Tell how they can
@@ -35,7 +40,12 @@ requirements:
         field: { type: text_box, lines: 5 }
       - id: "2c"
         prompt: "Name three kinds of soil erosion. Describe each."
-        field: { type: text_box, lines: 6 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Kind of soil erosion", type: text_field }
+            - { label: "Description", type: text_box, lines: 3 }
       - id: "2d"
         prompt: "Take pictures of or draw two kinds of soil erosion."
         field:
@@ -50,7 +60,12 @@ requirements:
         field: { type: text_box, lines: 5 }
       - id: "3b"
         prompt: "Describe the effect of three kinds of erosion-control practices."
-        field: { type: text_box, lines: 6 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Erosion-control practice", type: text_field }
+            - { label: "Effect", type: text_box, lines: 3 }
       - id: "3c"
         prompt: "Take pictures of or draw three kinds of erosion-control practices."
         field:

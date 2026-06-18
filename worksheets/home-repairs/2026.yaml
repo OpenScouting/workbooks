@@ -55,7 +55,7 @@ requirements:
     children:
       - id: "2-notes"
         prompt: "Notes from your chosen options"
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 8 }
 
   - id: "3"
     prompt: >
@@ -74,7 +74,7 @@ requirements:
     children:
       - id: "3-notes"
         prompt: "Notes from your chosen options"
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 8 }
 
   - id: "4"
     prompt: >
@@ -128,7 +128,7 @@ requirements:
     children:
       - id: "6-notes"
         prompt: "Notes from your chosen options"
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 8 }
 
   - id: "7"
     prompt: "Do ONE of the following:"

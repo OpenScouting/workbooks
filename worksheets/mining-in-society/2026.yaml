@@ -63,12 +63,12 @@ requirements:
         prompt: >
           Miners protect their hands and feet from impact, pinch, vibration,
           slipping, and tripping/falling hazards.
-        field: { type: text_box, lines: 5 }
+        field: { type: text_box, lines: 7 }
       - id: "3c"
         prompt: >
           Monitoring equipment warns miners of imminent danger, and how robots,
           drones, and other technology may be used in mine rescues.
-        field: { type: text_box, lines: 5 }
+        field: { type: text_box, lines: 7 }
 
   - id: "4"
     prompt: >

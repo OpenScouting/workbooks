@@ -57,7 +57,12 @@ requirements:
         field: { type: text_box, lines: 7 }
       - id: "3c"
         prompt: "Explain the purposes of three instruments used with astronomical telescopes."
-        field: { type: text_box, lines: 6 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Instrument", type: text_field }
+            - { label: "Purpose", type: text_box, lines: 3 }
       - id: "3d"
         prompt: "Describe the proper care and storage of telescopes and binoculars both at home and in the field."
         field: { type: text_box, lines: 5 }

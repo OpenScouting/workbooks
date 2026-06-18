@@ -36,7 +36,7 @@ requirements:
         prompt: >
           Name two nonferrous alloys used by pre-Iron Age metalworkers. Name the
           metals that are combined to form these alloys.
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 6 }
       - id: "2b"
         prompt: "Name three ferrous alloys used by modern metalworkers."
         field: { type: text_box, lines: 4 }
@@ -45,7 +45,7 @@ requirements:
         field: { type: text_box, lines: 4 }
       - id: "2d"
         prompt: "Describe how to anneal a nonferrous and a ferrous metal."
-        field: { type: text_box, lines: 5 }
+        field: { type: text_box, lines: 6 }
 
   - id: "3"
     intro: "Do the following:"

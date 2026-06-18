@@ -93,14 +93,24 @@ requirements:
           Explain four of the following elements of chess strategy: exploiting
           weaknesses, force, king safety, pawn structure, space, tempo, and clock
           management.
-        field: { type: text_box, lines: 7 }
+        field:
+          type: repeated_block
+          count: 4
+          template:
+            - { label: "Strategy element", type: text_field }
+            - { label: "Explanation", type: text_box, lines: 3 }
       - id: "5b"
         prompt: >
           Explain any five of these chess tactics: clearance sacrifice, decoy,
           discovered attack, double check, double attack, fork, interposing,
           overloading, overprotecting, pin, skewer, remove the defender,
           zwischenzug, and zugzwang.
-        field: { type: text_box, lines: 8 }
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Tactic", type: text_field }
+            - { label: "Explanation", type: text_box, lines: 3 }
       - id: "5c"
         prompt: >
           Set up a chessboard as follows and with White to move first,

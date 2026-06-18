@@ -37,7 +37,11 @@ requirements:
       Ask five people (not more than one from your immediate family) about the
       role of law enforcement officers in our society. Discuss their answers with
       them. Report your findings to your counselor.
-    field: { type: text_box, lines: 8 }
+    field:
+      type: table
+      headers: ["Person", "Their view on the role of law enforcement officers"]
+      rows: 5
+      cols: 2
 
   - id: "5"
     prompt: >

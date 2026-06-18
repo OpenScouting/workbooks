@@ -108,10 +108,10 @@ requirements:
             children:
               - id: "2B1a"
                 prompt: "Tell about the six areas of Courtesy (812)."
-                field: { type: text_box, lines: 6 }
+                field: { type: text_box, lines: 8 }
               - id: "2B1b"
                 prompt: "Describe the seven areas of Scoring (808)."
-                field: { type: text_box, lines: 6 }
+                field: { type: text_box, lines: 8 }
           - id: "2B2"
             prompt: "Tell about the history of disc golf and why it is an inclusive game."
             field: { type: text_box, lines: 6 }

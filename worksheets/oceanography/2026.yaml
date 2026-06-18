@@ -185,7 +185,7 @@ requirements:
     children:
       - id: "8notes"
         prompt: "Notes from your chosen option"
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 12 }
 
   - id: "9"
     prompt: >

@@ -18,7 +18,10 @@ requirements:
       are important for an entrepreneur: communication, planning, organization,
       problem solving, decision making, basic math, adaptability, technical and
       social skills, teamwork, and leadership.
-    field: { type: text_box, lines: 10 }
+    field:
+      type: labeled_rows
+      lines_each: 2
+      labels: [Communication, Planning, Organization, "Problem solving", "Decision making", "Basic math", Adaptability, "Technical and social skills", Teamwork, Leadership]
 
   - id: "3"
     prompt: >

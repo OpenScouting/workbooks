@@ -63,7 +63,7 @@ requirements:
         prompt: >
           Explain inboard, outboard, and inboard/outboard motors, and the uses and
           advantages of each.
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 8 }
       - id: "3b"
         prompt: >
           Explain the safety procedures and precautions involving handling fuel and

@@ -86,7 +86,7 @@ requirements:
         prompt: >
           Devices at the crossing (flashing red lights, with or without bells,
           flashing red lights and gates, and cantilever flashing lights)
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 7 }
       - id: "5c"
         prompt: "Markings on the road (pavement markings and stop bars)"
         field: { type: text_box, lines: 4 }
@@ -95,7 +95,7 @@ requirements:
           Signs before the crossing (advance warning sign, advance warning sign
           for side streets, no train horn sign, and low ground clearance grade
           crossing sign)
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 7 }
       - id: "5e"
         prompt: "Signs along the railroad property (no trespassing sign)"
         field: { type: text_box, lines: 4 }
@@ -103,7 +103,7 @@ requirements:
         prompt: >
           Signs at the crossing (crossbuck sign, emergency notification system
           sign, multiple track sign, stop sign, and yield sign)
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 8 }
 
   - id: "6"
     intro: "Do EACH of the following:"
@@ -115,7 +115,7 @@ requirements:
         field: { type: text_box, lines: 5 }
       - id: "6b"
         prompt: "Explain the meaning of three horn signals."
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 5 }
       - id: "6c"
         prompt: "Describe a way to signal a train for an emergency stop."
         field: { type: text_box, lines: 4 }

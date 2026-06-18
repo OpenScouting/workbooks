@@ -108,7 +108,7 @@ requirements:
             prompt: >
               What good traits should a sales representative have? What habits
               should the sales representative avoid?
-            field: { type: text_box, lines: 4 }
+            field: { type: text_box, lines: 6 }
           - id: "6b3"
             prompt: >
               What does the owner consider when deciding whether to establish an

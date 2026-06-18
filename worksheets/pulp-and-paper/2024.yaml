@@ -33,7 +33,12 @@ requirements:
         field: { type: text_box, lines: 6 }
       - id: "2d"
         prompt: "Describe two ways the papermaking industry has addressed pollution."
-        field: { type: text_box, lines: 6 }
+        field:
+          type: repeated_block
+          count: 2
+          template:
+            - { label: "Way", type: text_field }
+            - { label: "Description", type: text_box, lines: 3 }
 
   - id: "3"
     prompt: >

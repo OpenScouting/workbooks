@@ -185,7 +185,7 @@ requirements:
         prompt: >
           Develop an Incident Action Plan (IAP) for a hasty search using the
           scenario information.
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 10 }
       - id: "7c"
         prompt: >
           Before the search begins, conduct a PAUSE briefing to review hazards,

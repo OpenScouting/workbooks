@@ -43,10 +43,22 @@ requirements:
     children:
       - id: "4a"
         prompt: "Name three types of physical genealogical resources and where you can find them, and explain how these resources can help you chart your family tree."
-        field: { type: text_box, lines: 7 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Resource type", type: text_field }
+            - { label: "Where to find it", type: text_box, lines: 2 }
+            - { label: "How it helps chart your family tree", type: text_box, lines: 2 }
       - id: "4b"
         prompt: "Name three types of digital genealogical resources and where you can find them, and explain how these resources can help you chart your family tree."
-        field: { type: text_box, lines: 7 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Resource type", type: text_field }
+            - { label: "Where to find it", type: text_box, lines: 2 }
+            - { label: "How it helps chart your family tree", type: text_box, lines: 2 }
       - id: "4c"
         prompt: "Obtain at least one genealogical document that supports an event that is or can be recorded on your pedigree chart or family group record."
         field: { type: text_box, lines: 4 }

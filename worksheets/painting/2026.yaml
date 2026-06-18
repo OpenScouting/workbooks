@@ -18,7 +18,12 @@ requirements:
     children:
       - id: "2a"
         prompt: "Explain three ways that coatings can improve a surface."
-        field: { type: text_box, lines: 5 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Way coatings improve a surface", type: text_field }
+            - { label: "Explanation", type: text_box, lines: 3 }
       - id: "2b"
         prompt: >
           Explain the differences between oil-based paints, acrylic-based

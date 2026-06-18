@@ -79,7 +79,7 @@ requirements:
     children:
       - id: "4a"
         prompt: "A nosebleed."
-        field: { type: text_box, lines: 4 }
+        field: { type: text_box, lines: 5 }
       - id: "4b"
         prompt: "An open wound with mild or moderate bleeding, such as a scratch or a scrape (abrasions), or a shallow cut (laceration)."
         field: { type: text_box, lines: 5 }
@@ -146,7 +146,7 @@ requirements:
     children:
       - id: "8a"
         prompt: "Explain the similarities and differences in a strain, a muscle tear, a tendon rupture, a sprain, a dislocation, a simple fracture, and a compound fracture."
-        field: { type: text_box, lines: 8 }
+        field: { type: text_box, lines: 9 }
       - id: "8b"
         prompt: "Describe the symptoms and signs of and first aid for a muscle strain, a muscle tear, and a tendon rupture."
         field: { type: text_box, lines: 6 }

@@ -49,7 +49,12 @@ requirements:
           Three different methods robots can use to move themselves other than
           wheels or tracks. Describe when it would be appropriate to use each
           method.
-        field: { type: text_box, lines: 6 }
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Method", type: text_field }
+            - { label: "When it would be appropriate to use it", type: text_box, lines: 3 }
 
   - id: "3"
     prompt: >

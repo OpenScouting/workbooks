@@ -95,7 +95,7 @@ requirements:
           Explain how your collection is graded for value, physical defects,
           size, and age. Show the various classifications or ratings used in
           your collection.
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 8 }
       - id: "5e"
         prompt: >
           List the national, state, or local association(s) related to or
@@ -106,7 +106,7 @@ requirements:
           Explain to your counselor the purpose of and reason for the
           identification number (if applicable), series, brand name (if any),
           and any other special identification marks.
-        field: { type: text_box, lines: 6 }
+        field: { type: text_box, lines: 7 }
 
   - id: "6"
     prompt: >

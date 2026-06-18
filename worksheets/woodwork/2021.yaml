@@ -118,4 +118,4 @@ requirements:
       Talk with a cabinetmaker or finish carpenter. Learn about training,
       apprenticeships, career opportunities, work conditions, work hours, pay
       rates, and union organization that woodworking experts have in your area.
-    field: { type: text_box, lines: 10 }
+    field: { type: text_box, lines: 12 }
