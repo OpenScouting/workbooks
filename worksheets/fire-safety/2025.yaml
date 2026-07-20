@@ -173,3 +173,11 @@ requirements:
       - id: "10-notes"
         prompt: "Notes from your chosen option"
         field: { type: text_box, lines: 10 }
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md

@@ -160,3 +160,11 @@ requirements:
       - id: "9notes"
         prompt: "Describe the structure you built and how you planned it."
         field: { type: text_box, lines: 8 }
+
+reference_pages:
+  - title: "Outdoor Ethics"
+    columns:
+      - title: "The Principles of Leave No Trace"
+        body: shared/leave-no-trace.md
+      - title: "The Outdoor Code"
+        body: shared/outdoor-code.md
