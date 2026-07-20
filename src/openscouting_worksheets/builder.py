@@ -148,7 +148,8 @@ def _build_cover(badge: S.Badge, styles, asset_dir: Path,
         "Found an error or have a suggestion for this workbook? File an "
         'issue at <a href="https://github.com/openscouting/workbooks/issues" '
         'color="#1B4332"><b>github.com/openscouting/workbooks</b></a>. '
-        "Requirement changes should be reported to Scouting America directly."
+        "Suggestions regarding the requirements themselves should be "
+        "directed to Scouting America."
     )
     out.append(Paragraph(feedback, s["Disclaimer"]))
     out.append(Spacer(1, 12))
