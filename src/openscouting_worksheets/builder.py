@@ -237,9 +237,11 @@ def _render_requirement(req: S.Requirement, styles, depth: int,
             out.append(Paragraph(note, styles["ReqNote"]))
 
     if req.field is not None:
+        # Align fields with their prompt's text indent (Req1Prompt=18,
+        # Req2Prompt=36; deeper prompts reuse Req2Prompt's 36).
         out.extend(_render_field(req.field, styles,
                                  name_prefix=f"req_{req.id}",
-                                 indent=18 if depth >= 1 else 0))
+                                 indent=min(depth, 2) * 18))
         out.append(Spacer(1, 6))
 
     if req.children:
@@ -283,9 +285,11 @@ def _render_field(field: S.FieldDef, styles, name_prefix: str,
     elif isinstance(field, S.DrawAreaDef):
         out.append(F.DrawAreaFlowable(height=field.height * inch))
     elif isinstance(field, S.CheckboxDef):
-        out.append(F.CheckboxFlowable(name=name_prefix, label=field.label or ""))
+        out.append(F.CheckboxFlowable(name=name_prefix, label=field.label or "",
+                                      indent=indent))
     elif isinstance(field, S.ChecklistDef):
-        out.append(F.ChecklistFlowable(name_prefix=name_prefix, items=field.items))
+        out.append(F.ChecklistFlowable(name_prefix=name_prefix, items=field.items,
+                                       indent=indent))
     elif isinstance(field, S.LabeledRowsDef):
         # Emit one flowable per labeled row so ReportLab can break the list
         # between rows when the whole block won't fit on the current page.

@@ -53,6 +53,28 @@ def test_draft_watermark_present_only_in_draft(tmp_path):
     assert "DRAFT" not in page1_text(False)
 
 
+def test_labelless_checkbox_is_a_confirmation_box(tmp_path):
+    """A checkbox with no label renders the muted 'Completed' confirmation text."""
+    pypdf = pytest.importorskip("pypdf")
+    yaml_text = (
+        "badge:\n"
+        "  name: Test\n"
+        "  slug: test\n"
+        "requirements:\n"
+        "  - id: '1'\n"
+        "    prompt: Demonstrate the thing.\n"
+        "    field: { type: checkbox }\n"
+    )
+    src = tmp_path / "test.yaml"
+    src.write_text(yaml_text)
+    out = tmp_path / "Test.pdf"
+    builder.build(src, out, base_dir=REPO)
+    text = pypdf.PdfReader(str(out)).pages[0].extract_text() or ""
+    assert "Completed" in text
+    # and it's a real fillable checkbox widget
+    assert any(n.startswith("req_1") for n in (pypdf.PdfReader(str(out)).get_fields() or {}))
+
+
 def test_draw_area_renders_without_form_field(tmp_path):
     """A draw_area is a blank canvas: it draws a box but registers no widget."""
     pypdf = pytest.importorskip("pypdf")

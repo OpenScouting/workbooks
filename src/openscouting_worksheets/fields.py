@@ -25,6 +25,7 @@ BORDER_COLOR = colors.HexColor("#9CA3AF")   # neutral gray
 FILL_COLOR = colors.HexColor("#FAFAFA")     # very light gray (single-line fields)
 RULE_COLOR = colors.HexColor("#CBD5E1")     # soft gray for writing rules
 HEADER_COLOR = colors.HexColor("#1B4332")   # OpenScouting forest green
+MUTED_TEXT = colors.HexColor("#6B7280")     # neutral gray for meta labels
 CALLOUT_FILL = colors.HexColor("#FFF8E1")
 CALLOUT_BORDER = colors.HexColor("#F59E0B")
 
@@ -176,16 +177,32 @@ class DrawAreaFlowable(Flowable):
 
 # ---------- checkbox ----------
 
+# Default companion text for a label-less ("confirmation") checkbox — the
+# Scout ticks it to attest they completed the task described in the prompt.
+CONFIRM_LABEL = "Completed"
+
+
 class CheckboxFlowable(Flowable):
-    def __init__(self, name: str, label: str = ""):
+    """A checkbox with a label to its right.
+
+    With an explicit `label` it's a normal attestation checkbox. With no label
+    it's a *confirmation* checkbox: it gets the muted default "Completed" text
+    so it never renders as an orphaned box. Either way it is indented to sit in
+    line with the prompt above it (via `indent`) rather than jammed to the far
+    left margin.
+    """
+
+    def __init__(self, name: str, label: str = "", indent: float = 0):
         super().__init__()
         self.name = name
-        self.label = label
+        self.indent = indent
+        self.confirmation = not label
+        self.label = label or CONFIRM_LABEL
         self._label_lines: list[str] = []
 
     def wrap(self, avail_w, avail_h):
         self.width = avail_w
-        text_x = CHECKBOX_SIZE + 6
+        text_x = self.indent + CHECKBOX_SIZE + 6
         text_w = max(self.width - text_x, 50)
         self._label_lines = _wrap_text(
             self.label, text_w, self.canv if hasattr(self, "canv") else None,
@@ -199,28 +216,30 @@ class CheckboxFlowable(Flowable):
         c = self.canv
         # Checkbox aligns to the top line of the label
         y_top = self.height
-        _checkbox_widget(c, self.name, 0, y_top - CHECKBOX_SIZE - 2,
+        _checkbox_widget(c, self.name, self.indent, y_top - CHECKBOX_SIZE - 2,
                          tooltip=self.label or self.name)
-        if self.label:
-            c.setFont("Helvetica", 10)
-            c.setFillColor(colors.black)
-            text_x = CHECKBOX_SIZE + 6
-            for i, line in enumerate(self._label_lines):
-                c.drawString(text_x, y_top - 12 - i * 12, line)
+        c.setFont("Helvetica", 10)
+        # Confirmation checkboxes get muted text so they read as a meta-action,
+        # not as content; authored labels stay black.
+        c.setFillColor(MUTED_TEXT if self.confirmation else colors.black)
+        text_x = self.indent + CHECKBOX_SIZE + 6
+        for i, line in enumerate(self._label_lines):
+            c.drawString(text_x, y_top - 12 - i * 12, line)
 
 
 # ---------- checklist ----------
 
 class ChecklistFlowable(Flowable):
-    def __init__(self, name_prefix: str, items: list[str]):
+    def __init__(self, name_prefix: str, items: list[str], indent: float = 0):
         super().__init__()
         self.name_prefix = name_prefix
         self.items = items
+        self.indent = indent
         self._wrapped: list[list[str]] = []
 
     def wrap(self, avail_w, avail_h):
         self.width = avail_w
-        text_x = CHECKBOX_SIZE + 6
+        text_x = self.indent + CHECKBOX_SIZE + 6
         text_w = max(self.width - text_x, 50)
         self._wrapped = [
             _wrap_text(item, text_w, None, font="Helvetica", size=10)
@@ -232,13 +251,13 @@ class ChecklistFlowable(Flowable):
     def draw(self):
         c = self.canv
         y = self.height
-        text_x = CHECKBOX_SIZE + 6
+        text_x = self.indent + CHECKBOX_SIZE + 6
         c.setFont("Helvetica", 10)
         c.setFillColor(colors.black)
         for item, lines in zip(self.items, self._wrapped):
             row_h = max(len(lines), 1) * 12 + 4
             _checkbox_widget(c, f"{self.name_prefix}_{_slug(item)[:30]}",
-                             0, y - CHECKBOX_SIZE - 2, tooltip=item)
+                             self.indent, y - CHECKBOX_SIZE - 2, tooltip=item)
             for i, line in enumerate(lines):
                 c.drawString(text_x, y - 12 - i * 12, line)
             y -= row_h
