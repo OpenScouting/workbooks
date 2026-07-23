@@ -1,0 +1,302 @@
+badge:
+  name: Competitive Gaming
+  slug: competitive-gaming
+  requirements_revision: "2026-07-22"
+  description: >
+    Competitive Gaming explores esports and modern gaming as both a hobby and a
+    fast-growing industry. You will trace the history of video games, practice
+    good digital citizenship, balance gaming with health, build your ideal
+    gaming setup, and investigate the many careers that make competitive gaming
+    possible.
+
+requirements:
+  - id: "1"
+    intro: "History of Gaming. Do the following:"
+    children:
+      - id: "1a"
+        prompt: >
+          Create a timeline showing how video gaming has evolved since 1958.
+          Include at least one significant event from each decade.
+        field:
+          type: table
+          headers: ["Decade", "Significant event and why it mattered"]
+          rows: 8
+          cols: 2
+      - id: "1b"
+        prompt: "Identify and define five major video game genres. Provide an example for each."
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Genre", type: text_field }
+            - { label: "Definition", type: text_box, lines: 2 }
+            - { label: "Example", type: text_field }
+      - id: "1c"
+        prompt: >
+          Explain the difference between video gaming and esports. Include how
+          esports incorporates elements of organized competition such as teams,
+          tournaments, rules, coaching, and spectatorship.
+        field: { type: text_box, lines: 8 }
+      - id: "1c-examples"
+        prompt: >
+          Provide two examples of games that are commonly played casually as
+          video games but are also used in organized esports competition.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels: ["Example 1", "Example 2"]
+      - id: "1d"
+        prompt: >
+          Identify and define five major moments in the development of esports
+          as an industry since 1990. Include key tournaments, technological
+          advances, and organizations that helped shape competitive gaming
+          globally. Discuss your findings with your counselor.
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Moment", type: text_field }
+            - { label: "Why it mattered", type: text_box, lines: 2 }
+
+  - id: "2"
+    intro: >
+      Living the Scout Oath and Law Online. Do the following. (Note: View the
+      Personal Safety Awareness "Digital Safety" video with your parent or
+      guardian's permission.)
+    children:
+      - id: "2a"
+        prompt: >
+          Define the term "toxicity in gaming." Describe a real or hypothetical
+          example of toxic behavior in online play and outline how the situation
+          could be prevented or resolved by applying the Scout Oath and Law.
+        field: { type: text_box, lines: 9 }
+      - id: "2b"
+        prompt: >
+          List five strategies for handling negative online gaming experiences.
+          Describe how each strategy reflects a point of the Scout Oath or Law.
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Strategy", type: text_field }
+            - { label: "Point of the Oath or Law it reflects", type: text_box, lines: 2 }
+      - id: "2c"
+        prompt: >
+          Research the Entertainment Software Rating Board (ESRB) rating system.
+          Record the ratings of the video games you own and compare them to your
+          age group.
+        field:
+          type: table
+          headers: ["Game you own", "ESRB rating", "Appropriate for your age?"]
+          rows: 6
+          cols: 3
+      - id: "2c-agree"
+        prompt: "Explain to your counselor whether you agree with the ESRB descriptions."
+        field: { type: text_box, lines: 5 }
+      - id: "2d"
+        prompt: >
+          List five ways to create a positive online gaming environment for
+          yourself and others.
+        field:
+          type: repeated_block
+          count: 5
+          template:
+            - { label: "Way", type: text_box, lines: 2 }
+      - id: "2d-demo"
+        prompt: "Demonstrate one of these methods with your troop, patrol, or family, and describe what you did."
+        field: { type: text_box, lines: 4 }
+
+  - id: "3"
+    intro: "Gamer Health and Balance. Do the following:"
+    children:
+      - id: "3a"
+        prompt: >
+          Read two credible articles describing positive aspects of video gaming
+          and two describing negative aspects. Create a chart showing where the
+          articles agree or disagree.
+        field:
+          type: table
+          headers: ["Article", "Stance (positive / negative)", "Key claims"]
+          rows: 4
+          cols: 3
+      - id: "3a-compare"
+        prompt: "Summarize where the articles agree and where they disagree."
+        field: { type: text_box, lines: 5 }
+      - id: "3b"
+        prompt: "Track the amount of gaming you do each day for two weeks. Record and summarize your results."
+        field:
+          type: table
+          headers: ["Day", "Date", "Gaming time"]
+          rows: 14
+          cols: 3
+      - id: "3b-summary"
+        prompt: "Summarize your gaming results."
+        field: { type: text_box, lines: 4 }
+      - id: "3c"
+        prompt: >
+          Track your daily physical activity for the same two weeks. Compare your
+          results to the CDC recommendation of one hour of moderate-to-vigorous
+          activity per day for youth ages 6-17.
+        field:
+          type: table
+          headers: ["Day", "Date", "Physical activity (minutes)"]
+          rows: 14
+          cols: 3
+      - id: "3c-compare"
+        prompt: "Compare your physical activity to the CDC recommendation of one hour per day."
+        field: { type: text_box, lines: 4 }
+      - id: "3d"
+        prompt: >
+          Track your daily sleep for the same two weeks. Compare your results to
+          the CDC recommendation of 9-12 hours for ages 6-12 and 8-10 hours for
+          ages 13-18.
+        field:
+          type: table
+          headers: ["Day", "Date", "Hours of sleep"]
+          rows: 14
+          cols: 3
+      - id: "3d-compare"
+        prompt: "Compare your sleep to the CDC recommendation for your age."
+        field: { type: text_box, lines: 4 }
+      - id: "3e"
+        prompt: >
+          After completing 3(b), 3(c), and 3(d), create a one-week balanced
+          schedule that includes healthy sleep, physical activity, and
+          agreed-upon gaming time.
+        field:
+          type: table
+          headers: ["Day", "Sleep", "Physical activity", "Gaming time"]
+          rows: 7
+          cols: 4
+      - id: "3e-summary"
+        prompt: "Follow this schedule and summarize your results."
+        field: { type: text_box, lines: 5 }
+
+  - id: "4"
+    intro: "Gamer Safety and Community Connection. Do the following:"
+    children:
+      - id: "4a"
+        prompt: "Explain the benefits and risks of gaming online."
+        field: { type: text_box, lines: 7 }
+      - id: "4b"
+        prompt: "Research and list ten ways to stay safe when playing video games online."
+        field:
+          type: repeated_block
+          count: 10
+          template:
+            - { label: "Way to stay safe", type: text_field }
+      - id: "4c"
+        prompt: >
+          Play one of your favorite games with your parent or guardian for at
+          least 30 minutes. Demonstrate how to use privacy and safety settings,
+          explain what you enjoy about the game, and let them play for part of
+          the session.
+        field: { type: text_box, lines: 6 }
+      - id: "4d"
+        prompt: >
+          Play an online or local multiplayer game with another Scout, friend,
+          or community member in a cooperative or team-based setting. The match
+          may be casual or competitive. During play, demonstrate positive
+          communication, teamwork, and sportsmanship. Afterward, review the
+          experience with your counselor and describe how cooperation and
+          communication influenced your team's performance and overall enjoyment
+          of the game.
+        field: { type: text_box, lines: 8 }
+
+  - id: "5"
+    intro: "Technology in Competitive Gaming. Do the following:"
+    children:
+      - id: "5a"
+        prompt: >
+          Explain the difference between console gaming and PC gaming. List the
+          advantages and disadvantages of each.
+        field:
+          type: pair_grid
+          left_title: "Console Gaming"
+          right_title: "PC Gaming"
+          col_headers: ["Advantages", "Disadvantages"]
+          rows: 5
+      - id: "5b"
+        prompt: >
+          Play the same game on at least two different platforms. Describe the
+          similarities and differences in gameplay and performance. (Any game may
+          be used, including free games, on any platform: phone, tablet, PC,
+          laptop, console, etc.)
+        field: { type: text_box, lines: 7 }
+      - id: "5c"
+        prompt: >
+          Visit a PC builder website such as PCPartPicker or Micro Center. Design
+          your ideal gaming PC and create a parts list. Discuss your selections
+          with your counselor.
+        field:
+          type: labeled_rows
+          lines_each: 2
+          labels:
+            - "Central processing unit (CPU)"
+            - "Motherboard"
+            - "Random access memory (RAM)"
+            - "Hard drive"
+            - "Power supply"
+            - "Graphics card"
+            - "Fans"
+            - "Case"
+
+  - id: "6"
+    intro: "Leadership and Service in Competitive Gaming. Do ONE of the following:"
+    field:
+      type: checklist
+      items:
+        - "Teach your troop, patrol, or a group of younger Scouts or family members about online gaming safety or digital citizenship."
+        - "Attend or view a live-streamed esports event online, such as a professional tournament, collegiate match, or school-level competition. Take notes on how the broadcast team presents the event, how players communicate, and how the audience interacts digitally. Share with your counselor what you learned about the structure and presentation of online esports competition."
+        - "Attend an esports tournament, convention, or community event that includes a competitive gaming activity or demonstration. Attend with another Scout, troop member, or family member. Afterward, share with your counselor what you learned about the atmosphere of live esports events and how the experience changed your understanding of playing games competitively in front of an audience."
+    children:
+      - id: "6-notes"
+        prompt: "Notes and what you shared with your counselor for your chosen option"
+        field: { type: text_box, lines: 9 }
+
+  - id: "7"
+    intro: "Exploring Professions in the Competitive Gaming Industry. Do the following:"
+    children:
+      - id: "7a"
+        prompt: >
+          Research two colleges that offer varsity esports programs. Record the
+          following information for each.
+        field:
+          type: repeated_block
+          count: 2
+          template:
+            - { label: "College", type: text_field }
+            - { label: "Gaming scholarships (availability and amount)", type: text_box, lines: 2 }
+            - { label: "Gaming or IT-related degrees offered", type: text_box, lines: 2 }
+            - { label: "Games played by the esports team", type: text_box, lines: 2 }
+            - { label: "League or association", type: text_field }
+      - id: "7b"
+        prompt: >
+          Research three gaming-adjacent careers that support or connect to the
+          esports industry but are not esports athlete roles (for example: game
+          designer or developer, shoutcaster or broadcast producer, data analyst
+          or statistician, marketing or event coordinator, IT or network support
+          specialist). For each, identify the main responsibilities, education or
+          training requirements, and how the role contributes to the success of
+          the gaming or esports ecosystem.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Career", type: text_field }
+            - { label: "Main responsibilities", type: text_box, lines: 2 }
+            - { label: "Education or training required", type: text_box, lines: 2 }
+            - { label: "How it contributes to the ecosystem", type: text_box, lines: 2 }
+      - id: "7c"
+        prompt: >
+          Visit the "Careers" or "Jobs" page of a major game publisher (such as
+          Blizzard, Riot, Epic, or Nintendo). Choose three jobs that interest
+          you. For each, identify the required education, skills, and experience.
+        field:
+          type: repeated_block
+          count: 3
+          template:
+            - { label: "Job title and publisher", type: text_field }
+            - { label: "Required education", type: text_box, lines: 2 }
+            - { label: "Required skills", type: text_box, lines: 2 }
+            - { label: "Required experience", type: text_box, lines: 2 }

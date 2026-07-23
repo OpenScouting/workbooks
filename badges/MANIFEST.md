@@ -1,6 +1,6 @@
 # Merit Badge Workbook Manifest
 
-Catalogue of 141 merit badges (140 active, 1 retired).
+Catalogue of 143 merit badges (142 active, 1 retired).
 
 Layout: requirement source + emblem in `badges/<slug>/`, workbook YAML in
 `worksheets/<slug>/<year>.yaml`. The latest year is the current revision.
@@ -39,6 +39,7 @@ Layout: requirement source + emblem in `badges/<slug>/`, workbook YAML in
 | Coin Collecting | `coin-collecting` | active | 2026 | 1 | https://www.scouting.org/merit-badges/coin-collecting/ |
 | Collections | `collections` | active | 2021 | 1 | https://www.scouting.org/merit-badges/collections/ |
 | Communication | `communication` | active | 2019 | 1 | https://www.scouting.org/merit-badges/communication/ |
+| Competitive Gaming | `competitive-gaming` | active | 2026 | 1 | https://www.scouting.org/merit-badges/competitive-gaming/ |
 | Composite Materials | `composite-materials` | active | 2026 | 1 | https://www.scouting.org/merit-badges/composite-materials/ |
 | Cooking | `cooking` | active | 2025 | 1 | https://www.scouting.org/merit-badges/cooking/ |
 | Crime Prevention | `crime-prevention` | active | 2025 | 1 | https://www.scouting.org/merit-badges/crime-prevention/ |
@@ -146,5 +147,6 @@ Layout: requirement source + emblem in `badges/<slug>/`, workbook YAML in
 | Welding | `welding` | active | 2019 | 1 | https://www.scouting.org/merit-badges/welding/ |
 | Whitewater | `whitewater` | active | 2026 | 1 | https://www.scouting.org/merit-badges/whitewater/ |
 | Wilderness Survival | `wilderness-survival` | active | 2026 | 1 | https://www.scouting.org/merit-badges/wilderness-survival/ |
+| Wildland Fire Management | `wildland-fire-management` | active | 2026 | 1 | https://www.scouting.org/merit-badges/wildland-fire-management/ |
 | Wood Carving | `wood-carving` | active | 2017 | 1 | https://www.scouting.org/merit-badges/wood-carving/ |
 | Woodwork | `woodwork` | active | 2021 | 1 | https://www.scouting.org/merit-badges/woodwork/ |
