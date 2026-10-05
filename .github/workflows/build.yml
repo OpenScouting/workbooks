@@ -32,6 +32,10 @@ jobs:
   # GitHub serves one site per repo, so every deploy rebuilds both (each
   # incrementally) and combines them — pushing to main refreshes /draft/,
   # merging main -> release refreshes the clean root.
+  #
+  # Merge with `git merge --no-ff main`: Pages keys deployments on the commit
+  # SHA, so a fast-forwarded release reuses main's already-deployed SHA and
+  # the new site is silently dropped (see README "Publishing").
   build:
     if: github.event_name != 'pull_request'
     needs: check

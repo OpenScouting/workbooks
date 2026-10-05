@@ -82,6 +82,28 @@ worksheets validate worksheets/
 | `pair_grid`      | Two side-by-side titled tables (e.g., Internal/External pack) |
 | `callout`        | Boxed informational text (no field)                           |
 
+## Publishing
+
+Every push to `main` or `release` rebuilds and deploys the GitHub Pages site at
+https://openscouting.github.io/workbooks/:
+
+- `/` — clean workbooks, built from `release`
+- `/draft/` — DRAFT-watermarked workbooks, built from `main`
+
+To publish what's on `main`, merge it into `release` with a merge commit:
+
+```bash
+git switch release
+git merge --no-ff main -m "Release: <what changed>"
+git push origin release
+git switch main
+```
+
+Always use `--no-ff`. Pages labels each deployment with the triggering commit's
+SHA and silently keeps the live site if that SHA was already deployed. A
+fast-forward puts `release` on a commit `main` already deployed, so the deploy
+reports success but the clean site never changes.
+
 ## Architecture
 
 - `schema.py` — Pydantic models for the YAML grammar
